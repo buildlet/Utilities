@@ -38,6 +38,11 @@
     <Content Include="Sources\License.rtf" />
   </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
+  <PropertyGroup>
+    <PostBuildEvent>SET TARGET_DIRECTORY=Release
+ECHO Copy "$(TargetPath)" to "$(SolutionDir)%25TARGET_DIRECTORY%25"...
+COPY "$(TargetPath)" "$(SolutionDir)%25TARGET_DIRECTORY%25"</PostBuildEvent>
+  </PropertyGroup>
   <!--
 	To modify your build process, add your task inside one of the targets below and uncomment it.
 	Other similar extension points exist, see Wix.targets.

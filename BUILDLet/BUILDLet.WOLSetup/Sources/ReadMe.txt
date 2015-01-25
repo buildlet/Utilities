@@ -1,7 +1,7 @@
 ﻿BUILDLet WOL
 ============
 
-January 24, 2015
+January 25, 2015
 
 
 This application is front end to send the magic packet, built by WFP.
@@ -22,7 +22,7 @@ The file "WOL.conf" is searched in the following order.
 
 Release History
 ---------------
-January 24, 2015    1.0.0.0    1st Release
+January 25, 2015    1.0.0.0    1st Release
 
 
 License
