@@ -1,0 +1,12 @@
+﻿<Window x:Class="BUILDLet.WOL.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:app="clr-namespace:BUILDLet.WOL"
+        xmlns:prop="clr-namespace:BUILDLet.WOL.Properties"
+        Title="{x:Static app:App.Name}" Height="150" Width="300" ResizeMode="NoResize" KeyDown="Window_KeyDown">
+    <StackPanel>
+        <Label Name="InputMessageLabel" Content="{x:Static prop:Resources.InputMessageLabelContent}" Margin="5,5,5,5" Height="25"/>
+        <TextBox Name="MacAddressTextBox" Height="25" TextWrapping="Wrap" Text="" Margin="40,5,40,5"/>
+        <Button Name="SendButton" Content="{x:Static prop:Resources.SendButtonContent}" Margin="75,5,75,5" Height="25" Click="SendButton_Click" IsDefault="True"/>
+    </StackPanel>
+</Window>

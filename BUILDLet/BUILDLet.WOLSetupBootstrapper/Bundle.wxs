@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" 
+     xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
+
+  <!-- Include -->
+  <?include ..\Version\Installer.wxi?>
+
+
+  <!-- GUID -->
+  <?define GUID_UpgradeCode="{965E66F5-08CD-4138-AC1B-07BAD82AD75A}"?>
+
+  
+  <!-- Source Files -->
+  <?define SourceFile="Sources\WOLSetup.msi"?>
+  <?define Source_LicenseFile="Sources\License.rtf"?>
+  <?define Source_LogoFile="Sources\BUILDLet_Yellow_64x64.png"?>
+
+  
+  <Bundle Name="$(var.ProductName) $(var.ProductVersion)" 
+          Version="$(var.ProductVersion)" 
+          Manufacturer="$(var.Manufacturer)" 
+          UpgradeCode="$(var.GUID_UpgradeCode)">
+
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLargeLicense">
+      <bal:WixStandardBootstrapperApplication LicenseFile="$(var.Source_LicenseFile)"
+                                              LogoFile="$(var.Source_LogoFile)"/>
+    </BootstrapperApplicationRef>
+
+		<Chain>
+			<MsiPackage SourceFile="$(var.SourceFile)" />
+		</Chain>
+	</Bundle>
+</Wix>
