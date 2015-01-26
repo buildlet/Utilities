@@ -36,7 +36,7 @@ Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "BUILDLet.WOLSetupBootstrapp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Version", "Version", "{027248A7-BA3C-4E13-A293-B7365A7DB6D2}"
 	ProjectSection(SolutionItems) = preProject
-		Version\Installer.wxi = Version\Installer.wxi
+		Version\InstallerInfo.wxi = Version\InstallerInfo.wxi
 		Version\MasterAssemblyInfo.cs = Version\MasterAssemblyInfo.cs
 	EndProjectSection
 EndProject

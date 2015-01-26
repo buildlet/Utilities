@@ -4,14 +4,15 @@
 Copyright (c) 2015 Daiki Sakamoto
 
 
-* This application is front end to send the magic packet, built by WFP.
+This application is front end to send the magic packet, built by WFP.
 
-* Microsoft .NET Framework 4.5 is required to run this application.
+Microsoft .NET Framework 4.5 is required to run this application.
 
-* If "WOL.conf" exists in proper directory, 17 characters of the head of the 
+If "WOL.conf" exists in proper directory, 17 characters of the head of the 
 file is read and it is used as MAC address.
 MAC address should be written like "FF:FF:FF:FF:FF:FF".  
 The file "WOL.conf" is searched in the following order.
+
   1. Program Folder  (C:\Program Files (x86)\BUILDLet\WOL\)
   2. My Documents    (C:\Users\<User Name>\Documents\)
   3. Windows Folder  (C:\Windows\)
@@ -20,10 +21,11 @@ The file "WOL.conf" is searched in the following order.
 
 License
 -------
-* This software is released under the MIT License, see License.txt.
+This software is released under the MIT License, see License.txt.
 
 
 Release History
 ---------------
-* January 25, 2015    Version 1.0.1.0    Modify Readme
-* January 25, 2015    Version 1.0.0.0    1st Release
+* January 26, 2015    Version 1.0.2    Modify Readme
+* January 25, 2015    Version 1.0.1    Modify Readme
+* January 25, 2015    Version 1.0.0    1st Release
