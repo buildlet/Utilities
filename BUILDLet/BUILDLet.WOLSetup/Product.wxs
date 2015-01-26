@@ -2,7 +2,7 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 
   <!-- Include -->
-  <?include ..\Version\Installer.wxi?>
+  <?include ..\Version\InstallerInfo.wxi?>
 
   
   <!-- GUID -->
@@ -62,7 +62,7 @@
   
   <!-- Icon -->
   <Fragment>
-    <Icon Id="WOL.ico" SourceFile="$(var.Source_IconFile)"/>
+    <Icon Id="WOL.ico" SourceFile="$(var.Source_IconFile)" />
   </Fragment>
 
   
@@ -82,6 +82,7 @@
         </File>
       </Component>
 
+      
       <!-- Documents for WOL (Readme and License) -->
       <Component Id="Documents" Guid="$(var.GUID_Documents)" KeyPath="yes">
         <File Source="$(var.Source_Readme)" />
@@ -90,6 +91,5 @@
 
     </ComponentGroup>
   </Fragment>
-
 
 </Wix>
