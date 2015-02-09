@@ -10,6 +10,7 @@
   <?define GUID_UpgradeCode="{AFCA8C85-7CB9-44F9-9880-0C58F711B09C}"?>
   <?define GUID_ProductComponent="{6245EE59-0EFB-41AA-B19A-A61B98BDA287}"?>
   <?define GUID_Documents="{3C726715-3878-4664-A02F-959C79F96265}"?>
+  <?define GUID_ConfigFile="{5B00CD26-AC1D-430A-A5D1-09887191665D}"?>
 
   
   <!-- Source Files -->
@@ -18,6 +19,10 @@
   <?define Source_MainComponent="Sources\BUILDLet.WOL.exe"?>
   <?define Source_IconFile="..\BUILDLet.WOL\Resources\BUILDLet_WOL.ico"?>
 
+  
+  <!-- Remove Files -->
+  <?define Remove_ConfigFile="WOL.conf"?>
+  
   
   <!-- Product -->
   <Product Id="$(var.GUID_Product)"
@@ -87,6 +92,12 @@
       <Component Id="Documents" Guid="$(var.GUID_Documents)" KeyPath="yes">
         <File Source="$(var.Source_Readme)" />
         <File Source="$(var.Source_License)" />
+      </Component>
+      
+      
+      <!-- Configuration File to be deleted -->
+      <Component Id="ConfigFile" Guid="$(var.GUID_ConfigFile)">
+        <RemoveFile Id="ConfigFile" On="uninstall" Name="$(var.Remove_ConfigFile)" />
       </Component>
 
     </ComponentGroup>

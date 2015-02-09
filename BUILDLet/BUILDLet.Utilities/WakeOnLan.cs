@@ -59,7 +59,7 @@ namespace BUILDLet.Utilities.Network
                     bytes = udp.Send(packet.GetBytes(), packet.GetBytes().Length, ep);
 
 #if DEBUG
-                    Debug.WriteLine("[WakeOnLan]: Magic Packet (MAC Address=\"{0}\", Port={1}) has been sent! ({2})", packet.MacAddress, port, i + 1);
+                    Debug.WriteLine("[WakeOnLan]:Magic Packet (MAC Address=\"{0}\", Port={1}) has been sent! ({2})", packet.MACAddress, port, i + 1);
 #endif
                 }
                 return sent;

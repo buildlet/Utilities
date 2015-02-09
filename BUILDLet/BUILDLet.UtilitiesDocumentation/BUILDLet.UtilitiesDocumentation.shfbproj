@@ -58,10 +58,10 @@
     <CleanIntermediates>True</CleanIntermediates>
     <NamespaceSummaries>
       <NamespaceSummaryItem name="BUILDLet.Utilities" isDocumented="True">[TODO: Add "BUILDLet.Utilities" Namespace sumamry]</NamespaceSummaryItem>
-      <NamespaceSummaryItem name="BUILDLet.Utilities.Network" isDocumented="True">[TODO: Add "BUILDLet.Utilities.Network" Namespace sumamry]</NamespaceSummaryItem>
-      <NamespaceSummaryItem name="BUILDLet.Utilities.WPF" isDocumented="True">[TODO: Add "BUILDLet.Utilities.WPF" Namespace sumamry]</NamespaceSummaryItem>
-      <NamespaceSummaryItem name="(global)" isDocumented="True" />
-    </NamespaceSummaries>
+<NamespaceSummaryItem name="BUILDLet.Utilities.Network" isDocumented="True">[TODO: Add "BUILDLet.Utilities.Network" Namespace sumamry]</NamespaceSummaryItem>
+<NamespaceSummaryItem name="BUILDLet.Utilities.WPF" isDocumented="True">[TODO: Add "BUILDLet.Utilities.WPF" Namespace sumamry]</NamespaceSummaryItem>
+<NamespaceSummaryItem name="(global)" isDocumented="True" />
+<NamespaceSummaryItem name="BUILDLet.Utilities.Cryptography" isDocumented="True">[TODO: Add "BUILDLet.Utilities.Cryptography" Namespace sumamry]</NamespaceSummaryItem></NamespaceSummaries>
     <ProjectSummary>[TODO: Add Project Sumamry]</ProjectSummary>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>

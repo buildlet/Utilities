@@ -3,11 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:app="clr-namespace:BUILDLet.Utilities.WPF"
         xmlns:prop="clr-namespace:BUILDLet.Utilities.WPF.Properties"
-        Title="{x:Static prop:Resources.VersionInformationWindowTitle}" Height="140" Width="400" ResizeMode="NoResize" KeyDown="Window_KeyDown">
-    <StackPanel>
-        <Label Name="NameLabel" Content="Name"/>
-        <Label Name="VersionLabel" Content="Version"/>
-        <Button Name="OKButton" Content="OK" Margin="140,15" Height="25" IsDefault="True" Click="OKButton_Click"/>
-
-    </StackPanel>
+        Title="{x:Static prop:Resources.VersionInformationWindowTitle}"
+        ResizeMode="NoResize"
+        Height="140" Width="400"
+        KeyDown="Window_KeyDown">
+    <DockPanel>
+        <Image Name="LogoImage" />
+        <StackPanel>
+            <Label Name="NameLabel" Content="Name"/>
+            <Label Name="VersionLabel" Content="Version"/>
+            <Button Name="OKButton" Content="{x:Static prop:Resources.OKButtonContent}"
+                    Width="100" Height="25" HorizontalAlignment="Right" Margin="0,15,140,15"
+                    IsDefault="True" Click="OKButton_Click"/>
+        </StackPanel>
+    </DockPanel>
 </Window>

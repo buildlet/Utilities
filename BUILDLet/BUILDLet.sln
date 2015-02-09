@@ -26,7 +26,7 @@ Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "BUILDLet.WOLSetup", "BUILDL
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{A70596C4-1C7F-498D-AE8A-4C34F29CA2CD}"
 	ProjectSection(SolutionItems) = preProject
-		Documents\post-build.cmd = Documents\post-build.cmd
+		Documents\post-build.template.cmd = Documents\post-build.template.cmd
 	EndProjectSection
 EndProject
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "BUILDLet.WOLSetupBootstrapper", "BUILDLet.WOLSetupBootstrapper\BUILDLet.WOLSetupBootstrapper.wixproj", "{86008A55-2DFD-4B74-8ADD-7F3D22AC292D}"

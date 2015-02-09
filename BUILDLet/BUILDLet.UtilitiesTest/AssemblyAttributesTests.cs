@@ -12,6 +12,8 @@ namespace BUILDLet.Utilities.Tests
         [TestMethod()]
         public void AssemblyAttributesTest()
         {
+            Log log = new Log();
+
             AssemblyAttributes attr;
             string assemblyName;
 
@@ -36,13 +38,13 @@ namespace BUILDLet.Utilities.Tests
                         break;
                 }
 
-                Console.WriteLine();
-                Console.WriteLine("[Assembly={0}]", assemblyName);
-                Console.WriteLine("AssemblyAttributes.Name=\"{0}\"", attr.Name);
-                Console.WriteLine("AssemblyAttributes.FullName=\"{0}\"", attr.FullName);
-                Console.WriteLine("AssemblyAttributes.Version=\"{0}\"", attr.Version.ToString());
-                Console.WriteLine("AssemblyAttributes.CultureInfo=\"{0}\"", attr.CultureInfo.ToString());
-                Console.WriteLine("AssemblyAttributes.CultureName=\"{0}\"", attr.CultureName);
+                log.WriteLine();
+                log.WriteLine("Assembly={0}", assemblyName);
+                log.WriteLine("AssemblyAttributes.Name=\"{0}\"", attr.Name);
+                log.WriteLine("AssemblyAttributes.FullName=\"{0}\"", attr.FullName);
+                log.WriteLine("AssemblyAttributes.Version=\"{0}\"", attr.Version.ToString());
+                log.WriteLine("AssemblyAttributes.CultureInfo=\"{0}\"", attr.CultureInfo.ToString());
+                log.WriteLine("AssemblyAttributes.CultureName=\"{0}\"", attr.CultureName);
             }
         }
     }

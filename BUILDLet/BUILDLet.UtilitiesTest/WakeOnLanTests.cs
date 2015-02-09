@@ -23,26 +23,27 @@ namespace BUILDLet.Utilities.Network.Tests
         [TestMethod()]
         public void WakeOnLan_SendTest()
         {
+            Log log = new Log();
             int times = 0;
             int port = 0;
 
-            foreach (var mac in NetworkTestData.MacAddresses)
+            foreach (var mac in TestData.DummyMacAddresses)
             {
-                Console.WriteLine();
-                Console.WriteLine("MAC Address Text=\"{0}\"", mac);
+                log.WriteLine();
+                log.WriteLine("MAC Address Text=\"{0}\"", mac);
 
                 MagicPacket packet = new MagicPacket(mac);
 
-                Console.WriteLine("WakeOnLan.Send(packet)");
+                log.WriteLine("WakeOnLan.Send(packet)");
                 WakeOnLan.Send(packet);
 
-                Console.WriteLine("WakeOnLan.Send(packet, {0})", times = 0);
+                log.WriteLine("WakeOnLan.Send(packet, {0})", times = 0);
                 WakeOnLan.Send(packet, times);
 
-                Console.WriteLine("WakeOnLan.Send(packet, {0})", times = 5);
+                log.WriteLine("WakeOnLan.Send(packet, {0})", times = 5);
                 WakeOnLan.Send(packet, times);
 
-                Console.WriteLine("WakeOnLan.Send(packet, {0}, {1})", times = 3, port = 8080);
+                log.WriteLine("WakeOnLan.Send(packet, {0}, {1})", times = 3, port = 8080);
                 WakeOnLan.Send(packet, times, port);
             }
         }
@@ -51,11 +52,13 @@ namespace BUILDLet.Utilities.Network.Tests
         [TestMethod()]
         public void WakeOnLan_SendTest2()
         {
+            Log log = new Log();
+
             WakeOnLan.Send("00:00:00:00:00:00", -1);
-            Console.WriteLine("Magic Packet should not be sent.");
+            log.WriteLine("Magic Packet should not be sent.");
 
             WakeOnLan.Send("FF:FF:FF:FF:FF:FF", -1);
-            Console.WriteLine("Magic Packet should not be sent.");
+            log.WriteLine("Magic Packet should not be sent.");
         }
 
 
@@ -68,7 +71,7 @@ namespace BUILDLet.Utilities.Network.Tests
 
 
             // for file of MAC Address
-            string filename = "WOL.conf";
+            string filename = TestData.WakeOnLan_ConfigFileName;
             string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), filename);
 
 

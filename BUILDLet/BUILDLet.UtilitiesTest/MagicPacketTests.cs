@@ -53,14 +53,16 @@ namespace BUILDLet.Utilities.Network.Tests
         [TestMethod()]
         public void MagicPacket_GetBytesTest()
         {
-            foreach (var mac in NetworkTestData.MacAddresses)
+            new Log().WriteLine("(E:Expected, A:Actual)");
+
+            foreach (var mac in TestData.DummyMacAddresses)
             {
                 string expected = this.getExpectedMagicPacket(mac);
                 string actual = BitConverter.ToString((new MagicPacket(mac)).GetBytes()).Replace("-", "");
 
                 Console.WriteLine();
-                Console.WriteLine("Expected Text=\"{0}\"", expected);
-                Console.WriteLine("Actual Text=\"{0}\"", actual);
+                Console.WriteLine("E:\"{0}\"", expected);
+                Console.WriteLine("A:\"{0}\"", actual);
 
                 Assert.AreEqual(expected, actual);
             }
@@ -69,14 +71,16 @@ namespace BUILDLet.Utilities.Network.Tests
         [TestMethod()]
         public void MagicPacket_MacAddressTest()
         {
-            foreach (var mac in NetworkTestData.MacAddresses)
+            new Log().WriteLine("(E:Expected, A:Actual=MagicPacket.MACAddress)");
+
+            foreach (var mac in TestData.DummyMacAddresses)
             {
                 string expected = mac.Replace('-', ':');
-                string actual = (new MagicPacket(mac)).MacAddress;
+                string actual = (new MagicPacket(mac)).MACAddress;
 
                 Console.WriteLine();
-                Console.WriteLine("Expected Text=\"{0}\"", expected);
-                Console.WriteLine("MagicPacket.MacAddress=\"{0}\"", actual);
+                Console.WriteLine("E:\"{0}\"", expected);
+                Console.WriteLine("A:\"{0}\"", actual);
 
                 Assert.AreEqual(expected, actual);
             }
@@ -85,18 +89,20 @@ namespace BUILDLet.Utilities.Network.Tests
         [TestMethod()]
         public void MagicPacket_SeparatorTest()
         {
-            foreach (var mac in NetworkTestData.MacAddresses)
+            new Log().WriteLine("(E:Expected, A:Actual=MagicPacket.MACAddress)");
+
+            foreach (var mac in TestData.DummyMacAddresses)
             {
                 char separator = '@';
                 string expected = mac.Replace('-', separator).Replace(':', separator);
 
                 MagicPacket packet = new MagicPacket(mac);
                 packet.Separator = separator;
-                string actual = packet.MacAddress;
+                string actual = packet.MACAddress;
 
                 Console.WriteLine();
-                Console.WriteLine("Expected Text=\"{0}\"", expected);
-                Console.WriteLine("MagicPacket.MacAddress=\"{0}\"", actual);
+                Console.WriteLine("E:\"{0}\"", expected);
+                Console.WriteLine("A:\"{0}\"", actual);
 
                 Assert.AreEqual(expected, actual);
             }

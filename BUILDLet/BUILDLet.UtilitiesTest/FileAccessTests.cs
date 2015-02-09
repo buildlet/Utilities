@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using System.Diagnostics;
-using BUILDLet.Utilities;
 
 namespace BUILDLet.Utilities.Tests
 {
@@ -16,21 +15,21 @@ namespace BUILDLet.Utilities.Tests
         [TestMethod()]
         public void FileAccess_SearchPathTest()
         {
-            Console.WriteLine("FileAccess.SearchPath={");
-            foreach (var dir in FileAccess.SearchPath) { Console.WriteLine("\t\"{0}\",", dir); }
-            Console.WriteLine("}");
+            Log log = new Log(false, false, true);
+
+            log.WriteLine("FileAccess.SearchPath={");
+            foreach (var dir in FileAccess.SearchPath) { log.WriteLine("\t\"{0}\",", dir); }
+            log.WriteLine("}");
         }
 
 
-        private void test_GetSearchPath(string[] expected, string[] actual, string caption, string paramter)
+        private void test_GetSearchPath(string[] expected, string[] actual, string paramter)
         {
-            this.test_GetSearchPath(expected, actual, caption, new string[] { paramter });
+            this.test_GetSearchPath(expected, actual, new string[] { paramter });
         }
 
-        private void test_GetSearchPath(string[] expected, string[] actual, string caption, string[] parameters)
+        private void test_GetSearchPath(string[] expected, string[] actual, string[] parameters)
         {
-            Console.WriteLine();
-            Console.WriteLine("[{0}]", caption);
             Console.Write("FileAccess.GetSearchPath(");
 
 
@@ -74,43 +73,51 @@ namespace BUILDLet.Utilities.Tests
         [TestMethod()]
         public void FileAccess_GetSearchPathTest_Empty()
         {
+            new Log().WriteLine("Empty(Current Directory)");
+
             List<string> expected = new List<string>();
             expected.Add(Environment.CurrentDirectory);
             expected.AddRange(FileAccess.SearchPath);
 
-            this.test_GetSearchPath(expected.ToArray(), FileAccess.GetSearchPath(), "Current Directory", string.Empty);
+            this.test_GetSearchPath(expected.ToArray(), FileAccess.GetSearchPath(), string.Empty);
         }
 
         [TestMethod()]
         public void FileAccess_GetSearchPathTest_InvalidDirectory()
         {
+            new Log().WriteLine("Invalid Directory");
             string dir = "hoge";
 
-            this.test_GetSearchPath(FileAccess.SearchPath, FileAccess.GetSearchPath(dir), "Invalid Directory", dir);
+            this.test_GetSearchPath(FileAccess.SearchPath, FileAccess.GetSearchPath(dir), dir);
         }
 
         [TestMethod()]
         public void FileAccess_GetSearchPathTest_ValidDirectory()
         {
+            new Log().WriteLine("Valid Directory");
             string dir = @"C:\Users";
 
             List<string> expected = new List<string>();
             expected.Add(dir);
             expected.AddRange(FileAccess.SearchPath);
 
-            this.test_GetSearchPath(expected.ToArray(), FileAccess.GetSearchPath(dir), "Valid Directory", dir);
+            this.test_GetSearchPath(expected.ToArray(), FileAccess.GetSearchPath(dir), dir);
         }
 
         [TestMethod()]
         public void FileAccess_GetSearchPathTest_AlreadyIncludingDirectory()
         {
-            Dictionary<string, string> dirs = new Dictionary<string,string>();
+            Log log = new Log();
+
+            Dictionary<string, string> dirs = new Dictionary<string, string>();
             dirs.Add("Windows Folder", @"C:\Windows");
             dirs.Add("System32 Folder", @"C:\Windows\System32");
 
             foreach (var dir in dirs)
             {
-                this.test_GetSearchPath(FileAccess.SearchPath, FileAccess.GetSearchPath(dir.Value), dir.Key, dir.Value);
+                log.WriteLine();
+                log.WriteLine(dir.Key);
+                this.test_GetSearchPath(FileAccess.SearchPath, FileAccess.GetSearchPath(dir.Value), dir.Value);
             }
         }
 
@@ -118,6 +125,8 @@ namespace BUILDLet.Utilities.Tests
         [TestMethod()]
         public void FileAccess_GetSearchPathTest_ValidDirectories()
         {
+            new Log().WriteLine("Valid Directories");
+
             List<string> dirs = new List<string>();
             dirs.Add(@"C:\Users");
             dirs.Add(@"C:\Program Files");
@@ -126,12 +135,14 @@ namespace BUILDLet.Utilities.Tests
             expected.AddRange(dirs);
             expected.AddRange(FileAccess.SearchPath);
 
-            this.test_GetSearchPath(expected.ToArray(), FileAccess.GetSearchPath(dirs.ToArray()), "Valid Directories", dirs.ToArray());
+            this.test_GetSearchPath(expected.ToArray(), FileAccess.GetSearchPath(dirs.ToArray()), dirs.ToArray());
         }
 
         [TestMethod()]
         public void FileAccess_GetSearchPathTest_Complex()
         {
+            new Log().WriteLine("Complex");
+
             List<string> dirs = new List<string>();
             dirs.Add(@"C:\Users");
             dirs.Add(@"C:\Windows");
@@ -142,20 +153,13 @@ namespace BUILDLet.Utilities.Tests
             expected.Add(@"C:\Program Files");
             expected.AddRange(FileAccess.SearchPath);
 
-            this.test_GetSearchPath(expected.ToArray(), FileAccess.GetSearchPath(dirs.ToArray()), "Complex", dirs.ToArray());
+            this.test_GetSearchPath(expected.ToArray(), FileAccess.GetSearchPath(dirs.ToArray()), dirs.ToArray());
         }
 
 
 
-        private void test_GetFilePath(string title, string filename)
+        private void test_GetFilePath(string filename, string[] folders)
         {
-            this.test_GetFilePath(title, filename, null);
-        }
-
-        private void test_GetFilePath(string title, string filename, string[] folders)
-        {
-            Console.WriteLine();
-            Console.WriteLine("[{0}]", title);
             if (folders == null || folders.Length == 0)
             {
                 Console.WriteLine("FileAccess.GetFilePath(\"{0}\")=\"{1}\"", filename, FileAccess.GetFilePath(filename));
@@ -181,23 +185,43 @@ namespace BUILDLet.Utilities.Tests
         [ExpectedException(typeof(ArgumentNullException))]
         public void FileAccess_GetFilePathTest_Empty()
         {
-            this.test_GetFilePath("Empty", null);
+            new Log().WriteLine("Empty");
+            this.test_GetFilePath(null, null);
         }
 
         [TestMethod()]
         public void FileAccess_GetFilePathTest()
         {
-            this.test_GetFilePath("Current Directory", "BUILDLet.Utilities.dll");
-            this.test_GetFilePath("My Documents", "TESTFILE");
-            this.test_GetFilePath("My Documents", "NOEXIST");
-            this.test_GetFilePath("Windows Folder", "regedit.exe");
-            this.test_GetFilePath("System32 Folder", "calc.exe");
+            Log log = new Log();
 
-            this.test_GetFilePath("Current Directory", "BUILDLet.Utilities.dll");
+            new Log(false, false, true).WriteLine("Current Directory");
+            this.test_GetFilePath("BUILDLet.Utilities.dll", null);
+            
+            new Log(false, false, true).WriteLine("My Documents");
+            this.test_GetFilePath(TestData.DummyFileName_in_MyDocuments, null);
 
-            this.test_GetFilePath("Program Files", "wordpad.exe", new string[] { @"C:\Program Files\Windows NT\Accessories" });
-            this.test_GetFilePath("Program Files", "wordpad.exe", FileAccess.GetSearchPath(@"C:\Program Files\Windows NT\Accessories"));
-            this.test_GetFilePath("System32 Folder", "shell32.dll", FileAccess.GetSearchPath(@"C:\Program Files\Windows NT\Accessories"));
+            new Log(false, false, true).WriteLine("My Documents");
+            this.test_GetFilePath("NOEXIST", null);
+
+            new Log(false, false, true).WriteLine("Windows Folder");
+            this.test_GetFilePath("regedit.exe", null);
+
+            new Log(false, false, true).WriteLine("System32 Folder");
+            this.test_GetFilePath("calc.exe", null);
+
+
+            new Log(false, false, true).WriteLine("Current Directory");
+            this.test_GetFilePath("BUILDLet.Utilities.dll", null);
+
+
+            new Log(false, false, true).WriteLine("Program Folder");
+            this.test_GetFilePath("wordpad.exe", new string[] { @"C:\Program Files\Windows NT\Accessories" });
+
+            new Log(false, false, true).WriteLine("Program Folder");
+            this.test_GetFilePath("wordpad.exe", FileAccess.GetSearchPath(@"C:\Program Files\Windows NT\Accessories"));
+
+            new Log(false, false, true).WriteLine("System32 Folder");
+            this.test_GetFilePath("shell32.dll", FileAccess.GetSearchPath(@"C:\Program Files\Windows NT\Accessories"));
         }
     }
 }

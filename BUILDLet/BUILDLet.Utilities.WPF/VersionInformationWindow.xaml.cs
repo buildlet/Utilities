@@ -24,12 +24,23 @@ namespace BUILDLet.Utilities.WPF
         /// <summary>
         /// <see cref="VersionInformationWindow"/> クラスの新しいインスタンスを初期化します。 
         /// </summary>
+        /// <param name="logo">
+        ///     ロゴ イメージを指定します。
+        ///     <para>
+        ///         画像が表示されない場合は <see cref="BitmapImage.CacheOption"/> を
+        ///         <see cref="BitmapCacheOption.OnLoad"/> に設定すると、表示される場合があります。
+        ///     </para>
+        ///     <para>
+        ///         64x64 ピクセルの画像として表示されるので、<see cref="BitmapImage.DecodePixelWidth"/> または
+        ///         <see cref="BitmapImage.DecodePixelHeight"/> に 64 を設定することを検討してください。 
+        ///     </para>
+        /// </param>
         /// <remarks>
         ///     <see cref="VersionInformationWindow"/> は、このクラスを初期化したメソッドのコードを格納しているアセンブリの各種情報を格納します。
         ///     <see cref="System.Windows.Window"/> と同様に、<see cref="System.Windows.Window.Show"/> または 
         ///     <see cref="System.Windows.Window.ShowDialog"/> メソッドで表示できます。
         /// </remarks>
-        public VersionInformationWindow()
+        public VersionInformationWindow(BitmapImage logo = null)
         {
             InitializeComponent();
 
@@ -42,7 +53,27 @@ namespace BUILDLet.Utilities.WPF
 
             this.NameLabel.Content = product;
             this.VersionLabel.Content = string.Format("Version {0} (Build {1})", version, build);
+
+            if(logo == null)
+            {
+                this.LogoImage.Width = 0;
+            }
+            else
+            {
+                // for Logo Image
+
+                int logoImageWidth = 64;
+
+                logo.DecodePixelWidth = logoImageWidth;
+                logo.CacheOption = BitmapCacheOption.OnLoad;
+
+                this.LogoImage.Source = logo;
+                this.LogoImage.Width = logoImageWidth;
+                this.LogoImage.Height = logoImageWidth;
+                this.LogoImage.Margin = new Thickness(10);
+            }
         }
+
 
         private void OKButton_Click(object sender, RoutedEventArgs e)
         {

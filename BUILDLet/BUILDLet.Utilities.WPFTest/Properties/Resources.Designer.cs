@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BUILDLet.Utilities.WPF.Properties {
+namespace BUILDLet.WPF.Test.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace BUILDLet.Utilities.WPF.Properties {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BUILDLet.Utilities.WPF.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BUILDLet.WPF.Test.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,20 +61,12 @@ namespace BUILDLet.Utilities.WPF.Properties {
         }
         
         /// <summary>
-        ///   OK に類似しているローカライズされた文字列を検索します。
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        public static string OKButtonContent {
+        public static System.Drawing.Bitmap BUILDLet_White_64x64 {
             get {
-                return ResourceManager.GetString("OKButtonContent", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Version Information に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string VersionInformationWindowTitle {
-            get {
-                return ResourceManager.GetString("VersionInformationWindowTitle", resourceCulture);
+                object obj = ResourceManager.GetObject("BUILDLet_White_64x64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
