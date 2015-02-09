@@ -80,6 +80,15 @@ namespace BUILDLet.WOL.Properties {
         }
         
         /// <summary>
+        ///   5 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string HistoryCount {
+            get {
+                return ResourceManager.GetString("HistoryCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Input MAC Address: に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string InputMessageLabelContent {

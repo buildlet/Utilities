@@ -12,6 +12,8 @@ namespace BUILDLet.Utilities.Tests
         [TestMethod()]
         public void AssemblyCustomAttributesTest()
         {
+            Log log = new Log();
+
             AssemblyCustomAttributes attr;
             string assemblyName;
 
@@ -36,16 +38,16 @@ namespace BUILDLet.Utilities.Tests
                         break;
                 }
 
-                Console.WriteLine();
-                Console.WriteLine("[Assembly={0}]", assemblyName);
-                Console.WriteLine("AssemblyCustomAttributes.Title=\"{0}\"", attr.AssemblyTitleAttribute);
-                Console.WriteLine("AssemblyCustomAttributes.Description=\"{0}\"", attr.AssemblyDescriptionAttribute);
-                Console.WriteLine("AssemblyCustomAttributes.Company=\"{0}\"", attr.AssemblyCompanyAttribute);
-                Console.WriteLine("AssemblyCustomAttributes.Product=\"{0}\"", attr.AssemblyProductAttribute);
-                Console.WriteLine("AssemblyCustomAttributes.Copyright=\"{0}\"", attr.AssemblyCopyrightAttribute);
-                Console.WriteLine("AssemblyCustomAttributes.Trademark=\"{0}\"", attr.AssemblyTrademarkAttribute);
-                Console.WriteLine("AssemblyCustomAttributes.FileVersion=\"{0}\"", attr.AssemblyFileVersionAttribute);
-                Console.WriteLine("AssemblyCustomAttributes.ToString()=\"{0}\"", attr.ToString());
+                log.WriteLine();
+                log.WriteLine("Assembly={0}", assemblyName);
+                log.WriteLine("AssemblyCustomAttributes.Title=\"{0}\"", attr.AssemblyTitleAttribute);
+                log.WriteLine("AssemblyCustomAttributes.Description=\"{0}\"", attr.AssemblyDescriptionAttribute);
+                log.WriteLine("AssemblyCustomAttributes.Company=\"{0}\"", attr.AssemblyCompanyAttribute);
+                log.WriteLine("AssemblyCustomAttributes.Product=\"{0}\"", attr.AssemblyProductAttribute);
+                log.WriteLine("AssemblyCustomAttributes.Copyright=\"{0}\"", attr.AssemblyCopyrightAttribute);
+                log.WriteLine("AssemblyCustomAttributes.Trademark=\"{0}\"", attr.AssemblyTrademarkAttribute);
+                log.WriteLine("AssemblyCustomAttributes.FileVersion=\"{0}\"", attr.AssemblyFileVersionAttribute);
+                log.WriteLine("AssemblyCustomAttributes.ToString()=\"{0}\"", attr.ToString());
             }
         }
     }

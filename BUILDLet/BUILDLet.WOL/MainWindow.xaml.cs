@@ -25,27 +25,33 @@ namespace BUILDLet.WOL
     {
         public MainWindow()
         {
-            InitializeComponent();
-
-            // Get default MAC Address
-            string mac = ((App)App.Current).GetDefaultMacAddress();
-
-            // Set default MAC Address
-            if (!string.IsNullOrEmpty(mac)) { this.MacAddressTextBox.Text = mac; }
+            try
+            {
+                InitializeComponent();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, App.Name, MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
+
+        // (Send Button) Click Event Handler
         private void SendButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 // Magic Packet
-                MagicPacket packet = new MagicPacket(MacAddressTextBox.Text);
+                MagicPacket packet = new MagicPacket((string)MacAddressComboBox.Text);
 
                 // Send Magic Packet
                 WakeOnLan.Send(packet, 3);
 
-                // Show Message
-                MessageBox.Show(string.Format(Properties.Resources.SendMessage, packet.MacAddress), App.Name, MessageBoxButton.OK, MessageBoxImage.Information);
+                // Show message
+                MessageBox.Show(string.Format(Properties.Resources.SendMessage, packet.MACAddress), App.Name, MessageBoxButton.OK, MessageBoxImage.Information);
+
+                // Update source file of MAC addresses
+                ((DefaultMACAddressList)((App)App.Current).Resources["addressList"]).UpdateSourceFile(this.MacAddressComboBox.Text);
 
                 // Close MainWindow
                 this.Close();
@@ -56,6 +62,8 @@ namespace BUILDLet.WOL
             }
         }
 
+
+        // (Window) KeyDown Event Handler
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Escape) { this.Close(); }

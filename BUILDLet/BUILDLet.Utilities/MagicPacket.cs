@@ -22,7 +22,7 @@ namespace BUILDLet.Utilities.Network
         /// <summary>
         /// 保持している MAC アドレスを16進文字列として取得します。
         /// </summary>
-        public string MacAddress { get; protected set; }
+        public string MACAddress { get; protected set; }
 
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace BUILDLet.Utilities.Network
             set
             {
                 // Update MAC address hex string
-                this.MacAddress = this.MacAddress.Replace(this.separator, value);
+                this.MACAddress = this.MACAddress.Replace(this.separator, value);
 
                 this.separator = value;
             }
@@ -66,15 +66,15 @@ namespace BUILDLet.Utilities.Network
 
 
             // Hex String
-            StringBuilder hexMac = new StringBuilder();
-            foreach (byte hex in mac.ToArray()) { hexMac.Append(string.Format("{0:X2}{1}", hex, this.separator)); }
-            hexMac.Remove(hexMac.Length - 1, 1);
+            StringBuilder hexMAC = new StringBuilder();
+            foreach (byte hex in mac.ToArray()) { hexMAC.Append(string.Format("{0:X2}{1}", hex, this.separator)); }
+            hexMAC.Remove(hexMAC.Length - 1, 1);
 
-            this.MacAddress = hexMac.ToString();
+            this.MACAddress = hexMAC.ToString();
 
 #if DEBUG
             Debug.WriteLine("");
-            Debug.WriteLine("[MagicPacket]: MAC Address=\"" + this.MacAddress + "\"");
+            Debug.WriteLine("[MagicPacket]:MAC Address=\"" + this.MACAddress + "\"");
 #endif
 
 
@@ -90,7 +90,7 @@ namespace BUILDLet.Utilities.Network
 #if DEBUG
             for (int i = 0; i < (1 + 16); i++)
             {
-                Debug.Write(string.Format("[MagicPacket]: Magic Packet[{0:D2}]=0x", i));
+                Debug.Write(string.Format("[MagicPacket]:Magic Packet[{0:D2}]=0x", i));
                 for (int j = 0; j < 6; j++) { Debug.Write(string.Format("{0:X2}", this.data[(i * 6) + j])); }
                 Debug.WriteLine("");
             }

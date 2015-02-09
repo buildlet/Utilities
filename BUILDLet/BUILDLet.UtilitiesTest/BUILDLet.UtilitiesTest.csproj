@@ -6,7 +6,7 @@
     <ProjectGuid>{E9A430CF-6894-4CA6-9E64-6E5266D1545C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BUILDLet.Utilities.Test</RootNamespace>
+    <RootNamespace>BUILDLet.Utilities</RootNamespace>
     <AssemblyName>BUILDLet.UtilitiesTest</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -57,9 +57,12 @@
     <Compile Include="AssemblyCustomAttributesTests.cs" />
     <Compile Include="FileAccessTests.cs" />
     <Compile Include="AssemblyAttributesTests.cs" />
+    <Compile Include="LogTests.cs" />
     <Compile Include="MagicPacketTests.cs" />
+    <Compile Include="HashCodeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="NetworkTestData.cs" />
+    <Compile Include="TestPath.cs" />
+    <Compile Include="TestData.cs" />
     <Compile Include="WakeOnLanTests.cs" />
   </ItemGroup>
   <ItemGroup>
