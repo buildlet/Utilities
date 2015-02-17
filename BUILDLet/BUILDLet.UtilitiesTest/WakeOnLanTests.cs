@@ -4,8 +4,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 using System.Windows.Forms;
 using System.Reflection;
-
 using System.Diagnostics;
+
+using BUILDLet.Utilities.Tests;
 
 namespace BUILDLet.Utilities.Network.Tests
 {
@@ -71,7 +72,7 @@ namespace BUILDLet.Utilities.Network.Tests
 
 
             // for file of MAC Address
-            string filename = TestData.WakeOnLan_ConfigFileName;
+            string filename = LocalPath.WakeOnLan_ConfigFilePath_from_MyDocuments;
             string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), filename);
 
 

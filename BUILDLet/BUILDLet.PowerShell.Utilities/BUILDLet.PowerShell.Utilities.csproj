@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7955897B-7BB9-46A7-A4D3-039F0433C983}</ProjectGuid>
+    <ProjectGuid>{3FD2E411-F7FC-4D5C-9F2C-6D934CA98F23}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BUILDLet.Utilities</RootNamespace>
-    <AssemblyName>BUILDLet.Utilities</AssemblyName>
+    <RootNamespace>BUILDLet.PowerShell.Utilities</RootNamespace>
+    <AssemblyName>BUILDLet.PowerShell.Utilities</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -20,7 +20,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\BUILDLet.Utilities.xml</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,11 +30,14 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\BUILDLet.Utilities.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0\System.Management.Automation.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,16 +48,14 @@
     <Compile Include="..\Version\MasterAssemblyInfo.cs">
       <Link>Properties\MasterAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="AssemblyAttributes.cs" />
-    <Compile Include="FileAccess.cs" />
-    <Compile Include="AssemblyCustomAttributes.cs" />
-    <Compile Include="Log.cs" />
-    <Compile Include="LogOutputStream.cs" />
-    <Compile Include="MagicPacket.cs" />
-    <Compile Include="HashCode.cs" />
+    <Compile Include="Get_HashValue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BinaryData.cs" />
-    <Compile Include="WakeOnLan.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUILDLet.Utilities\BUILDLet.Utilities.csproj">
+      <Project>{7955897b-7bb9-46a7-a4d3-039f0433c983}</Project>
+      <Name>BUILDLet.Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

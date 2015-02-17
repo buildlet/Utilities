@@ -1,13 +1,9 @@
 ﻿using System;
 
-namespace BUILDLet.Utilities
+namespace BUILDLet.Utilities.Tests
 {
     public class TestData
     {
-        public static readonly string DummyFileName_in_MyDocuments = "TESTFILE";
-
-        public static readonly string WakeOnLan_ConfigFileName = "WOL.conf";
-        
         public static string[] DummyMacAddresses =
         {
             "00-00-00-00-00-00",

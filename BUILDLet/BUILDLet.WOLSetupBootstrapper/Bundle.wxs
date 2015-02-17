@@ -9,13 +9,16 @@
   <!-- GUID -->
   <?define GUID_UpgradeCode="{965E66F5-08CD-4138-AC1B-07BAD82AD75A}"?>
 
-  
+
+  <!-- Resources -->
+  <?define Source_LicenseFile="..\Resources\BUILDLet.WOLSetupBootstrapper\License.rtf"?>
+  <?define Source_LogoFile="..\Resources\BUILDLet.WOLSetupBootstrapper\BUILDLet_Yellow_64x64.png"?>
+
   <!-- Source Files -->
   <?define SourceFile="Sources\WOLSetup.msi"?>
-  <?define Source_LicenseFile="Sources\License.rtf"?>
-  <?define Source_LogoFile="Sources\BUILDLet_Yellow_64x64.png"?>
 
-  
+
+  <!-- Bundle -->
   <Bundle Name="$(var.ProductName) $(var.ProductVersion)" 
           Version="$(var.ProductVersion)" 
           Manufacturer="$(var.Manufacturer)" 

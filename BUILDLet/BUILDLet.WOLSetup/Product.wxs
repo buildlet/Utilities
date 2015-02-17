@@ -11,13 +11,15 @@
   <?define GUID_ProductComponent="{6245EE59-0EFB-41AA-B19A-A61B98BDA287}"?>
   <?define GUID_Documents="{3C726715-3878-4664-A02F-959C79F96265}"?>
   <?define GUID_ConfigFile="{5B00CD26-AC1D-430A-A5D1-09887191665D}"?>
-
   
-  <!-- Source Files -->
-  <?define Source_Readme="Sources\Readme.txt"?>
-  <?define Source_License="Sources\License.txt"?>
-  <?define Source_MainComponent="Sources\BUILDLet.WOL.exe"?>
+  
+  <!-- Resources -->
+  <?define Source_Readme="..\Resources\BUILDLet.WOLSetup\Readme.txt"?>
+  <?define Source_License="..\Resources\BUILDLet.WOLSetup\License.txt"?>
   <?define Source_IconFile="..\BUILDLet.WOL\Resources\BUILDLet_WOL.ico"?>
+
+  <!-- Source Files -->
+  <?define Source_MainComponent="Sources\BUILDLet.WOL.exe"?>
 
   
   <!-- Remove Files -->

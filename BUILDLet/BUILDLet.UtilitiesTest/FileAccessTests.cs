@@ -198,7 +198,7 @@ namespace BUILDLet.Utilities.Tests
             this.test_GetFilePath("BUILDLet.Utilities.dll", null);
             
             new Log(false, false, true).WriteLine("My Documents");
-            this.test_GetFilePath(TestData.DummyFileName_in_MyDocuments, null);
+            this.test_GetFilePath(LocalPath.DummyFileName_in_MyDocuments, null);
 
             new Log(false, false, true).WriteLine("My Documents");
             this.test_GetFilePath("NOEXIST", null);

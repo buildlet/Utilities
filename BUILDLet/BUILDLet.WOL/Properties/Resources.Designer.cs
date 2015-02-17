@@ -71,6 +71,15 @@ namespace BUILDLet.WOL.Properties {
         }
         
         /// <summary>
+        ///   BUILDLet に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ConfigurationFileFolder {
+            get {
+                return ResourceManager.GetString("ConfigurationFileFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   WOL.conf に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ConfigurationFileName {
