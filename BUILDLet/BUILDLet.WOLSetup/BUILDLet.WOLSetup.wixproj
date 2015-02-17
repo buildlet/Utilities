@@ -29,10 +29,6 @@
   <ItemGroup>
     <Folder Include="Sources" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Sources\License.txt" />
-    <Content Include="Sources\ReadMe.txt" />
-  </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
   <PropertyGroup>
     <PostBuildEvent>SET TARGET_PROJECT=BUILDLet.WOLSetupBootstrapper

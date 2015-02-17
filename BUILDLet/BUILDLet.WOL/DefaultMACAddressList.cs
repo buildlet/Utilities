@@ -75,7 +75,7 @@ namespace BUILDLet.WOL
             // Set search path of configuration file
             string[] searchPath =
             {
-                Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), Properties.Resources.ConfigurationFileFolder),
                 Environment.CurrentDirectory
             };
 

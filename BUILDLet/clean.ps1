@@ -13,7 +13,8 @@ $TargetProjects =
     "BUILDLet.UtilitiesTest",
     "BUILDLet.WOL",
     "BUILDLet.WOLSetup",
-    "BUILDLet.WOLSetupBootstrapper"
+    "BUILDLet.WOLSetupBootstrapper",
+    "BUILDLet.PowerShell.Utilities"
 
 $TargetFolders =
     "obj",
@@ -21,8 +22,8 @@ $TargetFolders =
 
 $AdditionalFiles =
     "TestResults\*",
-    "BUILDLet.WOLSetup\Sources\BUILDLet.WOL.exe",
-    "BUILDLet.WOLSetupBootstrapper\Sources\WOLSetup.msi"
+    "BUILDLet.WOLSetup\Sources\*",
+    "BUILDLet.WOLSetupBootstrapper\Sources\*"
 
 $RemoveFolders = @()
 

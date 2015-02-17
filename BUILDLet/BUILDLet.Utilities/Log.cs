@@ -222,25 +222,29 @@ namespace BUILDLet.Utilities
                 + separator + message;
 
 
-            // Output to Stream
-            switch (this.Outpt)
+            try
             {
-                case LogOutputStream.StandardOutput:
-                    Console.Write(text);
-                    break;
+                // Output to Stream
+                switch (this.Outpt)
+                {
+                    case LogOutputStream.StandardOutput:
+                        Console.Write(text);
+                        break;
 
-                case LogOutputStream.StandardError:
-                    if (this.error == null) { this.error = Console.Error; }
-                    error.Write(text);
-                    break;
+                    case LogOutputStream.StandardError:
+                        if (this.error == null) { this.error = Console.Error; }
+                        error.Write(text);
+                        break;
 
-                case LogOutputStream.Trace:
-                    Trace.Write(text);
-                    break;
+                    case LogOutputStream.Trace:
+                        Trace.Write(text);
+                        break;
 
-                default:
-                    throw new NotImplementedException();
+                    default:
+                        throw new NotImplementedException();
+                }
             }
+            catch (Exception e) { throw e; }
         }
     }
 }

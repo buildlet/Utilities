@@ -40,6 +40,12 @@ namespace BUILDLet.Utilities.Tests
             new Log(stream: LogOutputStream.StandardError).WriteLine("Standard Error Output Stream");
 
             new Log(stream: LogOutputStream.Trace).WriteLine("Trace Listner");
+
+            new Log().WriteLine("Standard Output Stream (2)");
+
+            new Log(stream: LogOutputStream.StandardError).WriteLine("Standard Error Output Stream (2)");
+
+            new Log(stream: LogOutputStream.Trace).WriteLine("Trace Listner (2)");
         }
 
         [TestMethod()]

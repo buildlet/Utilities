@@ -13,8 +13,8 @@ which name is "WOL.conf", in one of the following folders.
 Also, the application searches the configuration file in this order, 
 at being launched.
 
-  1. My Documents                   [C:\Users\<User Name>\Documents\]
-  2. Current Folder (Program Folder [C:\Program Files (x86)\BUILDLet\WOL\])
+  1. <My Documents>\BUILDLet          [C:\Users\<User Name>\Documents\BUILDLet\]
+  2. <Current Folder> (Program Folder [C:\Program Files (x86)\BUILDLet\WOL\])
 
 
 If configuration file exists in proper directory, 17 characters of the head of 
@@ -32,6 +32,8 @@ This software is released under the MIT License, see License.txt.
 
 History
 ---------------
+* February 15, 2015    Version 1.0.4  
+  File path of private configuration file in "My Documents" folder was changed.
 * January 29, 2015    Version 1.0.3  
   MAC address input field was changed into ComboBox from TextBox.
 * January 26, 2015    Version 1.0.2    Modify Readme

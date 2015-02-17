@@ -33,10 +33,6 @@
   <ItemGroup>
     <Folder Include="Sources" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Sources\BUILDLet_Yellow_64x64.png" />
-    <Content Include="Sources\License.rtf" />
-  </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
   <PropertyGroup>
     <PostBuildEvent>SET TARGET_DIRECTORY=Release

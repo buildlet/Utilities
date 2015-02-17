@@ -25,9 +25,9 @@ namespace BUILDLet.Utilities.Cryptography
 
 
         /// <summary>
-        ///     使用するハッシュ アルゴリズムの名前を取得します。
-        ///     <seealso cref="HashAlgorithm"/>
-        ///     <seealso cref="HashAlgorithm.Create(string)"/>
+        /// 使用するハッシュ アルゴリズムの名前を取得します。
+        /// <seealso cref="HashAlgorithm"/>
+        /// <seealso cref="HashAlgorithm.Create(string)"/>
         /// </summary>
         public string HashName
         {
@@ -44,7 +44,7 @@ namespace BUILDLet.Utilities.Cryptography
         
 
         /// <summary>
-        /// 指定されたハッシュ アルゴリズムで、ファイルのハッシュ値を取得します。
+        /// ハッシュ アルゴリズムと対象となるファイルを指定して、<see cref="HashCode"/> クラスの新しいインスタンスを初期化します。 
         /// </summary>
         /// <param name="path">ハッシュ コードを計算する対象のファイルのパスを指定します。</param>
         /// <param name="hashName">
@@ -71,7 +71,7 @@ namespace BUILDLet.Utilities.Cryptography
 
 
         /// <summary>
-        /// 指定されたハッシュ アルゴリズムで、バイト配列のハッシュ値を取得します。
+        /// ハッシュ アルゴリズムと対象となるバイト配列を指定して、<see cref="HashCode"/> クラスの新しいインスタンスを初期化します。 
         /// </summary>
         /// <param name="data">ハッシュ コードを計算する対象の入力データ</param>
         /// <param name="hashName">

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 using System.Diagnostics;
+
+using BUILDLet.Utilities.Tests;
 
 namespace BUILDLet.Utilities.Cryptography.Tests
 {
@@ -42,7 +42,7 @@ namespace BUILDLet.Utilities.Cryptography.Tests
             Log log = new Log(false, true, true);
             DateTime start;
 
-            string fciv_path = LocalTestPath.FCIV;
+            string fciv_path = LocalPath.FCIV;
             string fciv_stdout;
 
             string expected;
@@ -51,8 +51,8 @@ namespace BUILDLet.Utilities.Cryptography.Tests
 
             string[] testFiles = 
             {
-                "BUILDLet.Utilities.dll",
-                LocalTestPath.LargeDataFile
+                "default.bin",
+                "big.bin"
             };
 
             string[] hashNames =
