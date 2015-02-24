@@ -12,17 +12,30 @@ using BUILDLet.Utilities.Cryptography;
 namespace BUILDLet.PowerShell.Utilities
 {
     [Cmdlet(VerbsCommon.Get, "HashValue")]
-    [CmdletBinding()]
-    public class Get_HashValue : PSCmdlet
+    [CmdletBinding(DefaultParameterSetName="help")]
+    [OutputType(typeof(string))]
+    public class Get_HashValue : PSCmdletEx, ICmdletHelper
     {
-        [Parameter(Mandatory = true, Position = 0, ValueFromPipeline = true, ParameterSetName = "path")]
-        public string Path { get; set; }
+        public override string Synopsis
+        {
+            get { return "指定されたハッシュ アルゴリズムを使用して、入力データのハッシュ値を計算します。"; }
+        }
 
-        [Parameter(Mandatory = true, Position = 0, ValueFromPipeline = true, ParameterSetName = "data")]
+
+        [Parameter(Mandatory = true, Position = 0, ValueFromPipeline = true, ParameterSetName = "data",
+            HelpMessage = "バイト配列のハッシュ値を求める場合に、入力データを指定します。")]
         public byte[] InputObject { get; set; }
 
-        [Parameter(Mandatory = false, Position = 1)]
+
+        [Parameter(Mandatory = true, Position = 0, ValueFromPipeline = true, ParameterSetName = "path",
+            HelpMessage = "ファイルやフォルダーのハッシュ値を求める場合に、入力ファイルのパスを指定します。")]
+        public string Path { get; set; }
+
+
+        [Parameter(Mandatory = false, Position = 1,
+            HelpMessage = "使用するハッシュ アルゴリズムの名前を指定します。既定のアルゴリズムは MD5 です。")]
         public string Algorithm { get; set; }
+
 
         protected override void ProcessRecord()
         {
@@ -32,16 +45,20 @@ namespace BUILDLet.PowerShell.Utilities
             {
                 switch (this.ParameterSetName)
                 {
+                    case "help":
+                        this.WriteObject(this.HelpMessage);
+                        break;
+
+                    case "data":
+                        this.WriteObject(new HashCode(this.InputObject, this.Algorithm).ToString());
+                        break;
+
                     case "path":
                         string filepath = this.Path;
                         if (!File.Exists(filepath)) { filepath = System.IO.Path.Combine(this.SessionState.Path.CurrentFileSystemLocation.Path, this.Path); }
                         if (!File.Exists(filepath)) { throw new FileNotFoundException(); }
 
                         this.WriteObject(new HashCode(filepath, this.Algorithm).ToString());
-                        break;
-
-                    case "data":
-                        this.WriteObject(new HashCode(this.InputObject, this.Algorithm).ToString());
                         break;
 
                     default:

@@ -48,7 +48,9 @@
     <Compile Include="..\Version\MasterAssemblyInfo.cs">
       <Link>Properties\MasterAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="PSCmdletEx.cs" />
     <Compile Include="Get_HashValue.cs" />
+    <Compile Include="ICmdletHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +60,18 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>SET TARGET_PROJECT=BUILDLet.PackageMaker
+
+SET TARGET_DIRECTORY=Modules\PackageMaker
+ECHO Copy "$(TargetPath)" to "$(SolutionDir)%25TARGET_PROJECT%25\%25TARGET_DIRECTORY%25"...
+COPY "$(TargetPath)" "$(SolutionDir)%25TARGET_PROJECT%25\%25TARGET_DIRECTORY%25"
+
+SET TARGET_DIRECTORY=Libraries
+SET REQUIRED_ASSEMBLY=BUILDLet.Utilities.dll
+ECHO Copy "$(TargetDir)\%25REQUIRED_ASSEMBLY%25" to "$(SolutionDir)%25TARGET_PROJECT%25\%25TARGET_DIRECTORY%25"...
+COPY "$(TargetDir)\%25REQUIRED_ASSEMBLY%25" "$(SolutionDir)%25TARGET_PROJECT%25\%25TARGET_DIRECTORY%25"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

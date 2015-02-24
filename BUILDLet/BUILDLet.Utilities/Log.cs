@@ -26,7 +26,7 @@ namespace BUILDLet.Utilities
 
         private string time
         {
-            get { return (this.TimeBracket[0] + DateTime.Now.ToString("HH:mm:ss") + this.TimeBracket[1]); }
+            get { return (this.TimeBracket[0] + DateTime.Now.ToString(this.TimeFormat) + this.TimeBracket[1]); }
         }
 
 
@@ -45,6 +45,10 @@ namespace BUILDLet.Utilities
         ///     このクラスを初期化したしたときに、メソッド名を表示する場合に指定します。
         ///     既定の設定は false です。
         /// </param>
+        /// <param name="timeFormat">
+        ///     ログに出力される時刻の書式指定文字列を指定します。
+        ///     既定では "HH:mm:ss" です。
+        /// </param>
         /// <param name="methodBracket">
         ///     ログ出力のメソッド名を囲む文字を指定します。
         ///     既定では { '[', ']' } です。
@@ -53,19 +57,22 @@ namespace BUILDLet.Utilities
         ///     ログ出力の時刻を囲む文字を指定します。
         ///     既定では { '[', ']' } です。
         /// </param>
+        /// <param name="stream">
+        ///     ログ出力を書き込む出力ストリームを設定します。
+        /// </param>
         /// <param name="caller">
         ///     このクラスの新しいインスタンスを初期化したメソッドの名前が格納されます。
         ///     通常は指定しないでください。
         /// </param>
-        /// <param name="stream">
-        ///     ログ出力を書き込む出力ストリームを設定します。
-        /// </param>
         /// <remarks>
         ///     初期化時に空行1行を既定のログ出力に書き込みます。
         /// </remarks>
+        /// <exception cref="FormatException">書式指定文字列に不正な文字列が指定されました。</exception>
+        /// <exception cref="ArgumentOutOfRangeException">Char 配列の長さが 2 ではありません。</exception>
         public Log(bool methodName = true, bool timeStamp = false, bool title = false,
             LogOutputStream stream = LogOutputStream.StandardOutput,
-            [CallerMemberName] string caller = "", char[] methodBracket = null, char[] timeBracket = null)
+            string timeFormat = "HH:mm:ss", char[] methodBracket = null, char[] timeBracket = null, 
+            [CallerMemberName] string caller = "")
         {
             // MethodName
             this.caller = caller;
@@ -74,6 +81,12 @@ namespace BUILDLet.Utilities
             this.MethodName = methodName;
             this.TimeStamp = timeStamp;
 
+            // validate time format
+            try { string.Format(timeFormat, DateTime.Now); }
+            catch (Exception e) { throw e; }
+
+            // set time format
+            this.TimeFormat = timeFormat;
 
             // set bracket of Method
             if (methodBracket == null) { this.MethodBracket = new char[] { '[', ']' }; }
@@ -107,6 +120,10 @@ namespace BUILDLet.Utilities
             if (title) { this.WriteTitle(); }
         }
 
+        /// <summary>
+        /// ログに出力する時刻のフォーマットを指定します。
+        /// </summary>
+        public string TimeFormat { get; protected set; }
 
         /// <summary>
         /// ログ出力のメソッド名を囲む文字を取得します。

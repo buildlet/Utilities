@@ -33,6 +33,19 @@ namespace BUILDLet.Utilities.Tests
         }
 
         [TestMethod()]
+        public void Log_TimeFormatTest()
+        {
+            new Log(timeStamp: true, timeFormat: "G").WriteLine("Test");
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(FormatException))]
+        public void Log_TimeFormat_ExceptionTest()
+        {
+            new Log(timeStamp: true, timeFormat: "★").WriteLine("Test");
+        }
+
+        [TestMethod()]
         public void Log_LogOutputTest()
         {
             new Log().WriteLine("Standard Output Stream (Default)");
@@ -61,25 +74,31 @@ namespace BUILDLet.Utilities.Tests
                     case 0:
                         // methodName:true, timeStamp:false (Default)
                         log = new Log();
-                        log.WriteLine("new Log()");
+                        log.WriteLine("new Log();");
                         break;
 
                     case 1:
                         // methodName:true, timeStamp:true
-                        log = new Log(timeStamp: true);
-                        log.WriteLine("new Log(timeStamp:true)");
+                        log = new Log(methodName: true, timeStamp: true);
+                        log.WriteLine("new Log(methodName: true, timeStamp: true);");
                         break;
 
                     case 2:
-                        // methodName:false, timeStamp:false
-                        log = new Log(methodName: false);
-                        log.WriteLine("new Log(methodName:false)");
+                        // methodName:true, timeStamp:true
+                        log = new Log(methodName: true, timeStamp: true);
+                        log.WriteLine("new Log(methodName: true, timeStamp: true);");
                         break;
 
                     case 3:
+                        // methodName:false, timeStamp:false
+                        log = new Log(methodName: false, timeStamp: false);
+                        log.WriteLine("new Log(methodName: false, timeStamp: false);");
+                        break;
+
+                    case 4:
                         // methodName:false, timeStamp:true
                         log = new Log(methodName: false, timeStamp: true);
-                        log.WriteLine("new Log(methodName:false, timeStamp:true)");
+                        log.WriteLine("new Log(methodName: false, timeStamp: true);");
                         break;
 
                     default:

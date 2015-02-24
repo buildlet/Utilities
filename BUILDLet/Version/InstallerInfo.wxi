@@ -8,6 +8,6 @@
   <?define NickName="WOL"?>
 
   <!-- Version Information -->
-  <?define ProductVersion="1.0.4"?>
+  <?define ProductVersion="1.0.5"?>
 
 </Include>

@@ -62,6 +62,14 @@ namespace BUILDLet.Utilities.Cryptography.Tests
             };
 
 
+            // Validation of file existence
+            foreach (var file in testFiles)
+            {
+                if (!System.IO.File.Exists(file)) { Assert.Inconclusive("Test File\"{0}\" is not found.", file); }
+            }
+
+
+            // Main
             for (int i = 0; i < testFiles.Length; i++)
             {
                 // Output
