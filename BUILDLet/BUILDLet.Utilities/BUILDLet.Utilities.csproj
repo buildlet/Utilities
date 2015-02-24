@@ -45,7 +45,7 @@
       <Link>Properties\MasterAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="AssemblyAttributes.cs" />
-    <Compile Include="FileAccess.cs" />
+    <Compile Include="LocalFile.cs" />
     <Compile Include="AssemblyCustomAttributes.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="LogOutputStream.cs" />

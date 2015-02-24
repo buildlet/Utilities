@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BUILDLet.WOL</RootNamespace>
-    <AssemblyName>BUILDLet.WOL</AssemblyName>
+    <AssemblyName>WOL</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -82,8 +82,8 @@
     <Compile Include="..\BUILDLet.Utilities\AssemblyCustomAttributes.cs">
       <Link>Link\AssemblyCustomAttributes.cs</Link>
     </Compile>
-    <Compile Include="..\BUILDLet.Utilities\FileAccess.cs">
-      <Link>Link\FileAccess.cs</Link>
+    <Compile Include="..\BUILDLet.Utilities\LocalFile.cs">
+      <Link>Link\LocalFile.cs</Link>
     </Compile>
     <Compile Include="..\BUILDLet.Utilities\MagicPacket.cs">
       <Link>Link\MagicPacket.cs</Link>

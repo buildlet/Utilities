@@ -80,7 +80,7 @@ namespace BUILDLet.WOL
             };
 
             // Get file path
-            this.SourceFilePath = Utilities.FileAccess.GetFilePath(Properties.Resources.ConfigurationFileName, searchPath);
+            this.SourceFilePath = Utilities.LocalFile.GetFilePath(Properties.Resources.ConfigurationFileName, searchPath);
 
             // File is not found.
             if (string.IsNullOrEmpty(this.SourceFilePath)) { return null; }

@@ -11,12 +11,12 @@ namespace BUILDLet.Utilities
     /// <summary>
     /// ローカルハードディスク上のファイルやフォルダーに関する処理を実装します。
     /// </summary>
-    public class FileAccess
+    public class LocalFile
     {
         /// <summary>
-        /// <see cref="FileAccess"/> クラスの新しいインスタンスを初期化します。 
+        /// <see cref="LocalFile"/> クラスの新しいインスタンスを初期化します。 
         /// </summary>
-        protected FileAccess() { }
+        protected LocalFile() { }
 
         /// <summary>
         /// カレントディレクトリを除いたローカルハードディスク上のファイルを検索する既定のサーチパスを表します。
@@ -48,7 +48,7 @@ namespace BUILDLet.Utilities
         /// </summary>
         /// <returns>サーチパスを取得します。</returns>
         /// <remarks>
-        /// 取得されるフォルダーの順番は、カレントディレクトリの次に既定のサーチパス (<see cref="FileAccess.SearchPath"/>) を追加したものになります。
+        /// 取得されるフォルダーの順番は、カレントディレクトリの次に既定のサーチパス (<see cref="LocalFile.SearchPath"/>) を追加したものになります。
         /// </remarks>
         public static string[] GetSearchPath()
         {
@@ -62,7 +62,7 @@ namespace BUILDLet.Utilities
         /// <param name="directory">サーチパスの先頭に追加するディレクトリ</param>
         /// <returns>サーチパスを取得します。</returns>
         /// <remarks>
-        /// 取得されるフォルダーの順番は、directory パラメーターの次に既定のサーチパス (<see cref="FileAccess.SearchPath"/>) を追加したものになります。
+        /// 取得されるフォルダーの順番は、directory パラメーターの次に既定のサーチパス (<see cref="LocalFile.SearchPath"/>) を追加したものになります。
         /// </remarks>
         public static string[] GetSearchPath(string directory)
         {
@@ -76,7 +76,7 @@ namespace BUILDLet.Utilities
         /// <returns>サーチパスを取得します。</returns>
         /// <param name="directries">サーチパスの先頭に追加するディレクトリ</param>
         /// <remarks>
-        /// 取得されるフォルダーの順番は、directories パラメーターの次に既定のサーチパス (<see cref="FileAccess.SearchPath"/>) を追加したものになります。
+        /// 取得されるフォルダーの順番は、directories パラメーターの次に既定のサーチパス (<see cref="LocalFile.SearchPath"/>) を追加したものになります。
         /// </remarks>
         public static string[] GetSearchPath(string[] directries)
         {
@@ -87,7 +87,7 @@ namespace BUILDLet.Utilities
                 if (Directory.Exists(dir))
                 {
                     bool found = true;
-                    foreach (var search in FileAccess.SearchPath)
+                    foreach (var search in LocalFile.SearchPath)
                     {
                         if (Path.GetFullPath(dir).Equals(Path.GetFullPath(search), StringComparison.OrdinalIgnoreCase))
                         {
@@ -99,13 +99,13 @@ namespace BUILDLet.Utilities
                 }
             }
 
-            folders.AddRange(FileAccess.SearchPath);
+            folders.AddRange(LocalFile.SearchPath);
 
             return folders.ToArray();
         }
 
         /// <summary>
-        /// 指定されたファイルを、カレントディレクトリー、および、既定のサーチパス (<see cref="FileAccess.SearchPath"/>) から検索します。
+        /// 指定されたファイルを、カレントディレクトリー、および、既定のサーチパス (<see cref="LocalFile.SearchPath"/>) から検索します。
         /// </summary>
         /// <param name="filename">検索するファイル名を指定します。</param>
         /// <returns>
@@ -116,7 +116,7 @@ namespace BUILDLet.Utilities
         {
             try
             {
-                return FileAccess.GetFilePath(filename, FileAccess.GetSearchPath());
+                return LocalFile.GetFilePath(filename, LocalFile.GetSearchPath());
             }
             catch (Exception e) { throw e; }
         }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 
+  
   <!-- Include -->
   <?include ..\Version\InstallerInfo.wxi?>
 
@@ -8,24 +9,26 @@
   <!-- GUID -->
   <?define GUID_Product="{D56FBBFB-8D89-4233-9763-048BB7FF201D}"?>
   <?define GUID_UpgradeCode="{AFCA8C85-7CB9-44F9-9880-0C58F711B09C}"?>
-  <?define GUID_ProductComponent="{6245EE59-0EFB-41AA-B19A-A61B98BDA287}"?>
+  <?define GUID_ProductComponent="{EB131451-2E2A-4209-BD40-C2D02DD40216}"?> <!-- V1.0.5 Changed -->
   <?define GUID_Documents="{3C726715-3878-4664-A02F-959C79F96265}"?>
   <?define GUID_ConfigFile="{5B00CD26-AC1D-430A-A5D1-09887191665D}"?>
+  <?define GUID_OldExeFile="{6245EE59-0EFB-41AA-B19A-A61B98BDA287}"?>
   
-  
+
   <!-- Resources -->
   <?define Source_Readme="..\Resources\BUILDLet.WOLSetup\Readme.txt"?>
   <?define Source_License="..\Resources\BUILDLet.WOLSetup\License.txt"?>
   <?define Source_IconFile="..\BUILDLet.WOL\Resources\BUILDLet_WOL.ico"?>
 
   <!-- Source Files -->
-  <?define Source_MainComponent="Sources\BUILDLet.WOL.exe"?>
+  <?define Source_MainComponent="Sources\WOL.exe"?>
 
   
   <!-- Remove Files -->
   <?define Remove_ConfigFile="WOL.conf"?>
-  
-  
+  <?define Remove_OldExeFile="BUILDLet.WOL.exe"?>
+
+
   <!-- Product -->
   <Product Id="$(var.GUID_Product)"
            UpgradeCode="$(var.GUID_UpgradeCode)"
@@ -102,6 +105,13 @@
         <RemoveFile Id="ConfigFile" On="uninstall" Name="$(var.Remove_ConfigFile)" />
       </Component>
 
+      
+      <!-- Old Executable File ("BUILDLet.WOL.exe") to be deleted -->
+      <Component Id="OldExeFile" Guid="$(var.GUID_OldExeFile)">
+        <RemoveFile Id="OldExeFile" On="uninstall" Name="$(var.Remove_OldExeFile)" />
+      </Component>
+
+      
     </ComponentGroup>
   </Fragment>
 

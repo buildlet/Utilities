@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更してください。
 [assembly: AssemblyCompany("BUILDLet")]
-[assembly: AssemblyCopyright("BUILDLet Copyright © 2014-2015")]
+[assembly: AssemblyCopyright("Copyright © 2014-2015 Daiki Sakamoto")]
 [assembly: AssemblyTrademark("")]
 
 // アセンブリのバージョン情報は、以下の 4 つの値で構成されています:
@@ -17,4 +17,4 @@ using System.Runtime.InteropServices;
 //      Revision
 //
 [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyFileVersion("1.0.4.0")]
+[assembly: AssemblyFileVersion("1.0.5.0")]

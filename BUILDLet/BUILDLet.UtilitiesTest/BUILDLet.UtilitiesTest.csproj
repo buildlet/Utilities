@@ -55,7 +55,7 @@
       <Link>Properties\MasterAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="AssemblyCustomAttributesTests.cs" />
-    <Compile Include="FileAccessTests.cs" />
+    <Compile Include="LocalFileTests.cs" />
     <Compile Include="AssemblyAttributesTests.cs" />
     <Compile Include="LogTests.cs" />
     <Compile Include="MagicPacketTests.cs" />
