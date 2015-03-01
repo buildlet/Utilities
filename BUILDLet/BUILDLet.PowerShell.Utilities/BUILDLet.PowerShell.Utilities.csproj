@@ -45,6 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\BUILDLet.Utilities\HashCode.cs">
+      <Link>HashCode.cs</Link>
+    </Compile>
     <Compile Include="..\Version\MasterAssemblyInfo.cs">
       <Link>Properties\MasterAssemblyInfo.cs</Link>
     </Compile>
@@ -54,23 +57,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BUILDLet.Utilities\BUILDLet.Utilities.csproj">
-      <Project>{7955897b-7bb9-46a7-a4d3-039f0433c983}</Project>
-      <Name>BUILDLet.Utilities</Name>
-    </ProjectReference>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tests\BUILDLet.PowerShell.UtilitiesTest.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>SET TARGET_PROJECT=BUILDLet.PackageMaker
-
-SET TARGET_DIRECTORY=Modules\PackageMaker
-ECHO Copy "$(TargetPath)" to "$(SolutionDir)%25TARGET_PROJECT%25\%25TARGET_DIRECTORY%25"...
-COPY "$(TargetPath)" "$(SolutionDir)%25TARGET_PROJECT%25\%25TARGET_DIRECTORY%25"
-
-SET TARGET_DIRECTORY=Libraries
-SET REQUIRED_ASSEMBLY=BUILDLet.Utilities.dll
-ECHO Copy "$(TargetDir)\%25REQUIRED_ASSEMBLY%25" to "$(SolutionDir)%25TARGET_PROJECT%25\%25TARGET_DIRECTORY%25"...
-COPY "$(TargetDir)\%25REQUIRED_ASSEMBLY%25" "$(SolutionDir)%25TARGET_PROJECT%25\%25TARGET_DIRECTORY%25"</PostBuildEvent>
+    <PostBuildEvent>@ECHO OFF
+SET TARGET_DIRECTORY=Release
+ECHO [RELEASE] $(TargetFileName) -^&gt; $(SolutionDir)%25TARGET_DIRECTORY%25
+COPY "$(TargetPath)" "$(SolutionDir)%25TARGET_DIRECTORY%25"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

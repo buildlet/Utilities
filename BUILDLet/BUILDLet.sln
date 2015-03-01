@@ -64,13 +64,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{6CF639
 		Resources\GitHub\images\WOL_History.png = Resources\GitHub\images\WOL_History.png
 	EndProjectSection
 EndProject
-Project("{F5034706-568F-408A-B7B3-4D38C6DB8A32}") = "BUILDLet.PackageMaker", "BUILDLet.PackageMaker\BUILDLet.PackageMaker.pssproj", "{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PackageMaker (Link)", "PackageMaker (Link)", "{A93F9953-F5A3-495C-B452-99D06CF6B09D}"
-	ProjectSection(SolutionItems) = preProject
-		BUILDLet.PackageMaker\Modules\PackageMaker\PackageMaker.psd1 = BUILDLet.PackageMaker\Modules\PackageMaker\PackageMaker.psd1
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -171,16 +164,6 @@ Global
 		{3FD2E411-F7FC-4D5C-9F2C-6D934CA98F23}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{3FD2E411-F7FC-4D5C-9F2C-6D934CA98F23}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{3FD2E411-F7FC-4D5C-9F2C-6D934CA98F23}.Release|x86.ActiveCfg = Release|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -190,6 +173,5 @@ Global
 		{D06952EA-9DAB-4C83-9BA9-B63C05EFE203} = {94F12144-8ECC-48D9-8F95-6F18F0740F75}
 		{AE4A9AC1-3666-4259-AEFE-9775F39F63B2} = {94F12144-8ECC-48D9-8F95-6F18F0740F75}
 		{6CF63964-9543-49F2-BCB7-53E4E21E2DC1} = {AE4A9AC1-3666-4259-AEFE-9775F39F63B2}
-		{A93F9953-F5A3-495C-B452-99D06CF6B09D} = {027248A7-BA3C-4E13-A293-B7365A7DB6D2}
 	EndGlobalSection
 EndGlobal

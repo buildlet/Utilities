@@ -32,6 +32,8 @@ This software is released under the MIT License, see License.txt.
 
 History
 ---------------
+* March 1, 2015    Version 1.0.6  
+  Add shourcut in Start Menu, and remove Desktop shortcut.
 * February 24, 2015    Version 1.0.5   Change executable file name.
 * February 15, 2015    Version 1.0.4  
   File path of private configuration file in "My Documents" folder was changed.

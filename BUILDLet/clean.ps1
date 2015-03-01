@@ -26,7 +26,9 @@ $AdditionalFiles =
     "BUILDLet.WOLSetup\Sources\*",
     "BUILDLet.WOLSetupBootstrapper\Sources\*",
     "BUILDLet.PackageMaker\Libraries\*",
-    "BUILDLet.PackageMaker\Modules\PackageMaker\BUILDLet.PowerShell.Utilities.dll"
+    "BUILDLet.PackageMaker\Modules\PackageMaker\BUILDLet.PowerShell.Utilities.dll",
+    "WindowsPowerShell\*.dll"
+
 
 $RemoveFolders = @()
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-
   
   <!-- Include -->
   <?include ..\Version\InstallerInfo.wxi?>
@@ -12,21 +11,27 @@
   <?define GUID_ProductComponent="{EB131451-2E2A-4209-BD40-C2D02DD40216}"?> <!-- V1.0.5 Changed -->
   <?define GUID_Documents="{3C726715-3878-4664-A02F-959C79F96265}"?>
   <?define GUID_ConfigFile="{5B00CD26-AC1D-430A-A5D1-09887191665D}"?>
+  <?define GUID_ProgramMenu="{168B96DE-720A-4158-AE27-9A44BCFAD354}"?> <!-- V1.0.6 Add -->
+  
+  <!-- GUID for Backword Compatibility -->
   <?define GUID_OldExeFile="{6245EE59-0EFB-41AA-B19A-A61B98BDA287}"?>
   
 
-  <!-- Resources -->
+  <!-- Resource Files -->
   <?define Source_Readme="..\Resources\BUILDLet.WOLSetup\Readme.txt"?>
   <?define Source_License="..\Resources\BUILDLet.WOLSetup\License.txt"?>
   <?define Source_IconFile="..\BUILDLet.WOL\Resources\BUILDLet_WOL.ico"?>
 
   <!-- Source Files -->
-  <?define Source_MainComponent="Sources\WOL.exe"?>
+  <?define Source_ProductComponent="Sources\WOL.exe"?>
 
   
   <!-- Remove Files -->
   <?define Remove_ConfigFile="WOL.conf"?>
+
+  <!-- Remove Files (for Backword Compatibility) -->
   <?define Remove_OldExeFile="BUILDLet.WOL.exe"?>
+
 
 
   <!-- Product -->
@@ -50,24 +55,39 @@
 
     <Feature Id="ProductFeature" Title="$(var.ProductName)" Level="1">
       <ComponentGroupRef Id="ProductComponents" />
+      <ComponentGroupRef Id="ProgramMenuComponents" />
     </Feature>
     
   </Product>
 
   
+
   <!-- Directories -->
   <Fragment>
     <Directory Id="TARGETDIR" Name="SourceDir">
+      
+      <!-- Program Files Folder -->
       <Directory Id="ProgramFilesFolder">
-        <Directory Id="ManufacturerFolder" Name="$(var.Manufacturer)">
-          <Directory Id="WOLFolder" Name="$(var.NickName)">
-            <Directory Id="INSTALLFOLDER" />
+        <Directory Id="ProductFolder" Name="$(var.ProductFolderName)">
+          <Directory Id="WOLFolder" Name="$(var.ProductName)">
+            <Directory Id="INSTALLDIR" />
           </Directory>
         </Directory>
       </Directory>
+      
+
+      <!-- Program Menu Folder -->
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ProgramMenuDir" Name="$(var.ProductFolderName)" />
+      </Directory>
+    
+
+      <!-- Desktop Folder -->
       <Directory Id="DesktopFolder" Name="Desktop" />
+
     </Directory>
   </Fragment>
+
 
   
   <!-- Icon -->
@@ -75,21 +95,37 @@
     <Icon Id="WOL.ico" SourceFile="$(var.Source_IconFile)" />
   </Fragment>
 
+
   
   <!-- Components -->
   <Fragment>
-    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
 
+    <!-- Install Folder (Program Files Folder) -->
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLDIR">
+      
       <!-- BUILDLet.WOL.exe -->
-      <Component Id="ProductComponent" Guid="$(var.GUID_ProductComponent)">
-        <File Source="$(var.Source_MainComponent)" KeyPath="yes">
-          <Shortcut Id="shortcut" 
-                    Name="$(var.NickName)" 
+      <Component Id="ProductComponent.exe" Guid="$(var.GUID_ProductComponent)">
+        <File Id="ProductComponent.exe" Source="$(var.Source_ProductComponent)" KeyPath="yes">
+          
+          <!-- Desktop Shortcut -->
+<!--
+          <Shortcut Id="DesktopShortcut" 
+                    Name="$(var.ProductName)" 
+                    Description="$(var.ProductName) $(var.ProductVersion)"
                     Directory="DesktopFolder" 
-                    WorkingDirectory="INSTALLFOLDER" 
                     Icon="WOL.ico" 
                     Advertise="yes" />
-        </File>
+-->
+
+          <!-- Program Menu Shortcut -->
+          <Shortcut Id="ProgramMenuShortcut" 
+                    Name="$(var.ProductName)" 
+                    Description="$(var.ProductName) $(var.ProductVersion)"
+                    Directory="ProgramMenuDir" 
+                    Icon="WOL.ico" 
+                    Advertise="yes" />
+
+      </File>
       </Component>
 
       
@@ -110,7 +146,18 @@
       <Component Id="OldExeFile" Guid="$(var.GUID_OldExeFile)">
         <RemoveFile Id="OldExeFile" On="uninstall" Name="$(var.Remove_OldExeFile)" />
       </Component>
+    
+    </ComponentGroup>
 
+    
+    <!-- Start Menu (Program Menu Folder) -->
+    <ComponentGroup Id="ProgramMenuComponents" Directory="ProgramMenuDir">
+      
+      <!-- Program Menu Folder (to be removed) & Registry -->
+      <Component Id="ProgramMenuComponent" Guid="$(var.GUID_ProgramMenu)">
+        <RemoveFolder Id='ProgramMenuDir' On='uninstall' />
+        <RegistryValue Root='HKCU' Key='Software\[Manufacturer]\[ProductName]' Name='installed' Type='integer' Value='1' KeyPath='yes' />
+      </Component>
       
     </ComponentGroup>
   </Fragment>
