@@ -10,7 +10,7 @@
   <?define GUID_UpgradeCode="{965E66F5-08CD-4138-AC1B-07BAD82AD75A}"?>
 
 
-  <!-- Resources -->
+  <!-- Resource Files -->
   <?define Source_LicenseFile="..\Resources\BUILDLet.WOLSetupBootstrapper\License.rtf"?>
   <?define Source_LogoFile="..\Resources\BUILDLet.WOLSetupBootstrapper\BUILDLet_Yellow_64x64.png"?>
 
@@ -22,11 +22,14 @@
   <Bundle Name="$(var.ProductName) $(var.ProductVersion)" 
           Version="$(var.ProductVersion)" 
           Manufacturer="$(var.Manufacturer)" 
+          Copyright="$(var.ProductCopyright)"
           UpgradeCode="$(var.GUID_UpgradeCode)">
 
     <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLargeLicense">
       <bal:WixStandardBootstrapperApplication LicenseFile="$(var.Source_LicenseFile)"
-                                              LogoFile="$(var.Source_LogoFile)"/>
+                                              LogoFile="$(var.Source_LogoFile)"
+                                              ShowVersion="yes"
+                                              SuppressOptionsUI="yes" />
     </BootstrapperApplicationRef>
 
 		<Chain>

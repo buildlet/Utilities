@@ -4,10 +4,14 @@
   <!-- Product Information -->
   <?define Manufacturer="BUILDLet"?>
   <?define ProductName="BUILDLet WOL"?>
-  <?define ProductComment="Wake On LAN"?>
   <?define NickName="WOL"?>
+  <?define ProductComment="This is the front end of utility for sending the magic packet (Wake On LAN)"?>
+  <?define ProductFolderName="BUILDLet Utilities"?>
 
   <!-- Version Information -->
-  <?define ProductVersion="1.0.5"?>
+  <?define ProductVersion="1.0.6"?>
+
+  <!-- Copyright -->
+  <?define ProductCopyright="Daiki Sakamoto"?>
 
 </Include>

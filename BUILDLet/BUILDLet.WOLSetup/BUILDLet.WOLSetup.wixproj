@@ -31,9 +31,10 @@
   </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
   <PropertyGroup>
-    <PostBuildEvent>SET TARGET_PROJECT=BUILDLet.WOLSetupBootstrapper
+    <PostBuildEvent>%40ECHO OFF
+SET TARGET_PROJECT=BUILDLet.WOLSetupBootstrapper
 SET TARGET_DIRECTORY=Sources
-ECHO Copy "$(TargetPath)" to "$(SolutionDir)%25TARGET_PROJECT%25\%25TARGET_DIRECTORY%25"...
+ECHO [COPY] $(TargetFileName) -^&gt; $(SolutionDir)%25TARGET_PROJECT%25\%25TARGET_DIRECTORY%25
 COPY "$(TargetPath)" "$(SolutionDir)%25TARGET_PROJECT%25\%25TARGET_DIRECTORY%25"</PostBuildEvent>
   </PropertyGroup>
   <!--

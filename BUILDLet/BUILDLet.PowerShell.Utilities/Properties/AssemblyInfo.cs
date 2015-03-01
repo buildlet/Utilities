@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // アセンブリに関する一般情報は以下の属性セットをとおして制御されます。
 // アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更してください。
-[assembly: AssemblyTitle("BUILDLet PowerShell Utility Class Library")]
-[assembly: AssemblyDescription("BUILDLet PowerShell Utility Class Library")]
+[assembly: AssemblyTitle("BUILDLet Utility Class Library for PowerShell")]
+[assembly: AssemblyDescription("BUILDLet Utility Class Library for PowerShell")]
 [assembly: AssemblyConfiguration("")]
 // [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BUILDLet PowerShell Utility Class Library")]
+[assembly: AssemblyProduct("BUILDLet Utility Class Library for PowerShell")]
 // [assembly: AssemblyCopyright("")]
 // [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
