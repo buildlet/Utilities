@@ -1,7 +1,7 @@
 #Utility Class Library
 
 ##概要
-Windows ライブラリ
+Windows クラスライブラリ
 
 ##プロジェクト
 以下のプロジェクトを含みます。
@@ -21,7 +21,7 @@ BUILDLet.Utilities.WPF のテストモジュールです。
 ###BUILDLet.UtilitiesDocumentation (SandCastle)
 SandCastle による BUILDLet.Utilities のヘルプファイルです。
 
-###BUILDLet.UtilitiesTest (C# Project)
+###BUILDLet.UtilitiesTest (C#)
 BUILDLet.Utilities のテストモジュールです。
 
 ###BUILDLet.WOL (C#)
