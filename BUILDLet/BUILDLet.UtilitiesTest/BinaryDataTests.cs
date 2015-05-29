@@ -75,7 +75,7 @@ namespace BUILDLet.Utilities.Tests
 
 
         [TestMethod()]
-        public void BinaryData_ToFileTest_DEFAULT()
+        public void BinaryData_ToFileTest()
         {
             BinaryData bin = new BinaryData();
             bin.ToFile(@".\default.bin");

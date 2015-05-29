@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <!-- Include -->
+  <?include ..\Version\InstallerInfo.wxi?>
+  <?include ..\Version\InstallerGUID.wxi?>
+
+  <!-- Product Information -->
+  <?define ProductName="$(var.PackageMaker_ProductName)"?>
+  <?define ProductComment="$(var.PackageMaker_ProductComment)"?>
+  <?define ProductFolderName="$(var.PackageMaker_ProductFolderName)"?>
+
+  <!-- GUID -->
+  <?define GUID_Product="$(var.GUID_PackageMaker_Product)"?>
+  <?define GUID_UpgradeCode="$(var.GUID_PackageMaker_UpgradeCode)"?>
+  <?define GUID_ProductComponent="$(var.GUID_PackageMaker_ProductComponent)"?>
+  <?define GUID_Documents="$(var.GUID_PackageMaker_Documents)"?>
+
+  
+  <!-- Source Files -->
+  <?define Source_ProductComponent=""?>
+  <?define Source_ReadmeFile="$(var.ReadmeFile_PackageMaker)"?>
+  <?define Source_SampleFile="..\Release\BUILDLet.PackageMaker\Sample.zip"?>
+
+  <!-- Texts -->
+  <?define FeatureTitle_SampleScripts="Sample Scripts"?>
+
+
+  
+  <!-- Product -->
+  <Product Id="$(var.GUID_Product)"
+           UpgradeCode="$(var.GUID_UpgradeCode)"
+           Manufacturer="$(var.Manufacturer)"
+           Name="$(var.ProductName) $(var.Version)"
+           Version="$(var.Version)"
+           Language="1041" Codepage="932">
+
+    <Package Id="*"
+             Description="$(var.ProductName) $(var.Version) Installer"
+             Comments="$(var.ProductComment)"
+             Manufacturer="$(var.Manufacturer)"
+             InstallerVersion="200"
+             Compressed="yes"
+             Languages="1041" SummaryCodepage="932"
+             InstallScope="perMachine" />
+
+    
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate CabinetTemplate="data{0}.cab" EmbedCab="yes" />
+
+
+    <!-- Product Components -->
+    <Feature Id="ProductFeature" Title="$(var.ProductName)" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+    </Feature>
+
+    
+    <!-- Sample Scripts -->
+    <Feature Id="SampleScriptFeature" Title="$(var.FeatureTitle_SampleScripts)" Level="1">
+      <ComponentGroupRef Id="SampleScriptComponents" />
+    </Feature>
+
+  </Product>
+
+  
+  
+  <!-- Install Folder (Program Files Folder) -->
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="$(var.ProductFolderName)" />
+      </Directory>
+    </Directory>
+  </Fragment>
+
+
+  
+  <!-- Components -->
+  <Fragment>
+
+    <!-- Product Components -->
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      
+      <!-- Product Component (None) -->
+      <!--
+      <Component Id="ProductComponent" />
+      -->
+      
+      <!-- Documents (Readme and License) -->
+      <Component Id="Documents" Guid="$(var.GUID_Documents)" KeyPath="yes">
+        <File Source="$(var.Source_ReadmeFile)" />
+        <File Source="$(var.LicenseFile_TXT)" />
+      </Component>
+    
+    </ComponentGroup>
+
+    
+    <!-- Sample Script Components -->
+    <ComponentGroup Id="SampleScriptComponents" Directory="INSTALLFOLDER">
+      
+      <!-- Sample Script Component -->
+      <Component Id="SampleScriptComponent">
+        <File Source="$(var.Source_SampleFile)" />
+      </Component>
+    
+    </ComponentGroup>
+
+  </Fragment>
+
+</Wix>

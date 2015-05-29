@@ -1,0 +1,51 @@
+div.example {
+	width: 100%; color: black;
+}
+div.dtd-example {
+	width: 100%; color: black;
+}
+tt.example {
+	color: maroon; margin-left: 1em;
+}
+pre {
+	color: maroon; margin-left: 1em;
+}
+div.dtd-fragment {
+	border: currentColor; border-image: none; width: 100%; background-color: rgb(238, 238, 238);
+}
+pre.dtd-fragment {
+	margin-left: 0px;
+}
+pre.dtd {
+	color: black; margin-left: 0px;
+}
+div.illegal-example {
+	border: solid red; border-image: none; width: 100%; color: red;
+}
+div.illegal-example p {
+	color: black;
+}
+div.deprecated-example {
+	border: solid rgb(255, 165, 0); border-image: none; width: 100%; color: red;
+}
+div.deprecated-example p {
+	color: black;
+}
+div.note {
+	color: green; margin-left: 1em;
+}
+p.note {
+	color: green; margin-left: 1em;
+}
+ul.toc {
+	list-style-type: none;
+}
+a.normref {
+	color: red;
+}
+a.informref {
+	color: green;
+}
+div.subtoc {
+	background: rgb(221, 221, 221); margin: 1em 0px; padding: 1em; border: thin solid currentColor; border-image: none;
+}

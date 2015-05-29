@@ -5,45 +5,57 @@ Copyright (C) 2015 Daiki Sakamoto
 
 "@
 
-$TargetProjects =
-    "BUILDLet.Utilities",
-    "BUILDLet.Utilities.WPF",
-    "BUILDLet.Utilities.WPFTest",
-    "BUILDLet.UtilitiesDocumentation",
-    "BUILDLet.UtilitiesTest",
-    "BUILDLet.WOL",
-    "BUILDLet.WOLSetup",
-    "BUILDLet.WOLSetupBootstrapper",
-    "BUILDLet.PowerShell.Utilities",
-    "BUILDLet.PackageMaker"
+$Target_Projects = @(
+    "BUILDLet.Utilities"
+    "BUILDLet.Utilities.WPF"
+    "BUILDLet.Utilities.WPFTest"
+    "BUILDLet.UtilitiesDocumentation"
+    "BUILDLet.UtilitiesTest"
+    "BUILDLet.WOL"
+    "BUILDLet.WOLSetup"
+    "BUILDLet.WOLSetupBootstrapper"
+    "BUILDLet.Test.ConsoleApplications\randum300"
+    "BUILDLet.Test.ConsoleApplications\stderr300"
+    "BUILDLet.Test.ConsoleApplications\stdout300"
+    "BUILDLet.Test.ConsoleApplications\exit999"
+    "BUILDLet.PowerShell.Utilities"
+    "BUILDLet.PowerShell.UtilitiesTest"
+    "BUILDLet.PowerShell.UtilitiesSetup"
+    "BUILDLet.PowerShell.UtilitiesSetup64"
+    "BUILDLet.PowerShell.UtilitiesSetupBootstrapper"
+    "BUILDLet.PowerShell.PackageMakerTest"
+    "BUILDLet.PowerShell.PackageMakerSetup"
+    "BUILDLet.PowerShell.PackageMakerSetup64"
+    "BUILDLet.PowerShell.PackageMakerSetupBootstrapper"
+    "BUILDLet.PackageMakerSetup"
+    "BUILDLet.PackageMakerSetupBootstrapper"
+)
 
-$TargetFolders =
-    "obj",
+$Target_Folders = @(
+    "obj"
     "bin"
+)
 
-$AdditionalFiles =
-    "TestResults\*",
-    "BUILDLet.WOLSetup\Sources\*",
-    "BUILDLet.WOLSetupBootstrapper\Sources\*",
-    "BUILDLet.PackageMaker\Libraries\*",
-    "BUILDLet.PackageMaker\Modules\PackageMaker\BUILDLet.PowerShell.Utilities.dll",
-    "WindowsPowerShell\*.dll"
+$Additional_Files = @(
+    "TestResults\*"
+    "BUILDLet.PowerShell.PackageMaker\Sample\Work"
+    "BUILDLet.PowerShell.PackageMaker\Sample\Release"
+)
 
-
-$RemoveFolders = @()
+$Remove_Folders = @()
 
 
 # Add "obj" and "bin" folders to remove queue
-$TargetProjects | % {
+$Target_Projects | % {
 
-    $ProjectFolder = Get-Location | Join-Path -ChildPath $_
-    if ((Test-Path -Path $ProjectFolder) -and ((Get-Item -Path $ProjectFolder).PSIsContainer))
+    $project_folder = Get-Location | Join-Path -ChildPath $_
+    if ((Test-Path -Path $project_folder) -and ((Get-Item -Path $project_folder).PSIsContainer))
     {
-        $TargetFolders | % {
+        $Target_Folders | % {
 
-            if (($target = Join-Path -Path $ProjectFolder -ChildPath $_) | Test-Path)
+            if (($target = Join-Path -Path $project_folder -ChildPath $_) | Test-Path)
             {
-                $RemoveFolders += $target
+                $Remove_Folders += $target
             }
         }
     }
@@ -51,11 +63,11 @@ $TargetProjects | % {
 
 
 # Add additional files to remove queue
-$AdditionalFiles | % {
+$Additional_Files | % {
     
     if (($target = Get-Location | Join-Path -ChildPath $_) | Test-Path)
     {
-        $RemoveFolders += $target
+        $Remove_Folders += $target
     }
 }
 
@@ -63,15 +75,15 @@ $AdditionalFiles | % {
 # Show continue message
 "The following folder(s) and file(s) are removed."
 ""
-$RemoveFolders | % { $_ }
-if ($RemoveFolders.Count -eq 0) { "(None)" }
+$Remove_Folders | % { $_ }
+if ($Remove_Folders.Count -eq 0) { "(None)" }
 ""
 "Please hit ENTER key to continue."
 Read-Host
 
 
 # Remove folders and files
-$RemoveFolders | % {
+$Remove_Folders | % {
 
     Remove-Item -Path $_ -Recurse -Force -Verbose
 }

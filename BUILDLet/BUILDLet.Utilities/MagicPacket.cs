@@ -4,7 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Text.RegularExpressions;
+using System.Net;
+using System.Net.Sockets;
 using System.Diagnostics;
+
 
 namespace BUILDLet.Utilities.Network
 {
@@ -22,7 +26,7 @@ namespace BUILDLet.Utilities.Network
         /// <summary>
         /// 保持している MAC アドレスを16進文字列として取得します。
         /// </summary>
-        public string MACAddress { get; protected set; }
+        public string MacAddress { get; protected set; }
 
 
         /// <summary>
@@ -35,7 +39,7 @@ namespace BUILDLet.Utilities.Network
             set
             {
                 // Update MAC address hex string
-                this.MACAddress = this.MACAddress.Replace(this.separator, value);
+                this.MacAddress = this.MacAddress.Replace(this.separator, value);
 
                 this.separator = value;
             }
@@ -48,7 +52,7 @@ namespace BUILDLet.Utilities.Network
         /// <param name="macAddress">MAC アドレスの文字列を指定します。</param>
         public MagicPacket(string macAddress)
         {
-            // Set initial value of separator
+            // Set initial value_found of separator
             this.separator = this.separators[0];
 
 
@@ -56,7 +60,7 @@ namespace BUILDLet.Utilities.Network
             bool match = false;
             foreach (var separator in this.separators)
             {
-                if (System.Text.RegularExpressions.Regex.IsMatch(macAddress + separator, "(([0-9A-Za-z]{2})" + separator + "){6}")) { match = true; }
+                if (Regex.IsMatch(macAddress + separator, "(([0-9A-Za-z]{2})" + separator + "){6}")) { match = true; }
             }
             if (!match) { throw new ArgumentException(); }
 
@@ -70,11 +74,11 @@ namespace BUILDLet.Utilities.Network
             foreach (byte hex in mac.ToArray()) { hexMAC.Append(string.Format("{0:X2}{1}", hex, this.separator)); }
             hexMAC.Remove(hexMAC.Length - 1, 1);
 
-            this.MACAddress = hexMAC.ToString();
+            this.MacAddress = hexMAC.ToString();
 
 #if DEBUG
             Debug.WriteLine("");
-            Debug.WriteLine("[MagicPacket]:MAC Address=\"" + this.MACAddress + "\"");
+            Debug.WriteLine("[MagicPacket]:MAC Address=\"" + this.MacAddress + "\"");
 #endif
 
 
@@ -103,5 +107,36 @@ namespace BUILDLet.Utilities.Network
         /// </summary>
         /// <returns>マジックパケットのバイト配列</returns>
         public byte[] GetBytes() { return this.data; }
+
+
+        /// <summary>
+        /// マジックパケットを送信します。
+        /// </summary>
+        /// <param name="times">マジックパケットを送信する回数を指定します。省略した場合の既定の回数は 1 回です。</param>
+        /// <param name="port">リモートマシンのポート番号を指定します。省略した場合の既定のポート番号は 2304 番です。</param>
+        /// <returns>マジックパケットを送信した回数を返します。</returns>
+        public int Send(int times = 1, int port = 2304)
+        {
+            try
+            {
+                UdpClient udp = new UdpClient();
+                IPEndPoint ep = new IPEndPoint(IPAddress.Broadcast, port);
+                int bytes = 0;
+                int sent = 0;
+
+                for (int i = 0; i < times; i++)
+                {
+                    bytes = udp.Send(this.data, this.data.Length, ep);
+                    sent++;
+
+#if DEBUG
+                    Debug.WriteLine("[MagicPacket]:Magic Packet (MAC Address=\"{0}\", Port={1}) has been sent! ({2})", this.MacAddress, port, i + 1);
+#endif
+                }
+                return sent;
+            }
+            catch (Exception e) { throw e; }
+        }
+
     }
 }

@@ -58,17 +58,18 @@
     <CleanIntermediates>True</CleanIntermediates>
     <NamespaceSummaries>
       <NamespaceSummaryItem name="BUILDLet.Utilities" isDocumented="True">[TODO: Add "BUILDLet.Utilities" Namespace sumamry]</NamespaceSummaryItem>
-      <NamespaceSummaryItem name="BUILDLet.Utilities.Network" isDocumented="True">[TODO: Add "BUILDLet.Utilities.Network" Namespace sumamry]</NamespaceSummaryItem>
-      <NamespaceSummaryItem name="BUILDLet.Utilities.WPF" isDocumented="True">[TODO: Add "BUILDLet.Utilities.WPF" Namespace sumamry]</NamespaceSummaryItem>
-      <NamespaceSummaryItem name="(global)" isDocumented="True" />
-      <NamespaceSummaryItem name="BUILDLet.Utilities.Cryptography" isDocumented="True">[TODO: Add "BUILDLet.Utilities.Cryptography" Namespace sumamry]</NamespaceSummaryItem>
-    </NamespaceSummaries>
+<NamespaceSummaryItem name="BUILDLet.Utilities.Network" isDocumented="True">[TODO: Add "BUILDLet.Utilities.Network" Namespace sumamry]</NamespaceSummaryItem>
+<NamespaceSummaryItem name="BUILDLet.Utilities.WPF" isDocumented="True">[TODO: Add "BUILDLet.Utilities.WPF" Namespace sumamry]</NamespaceSummaryItem>
+<NamespaceSummaryItem name="(global)" isDocumented="True" />
+<NamespaceSummaryItem name="BUILDLet.Utilities.Cryptography" isDocumented="True">[TODO: Add "BUILDLet.Utilities.Cryptography" Namespace sumamry]</NamespaceSummaryItem>
+<NamespaceSummaryItem name="BUILDLet.Utilities.Compression" isDocumented="True">[TODO: Add "BUILDLet.Utilities.Compression" Namespace sumamry]</NamespaceSummaryItem></NamespaceSummaries>
     <ProjectSummary>[TODO: Add Project Sumamry]</ProjectSummary>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
     <PostBuildEvent>@ECHO OFF
 SET TARGET_DIRECTORY=Release
-ECHO [RELEASE] $(HtmlHelpName).chm -^&gt; $(SolutionDir)%TARGET_DIRECTORY%
-COPY "$(OutputPath)$(HtmlHelpName).chm" "$(SolutionDir)%TARGET_DIRECTORY%"</PostBuildEvent>
+SET TARGET_DIRECTORY=$(SolutionDir)%TARGET_DIRECTORY%
+ECHO [RELEASE] $(HtmlHelpName).chm -^&gt; %TARGET_DIRECTORY%
+COPY "$(OutputPath)$(HtmlHelpName).chm" "%TARGET_DIRECTORY%"</PostBuildEvent>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->

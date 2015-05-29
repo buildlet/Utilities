@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.IO;
 using System.Diagnostics;
+
+using BUILDLet.Utilities;
 
 namespace BUILDLet.Utilities.Tests
 {
@@ -27,6 +30,7 @@ namespace BUILDLet.Utilities.Tests
         {
             this.test_GetSearchPath(expected, actual, new string[] { paramter });
         }
+
 
         private void test_GetSearchPath(string[] expected, string[] actual, string[] parameters)
         {
@@ -71,7 +75,7 @@ namespace BUILDLet.Utilities.Tests
 
 
         [TestMethod()]
-        public void LocalFile_GetSearchPathTest_Empty()
+        public void LocalFile_GetSearchPath_TestEmpty()
         {
             new Log().WriteLine("Empty(Current Directory)");
 
@@ -83,7 +87,7 @@ namespace BUILDLet.Utilities.Tests
         }
 
         [TestMethod()]
-        public void LocalFile_GetSearchPathTest_InvalidDirectory()
+        public void LocalFile_GetSearchPath_InvalidDirectoryTest()
         {
             new Log().WriteLine("Invalid Directory");
             string dir = "hoge";
@@ -92,7 +96,7 @@ namespace BUILDLet.Utilities.Tests
         }
 
         [TestMethod()]
-        public void LocalFile_GetSearchPathTest_ValidDirectory()
+        public void LocalFile_GetSearchPath_ValidDirectoryTest()
         {
             new Log().WriteLine("Valid Directory");
             string dir = @"C:\Users";
@@ -105,7 +109,7 @@ namespace BUILDLet.Utilities.Tests
         }
 
         [TestMethod()]
-        public void LocalFile_GetSearchPathTest_AlreadyIncludingDirectory()
+        public void LocalFile_GetSearchPath_AlreadyIncludingDirectoryTest()
         {
             Log log = new Log();
 
@@ -123,7 +127,7 @@ namespace BUILDLet.Utilities.Tests
 
 
         [TestMethod()]
-        public void LocalFile_GetSearchPathTest_ValidDirectories()
+        public void LocalFile_GetSearchPath_ValidDirectoriesTest()
         {
             new Log().WriteLine("Valid Directories");
 
@@ -139,7 +143,7 @@ namespace BUILDLet.Utilities.Tests
         }
 
         [TestMethod()]
-        public void LocalFile_GetSearchPathTest_Complex()
+        public void LocalFile_GetSearchPath_ComplexTest()
         {
             new Log().WriteLine("Complex");
 
@@ -183,7 +187,7 @@ namespace BUILDLet.Utilities.Tests
 
         [TestMethod()]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void LocalFile_GetFilePathTest_Empty()
+        public void LocalFile_GetFilePath_EmptyTest()
         {
             new Log().WriteLine("Empty");
             this.test_GetFilePath(null, null);
@@ -192,8 +196,6 @@ namespace BUILDLet.Utilities.Tests
         [TestMethod()]
         public void LocalFile_GetFilePathTest()
         {
-            Log log = new Log();
-
             new Log(false, false, true).WriteLine("Current Directory");
             this.test_GetFilePath("BUILDLet.Utilities.dll", null);
             
@@ -222,6 +224,75 @@ namespace BUILDLet.Utilities.Tests
 
             new Log(false, false, true).WriteLine("System32 Folder");
             this.test_GetFilePath("shell32.dll", LocalFile.GetSearchPath(@"C:\Program Files\Windows NT\Accessories"));
+        }
+
+
+        [TestMethod()]
+        public void LocalFile_ConvertPathTest()
+        {
+            Log log = new Log();
+
+            string path;
+            string expected;
+            string actual;
+            int number_of_testcase = 2;
+
+            for (int i = 0; i < number_of_testcase; i++)
+            {
+                switch (i)
+                {
+                    case 0:
+                        path = @"C:\FCIV\";
+                        expected = path;
+                        break;
+
+                    case 1:
+                        path = @"..\..\bin\Debug";
+                        expected = Path.Combine(Environment.CurrentDirectory);
+                        break;
+
+                    default:
+                        throw new InvalidOperationException();
+                }
+
+                actual = LocalFile.ConvertPath(path);
+                log.WriteLine("LocalFile.ConvertPath({0}) = {1}", path, actual);
+                Assert.AreEqual(expected, actual);
+            }
+        }
+
+        [TestMethod()]
+        public void LocalFile_GetFolderNameTest()
+        {
+            Log log = new Log();
+
+            string path;
+            string expected;
+            string actual;
+            int number_of_testcase = 2;
+
+            for (int i = 0; i < number_of_testcase; i++)
+            {
+                switch (i)
+                {
+                    case 0:
+                        path = @"C:\FCIV\";
+                        expected = "FCIV";
+                        break;
+
+                    case 1:
+                        path = @"..\..\bin\Debug";
+                        expected = "Debug";
+                        break;
+
+                    default:
+                        throw new InvalidOperationException();
+                }
+
+                actual = LocalFile.GetFolderName(path);
+                log.WriteLine("LocalFile.ConvertPath({0}) = {1}", path, actual);
+                Assert.AreEqual(expected, actual);
+            }
         }
     }
 }

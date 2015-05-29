@@ -1,0 +1,1131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0027)http://www.w3.org/TR/html4/ -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" ""><HTML lang="en"><!-- $Id: cover.html,v 1.2 1999/12/24 23:37:45 ijacobs Exp $ --><HEAD><META 
+content="IE=5.0000" http-equiv="X-UA-Compatible">
+ 
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> 
+<TITLE>HTML 4.01 Specification</TITLE> <!-- Changed by: Ian B. Jacobs,  6-Dec-1998 --> 
+<LINK href="about.html" rel="next"> <LINK href="cover.html#minitoc" rel="contents"> 
+<LINK href="HTML%204_01%20Specification.files/W3C-REC.css" rel="stylesheet" 
+type="text/css"> <LINK href="HTML%204_01%20Specification.files/default.css" rel="STYLESHEET" 
+type="text/css"> 
+<META name="GENERATOR" content="MSHTML 11.00.9600.17690"></HEAD> 
+<BODY>
+<DIV align="center" class="navbar">&nbsp;<A href="http://www.w3.org/TR/html4/about.html">next</A> 
+&nbsp;<A href="http://www.w3.org/TR/html4/#minitoc">table of contents</A> &nbsp; 
+<A href="http://www.w3.org/TR/html4/index/elements.html">elements</A> &nbsp; <A 
+href="http://www.w3.org/TR/html4/index/attributes.html">attributes</A> &nbsp; <A 
+href="http://www.w3.org/TR/html4/index/list.html">index</A> 
+<HR>
+</DIV>
+<DIV class="head">
+<P><A href="http://www.w3.org/"><IMG width="72" height="48" alt="W3C" src="HTML%204_01%20Specification.files/w3c_home.png"></A></P>
+<H1>HTML 4.01 Specification</H1>
+<H2>W3C Recommendation 24 December 1999</H2>
+<DL>
+  <DT>This version:</DT>
+  <DD><A href="http://www.w3.org/TR/1999/REC-html401-19991224">
+  http://www.w3.org/TR/1999/REC-html401-19991224</A></DD>
+  <DD>(<A href="http://www.w3.org/TR/html4/html40.txt">plain text [794Kb]</A>, 
+  <A href="http://www.w3.org/TR/html4/html40.tgz">gzip'ed tar archive of HTML 
+  files [371Kb]</A>, <A href="http://www.w3.org/TR/html4/html40.zip">a .zip 
+  archive of HTML files [405Kb]</A>, <A href="http://www.w3.org/TR/html4/html40.ps.gz">gzip'ed 
+  Postscript file [746Kb, 389 pages]</A>, <A href="http://www.w3.org/TR/html4/html40.pdf.gz">gzip'ed 
+  PDF file [963Kb]</A>)</DD>
+  <DT>Latest version of HTML 4.01:</DT>
+  <DD><A href="http://www.w3.org/TR/html401">
+  http://www.w3.org/TR/html401</A></DD>
+  <DT>Latest version of HTML 4:</DT>
+  <DD><A href="http://www.w3.org/TR/html4">http://www.w3.org/TR/html4</A></DD>
+  <DT>Latest version of HTML:</DT>
+  <DD><A href="http://www.w3.org/TR/html">http://www.w3.org/TR/html</A></DD>
+  <DT>Previous version of HTML 4.01:</DT>
+  <DD><A href="http://www.w3.org/TR/1999/PR-html40-19990824">
+  http://www.w3.org/TR/1999/PR-html40-19990824</A></DD>
+  <DT>Previous HTML 4 Recommendation:</DT>
+  <DD><A href="http://www.w3.org/TR/1998/REC-html40-19980424">
+  http://www.w3.org/TR/1998/REC-html40-19980424</A></DD>
+  <DT>Editors:</DT>
+  <DD><A href="http://www.w3.org/People/Raggett">Dave Raggett</A> &lt;<A href="mailto:dsr@w3.org">dsr@w3.org</A>&gt;</DD>
+  <DD>Arnaud Le Hors, W3C</DD>
+  <DD>Ian Jacobs, W3C</DD></DL>
+<P class="copyright"><A href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</A> 
+©1997-1999 <A href="http://www.w3.org/"><ABBR title="World Wide Web &#10;Consortium">W3C</ABBR></A><SUP>®</SUP> 
+(<A href="http://www.lcs.mit.edu/"><ABBR title="Massachusetts Institute of&#10;Technology">MIT</ABBR></A>, 
+<A href="http://www.inria.fr/"><ABBR title="Institut National de Recherche en Informatique et Automatique" 
+lang="fr">INRIA</ABBR></A>, <A href="http://www.keio.ac.jp/">Keio</A>), All 
+Rights Reserved. W3C <A href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</A>, 
+<A href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">
+trademark</A>, <A href="http://www.w3.org/Consortium/Legal/copyright-documents-19990405">document
+ use</A> and <A href="http://www.w3.org/Consortium/Legal/copyright-software-19980720">software
+ licensing</A> rules apply.</P></DIV>
+<HR title="Separator from Header">
+
+<H2>Abstract</H2>
+<P>This specification defines the HyperText Markup Language (HTML), the
+ publishing language of the World Wide Web. This specification defines HTML
+ 4.01, which is a subversion of HTML 4. In addition to the text, multimedia, and
+ hyperlink features of the previous versions of HTML (HTML 3.2 <A class="informref" 
+href="http://www.w3.org/TR/html4/references.html#ref-HTML32" rel="biblioentry">
+[HTML32]</A> and HTML 2.0 <A class="informref" href="http://www.w3.org/TR/html4/references.html#ref-RFC1866" 
+rel="biblioentry">[RFC1866]</A>), HTML 4 supports more multimedia options, 
+scripting languages, style sheets, better printing facilities, and documents 
+that are more accessible to users with disabilities. HTML 4 also takes great 
+strides towards the internationalization of documents, with the goal of making 
+the Web truly World Wide.</P>
+<P>HTML 4 is an SGML application conforming to International Standard ISO 8879
+ -- Standard Generalized Markup Language <A class="normref" href="http://www.w3.org/TR/html4/references.html#ref-ISO8879" 
+rel="biblioentry">[ISO8879]</A>.</P>
+<H2>Status of this document</H2>
+<P><EM>This section describes the status of this document at the time of its
+ publication. Other documents may supersede this document. The latest status of
+ this document series is maintained at the W3C.</EM></P>
+<P>This document specifies HTML 4.01, which is part of the HTML 4 line of
+ specifications. The first version of HTML 4 was HTML 4.0 <A class="informref" 
+href="http://www.w3.org/TR/html4/references.html#ref-HTML40" 
+rel="biblioentry">[HTML40]</A>, published on 18 December 1997 and revised 24 
+April 1998. This specification is the first HTML 4.01 Recommendation. It 
+includes non-editorial <A href="http://www.w3.org/TR/html4/appendix/changes.html#19991224">changes 
+since the 24 April version of HTML 4.0</A>. There have been some changes to the 
+DTDs, for example. This document obsoletes previous versions of HTML 4.0, 
+although W3C will continue to make those specifications and their DTDs available 
+at the W3C Web site.</P>
+<P>This document has been reviewed by W3C Members and other interested parties
+ and has been endorsed by the Director as a W3C Recommendation. It is a stable
+ document and may be used as reference material or cited as a normative
+ reference from another document. W3C's role in making the Recommendation is to
+ draw attention to the specification and to promote its widespread deployment.
+ This enhances the functionality and interoperability of the Web.</P>
+<P>W3C recommends that user agents and authors (and in particular, authoring
+ tools) produce HTML 4.01 documents rather than HTML 4.0 documents. W3C
+ recommends that authors produce HTML 4 documents instead of HTML 3.2 documents.
+ For reasons of backward compatibility, W3C also recommends that tools
+ interpreting HTML 4 continue to support HTML 3.2 and HTML 2.0 as well.</P>
+<P>For information about the next generation of HTML, "The Extensible HyperText
+ Markup Language" <A class="informref" href="http://www.w3.org/TR/html4/references.html#ref-XHTML" 
+rel="biblioentry">[XHTML]</A>, please refer to the <A href="http://www.w3.org/MarkUp/">W3C 
+HTML Activity</A> and the list of <A href="http://www.w3.org/TR">W3C Technical 
+Reports</A>.</P>
+<P>This document has been produced as part of the <A href="http://www.w3.org/MarkUp/">W3C 
+HTML Activity</A>. The goals of the <A 
+href="http://www.w3.org/MarkUp/Group/">HTML Working Group</A> <I>(<A href="http://cgi.w3.org/MemberAccess/">Members 
+only</A>)</I> are discussed in the <A href="http://www.w3.org/MarkUp/Group/HTMLcharter">HTML 
+Working Group charter</A> <I>(<A href="http://cgi.w3.org/MemberAccess/">Members
+ only</A>)</I>.</P>
+<P>A list of current W3C Recommendations and other technical documents can be
+ found at <A href="http://www.w3.org/TR">http://www.w3.org/TR</A>.</P>
+<P>Public discussion on HTML features takes place on <A href="mailto:www-html@w3.org">www-html@w3.org</A> 
+(<A href="http://lists.w3.org/Archives/Public/www-html/">archives of
+ www-html@w3.org</A>).</P>
+<H3>Available languages</H3>
+<P>The English version of this specification is the only normative version.
+ However, for translations of this document, see <A href="http://www.w3.org/MarkUp/html4-updates/translations">
+http://www.w3.org/MarkUp/html4-updates/translations</A>.</P>
+<H3>Errata</H3>
+<DL>
+  <DT>The list of known errors in this specification is available at:</DT>
+  <DD><A href="http://www.w3.org/MarkUp/html4-updates/errata">
+  http://www.w3.org/MarkUp/html4-updates/errata</A></DD></DL>
+<P>Please report errors in this document to <A href="mailto:www-html-editor@w3.org">www-html-editor@w3.org</A>.</P><!--NewPage--><!-- this is for html2ps --> 
+<DIV class="toc">
+<H2><A name="minitoc">Quick Table of Contents</A></H2>
+<OL>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/about.html" rel="chapter">About 
+  the HTML 4 Specification</A></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/intro.html" rel="chapter">Introduction 
+  to HTML 4</A></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/sgmltut.html" 
+  rel="chapter">On SGML and HTML</A></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/conform.html" rel="chapter">Conformance:
+   requirements and recommendations</A></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/charset.html" rel="chapter">HTML 
+  Document Representation</A> <EM>- Character sets, character encodings, and
+   entities</EM></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/types.html" rel="chapter">Basic 
+  HTML data types</A> <EM>- Character data, colors, lengths, URIs, content 
+  types, etc.</EM></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/global.html" 
+  rel="chapter">The global structure of an HTML document</A> <EM>- The HEAD and 
+  BODY of a document</EM></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/dirlang.html" 
+  rel="chapter">Language information and text direction</A> <EM>- International 
+  considerations for text</EM></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/text.html" rel="chapter">Text</A> 
+  <EM>- Paragraphs, Lines, and Phrases</EM></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/lists.html" 
+  rel="chapter">Lists</A> <EM>- Unordered, Ordered, and Definition 
+  Lists</EM></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html" 
+  rel="chapter">Tables</A></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/links.html" 
+  rel="chapter">Links</A> <EM>- Hypertext and Media-Independent Links</EM></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/objects.html" 
+  rel="chapter">Objects, Images, and Applets</A></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/styles.html" 
+  rel="chapter">Style Sheets</A> <EM>- Adding style to HTML documents</EM></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/graphics.html" 
+  rel="chapter">Alignment, font styles, and horizontal rules</A></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/frames.html" 
+  rel="chapter">Frames</A> <EM>- Multi-view presentation of documents</EM></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html" 
+  rel="chapter">Forms</A> <EM>- User-input Forms: Text Fields, Buttons, Menus, 
+  and more</EM></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/scripts.html" 
+  rel="chapter">Scripts</A> <EM>- Animated Documents and Smart Forms</EM></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/intro.html" rel="chapter">SGML 
+  reference information for HTML</A> <EM>- Formal definition of HTML and
+   validation</EM></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/sgmldecl.html" 
+  rel="chapter"><SPAN title="SGML::declaration of HTML 4" class="index-def">SGML 
+  Declaration of HTML 4</SPAN></A></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/dtd.html" rel="chapter"><SPAN 
+  title="strict DTD::definition of|document type definition::strict" class="index-def">
+  Document Type Definition</SPAN></A></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/loosedtd.html" 
+  rel="chapter"><SPAN title="transitional DTD::definition of|document type &#10;definition::transitional" 
+  class="index-def">Transitional Document Type Definition</SPAN></A></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/framesetdtd.html" 
+  rel="chapter"><SPAN title="frameset::DTD, definition of|document type &#10;definition::frameset" 
+  class="index-def">Frameset Document Type Definition</SPAN></A></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/entities.html" 
+  rel="chapter">Character entity references in HTML 4</A></LI></OL>
+<OL type="A">
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html" 
+  rel="chapter">Changes</A></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html" 
+  rel="chapter">Performance, Implementation, and Design Notes</A></LI></OL>
+<UL class="toc">
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/references.html" rel="chapter">References</A></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/index/elements.html" 
+  rel="chapter">Index of Elements</A></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/index/attributes.html" 
+  rel="chapter">Index of Attributes</A></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/index/list.html" rel="chapter">Index</A></LI></UL></DIV><!--NewPage--><!-- this is for html2ps --> 
+<H2><A name="toc">Full Table of Contents</A></H2>
+<OL>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/about.html" rel="chapter">About 
+  the HTML 4 Specification</A> 
+  <OL>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/about.html#h-1.1">How the specification is
+     organized</A></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/about.html#h-1.2">Document conventions</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/about.html#h-1.2.1">Elements 
+      and attributes</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/about.html#h-1.2.2">Notes 
+      and examples</A></LI></OL></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/about.html#h-1.3">Acknowledgments</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/about.html#h-1.3.1">Acknowledgments 
+      for the current revision</A></LI></OL></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/about.html#h-1.4">Copyright 
+  Notice</A></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/intro.html" rel="chapter">Introduction 
+  to HTML 4</A> 
+  <OL>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/intro.html#h-2.1">What 
+    is the World Wide Web?</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/intro.html#h-2.1.1">Introduction 
+      to URIs</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/intro.html#h-2.1.2">Fragment
+       identifiers</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/intro.html#h-2.1.3">Relative 
+      URIs</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/intro.html#h-2.2">What 
+    is HTML?</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/intro.html#h-2.2.1">A 
+      brief history of HTML</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/intro.html#h-2.3">HTML 
+    4</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/intro.html#h-2.3.1">
+      Internationalization</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/intro.html#h-2.3.2">Accessibility</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/intro.html#h-2.3.3">Tables</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/intro.html#h-2.3.4">Compound
+       documents</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/intro.html#h-2.3.5">Style 
+      sheets</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/intro.html#h-2.3.6">Scripting</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/intro.html#h-2.3.7">Printing</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/intro.html#h-2.4">Authoring 
+    documents with HTML 4</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/intro.html#h-2.4.1">Separate 
+      structure and presentation</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/intro.html#h-2.4.2">Consider 
+      universal accessibility to the Web</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/intro.html#h-2.4.3">Help 
+      user agents with incremental rendering</A></LI></OL></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/sgmltut.html" 
+  rel="chapter">On SGML and HTML</A> 
+  <OL>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/sgmltut.html#h-3.1">Introduction 
+    to SGML</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/sgmltut.html#h-3.2">SGML 
+    constructs used in HTML</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/sgmltut.html#h-3.2.1">Elements</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/sgmltut.html#h-3.2.2">Attributes</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/sgmltut.html#h-3.2.3">Character
+       references</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/sgmltut.html#h-3.2.4">Comments</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/sgmltut.html#h-3.3">How 
+    to read the HTML DTD</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/sgmltut.html#h-3.3.1">DTD 
+      Comments</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/sgmltut.html#h-3.3.2">Parameter 
+      entity definitions</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/sgmltut.html#h-3.3.3">Element
+       declarations</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/sgmltut.html#h-3.3.3.1">Content 
+        model definitions</A></LI></UL></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/sgmltut.html#h-3.3.4">Attribute
+       declarations</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/sgmltut.html#h-3.3.4.1">DTD 
+        entities in attribute definitions</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/intro/sgmltut.html#h-3.3.4.2"><SPAN 
+        title="boolean attribute|attribute::boolean" class="index-def">Boolean
+         attributes</SPAN></A></LI></UL></LI></OL></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/conform.html" rel="chapter">Conformance:
+   requirements and recommendations</A> 
+  <OL>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/conform.html#h-4.1">Definitions</A></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/conform.html#h-4.2">SGML</A></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/conform.html#h-4.3"><SPAN title="text/html" 
+    class="index-def">The text/html content type</SPAN></A></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/charset.html" rel="chapter">HTML 
+  Document Representation</A> <EM>- Character sets, character encodings, and 
+  entities</EM> 
+  <OL>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/charset.html#h-5.1">The Document Character
+     Set</A></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/charset.html#h-5.2">Character encodings</A> 
+    
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/charset.html#h-5.2.1">Choosing 
+      an encoding</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/charset.html#h-5.2.1.1">Notes 
+        on specific encodings</A></LI></UL></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/charset.html#h-5.2.2">Specifying 
+      the character encoding</A></LI></OL></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/charset.html#h-5.3">Character 
+    references</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/charset.html#h-5.3.1">Numeric 
+      character references</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/charset.html#h-5.3.2">Character 
+      entity references</A></LI></OL></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/charset.html#h-5.4">Undisplayable
+     characters</A></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/types.html" rel="chapter">Basic 
+  HTML data types</A> <EM>- Character data, colors, lengths, URIs, content 
+  types, etc.</EM> 
+  <OL>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/types.html#h-6.1">Case information</A></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/types.html#h-6.2">SGML basic types</A></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/types.html#h-6.3">Text strings</A></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/types.html#h-6.4">URIs</A></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/types.html#h-6.5">Colors</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/types.html#h-6.5.1">Notes 
+      on using colors</A></LI></OL></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/types.html#h-6.6">Lengths</A></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/types.html#h-6.7">Content types (MIME
+     types)</A></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/types.html#h-6.8">Language codes</A></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/types.html#h-6.9">Character 
+    encodings</A></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/types.html#h-6.10">Single 
+    characters</A></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/types.html#h-6.11">Dates and times</A></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/types.html#h-6.12">Link types</A></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/types.html#h-6.13">Media 
+    descriptors</A></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/types.html#h-6.14">Script data</A></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/types.html#h-6.15">Style sheet 
+data</A></LI>
+    <LI><A class="tocxref" 
+    href="http://www.w3.org/TR/html4/types.html#h-6.16">Frame target 
+    names</A></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/global.html" 
+  rel="chapter">The global structure of an HTML document</A> <EM>- The HEAD and 
+  BODY of a document</EM> 
+  <OL>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/global.html#h-7.1">Introduction 
+    to the structure of an HTML document</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/global.html#h-7.2">HTML 
+    version information</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/global.html#h-7.3">The 
+    <SAMP class="einst2">HTML</SAMP> element</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/global.html#h-7.4">The 
+    document head</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/global.html#h-7.4.1">The 
+      <SAMP class="einst2">HEAD</SAMP> element</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/global.html#h-7.4.2">The 
+      <SAMP class="einst2">TITLE</SAMP> element</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/global.html#h-7.4.3">The 
+      <SAMP>title</SAMP> attribute</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/global.html#h-7.4.4">Meta 
+      data</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/global.html#h-7.4.4.1">Specifying 
+        meta data</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/global.html#h-7.4.4.2">The 
+        <SAMP class="einst2">META</SAMP> element</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/global.html#h-7.4.4.3">Meta 
+        data profiles</A></LI></UL></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/global.html#h-7.5">The 
+    document body</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/global.html#h-7.5.1">The 
+      <SAMP class="einst2">BODY</SAMP> element</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/global.html#h-7.5.2">Element 
+      identifiers: the <SAMP>id</SAMP> and <SAMP>class</SAMP> 
+attributes</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/global.html#h-7.5.3">Block-level 
+      and inline elements</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/global.html#h-7.5.4">Grouping 
+      elements: the <SAMP class="einst2">DIV</SAMP> and <SAMP 
+      class="einst2">SPAN</SAMP> elements</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/global.html#h-7.5.5">Headings: 
+      The <SAMP class="einst2">H1</SAMP>, <SAMP class="einst2">H2</SAMP>, <SAMP 
+      class="einst2">H3</SAMP>, <SAMP class="einst2">H4</SAMP>, <SAMP class="einst2">H5</SAMP>, 
+      <SAMP class="einst2">H6</SAMP> elements</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/global.html#h-7.5.6">The 
+      <SAMP class="einst2">ADDRESS</SAMP> element</A></LI></OL></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/dirlang.html" 
+  rel="chapter">Language information and text direction</A> <EM>- International 
+  considerations for text</EM> 
+  <OL>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/dirlang.html#h-8.1">Specifying 
+    the language of content: the <SAMP>lang</SAMP> attribute</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/dirlang.html#h-8.1.1"><SPAN 
+      title="language::codes to specify" class="index-def">Language 
+      codes</SPAN></A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/dirlang.html#h-8.1.2">Inheritance 
+      of language codes</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/dirlang.html#h-8.1.3">Interpretation 
+      of language codes</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/dirlang.html#h-8.2">Specifying 
+    the direction of text and tables: the <SAMP>dir</SAMP> attribute</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/dirlang.html#h-8.2.1">Introduction 
+      to the bidirectional algorithm</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/dirlang.html#h-8.2.2">Inheritance 
+      of text direction information</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/dirlang.html#h-8.2.3">Setting 
+      the direction of embedded text</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/dirlang.html#h-8.2.4">Overriding 
+      the bidirectional algorithm: the <SAMP class="einst2">BDO</SAMP> 
+      element</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/dirlang.html#h-8.2.5">Character 
+      references for directionality and joining control</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/dirlang.html#h-8.2.6">The 
+      effect of style sheets on bidirectionality</A></LI></OL></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/text.html" rel="chapter">Text</A> 
+  <EM>- Paragraphs, Lines, and Phrases</EM> 
+  <OL>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/text.html#h-9.1"><SPAN 
+    title="white space" class="index-def">White space</SPAN></A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2">Structured 
+    text</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.1">Phrase 
+      elements: <SAMP class="einst2">EM</SAMP>, <SAMP 
+      class="einst2">STRONG</SAMP>, <SAMP class="einst2">DFN</SAMP>, <SAMP 
+      class="einst2">CODE</SAMP>, <SAMP class="einst2">SAMP</SAMP>, <SAMP class="einst2">KBD</SAMP>, 
+      <SAMP class="edef">VAR</SAMP>, <SAMP class="einst2">CITE</SAMP>, <SAMP 
+      class="einst2">ABBR</SAMP>, and <SAMP 
+      class="einst2">ACRONYM</SAMP></A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.2">Quotations: 
+      The <SAMP class="einst2">BLOCKQUOTE</SAMP> and <SAMP 
+      class="einst2">Q</SAMP> elements</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.2.1">Rendering
+         quotations</A></LI></UL></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.3">Subscripts 
+      and superscripts: the <SAMP class="edef">SUB</SAMP> and <SAMP class="einst2">
+      SUP</SAMP> elements</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/text.html#h-9.3">Lines 
+    and Paragraphs</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/text.html#h-9.3.1">Paragraphs: 
+      the <SAMP class="einst2">P</SAMP> element</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/text.html#h-9.3.2">Controlling 
+      line breaks</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/text.html#h-9.3.2.1">Forcing 
+        a line break: the <SAMP class="einst2">BR</SAMP> element</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/text.html#h-9.3.2.2">Prohibiting 
+        a line break</A></LI></UL></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/text.html#h-9.3.3">Hyphenation</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/text.html#h-9.3.4">Preformatted 
+      text: The <SAMP class="einst2">PRE</SAMP> element</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/text.html#h-9.3.5">Visual 
+      rendering of paragraphs</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/text.html#h-9.4">Marking 
+    document changes: The INS and DEL elements</A></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/lists.html" 
+  rel="chapter">Lists</A> <EM>- Unordered, Ordered, and Definition Lists</EM> 
+  <OL>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/lists.html#h-10.1">Introduction 
+    to lists</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/lists.html#h-10.2"><SPAN 
+    title="list::unordered" class="index-def">Unordered lists</SPAN> (<SAMP 
+    class="einst2">UL</SAMP>), <SPAN title="list::ordered" 
+    class="index-def">ordered lists</SPAN> (<SAMP class="einst2">OL</SAMP>), and 
+    list items (<SAMP class="einst2">LI</SAMP>)</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/lists.html#h-10.3"><SPAN 
+    title="list::definition list" class="index-def">Definition lists</SPAN>: the 
+    <SAMP class="einst2">DL</SAMP>, <SAMP class="einst2">DT</SAMP>, and <SAMP 
+    class="einst2">DD</SAMP> elements</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/lists.html#h-10.3.1">Visual 
+      rendering of lists</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/lists.html#h-10.4">The 
+    <SAMP class="einst2">DIR</SAMP> and <SAMP class="einst2">MENU</SAMP> 
+    elements</A></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html" 
+  rel="chapter">Tables</A> 
+  <OL>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.1">Introduction 
+    to tables</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2">Elements 
+    for constructing tables</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.1">The 
+      <SAMP class="einst2">TABLE</SAMP> element</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.1.1">Table
+         directionality</A></LI></UL></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.2">Table 
+      Captions: The <SAMP class="einst2">CAPTION</SAMP> element</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.3">Row 
+      groups: the <SAMP class="einst2">THEAD</SAMP>, <SAMP 
+      class="einst2">TFOOT</SAMP>, and <SAMP class="einst2">TBODY</SAMP> 
+      elements</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.4">Column 
+      groups: the <SAMP class="einst2">COLGROUP</SAMP> and <SAMP 
+      class="einst2">COL</SAMP> elements</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.4.1">The 
+        <SAMP class="einst2">COLGROUP</SAMP> element</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.4.2">The 
+        <SAMP class="einst2">COL</SAMP> element</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.4.3">Calculating 
+        the number of columns in a table</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.4.4">Calculating 
+        the width of columns</A></LI></UL></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.5">Table 
+      rows: The <SAMP class="einst2">TR</SAMP> element</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.6">Table 
+      cells: The <SAMP class="einst2">TH</SAMP> and <SAMP 
+      class="einst2">TD</SAMP> elements</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.6.1">Cells 
+        that span several rows or columns</A></LI></UL></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.3">Table 
+    formatting by visual user agents</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.3.1">Borders 
+      and rules</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.3.2">Horizontal 
+      and vertical alignment</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.3.2.1">Inheritance 
+        of alignment specifications</A></LI></UL></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.3.3">Cell 
+      margins</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.4">Table 
+    rendering by non-visual user agents</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.4.1">Associating 
+      header information with data cells</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.4.2">Categorizing
+       cells</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.4.3">Algorithm 
+      to find heading information</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.5">Sample 
+    table</A></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/links.html" 
+  rel="chapter">Links</A> <EM>- Hypertext and Media-Independent Links</EM> 
+  <OL>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/links.html#h-12.1">Introduction 
+    to links and anchors</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/links.html#h-12.1.1">Visiting 
+      a linked resource</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/links.html#h-12.1.2">Other 
+      link relationships</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/links.html#h-12.1.3">Specifying 
+      anchors and links</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/links.html#h-12.1.4">Link 
+      titles</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/links.html#h-12.1.5">Internationalization
+       and links</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/links.html#h-12.2">The 
+    <SAMP class="einst2">A</SAMP> element</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/links.html#h-12.2.1">Syntax 
+      of anchor names</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/links.html#h-12.2.2">Nested 
+      links are illegal</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/links.html#h-12.2.3">Anchors 
+      with the <SAMP>id</SAMP> attribute</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/links.html#h-12.2.4">Unavailable 
+      and unidentifiable resources</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/links.html#h-12.3">Document 
+    relationships: the <SAMP class="einst2">LINK</SAMP> element</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/links.html#h-12.3.1">Forward 
+      and reverse links</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/links.html#h-12.3.2">Links 
+      and external style sheets</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/links.html#h-12.3.3">Links 
+      and search engines</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/links.html#h-12.4">Path 
+    information: the <SAMP class="einst2">BASE</SAMP> element</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/links.html#h-12.4.1"><SPAN 
+      title="URI::resolution of relative|resolution of relative URI" class="index-def">
+      Resolving relative URIs</SPAN></A></LI></OL></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/objects.html" 
+  rel="chapter">Objects, Images, and Applets</A> 
+  <OL>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/objects.html#h-13.1">Introduction 
+    to objects, images, and applets</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/objects.html#h-13.2">Including 
+    an image: the <SAMP class="einst2">IMG</SAMP> element</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/objects.html#h-13.3">Generic 
+    inclusion: the <SAMP class="einst2">OBJECT</SAMP> element</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/objects.html#h-13.3.1">Rules 
+      for rendering objects</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/objects.html#h-13.3.2">Object
+       initialization: the <SAMP class="einst2">PARAM</SAMP> element</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/objects.html#h-13.3.3">Global 
+      naming schemes for objects</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/objects.html#h-13.3.4">Object 
+      declarations and instantiations</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/objects.html#h-13.4">Including 
+    an applet: the <SAMP class="einst2">APPLET</SAMP> element</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/objects.html#h-13.5">Notes 
+    on embedded documents</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/objects.html#h-13.6"><SPAN 
+    title="image map" class="index-def">Image maps</SPAN></A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/objects.html#h-13.6.1">Client-side 
+      image maps: the <SAMP class="einst2">MAP</SAMP> and <SAMP 
+      class="einst2">AREA</SAMP> elements</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/objects.html#h-13.6.1.1">Client-side 
+        image map examples</A></LI></UL></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/objects.html#h-13.6.2">Server-side 
+      image maps</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/objects.html#h-13.7">Visual 
+    presentation of images, objects, and applets</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/objects.html#h-13.7.1">Width 
+      and height</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/objects.html#h-13.7.2">White 
+      space around images and objects</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/objects.html#h-13.7.3">Borders</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/objects.html#h-13.7.4">Alignment</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/struct/objects.html#h-13.8">How 
+    to specify alternate text</A></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/styles.html" 
+  rel="chapter">Style Sheets</A> <EM>- Adding style to HTML documents</EM> 
+  <OL>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/styles.html#h-14.1">Introduction 
+    to style sheets</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/styles.html#h-14.2">Adding 
+    style to HTML</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/styles.html#h-14.2.1">Setting 
+      the default style sheet language</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/styles.html#h-14.2.2">Inline 
+      style information</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/styles.html#h-14.2.3">Header 
+      style information: the <SAMP class="einst2">STYLE</SAMP> element</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/styles.html#h-14.2.4">Media 
+      types</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/styles.html#h-14.3">External 
+    style sheets</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/styles.html#h-14.3.1">Preferred 
+      and alternate style sheets</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/styles.html#h-14.3.2">Specifying 
+      external style sheets</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/styles.html#h-14.4">Cascading 
+    style sheets</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/styles.html#h-14.4.1">Media-dependent
+       cascades</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/styles.html#h-14.4.2">Inheritance 
+      and cascading</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/styles.html#h-14.5">Hiding 
+    style data from user agents</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/styles.html#h-14.6">Linking 
+    to style sheets with HTTP headers</A></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/graphics.html" 
+  rel="chapter">Alignment, font styles, and horizontal rules</A> 
+  <OL>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/graphics.html#h-15.1">Formatting</A> 
+    
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/graphics.html#h-15.1.1">Background
+       color</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/graphics.html#h-15.1.2">Alignment</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/graphics.html#h-15.1.3">Floating
+       objects</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/graphics.html#h-15.1.3.1">Float 
+        an object</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/graphics.html#h-15.1.3.2">Float 
+        text around an object</A></LI></UL></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/graphics.html#h-15.2">Fonts</A> 
+    
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/graphics.html#h-15.2.1">Font 
+      style elements: the <SAMP class="einst2">TT</SAMP>, <SAMP 
+      class="einst2">I</SAMP>, <SAMP class="einst2-B">B</SAMP>, <SAMP class="einst2">BIG</SAMP>, 
+      <SAMP class="einst2">SMALL</SAMP>, <SAMP class="einst2">STRIKE</SAMP>, 
+      <SAMP class="einst2">S</SAMP>, and <SAMP class="einst2">U</SAMP> 
+      elements</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/graphics.html#h-15.2.2">Font 
+      modifier elements: <SAMP class="einst2">FONT</SAMP> and <SAMP class="einst2">
+      BASEFONT</SAMP></A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/graphics.html#h-15.3">Rules: 
+    the <SAMP class="einst2">HR</SAMP> element</A></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/frames.html" 
+  rel="chapter">Frames</A> <EM>- Multi-view presentation of documents</EM> 
+  <OL>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/frames.html#h-16.1">Introduction 
+    to frames</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/frames.html#h-16.2">Layout 
+    of frames</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/frames.html#h-16.2.1">The 
+      <SAMP class="einst2">FRAMESET</SAMP> element</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/frames.html#h-16.2.1.1">Rows 
+        and columns</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/frames.html#h-16.2.1.2">Nested 
+        frame sets</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/frames.html#h-16.2.1.3">Sharing 
+        data among frames</A></LI></UL></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/frames.html#h-16.2.2">The 
+      <SAMP class="einst2">FRAME</SAMP> element</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/frames.html#h-16.2.2.1">Setting 
+        the initial contents of a frame</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/frames.html#h-16.2.2.2">Visual 
+        rendering of a frame</A></LI></UL></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/frames.html#h-16.3">Specifying 
+    target frame information</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/frames.html#h-16.3.1">Setting 
+      the default target for links</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/frames.html#h-16.3.2">Target
+       semantics</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/frames.html#h-16.4">Alternate 
+    content</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/frames.html#h-16.4.1">The 
+      <SAMP class="einst2">NOFRAMES</SAMP> element</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/frames.html#h-16.4.2">Long 
+      descriptions of frames</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/present/frames.html#h-16.5">Inline 
+    frames: the <SAMP class="einst2">IFRAME</SAMP> element</A></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html" 
+  rel="chapter">Forms</A> <EM>- User-input Forms: Text Fields, Buttons, Menus, 
+  and more</EM> 
+  <OL>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.1">Introduction 
+    to forms</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.2">Controls</A> 
+    
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.2.1">Control
+       types</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.3">The 
+    <SAMP class="einst2">FORM</SAMP> element</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.4">The 
+    <SAMP class="einst2">INPUT</SAMP> element</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.4.1">Control 
+      types created with INPUT</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.4.2">Examples 
+      of forms containing INPUT controls</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.5">The 
+    <SAMP class="einst2">BUTTON</SAMP> element</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.6">The 
+    <SAMP class="einst2">SELECT</SAMP>, <SAMP class="einst2">OPTGROUP</SAMP>, 
+    and <SAMP class="einst2">OPTION</SAMP> elements</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.6.1">Pre-selected
+       options</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.7">The 
+    <SAMP class="einst2">TEXTAREA</SAMP> element</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.8">The 
+    <SAMP class="einst2">ISINDEX</SAMP> element</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.9">Labels</A> 
+    
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.9.1">The 
+      <SAMP class="einst2">LABEL</SAMP> element</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.10">Adding 
+    structure to forms: the <SAMP class="einst2">FIELDSET</SAMP> and <SAMP 
+    class="einst2">LEGEND</SAMP> elements</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.11"><SPAN 
+    title="focus|control::giving focus to" class="index-def">Giving focus to an
+     element</SPAN></A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.11.1"><SPAN 
+      title="control::tabbing navigation|tabbing &#10;navigation|form::navigating through controls" 
+      class="index-def">Tabbing navigation</SPAN></A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.11.2"><SPAN 
+      title="access key|control::access key for|accessibility::access&#10;keys" 
+      class="index-def">Access keys</SPAN></A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.12">Disabled 
+    and read-only controls</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.12.1">Disabled
+       controls</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.12.2">Read-only
+       controls</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.13">Form 
+    submission</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.13.1">Form 
+      submission method</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.13.2">Successful
+       controls</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.13.3">Processing 
+      form data</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.13.3.1">Step 
+        one: Identify the successful controls</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.13.3.2">Step 
+        two: Build a form data set</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.13.3.3">Step 
+        three: Encode the form data set</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.13.3.4">Step 
+        four: Submit the encoded form data set</A></LI></UL></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.13.4">Form 
+      content types</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.13.4.1"><SPAN 
+        title="application/x-www-form-urlencoded|content &#10;type::application/x-www-form-urlencoded" 
+        class="index-def">application/x-www-form-urlencoded</SPAN></A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/forms.html#h-17.13.4.2"><SPAN 
+        title="multipart/form-data|content type::multipart/form-data" class="index-def">
+        multipart/form-data</SPAN></A></LI></UL></LI></OL></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/scripts.html" 
+  rel="chapter">Scripts</A> <EM>- Animated Documents and Smart Forms</EM> 
+  <OL>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/scripts.html#h-18.1">Introduction 
+    to scripts</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/scripts.html#h-18.2">Designing 
+    documents for user agents that support scripting</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/scripts.html#h-18.2.1">The 
+      <SAMP class="einst2">SCRIPT</SAMP> element</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/scripts.html#h-18.2.2">Specifying 
+      the scripting language</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/scripts.html#h-18.2.2.1">The 
+        default scripting language</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/scripts.html#h-18.2.2.2">Local
+         declaration of a scripting language</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/scripts.html#h-18.2.2.3">References 
+        to HTML elements from a script</A></LI></UL></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/scripts.html#h-18.2.3">Intrinsic
+       events</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/scripts.html#h-18.2.4">Dynamic
+       modification of documents</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/scripts.html#h-18.3">Designing 
+    documents for user agents that don't support scripting</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/scripts.html#h-18.3.1">The 
+      <SAMP class="einst2">NOSCRIPT</SAMP> element</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/interact/scripts.html#h-18.3.2">Hiding 
+      script data from user agents</A></LI></OL></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/intro.html" rel="chapter">SGML 
+  reference information for HTML</A> <EM>- Formal definition of HTML and 
+  validation</EM> 
+  <OL>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/intro.html#h-19.1">Document
+     Validation</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/intro.html#h-19.2">Sample 
+    SGML catalog</A></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/sgmldecl.html" 
+  rel="chapter"><SPAN title="SGML::declaration of HTML 4" class="index-def">SGML 
+  Declaration of HTML 4</SPAN></A> 
+  <OL>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/sgmldecl.html#h-20.1">SGML
+     Declaration</A></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/dtd.html" rel="chapter"><SPAN 
+  title="strict DTD::definition of|document type definition::strict" class="index-def">
+  Document Type Definition</SPAN></A></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/loosedtd.html" 
+  rel="chapter"><SPAN title="transitional DTD::definition of|document type &#10;definition::transitional" 
+  class="index-def">Transitional Document Type Definition</SPAN></A></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/framesetdtd.html" 
+  rel="chapter"><SPAN title="frameset::DTD, definition of|document type &#10;definition::frameset" 
+  class="index-def">Frameset Document Type Definition</SPAN></A></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/entities.html" 
+  rel="chapter">Character entity references in HTML 4</A> 
+  <OL>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/entities.html#h-24.1">Introduction 
+    to character entity references</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/entities.html#h-24.2">Character 
+    entity references for ISO 8859-1 characters</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/entities.html#h-24.2.1">The 
+      list of characters</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/entities.html#h-24.3">Character 
+    entity references for symbols, mathematical symbols, and Greek letters</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/entities.html#h-24.3.1">The 
+      list of characters</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/entities.html#h-24.4">Character 
+    entity references for markup-significant and internationalization 
+    characters</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/sgml/entities.html#h-24.4.1">The 
+      list of characters</A></LI></OL></LI></OL></LI></OL>
+<OL type="A">
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html" 
+  rel="chapter">Changes</A> 
+  <OL>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1">Changes 
+    between 24 April 1998 HTML 4.0 and 24 December 1999 HTML 4.01 versions</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1.1">Changes 
+      to the specification</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1.1.1">General
+         changes</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1.1.2">On 
+        SGML and HTML</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1.1.3">HTML 
+        Document Representation</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1.1.4">Basic 
+        HTML data types</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1.1.5">Global 
+        structure of an HTML document</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1.1.6">Language
+         information and text direction</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1.1.7">Tables</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1.1.8">Links</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1.1.9">Objects, 
+        Images, and Applets</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1.1.10">Style 
+        Sheets in HTML Documents</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1.1.11">Frames</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1.1.12">Forms</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1.1.13">SGML
+         Declaration</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1.1.14">Strict
+         DTD</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1.1.15">Notes</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1.1.16">
+        References</A></LI></UL></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1.2">Errors 
+      that were corrected</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1.3">Minor 
+      typographical errors that were corrected</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1.4">
+      Clarifications</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.1.5">Known 
+      Browser problems</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.2">Changes 
+    between 18 December 1997 and 24 April 1998 versions</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.2.1">Errors 
+      that were corrected</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.2.2">Minor 
+      typographical errors that were corrected</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.3">Changes 
+    between HTML 3.2 and HTML 4.0 (18 December 1997)</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.3.1">Changes 
+      to elements</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.3.1.1">New
+         elements</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.3.1.2">Deprecated
+         elements</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.3.1.3">Obsolete
+         elements</A></LI></UL></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.3.2">Changes 
+      to attributes</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.3.3">Changes 
+      for accessibility</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.3.4">Changes 
+      for meta data</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.3.5">Changes 
+      for text</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.3.6">Changes 
+      for links</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.3.7">Changes 
+      for tables</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.3.8">Changes 
+      for images, objects, and image maps</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.3.9">Changes 
+      for forms</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.3.10">Changes 
+      for style sheets</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.3.11">Changes 
+      for frames</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.3.12">Changes 
+      for scripting</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/changes.html#h-A.3.13">Changes 
+      for internationalization</A></LI></OL></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html" 
+  rel="chapter">Performance, Implementation, and Design Notes</A> 
+  <OL>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.1">Notes 
+    on invalid documents</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.2">Special 
+    characters in URI attribute values</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.2.1">Non-ASCII 
+      characters in URI attribute values</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.2.2">Ampersands 
+      in URI attribute values</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.3">SGML 
+    implementation notes</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.3.1">Line 
+      breaks</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.3.2">Specifying 
+      non-HTML data</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.3.2.1">Element
+         content</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.3.2.2">Attribute
+         values</A></LI></UL></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.3.3">SGML 
+      features with limited support</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.3.4">Boolean
+       attributes</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.3.5">Marked
+       Sections</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.3.6">Processing
+       Instructions</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.3.7">Shorthand
+       markup</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.4">Notes 
+    on helping search engines index your Web site</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.4.1">Search 
+      robots</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.4.1.1">The 
+        robots.txt file</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.4.1.2">Robots 
+        and the META element</A></LI></UL></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.5">Notes 
+    on tables</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.5.1">Design 
+      rationale</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.5.1.1">Dynamic
+         reformatting</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.5.1.2">Incremental
+         display</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.5.1.3">Structure 
+        and presentation</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.5.1.4">Row 
+        and column groups</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.5.1.5">
+        Accessibility</A></LI></UL></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.5.2">Recommended 
+      Layout Algorithms</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.5.2.1">Fixed 
+        Layout Algorithm</A></LI>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.5.2.2">Autolayout
+         Algorithm</A></LI></UL></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.6">Notes 
+    on forms</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.6.1">Incremental
+       display</A></LI>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.6.2">Future
+       projects</A></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.7">Notes 
+    on scripting</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.7.1">Reserved 
+      syntax for future script macros</A> 
+      <UL>
+        <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.7.1.1">Current 
+        Practice for Script Macros</A></LI></UL></LI></OL></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.8">Notes 
+    on frames</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.9">Notes 
+    on accessibility</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.10">Notes 
+    on security</A> 
+    <OL>
+      <LI><A class="tocxref" href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.10.1">Security 
+      issues for forms</A></LI></OL></LI></OL></LI></OL>
+<UL class="toc">
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/references.html" rel="chapter">References</A> 
+  
+  <OL>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/references.html#h-1.1">Normative
+     references</A></LI>
+    <LI><A class="tocxref" href="http://www.w3.org/TR/html4/references.html#h-1.2">Informative
+     references</A></LI></OL></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/index/elements.html" 
+  rel="chapter">Index of Elements</A></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/index/attributes.html" 
+  rel="chapter">Index of Attributes</A></LI>
+  <LI><A class="tocxref" href="http://www.w3.org/TR/html4/index/list.html" rel="chapter">Index</A></LI></UL>
+<DIV align="center" class="navbar">
+<HR>
+<A href="http://www.w3.org/TR/html4/about.html">next</A> &nbsp; <A href="http://www.w3.org/TR/html4/#minitoc">table 
+of contents</A> &nbsp; <A 
+href="http://www.w3.org/TR/html4/index/elements.html">elements</A> &nbsp; <A 
+href="http://www.w3.org/TR/html4/index/attributes.html">attributes</A> &nbsp; <A 
+href="http://www.w3.org/TR/html4/index/list.html">index</A></DIV></BODY></HTML>

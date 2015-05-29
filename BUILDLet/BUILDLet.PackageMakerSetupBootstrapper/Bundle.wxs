@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:bal="http://schemas.microsoft.com/wix/BalExtension"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
+
+  <!-- Include -->
+  <?include ..\Version\InstallerInfo.wxi?>
+  <?include ..\Version\InstallerGUID.wxi?>
+
+  <!-- GUID -->
+  <?define GUID_UpgradeCode="$(var.GUID_PackageMaker_ExePackage_UpgradeCode)"?>
+
+  
+  <!-- Source Files -->
+  <?define Source_PSUtilitySetup="..\Release\PSUtilitySetup.exe"?>
+  <?define Source_PSPackageMakerSetup="..\Release\PSPackageMakerSetup.exe"?>
+  <?define Source_PackageMakerSetup="..\Release\PackageMakerSetup.msi"?>
+
+  <!-- Source Files (.NET Framework 4.5) -->
+  <?define Source_dotNetFx45_ja="..\Redist\Microsoft\ja\dotNetFx45_Full_setup.exe"?>
+  <?define Source_dotNetFx45_en="..\Redist\Microsoft\en\dotNetFx45_Full_setup.exe"?>
+
+
+  <!-- Bundle -->
+  <Bundle Name="$(var.PackageMaker_ProductName) $(var.Version)"
+          Version="$(var.Version)"
+          Manufacturer="$(var.Manufacturer)"
+          Copyright="$(var.Copyright)"
+          UpgradeCode="$(var.GUID_UpgradeCode)">
+
+    
+    <!-- BootstrapperApplicationRef -->
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.HyperlinkSidebarLicense">
+      <bal:WixStandardBootstrapperApplication LicenseUrl=""
+                                              LogoFile="$(var.LogoFile_PSPackageMakerSetupBootstrapper)"
+                                              ShowVersion="yes"
+                                              SuppressOptionsUI="yes"
+                                              LaunchTarget="[ProgramFilesFolder]$(var.PackageMaker_ProductFolderName)\Readme.txt" />
+                                         <!-- LicenseFile="$(var.LicenseFile_RTF)" -->
+    </BootstrapperApplicationRef>
+
+    
+    <!-- Related Product (MsiPackage) -->
+    <util:ProductSearch Result="version" Variable="PSUtility_Version" ProductCode="$(var.GUID_PSUtility_Product)" />
+    <util:ProductSearch Result="version" Variable="PSUtility64_Version" ProductCode="$(var.GUID_PSUtility64_Product)" />
+    <util:ProductSearch Result="version" Variable="PSPackageMaker_Version" ProductCode="$(var.GUID_PSPackageMaker_Product)" />
+    <util:ProductSearch Result="version" Variable="PSPackageMaker64_Version" ProductCode="$(var.GUID_PSPackageMaker64_Product)" />
+    
+    
+    <!-- Chain -->
+    <Chain>
+      <!-- .NET Framework 4.5 -->
+      <!--
+      <PackageGroupRef Id="NetFx45Web" />
+      -->
+
+      <!-- BUILDLet.PowerShell.Utilities -->
+      <ExePackage SourceFile="$(var.Source_PSUtilitySetup)"
+                  DetectCondition="(PSUtility_Version &gt;= &quot;$(var.Version).0&quot;) AND (PSUtility_Version &gt;= &quot;$(var.Version).0&quot;)"
+                  Permanent="yes"
+                  InstallCommand="/q /hideconsole"
+                  UninstallCommand="/q /uninstall /hideconsole" />
+
+      <!-- BUILDLet.PowerShell.PackageMaker -->
+      <ExePackage SourceFile="$(var.Source_PSPackageMakerSetup)"
+                  DetectCondition="(PSPackageMaker_Version &gt;= &quot;$(var.Version).0&quot;) AND (PSPackageMaker_Version &gt;= &quot;$(var.Version).0&quot;)"
+                  Permanent="yes"
+                  InstallCommand="/q /hideconsole"
+                  UninstallCommand="/q /uninstall /hideconsole" />
+      
+      <!-- Components of BUILDLet PackageMaker Toolkit itself -->
+      <MsiPackage SourceFile="$(var.Source_PackageMakerSetup)" />
+    </Chain>
+    
+
+    <!-- .NET Framework 4.5 -->
+    <!--
+    <PayloadGroup Id="NetFx45Web">
+      <Payload SourceFile="$(var.Source_dotNetFx45_ja)" />
+    </PayloadGroup>
+    -->
+  </Bundle>
+</Wix>

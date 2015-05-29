@@ -9,15 +9,15 @@ using System.IO;
 
 namespace BUILDLet.WOL
 {
-    public class DefaultMACAddressList : ObservableCollection<string>
+    public class DefaultMacAddressList : ObservableCollection<string>
     {
         private int macLength = 17;
         private int maxHist = int.Parse(Properties.Resources.HistoryCount);
         
-        public DefaultMACAddressList()
+        public DefaultMacAddressList()
         {
             // Get default MAC Address
-            string[] addresses = this.getDefaultMACAddresses();
+            string[] addresses = this.getDefaultMacAddresses();
 
 
             if (addresses != null)
@@ -40,7 +40,7 @@ namespace BUILDLet.WOL
                 if (!string.IsNullOrEmpty(this.SourceFilePath))
                 {
                     // Update MAC address list
-                    this.updateMACAddresses(address);
+                    this.updateMacAddresses(address);
 
 
                     // Write to configuration file
@@ -57,7 +57,7 @@ namespace BUILDLet.WOL
         }
 
 
-        private void updateMACAddresses(string address)
+        private void updateMacAddresses(string address)
         {
             if (this.IndexOf(address) < 0)
             {
@@ -70,7 +70,7 @@ namespace BUILDLet.WOL
         }
 
 
-        private string[] getDefaultMACAddresses()
+        private string[] getDefaultMacAddresses()
         {
             // Set search path of configuration file
             string[] searchPath =
