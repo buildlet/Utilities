@@ -4,6 +4,6 @@
              xmlns:app="clr-namespace:BUILDLet.WOL"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <app:DefaultMACAddressList x:Key="addressList" />
+        <app:DefaultMacAddressList x:Key="addressList" />
     </Application.Resources>
 </Application>

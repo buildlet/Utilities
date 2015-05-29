@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
 
 using BUILDLet.Utilities.Tests;
+
 
 namespace BUILDLet.Utilities.Cryptography.Tests
 {
@@ -15,7 +17,7 @@ namespace BUILDLet.Utilities.Cryptography.Tests
     {
         [TestMethod()]
         [ExpectedException(typeof(ArgumentException))]
-        public void HashCode_HashNameTest()
+        public void HashCode_HashNameExceptionTest()
         {
             byte[] dummy = new byte[] { 0x00, 0xFF };
             new HashCode(dummy, "hoge");
@@ -23,21 +25,21 @@ namespace BUILDLet.Utilities.Cryptography.Tests
 
         [TestMethod()]
         [ExpectedException(typeof(ArgumentException))]
-        public void HashCode_MD5_ExpectedExceptionTest1()
+        public void HashCode_MD5_ExceptionTest1()
         {
             new HashCode(string.Empty);
         }
 
         [TestMethod()]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void HashCode_MD5_ExpectedExceptionTest2()
+        public void HashCode_MD5_ExceptionTest2()
         {
             byte[] dummy = null;
             new HashCode(dummy);
         }
 
         [TestMethod()]
-        public void LONG_HashCode_ToStringTest()
+        public void LONG_BIG_HashCode_ToStringTest()
         {
             Log log = new Log(false, true, true);
             DateTime start;
@@ -65,7 +67,23 @@ namespace BUILDLet.Utilities.Cryptography.Tests
             // Validation of file existence
             foreach (var file in testFiles)
             {
-                if (!System.IO.File.Exists(file)) { Assert.Inconclusive("Test File\"{0}\" is not found.", file); }
+                if (!System.IO.File.Exists(file))
+                {
+                    switch (file)
+                    {
+                        case "default.bin":
+                            new BinaryData().ToFile(file);
+                            break;
+
+                        case "big.bin":
+                            new BinaryData().ToFile(file, 3 * (long)Math.Pow(1000, 3));
+                            break;
+
+                        default:
+                            Assert.Inconclusive("Test File\"{0}\" is not founds.", file);
+                            break;
+                    }
+                }
             }
 
 
@@ -102,7 +120,7 @@ namespace BUILDLet.Utilities.Cryptography.Tests
                 p.WaitForExit();
                 p.Close();
 
-                // extract message of hash value (FCIV)
+                // extract message of hash value_found (FCIV)
                 expected = fciv_stdout.Split(new string[] { "\r\n" }, StringSplitOptions.None)[3].Split(' ')[0].ToUpper();
 
                 // Output (FCIV: End)

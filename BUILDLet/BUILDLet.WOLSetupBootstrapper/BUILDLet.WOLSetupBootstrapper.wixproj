@@ -30,15 +30,12 @@
       <Name>WixBalExtension</Name>
     </WixExtension>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Sources" />
-  </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
   <PropertyGroup>
     <PostBuildEvent>%40ECHO OFF
-SET TARGET_DIRECTORY=Release
-ECHO [RELEASE] $(TargetFileName) -^&gt; $(SolutionDir)%25TARGET_DIRECTORY%25
-COPY "$(TargetPath)" "$(SolutionDir)%25TARGET_DIRECTORY%25"</PostBuildEvent>
+SET TARGET_DIRECTORY=$(SolutionDir)Release
+ECHO [RELEASE] $(TargetFileName) -^&gt; %25TARGET_DIRECTORY%25
+COPY "$(TargetPath)" "%25TARGET_DIRECTORY%25"</PostBuildEvent>
   </PropertyGroup>
   <!--
 	To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using System.IO;
 
+
 namespace BUILDLet.Utilities
 {
     /// <summary>
@@ -25,9 +26,9 @@ namespace BUILDLet.Utilities
         /// 既定では、下記の順番でフォルダーを検索します。
         /// <para>
         ///     <list type="number">
-        ///         <item><description>マイ ドキュメント フォルダー</description></item>
-        ///         <item><description>Windows フォルダー</description></item>
-        ///         <item><description>System32 フォルダー</description></item>
+        ///         <value_found><description>マイ ドキュメント フォルダー</description></value_found>
+        ///         <value_found><description>Windows フォルダー</description></value_found>
+        ///         <value_found><description>System32 フォルダー</description></value_found>
         ///     </list>
         /// </para>
         /// </remarks>
@@ -144,6 +145,37 @@ namespace BUILDLet.Utilities
 
             // File does not exist.
             return string.Empty;
+        }
+
+
+        /// <summary>
+        /// 相対パスを絶対パスに変換します。
+        /// </summary>
+        /// <param name="path">変換する相対パス</param>
+        /// <returns>変換された絶対パス</returns>
+        /// <remarks>
+        /// 指定されたパスが絶対パスの場合は、指定されたパスをそのまま返します。
+        /// 指定されたパスが存在しないなど、変換に失敗した場合は <see cref="String.Empty"/> を返します。
+        /// </remarks>
+        public static string ConvertPath(string path)
+        {
+            try
+            {
+                if (!Path.IsPathRooted(path)) { path = Path.Combine(Environment.CurrentDirectory, path); }
+
+                return Path.GetFullPath(path);
+            }
+            catch (Exception) { return string.Empty; }
+        }
+
+        /// <summary>
+        /// 指定されたパス文字列からフォルダー名を取得します。
+        /// </summary>
+        /// <param name="path">パス文字列</param>
+        /// <returns>フォルダー名</returns>
+        public static string GetFolderName(string path)
+        {
+            return path.Split(new char[] { Path.DirectorySeparatorChar }, StringSplitOptions.RemoveEmptyEntries).Last();
         }
     }
 }

@@ -44,14 +44,14 @@ namespace BUILDLet.WOL
                 // Magic Packet
                 MagicPacket packet = new MagicPacket((string)MacAddressComboBox.Text);
 
-                // Send Magic Packet
-                WakeOnLan.Send(packet, 3);
+                // Send Magic Packet (3 times)
+                packet.Send(3);
 
                 // Show message
-                MessageBox.Show(string.Format(Properties.Resources.SendMessage, packet.MACAddress), App.Name, MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show(string.Format(Properties.Resources.SendMessage, packet.MacAddress), App.Name, MessageBoxButton.OK, MessageBoxImage.Information);
 
                 // Update source file of MAC addresses
-                ((DefaultMACAddressList)((App)App.Current).Resources["addressList"]).UpdateSourceFile(this.MacAddressComboBox.Text);
+                ((DefaultMacAddressList)((App)App.Current).Resources["addressList"]).UpdateSourceFile(this.MacAddressComboBox.Text);
 
                 // Close MainWindow
                 this.Close();

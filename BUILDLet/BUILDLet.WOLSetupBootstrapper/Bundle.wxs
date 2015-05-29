@@ -4,30 +4,26 @@
 
   <!-- Include -->
   <?include ..\Version\InstallerInfo.wxi?>
-
+  <?include ..\Version\InstallerGUID.wxi?>
 
   <!-- GUID -->
-  <?define GUID_UpgradeCode="{965E66F5-08CD-4138-AC1B-07BAD82AD75A}"?>
+  <?define GUID_UpgradeCode="$(var.GUID_WOL_ExePackage_UpgradeCode)"?>
 
-
-  <!-- Resource Files -->
-  <?define Source_LicenseFile="..\Resources\BUILDLet.WOLSetupBootstrapper\License.rtf"?>
-  <?define Source_LogoFile="..\Resources\BUILDLet.WOLSetupBootstrapper\BUILDLet_Yellow_64x64.png"?>
-
+  
   <!-- Source Files -->
-  <?define SourceFile="Sources\WOLSetup.msi"?>
-
+  <?define SourceFile="..\Release\WOLSetup.msi"?>
+  
 
   <!-- Bundle -->
-  <Bundle Name="$(var.ProductName) $(var.ProductVersion)" 
-          Version="$(var.ProductVersion)" 
+  <Bundle Name="$(var.WOL_ProductName) $(var.Version)" 
+          Version="$(var.Version)" 
           Manufacturer="$(var.Manufacturer)" 
-          Copyright="$(var.ProductCopyright)"
+          Copyright="$(var.Copyright)"
           UpgradeCode="$(var.GUID_UpgradeCode)">
 
     <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLargeLicense">
-      <bal:WixStandardBootstrapperApplication LicenseFile="$(var.Source_LicenseFile)"
-                                              LogoFile="$(var.Source_LogoFile)"
+      <bal:WixStandardBootstrapperApplication LicenseFile="$(var.LicenseFile_RTF)"
+                                              LogoFile="$(var.LogoFile_WOLSetupBootstrapper)"
                                               ShowVersion="yes"
                                               SuppressOptionsUI="yes" />
     </BootstrapperApplicationRef>

@@ -55,6 +55,8 @@
       <Link>Properties\MasterAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="AssemblyCustomAttributesTests.cs" />
+    <Compile Include="PrivateProfileTests.cs" />
+    <Compile Include="SimpleHtmlParserTests.cs" />
     <Compile Include="LocalFileTests.cs" />
     <Compile Include="AssemblyAttributesTests.cs" />
     <Compile Include="LogTests.cs" />
@@ -64,7 +66,7 @@
     <Compile Include="BinaryDataTests.cs" />
     <Compile Include="LocalPath.cs" />
     <Compile Include="TestData.cs" />
-    <Compile Include="WakeOnLanTests.cs" />
+    <Compile Include="SimpleZipArchiverTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BUILDLet.Utilities\BUILDLet.Utilities.csproj">

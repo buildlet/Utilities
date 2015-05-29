@@ -34,6 +34,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +47,8 @@
       <Link>Properties\MasterAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="AssemblyAttributes.cs" />
+    <Compile Include="PrivateProfile.cs" />
+    <Compile Include="SimpleHtmlParser.cs" />
     <Compile Include="LocalFile.cs" />
     <Compile Include="AssemblyCustomAttributes.cs" />
     <Compile Include="Log.cs" />
@@ -53,14 +57,12 @@
     <Compile Include="HashCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BinaryData.cs" />
-    <Compile Include="WakeOnLan.cs" />
+    <Compile Include="SimpleZipArchiver.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>@ECHO OFF
-SET TARGET_DIRECTORY=Release
-ECHO [RELEASE] $(TargetFileName) -^&gt; $(SolutionDir)%25TARGET_DIRECTORY%25
-COPY "$(TargetPath)" "$(SolutionDir)%25TARGET_DIRECTORY%25"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -8,6 +8,7 @@ using System.Runtime.CompilerServices;
 using System.Diagnostics;
 using System.IO;
 
+
 namespace BUILDLet.Utilities
 {
     /// <summary>
@@ -159,16 +160,16 @@ namespace BUILDLet.Utilities
 
         /// <summary>
         /// 指定した書式情報を使用して、指定したオブジェクト配列のテキスト表現をログ出力に書き込み、続けて現在の行終端記号を書き込みます。
-        /// <seealso cref="System.Console.WriteLine(String, Object[])"/>
         /// </summary>
         /// <param name="format">
         /// 複合書式指定文字列
-        /// <seealso cref="System.Console.WriteLine(String, Object[])"/>
-        /// <seealso cref="System.String.Format(String, Object[])"/>
         /// </param>
         /// <param name="args">
         /// format を使用して書き込むオブジェクトの配列
         /// </param>
+        /// <seealso cref="System.Console.WriteLine(String, Object[])"/>
+        /// <seealso cref="System.String.Format(String, Object[])"/>
+        /// <seealso cref="System.Console.WriteLine(String, Object[])"/>
         public void WriteLine(string format, params object[] args)
         {
             this.Write(format, args);
@@ -177,19 +178,23 @@ namespace BUILDLet.Utilities
 
         /// <summary>
         /// 指定した書式情報を使用して、指定したオブジェクト配列のテキスト表現をログ出力に書き込みます。
-        /// <seealso cref="System.Console.WriteLine(String, Object[])"/>
         /// </summary>
         /// <param name="format">
         /// 複合書式指定文字列
-        /// <seealso cref="System.Console.WriteLine(String, Object[])"/>
-        /// <seealso cref="System.String.Format(String, Object[])"/>
         /// </param>
         /// <param name="args">
         /// format を使用して書き込むオブジェクトの配列
         /// </param>
+        /// <seealso cref="System.Console.WriteLine(String, Object[])"/>
+        /// <seealso cref="System.Console.WriteLine(String, Object[])"/>
+        /// <seealso cref="System.String.Format(String, Object[])"/>
         public void Write(string format, params object[] args)
         {
-            this.Write(string.Format(format, args));
+            try
+            {
+                this.Write(string.Format(format, args));
+            }
+            catch (Exception e) { throw e; }
         }
 
         /// <summary>
