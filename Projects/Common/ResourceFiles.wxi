@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+
+  <!-- License -->
+  <?define LicenseFile_TXT="..\..\..\Resources\License\License.txt"?>
+  <?define LicenseFile_RTF="..\..\..\Resources\License\License.rtf"?>
+
+  <!-- Readme -->
+  <?define ReadmeFile_WOL="..\..\..\Resources\Readme\BUILDLet.WOLSetup\Readme.txt"?>
+  <?define ReadmeFile_PackageMaker="..\..\..\Resources\Readme\BUILDLet.PackageMakerSetup\Readme.txt"?>
+
+  <!-- Logo -->
+  <?define LogoFile_WOLSetupBootstrapper="..\..\..\Resources\Logo\BUILDLet.WOLSetupBootstrapper\BUILDLet_Yellow_64x64.png"?>
+  <?define LogoFile_PSUtilitySetupBootstrapper="..\..\..\Resources\Logo\BUILDLet.PowerShell.UtilitiesSetupBootstrapper\BUILDLet_White2_64x64.png"?>
+  <?define LogoFile_PSPackageMakerSetupBootstrapper="..\..\..\Resources\Logo\BUILDLet.PowerShell.PackageMakerSetupBootstrapper\BUILDLet_DarkRed_64x64.png"?>
+
+  <!-- .NET Framework 4.5 Setup.exe -->
+  <?define Redist_dotNetFx45_ja="..\..\..\Redist\Microsoft\ja\dotNetFx45_Full_setup.exe"?>
+  <?define Redist_dotNetFx45_en="..\..\..\Redist\Microsoft\en\dotNetFx45_Full_setup.exe"?>
+
+</Include>

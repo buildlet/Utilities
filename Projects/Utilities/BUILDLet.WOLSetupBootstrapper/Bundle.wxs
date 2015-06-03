@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" 
+     xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
+
+  <!-- Include -->
+  <?include ..\..\Common\InstallerGUID.wxi?>
+  <?include ..\..\Common\Manufacturer.wxi?>
+  <?include ..\..\Common\ResourceFiles.wxi?>
+  <?include ..\Version\InstallerInfo.wxi?>
+
+  <!-- GUID -->
+  <?define GUID_UpgradeCode="$(var.GUID_WOL_ExePackage_UpgradeCode)"?>
+  
+  <!-- Source Files -->
+  <?define SourceFile="$(var.ProductComponent_WOLSetup)"?>
+  
+
+  <!-- Bundle -->
+  <Bundle Name="$(var.WOL_ProductName) $(var.Version)" 
+          Version="$(var.Version)" 
+          Manufacturer="$(var.Manufacturer)" 
+          Copyright="$(var.Copyright)"
+          UpgradeCode="$(var.GUID_UpgradeCode)">
+
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLargeLicense">
+      <bal:WixStandardBootstrapperApplication LicenseFile="$(var.LicenseFile_RTF)"
+                                              LogoFile="$(var.LogoFile_WOLSetupBootstrapper)"
+                                              ShowVersion="yes"
+                                              SuppressOptionsUI="yes"
+                                              LaunchTarget="[ProgramFilesFolder]$(var.Utilities_ProductFolderName)\$(var.WOL_ProductFolderName)\WOL.exe" />
+    </BootstrapperApplicationRef>
+
+		<Chain>
+			<MsiPackage SourceFile="$(var.SourceFile)" />
+		</Chain>
+	</Bundle>
+</Wix>
