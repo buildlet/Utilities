@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
+
+  <!-- Include -->
+  <?include ..\..\Common\InstallerGUID.wxi?>
+  <?include ..\..\Common\Manufacturer.wxi?>
+  <?include ..\..\Common\ResourceFiles.wxi?>
+  <?include ..\Version\InstallerInfo.wxi?>
+
+  <!-- GUID -->
+  <?define GUID_UpgradeCode="$(var.GUID_PSUtility_ExePackage_UpgradeCode)"?>
+  
+  <!-- Source Files -->
+  <?define SourceFile="$(var.ProductComponent_PSUtilitySetup)"?>
+  <?define SourceFile64="$(var.ProductComponent_PSUtilitySetup64)"?>
+
+
+  <!-- Bundle -->
+  <Bundle Name="$(var.PSUtility_ProductName) $(var.Version)"
+          Version="$(var.Version)"
+          Manufacturer="$(var.Manufacturer)"
+          Copyright="$(var.Copyright)"
+          UpgradeCode="$(var.GUID_UpgradeCode)">
+
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLargeLicense">
+      <bal:WixStandardBootstrapperApplication LicenseFile="$(var.LicenseFile_RTF)"
+                                              LogoFile="$(var.LogoFile_PSUtilitySetupBootstrapper)"
+                                              ShowVersion="yes"
+                                              SuppressOptionsUI="yes" />
+    </BootstrapperApplicationRef>
+
+    <Chain>
+      <MsiPackage SourceFile="$(var.SourceFile)" />
+      <MsiPackage SourceFile="$(var.SourceFile64)" InstallCondition="VersionNT64" />
+    </Chain>
+	</Bundle>
+</Wix>

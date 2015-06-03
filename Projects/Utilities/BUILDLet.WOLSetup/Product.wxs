@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  
+  <!-- Include -->
+  <?include ..\..\Common\InstallerGUID.wxi?>
+  <?include ..\..\Common\Manufacturer.wxi?>
+  <?include ..\..\Common\ResourceFiles.wxi?>
+  <?include ..\Version\InstallerInfo.wxi?>
+
+  <!-- Product Information -->
+  <?define ProductName="$(var.WOL_ProductName)"?>
+  <?define ProductComment="$(var.WOL_ProductComment)"?>
+  <?define ProductFolderName="$(var.Utilities_ProductFolderName)"?>
+  <?define NickName="$(var.WOL_NickName)"?>  <!-- not used -->
+
+  <!-- GUID -->
+  <?define GUID_Product="$(var.GUID_WOL_Product)"?>
+  <?define GUID_UpgradeCode="$(var.GUID_WOL_UpgradeCode)"?>
+  <?define GUID_ProductComponent="$(var.GUID_WOL_ProductComponent)"?>  <!-- V1.0.5 Changed -->
+  <?define GUID_Documents="$(var.GUID_WOL_Documents)"?>
+  <?define GUID_ConfigFile="$(var.GUID_WOL_ConfigFile)"?>
+  <?define GUID_ProgramMenu="$(var.GUID_WOL_ProgramMenu)"?>  <!-- V1.0.6 Add -->
+  <?define GUID_OldExeFile="$(var.GUID_WOL_OldExeFile)"?>  <!-- for Backword Compatibility -->
+
+  <!-- Source Files -->
+  <?define Source_ProductComponent="$(var.ProductComponent_WOL)"?>
+  <?define Source_ReadmeFile="$(var.ReadmeFile_WOL)"?>
+
+  
+
+  <!-- Source Files (from other project) -->
+  <?define Source_IconFile="..\BUILDLet.WOL\Resources\BUILDLet_WOL.ico"?>
+
+  <!-- Remove Files -->
+  <?define Remove_ConfigFile="WOL.conf"?>
+  <?define Remove_OldExeFile="BUILDLet.WOL.exe"?>  <!-- (for Backword Compatibility) -->
+
+  
+
+  <!-- Product -->
+  <Product Id="$(var.GUID_Product)"
+           UpgradeCode="$(var.GUID_UpgradeCode)"
+           Manufacturer="$(var.Manufacturer)"
+           Name="$(var.ProductName) $(var.Version)"
+           Version="$(var.Version)"
+           Language="1041" Codepage="932">
+
+    <Package Id="*"
+             Description="$(var.ProductName) $(var.Version) Installer"
+             Comments="$(var.ProductComment)"
+             Manufacturer="$(var.Manufacturer)"
+             InstallerVersion="200"
+             Compressed="yes"
+             Languages="1041" SummaryCodepage="932"
+             InstallScope="perMachine" />
+
+    
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate CabinetTemplate="data{0}.cab" EmbedCab="yes" />
+
+    
+    <Feature Id="ProductFeature" Title="$(var.ProductName)" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+      <ComponentGroupRef Id="ProgramMenuComponents" />
+    </Feature>
+    
+  </Product>
+
+  
+
+  <!-- Directories -->
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      
+      <!-- Program Files Folder -->
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="ProductFolder" Name="$(var.ProductFolderName)">
+          <Directory Id="WOLFolder" Name="$(var.WOL_ProductFolderName)">
+            <Directory Id="INSTALLDIR" />
+          </Directory>
+        </Directory>
+      </Directory>
+      
+
+      <!-- Program Menu Folder -->
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ProgramMenuDir" Name="$(var.ProductFolderName)" />
+      </Directory>
+    
+
+      <!-- Desktop Folder -->
+      <Directory Id="DesktopFolder" Name="Desktop" />
+
+    </Directory>
+  </Fragment>
+
+
+  
+  <!-- Icon -->
+  <Fragment>
+    <Icon Id="WOL.ico" SourceFile="$(var.Source_IconFile)" />
+  </Fragment>
+
+
+  
+  <!-- Components -->
+  <Fragment>
+
+    <!-- Install Folder (Program Files Folder) -->
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLDIR">
+      
+      <!-- BUILDLet.WOL.exe -->
+      <Component Id="ProductComponent.exe" Guid="$(var.GUID_ProductComponent)">
+        <File Id="ProductComponent.exe" Source="$(var.Source_ProductComponent)" KeyPath="yes">
+          
+          <!-- Desktop Shortcut -->
+          <!--
+          <Shortcut Id="DesktopShortcut" 
+                    Name="$(var.ProductName)" 
+                    Description="$(var.ProductName) $(var.Version)"
+                    Directory="DesktopFolder" 
+                    Icon="WOL.ico" 
+                    Advertise="yes" />
+          -->
+
+          <!-- Program Menu Shortcut -->
+          <Shortcut Id="ProgramMenuShortcut" 
+                    Name="$(var.ProductName)" 
+                    Description="$(var.ProductName) $(var.Version)"
+                    Directory="ProgramMenuDir" 
+                    Icon="WOL.ico" 
+                    Advertise="yes" />
+
+      </File>
+      </Component>
+
+      
+      <!-- Documents for WOL (Readme and License) -->
+      <Component Id="Documents" Guid="$(var.GUID_Documents)" KeyPath="yes">
+        <File Source="$(var.Source_ReadmeFile)" />
+        <File Source="$(var.LicenseFile_TXT)" />
+      </Component>
+      
+      
+      <!-- Configuration File to be deleted -->
+      <Component Id="ConfigFile" Guid="$(var.GUID_ConfigFile)">
+        <RemoveFile Id="ConfigFile" On="uninstall" Name="$(var.Remove_ConfigFile)" />
+      </Component>
+
+      
+      <!-- Old Executable File ("BUILDLet.WOL.exe") to be deleted -->
+      <Component Id="OldExeFile" Guid="$(var.GUID_OldExeFile)">
+        <RemoveFile Id="OldExeFile" On="uninstall" Name="$(var.Remove_OldExeFile)" />
+      </Component>
+    
+    </ComponentGroup>
+
+    
+    <!-- Start Menu (Program Menu Folder) -->
+    <ComponentGroup Id="ProgramMenuComponents" Directory="ProgramMenuDir">
+      
+      <!-- Program Menu Folder (to be removed) & Registry -->
+      <Component Id="ProgramMenuComponent" Guid="$(var.GUID_ProgramMenu)">
+        <RemoveFolder Id='ProgramMenuDir' On='uninstall' />
+        <RegistryValue Root='HKCU' Key='Software\[Manufacturer]\[ProductName]' Name='installed' Type='integer' Value='1' KeyPath='yes' />
+      </Component>
+      
+    </ComponentGroup>
+  </Fragment>
+
+</Wix>

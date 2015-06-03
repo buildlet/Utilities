@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+
+  <!-- Version Information -->
+  <?define Version="1.1.0"?>
+
+
+  
+  <!-- Product Information (BUILDLet.Utilities) -->
+  <?define Utilities_ProductFolderName="BUILDLet Utilities"?>
+
+  <!-- Product Information (WOL) -->
+  <?define WOL_ProductName="BUILDLet WOL"?>
+  <?define WOL_ProductComment="This is the front end for sending the magic packet (Wake On LAN)"?>
+  <?define WOL_ProductFolderName="WOL"?> <!-- Add V1.1.0 (NOT "BUILDLet WOL") -->
+  <?define WOL_NickName="WOL"?>
+
+  <!-- Product Information (BUILDLet.PowerShell.Utilities) -->
+  <?define PSUtility_ProductName="BUILDLet PowerShell Utility Module"?>
+  <?define PSUtility_ProductComment="BUILDLet PowerShell Utility Module"?>
+  <?define PSUtility_PSModuleName="BUILDLet.PowerShell.Utilities"?>
+
+  
+  
+  <!-- Product Component (WOL) -->
+  <?define ProductComponent_WOL="..\..\..\Release\Utilities\WOL.exe"?>
+  <?define ProductComponent_WOLSetup="..\..\..\Release\Utilities\WOLSetup.msi"?>
+
+  <!-- Product Component (BUILDLet.PowerShell.Utilities) -->
+  <?define ProductComponent_PSUtility_PSD1="..\..\..\Release\Utilities\BUILDLet.PowerShell.Utilities\BUILDLet.PowerShell.Utilities.psd1"?>
+  <?define ProductComponent_PSUtility_PSM1="..\..\..\Release\Utilities\BUILDLet.PowerShell.Utilities\BUILDLet.PowerShell.Utilities.psm1"?>
+  <?define ProductComponent_PSUtility_DLL="..\..\..\Release\Utilities\BUILDLet.PowerShell.Utilities\BUILDLet.PowerShell.Utilities.dll"?>
+  <?define ProductComponent_PSUtilitySetup="..\..\..\Release\Utilities\PSUtilitySetup.msi"?>
+  <?define ProductComponent_PSUtilitySetup64="..\..\..\Release\Utilities\PSUtilitySetup64.msi"?>
+
+</Include>
