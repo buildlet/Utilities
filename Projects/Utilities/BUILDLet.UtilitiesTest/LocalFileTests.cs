@@ -247,7 +247,11 @@ namespace BUILDLet.Utilities.Tests
                         break;
 
                     case 1:
+#if DEBUG
                         path = @"..\..\bin\Debug";
+#else
+                        path = @"..\..\bin\Release";
+#endif
                         expected = Path.Combine(Environment.CurrentDirectory);
                         break;
 

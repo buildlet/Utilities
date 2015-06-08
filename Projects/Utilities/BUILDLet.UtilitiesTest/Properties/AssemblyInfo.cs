@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // アセンブリに関する一般情報は以下の属性セットをとおして制御されます。
 // アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更してください。
-[assembly: AssemblyTitle("Unit Tests for BUILDLet Utilities Class Library")]
-[assembly: AssemblyDescription("Unit Tests for BUILDLet Utilities Class Library")]
+[assembly: AssemblyTitle("Test Module for BUILDLet Utilities Class Library")]
+[assembly: AssemblyDescription("Test Module for BUILDLet Utilities Class Library")]
 [assembly: AssemblyConfiguration("")]
 // [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Unit Tests for BUILDLet Utilities Class Library")]
+[assembly: AssemblyProduct("Test Module for BUILDLet Utilities Class Library")]
 // [assembly: AssemblyCopyright("")]
 // [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

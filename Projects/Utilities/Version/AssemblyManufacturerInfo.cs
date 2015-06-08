@@ -8,13 +8,3 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCompany("BUILDLet")]
 [assembly: AssemblyCopyright("Copyright © 2014-2015 Daiki Sakamoto")]
 [assembly: AssemblyTrademark("")]
-
-// アセンブリのバージョン情報は、以下の 4 つの値で構成されています:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-[assembly: AssemblyVersion("1.1.*")]
-[assembly: AssemblyFileVersion("1.1.0.0")]

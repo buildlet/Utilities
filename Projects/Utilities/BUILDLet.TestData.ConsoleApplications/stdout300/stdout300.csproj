@@ -45,8 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Version\MasterAssemblyInfo.cs">
-      <Link>Properties\MasterAssemblyInfo.cs</Link>
+    <Compile Include="..\..\Version\AssemblyManufacturerInfo.cs">
+      <Link>Properties\AssemblyManufacturerInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Version\AssemblyVersionInfo.cs">
+      <Link>Properties\AssemblyVersionInfo.cs</Link>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

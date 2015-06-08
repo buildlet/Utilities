@@ -32,6 +32,7 @@ This software is released under the MIT License, see License.txt.
 
 History
 ---------------
+* June 5, 2015    Version 1.1.1.0    Minor Update
 * June 3, 2015    Version 1.1.0.0    Minor Update
   The "Launch" button was added to the final step of the installation wizard 
   to launch WOL.exe.

@@ -6,8 +6,8 @@
     <ProjectGuid>{E9A430CF-6894-4CA6-9E64-6E5266D1545C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BUILDLet.Utilities</RootNamespace>
-    <AssemblyName>BUILDLet.UtilitiesTest</AssemblyName>
+    <RootNamespace>BUILDLet.Utilities.Tests</RootNamespace>
+    <AssemblyName>BUILDLet.UtilitiesTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,8 +55,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="..\Version\MasterAssemblyInfo.cs">
-      <Link>Properties\MasterAssemblyInfo.cs</Link>
+    <Compile Include="..\Version\AssemblyManufacturerInfo.cs">
+      <Link>Properties\AssemblyManufacturerInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Version\AssemblyVersionInfo.cs">
+      <Link>Properties\AssemblyVersionInfo.cs</Link>
     </Compile>
     <Compile Include="AssemblyCustomAttributesTests.cs" />
     <Compile Include="PrivateProfileTests.cs" />
