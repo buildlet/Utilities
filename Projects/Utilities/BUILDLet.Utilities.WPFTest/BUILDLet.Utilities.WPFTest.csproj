@@ -6,8 +6,8 @@
     <ProjectGuid>{4A5D7CDC-950C-4721-ABB2-0F38D1F71480}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BUILDLet.WPF.Test</RootNamespace>
-    <AssemblyName>BUILDLet.WPFTest</AssemblyName>
+    <RootNamespace>BUILDLet.Utilities.WPF.Tests</RootNamespace>
+    <AssemblyName>BUILDLet.Utilities.WPFTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -59,8 +59,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="..\Version\MasterAssemblyInfo.cs">
-      <Link>Properties\MasterAssemblyInfo.cs</Link>
+    <Compile Include="..\Version\AssemblyManufacturerInfo.cs">
+      <Link>Properties\AssemblyManufacturerInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Version\AssemblyVersionInfo.cs">
+      <Link>Properties\AssemblyVersionInfo.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

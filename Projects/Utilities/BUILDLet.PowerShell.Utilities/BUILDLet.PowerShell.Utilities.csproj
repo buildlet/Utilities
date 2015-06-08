@@ -75,8 +75,11 @@
     <Compile Include="..\BUILDLet.Utilities\SimpleZipArchiver.cs">
       <Link>Link\SimpleZipArchiver.cs</Link>
     </Compile>
-    <Compile Include="..\Version\MasterAssemblyInfo.cs">
-      <Link>Properties\MasterAssemblyInfo.cs</Link>
+    <Compile Include="..\Version\AssemblyManufacturerInfo.cs">
+      <Link>Properties\AssemblyManufacturerInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Version\PowerShellAssemblyVersionInfo.cs">
+      <Link>Properties\PowerShellAssemblyVersionInfo.cs</Link>
     </Compile>
     <Compile Include="InvokeProcess.cs" />
     <Compile Include="SetPrivateProfileString.cs" />
@@ -103,16 +106,20 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>@ECHO OFF
-SET TARGET_DIRECTORY=$(SolutionDir)..\..\Release\$(SolutionName)\$(ProjectName)
-MKDIR "%25TARGET_DIRECTORY%25"
+SET RELEASE_DIRECTORY=$(SolutionDir)..\..\Release\$(SolutionName)\$(ProjectName)
+MKDIR "%25RELEASE_DIRECTORY%25"
 
-ECHO [RELEASE] $(TargetFileName) -^&gt; %25TARGET_DIRECTORY%25
-ECHO [RELEASE] $(TargetName).psd1 -^&gt; "%25TARGET_DIRECTORY%25"
-ECHO [RELEASE] $(TargetName).psm1 -^&gt; "%25TARGET_DIRECTORY%25"
+SET TARGET_FILE=$(TargetFileName)
+ECHO [RELEASE] %25TARGET_FILE%25 -^&gt; %25RELEASE_DIRECTORY%25
+COPY "$(TargetDir)%25TARGET_FILE%25" "%25RELEASE_DIRECTORY%25"
 
-COPY "$(TargetPath)" "%25TARGET_DIRECTORY%25"
-COPY "$(TargetDir)$(TargetName).psd1" "%25TARGET_DIRECTORY%25"
-COPY "$(TargetDir)$(TargetName).psm1" "%25TARGET_DIRECTORY%25"</PostBuildEvent>
+SET TARGET_FILE=$(TargetName).psd1
+ECHO [RELEASE] %25TARGET_FILE%25 -^&gt; %25RELEASE_DIRECTORY%25
+COPY "$(TargetDir)%25TARGET_FILE%25" "%25RELEASE_DIRECTORY%25"
+
+SET TARGET_FILE=$(TargetName).psm1
+ECHO [RELEASE] %25TARGET_FILE%25 -^&gt; %25RELEASE_DIRECTORY%25
+COPY "$(TargetDir)%25TARGET_FILE%25" "%25RELEASE_DIRECTORY%25"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -47,8 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Version\MasterAssemblyInfo.cs">
-      <Link>Properties\MasterAssemblyInfo.cs</Link>
+    <Compile Include="..\Version\AssemblyManufacturerInfo.cs">
+      <Link>Properties\AssemblyManufacturerInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Version\AssemblyVersionInfo.cs">
+      <Link>Properties\AssemblyVersionInfo.cs</Link>
     </Compile>
     <Compile Include="AssemblyAttributes.cs" />
     <Compile Include="PrivateProfile.cs" />
@@ -66,9 +69,10 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>@ECHO OFF
-SET TARGET_DIRECTORY=$(SolutionDir)..\..\Release\$(SolutionName)
-ECHO [RELEASE] $(TargetFileName) -^&gt; %25TARGET_DIRECTORY%25
-COPY "$(TargetPath)" "%25TARGET_DIRECTORY%25"</PostBuildEvent>
+SET RELEASE_DIRECTORY=$(SolutionDir)..\..\Release\$(SolutionName)
+SET TARGET_FILE=$(TargetFileName)
+ECHO [RELEASE] %25TARGET_FILE%25 -^&gt; %25RELEASE_DIRECTORY%25
+COPY "$(TargetDir)%25TARGET_FILE%25" "%25RELEASE_DIRECTORY%25"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

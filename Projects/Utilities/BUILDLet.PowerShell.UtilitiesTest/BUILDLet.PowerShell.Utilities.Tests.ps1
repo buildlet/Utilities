@@ -9,7 +9,7 @@ Copyright (C) 2015 Daiki Sakamoto
 ####################################################################################################
 
 # Version
-$version = '1.1.0.0'
+$version = '1.1.1.0'
 
 # VerbosePreference
 $Script:VerbosePreference = 'SilentlyContinue'

@@ -67,9 +67,10 @@
     <ProjectSummary>[TODO: Add Project Sumamry]</ProjectSummary>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
     <PostBuildEvent>@ECHO OFF
-SET TARGET_DIRECTORY=$(SolutionDir)..\..\Release\$(SolutionName)
-ECHO [RELEASE] $(HtmlHelpName).chm -^&gt; %TARGET_DIRECTORY%
-COPY "$(OutputPath)$(HtmlHelpName).chm" "%TARGET_DIRECTORY%"</PostBuildEvent>
+SET RELEASE_DIRECTORY=$(SolutionDir)..\..\Release\$(SolutionName)
+SET TARGET_FILE=$(HtmlHelpName).chm
+ECHO [RELEASE] %TARGET_FILE% -^&gt; %RELEASE_DIRECTORY%
+COPY "$(OutputPath)%TARGET_FILE%" "%TARGET_DIRECTORY%"</PostBuildEvent>
     <SccProjectName>SAK</SccProjectName>
     <SccProvider>SAK</SccProvider>
     <SccAuxPath>SAK</SccAuxPath>

@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUILDLet.Utilities", "BUILD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUILDLet.Utilities.WPF", "BUILDLet.Utilities.WPF\BUILDLet.Utilities.WPF.csproj", "{E40A3CC0-5FD4-4E0D-85CD-B1C0EA6B3FAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUILDLet.UtilitiesTest", "BUILDLet.UtilitiesTest\BUILDLet.UtilitiesTest.csproj", "{E9A430CF-6894-4CA6-9E64-6E5266D1545C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUILDLet.UtilitiesTests", "BUILDLet.UtilitiesTest\BUILDLet.UtilitiesTests.csproj", "{E9A430CF-6894-4CA6-9E64-6E5266D1545C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUILDLet.Utilities.WPFTest", "BUILDLet.Utilities.WPFTest\BUILDLet.Utilities.WPFTest.csproj", "{4A5D7CDC-950C-4721-ABB2-0F38D1F71480}"
 EndProject
@@ -31,8 +31,10 @@ Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "BUILDLet.WOLSetupBootstrapp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Version", "Version", "{027248A7-BA3C-4E13-A293-B7365A7DB6D2}"
 	ProjectSection(SolutionItems) = preProject
+		Version\AssemblyManufacturerInfo.cs = Version\AssemblyManufacturerInfo.cs
+		Version\AssemblyVersionInfo.cs = Version\AssemblyVersionInfo.cs
 		Version\InstallerInfo.wxi = Version\InstallerInfo.wxi
-		Version\MasterAssemblyInfo.cs = Version\MasterAssemblyInfo.cs
+		Version\PowerShellAssemblyVersionInfo.cs = Version\PowerShellAssemblyVersionInfo.cs
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUILDLet.PowerShell.Utilities", "BUILDLet.PowerShell.Utilities\BUILDLet.PowerShell.Utilities.csproj", "{3FD2E411-F7FC-4D5C-9F2C-6D934CA98F23}"
@@ -41,6 +43,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Link", "Link", "{6E889817-C
 	ProjectSection(SolutionItems) = preProject
 		BUILDLet.PowerShell.Utilities\BUILDLet.PowerShell.Utilities.psd1 = BUILDLet.PowerShell.Utilities\BUILDLet.PowerShell.Utilities.psd1
 		BUILDLet.PowerShell.UtilitiesTest\BUILDLet.PowerShell.Utilities.Tests.ps1 = BUILDLet.PowerShell.UtilitiesTest\BUILDLet.PowerShell.Utilities.Tests.ps1
+	EndProjectSection
+	ProjectSection(FolderStartupServices) = postProject
+		{82A7F48D-3B50-4B1E-B82E-3ADA8210C358} = {82A7F48D-3B50-4B1E-B82E-3ADA8210C358}
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BUILDLet.PowerShell.UtilitiesTest", "BUILDLet.PowerShell.UtilitiesTest", "{E997E7F1-13CF-4EA8-B6B5-B759261A72CD}"
@@ -77,6 +82,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stdout300", "BUILDLet.TestData.ConsoleApplications\stdout300\stdout300.csproj", "{65331C87-6B19-4E66-A0B1-F8CAC98B0011}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{E4511E72-CBA0-4FB7-8938-01689D6A93F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Link", "Link", "{1D689DCD-DD7B-4557-A0E7-EEB60B250F18}"
 	ProjectSection(SolutionItems) = preProject
 		..\Common\InstallerGUID.wxi = ..\Common\InstallerGUID.wxi
 		..\Common\Manufacturer.wxi = ..\Common\Manufacturer.wxi
@@ -129,18 +136,18 @@ Global
 		SccProjectUniqueName12 = BUILDLet.UtilitiesDocumentation\\BUILDLet.UtilitiesDocumentation.shfbproj
 		SccProjectName12 = BUILDLet.UtilitiesDocumentation
 		SccLocalPath12 = BUILDLet.UtilitiesDocumentation
-		SccProjectUniqueName13 = BUILDLet.UtilitiesTest\\BUILDLet.UtilitiesTest.csproj
-		SccProjectName13 = BUILDLet.UtilitiesTest
-		SccLocalPath13 = BUILDLet.UtilitiesTest
-		SccProjectUniqueName14 = BUILDLet.WOL\\BUILDLet.WOL.csproj
-		SccProjectName14 = BUILDLet.WOL
-		SccLocalPath14 = BUILDLet.WOL
-		SccProjectUniqueName15 = BUILDLet.WOLSetup\\BUILDLet.WOLSetup.wixproj
-		SccProjectName15 = BUILDLet.WOLSetup
-		SccLocalPath15 = BUILDLet.WOLSetup
-		SccProjectUniqueName16 = BUILDLet.WOLSetupBootstrapper\\BUILDLet.WOLSetupBootstrapper.wixproj
-		SccProjectName16 = BUILDLet.WOLSetupBootstrapper
-		SccLocalPath16 = BUILDLet.WOLSetupBootstrapper
+		SccProjectUniqueName13 = BUILDLet.WOL\\BUILDLet.WOL.csproj
+		SccProjectName13 = BUILDLet.WOL
+		SccLocalPath13 = BUILDLet.WOL
+		SccProjectUniqueName14 = BUILDLet.WOLSetup\\BUILDLet.WOLSetup.wixproj
+		SccProjectName14 = BUILDLet.WOLSetup
+		SccLocalPath14 = BUILDLet.WOLSetup
+		SccProjectUniqueName15 = BUILDLet.WOLSetupBootstrapper\\BUILDLet.WOLSetupBootstrapper.wixproj
+		SccProjectName15 = BUILDLet.WOLSetupBootstrapper
+		SccLocalPath15 = BUILDLet.WOLSetupBootstrapper
+		SccProjectUniqueName16 = BUILDLet.UtilitiesTest\\BUILDLet.UtilitiesTests.csproj
+		SccProjectName16 = BUILDLet.UtilitiesTest
+		SccLocalPath16 = BUILDLet.UtilitiesTest
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -365,6 +372,6 @@ Global
 		{5BC4DF28-4AAC-4D92-AC5A-92F2C3D1C4F9} = {34E0B07A-86F9-46C9-9CB4-2458D352F78D}
 		{4663201F-C1EB-41EC-A059-74FB78768324} = {34E0B07A-86F9-46C9-9CB4-2458D352F78D}
 		{65331C87-6B19-4E66-A0B1-F8CAC98B0011} = {34E0B07A-86F9-46C9-9CB4-2458D352F78D}
-		{E4511E72-CBA0-4FB7-8938-01689D6A93F3} = {6E889817-C38C-47C6-B0D9-54BF15A05F1D}
+		{1D689DCD-DD7B-4557-A0E7-EEB60B250F18} = {E4511E72-CBA0-4FB7-8938-01689D6A93F3}
 	EndGlobalSection
 EndGlobal
