@@ -40,6 +40,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -92,7 +93,12 @@
   <PropertyGroup>
     <PostBuildEvent>@ECHO OFF
 SET RELEASE_DIRECTORY=$(SolutionDir)..\..\Release\$(SolutionName)
+
 SET TARGET_FILE=$(TargetFileName)
+ECHO [RELEASE] %25TARGET_FILE%25 -^&gt; %25RELEASE_DIRECTORY%25
+COPY "$(TargetDir)%25TARGET_FILE%25" "%25RELEASE_DIRECTORY%25"
+
+SET TARGET_FILE=$(TargetName).xml
 ECHO [RELEASE] %25TARGET_FILE%25 -^&gt; %25RELEASE_DIRECTORY%25
 COPY "$(TargetDir)%25TARGET_FILE%25" "%25RELEASE_DIRECTORY%25"</PostBuildEvent>
   </PropertyGroup>

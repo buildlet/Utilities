@@ -7,12 +7,6 @@
   <?include ..\..\Common\ResourceFiles.wxi?>
   <?include ..\Version\InstallerInfo.wxi?>
 
-  <!-- Product Information -->
-  <?define ProductName="$(var.WOL_ProductName)"?>
-  <?define ProductComment="$(var.WOL_ProductComment)"?>
-  <?define ProductFolderName="$(var.Utilities_ProductFolderName)"?>
-  <?define NickName="$(var.WOL_NickName)"?>  <!-- not used -->
-
   <!-- GUID -->
   <?define GUID_Product="$(var.GUID_WOL_Product)"?>
   <?define GUID_UpgradeCode="$(var.GUID_WOL_UpgradeCode)"?>
@@ -22,21 +16,32 @@
   <?define GUID_ProgramMenu="$(var.GUID_WOL_ProgramMenu)"?>  <!-- V1.0.6 Add -->
   <?define GUID_OldExeFile="$(var.GUID_WOL_OldExeFile)"?>  <!-- for Backword Compatibility -->
 
-  <!-- Source Files -->
-  <?define Source_ProductComponent="$(var.ProductComponent_WOL)"?>
-  <?define Source_ReadmeFile="$(var.ReadmeFile_WOL)"?>
+  <!-- Product Information -->
+  <?define ProductName="$(var.WOL_ProductName)"?>
+  <?define ProductComment="$(var.WOL_ProductComment)"?>
+  <?define ProductFolderName="$(var.Utilities_ProductFolderName)"?>
+  <?define NickName="$(var.WOL_NickName)"?>  <!-- not used -->
 
-  
+  <!-- Source Files (Common) -->
+  <?define Source_ReadmeFile="$(var.Resource_ReadmeFile_WOL)"?>
+  <?define Source_LicenseFile="$(var.Resource_LicenseFile_TXT)"?>
 
   <!-- Source Files (from other project) -->
   <?define Source_IconFile="..\BUILDLet.WOL\Resources\BUILDLet_WOL.ico"?>
 
+  <!-- Source Files -->
+  <?define Source_ProductComponent="$(var.Resource_WOL)"?>
+
+
+  <!-- Icon File Name -->
+  <?define IconFileName="WOL.ico"?>
+
   <!-- Remove Files -->
   <?define Remove_ConfigFile="WOL.conf"?>
   <?define Remove_OldExeFile="BUILDLet.WOL.exe"?>  <!-- (for Backword Compatibility) -->
-
   
 
+  
   <!-- Product -->
   <Product Id="$(var.GUID_Product)"
            UpgradeCode="$(var.GUID_UpgradeCode)"
@@ -65,7 +70,6 @@
     </Feature>
     
   </Product>
-
   
 
   <!-- Directories -->
@@ -138,7 +142,7 @@
       <!-- Documents for WOL (Readme and License) -->
       <Component Id="Documents" Guid="$(var.GUID_Documents)" KeyPath="yes">
         <File Source="$(var.Source_ReadmeFile)" />
-        <File Source="$(var.LicenseFile_TXT)" />
+        <File Source="$(var.Source_LicenseFile)" />
       </Component>
       
       

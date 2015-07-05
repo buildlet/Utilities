@@ -1,4 +1,27 @@
-﻿using System;
+﻿/*******************************************************************************
+ The MIT License (MIT)
+
+ Copyright (c) 2015 Daiki Sakamoto
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+********************************************************************************/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -134,6 +157,7 @@ namespace BUILDLet.Utilities.Compression.Tests
             // source does not exist.
 
             string source = Path.Combine(Environment.CurrentDirectory, "dummy");
+
             SimpleZipArchiver.Unzip(source);
         }
 
@@ -145,6 +169,7 @@ namespace BUILDLet.Utilities.Compression.Tests
 
             string source = Path.Combine(LocalPath.TestDataFolder, "hello.zip");
             string destination = "dummy";
+
             SimpleZipArchiver.Unzip(source, Path.Combine(Environment.CurrentDirectory, destination));
         }
 
@@ -156,6 +181,7 @@ namespace BUILDLet.Utilities.Compression.Tests
 
             string source = Path.Combine(LocalPath.TestDataFolder, "hello.zip");
             string destination = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).FullName).FullName;
+
             SimpleZipArchiver.Unzip(source, destination, "bin");
         }
 
@@ -166,7 +192,8 @@ namespace BUILDLet.Utilities.Compression.Tests
             // output folder path to be unzipped already exists. (File)
 
             string source = Path.Combine(LocalPath.TestDataFolder, "hello.zip");
-            string destination = "BUILDLet.UtilitiesTest.dll";
+            string destination = new BUILDLet.Utilities.AssemblyAttributes().Name + ".dll";
+
             SimpleZipArchiver.Unzip(source, Environment.CurrentDirectory, destination);
         }
 
@@ -177,6 +204,7 @@ namespace BUILDLet.Utilities.Compression.Tests
             // folder name includes directory separator character.
 
             string source = Path.Combine(LocalPath.TestDataFolder, "hello.zip");
+
             SimpleZipArchiver.Unzip(source, foldername: @".\dummy\folder");
         }
 

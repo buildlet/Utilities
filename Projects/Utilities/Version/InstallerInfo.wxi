@@ -2,8 +2,7 @@
 <Include>
 
   <!-- Version Information -->
-  <?define Version="1.1.1"?>
-
+  <?define Version="1.1.2"?>
 
   
   <!-- Product Information (BUILDLet.Utilities) -->
@@ -12,25 +11,24 @@
   <!-- Product Information (WOL) -->
   <?define WOL_ProductName="BUILDLet WOL"?>
   <?define WOL_ProductComment="This is the front end for sending the magic packet (Wake On LAN)"?>
-  <?define WOL_ProductFolderName="WOL"?> <!-- Add V1.1.0 (NOT "BUILDLet WOL") -->
-  <?define WOL_NickName="WOL"?>
+  <?define WOL_ProductFolderName="WOL"?>  <!-- Add V1.1.0 (NOT "BUILDLet WOL") -->
+  <?define WOL_NickName="WOL"?>  <!-- not used -->
 
-  <!-- Product Information (BUILDLet.PowerShell.Utilities) -->
-  <?define PSUtility_ProductName="BUILDLet PowerShell Utility Module"?>
-  <?define PSUtility_ProductComment="BUILDLet PowerShell Utility Module"?>
-  <?define PSUtility_PSModuleName="BUILDLet.PowerShell.Utilities"?>
+  <!-- Product Information (BUILDLet.Utilities.PowerShell) -->
+  <?define PSUtility_ProductName="BUILDLet Utility PowerShell Module"?>
+  <?define PSUtility_ProductComment="BUILDLet Utility PowerShell Module"?>
+  <?define PSUtility_PSModuleName="BUILDLet.Utilities.PowerShell"?>
 
-  
-  
-  <!-- Product Component (WOL) -->
-  <?define ProductComponent_WOL="..\..\..\Release\Utilities\WOL.exe"?>
-  <?define ProductComponent_WOLSetup="..\..\..\Release\Utilities\WOLSetup.msi"?>
 
-  <!-- Product Component (BUILDLet.PowerShell.Utilities) -->
-  <?define ProductComponent_PSUtility_PSD1="..\..\..\Release\Utilities\BUILDLet.PowerShell.Utilities\BUILDLet.PowerShell.Utilities.psd1"?>
-  <?define ProductComponent_PSUtility_PSM1="..\..\..\Release\Utilities\BUILDLet.PowerShell.Utilities\BUILDLet.PowerShell.Utilities.psm1"?>
-  <?define ProductComponent_PSUtility_DLL="..\..\..\Release\Utilities\BUILDLet.PowerShell.Utilities\BUILDLet.PowerShell.Utilities.dll"?>
-  <?define ProductComponent_PSUtilitySetup="..\..\..\Release\Utilities\PSUtilitySetup.msi"?>
-  <?define ProductComponent_PSUtilitySetup64="..\..\..\Release\Utilities\PSUtilitySetup64.msi"?>
+  <!-- Resource Files (WOL) -->
+  <?define Resource_WOL="..\..\..\Release\Utilities\WOL.exe"?>
+  <?define Resource_WOLSetup="..\..\..\Release\Utilities\WOLSetup.msi"?>
+
+  <!-- Resource Files (BUILDLet.Utilities.PowerShell) -->
+  <?define Resource_PSUtility_PSD1="..\..\..\Release\Utilities\BUILDLet.Utilities.PowerShell\BUILDLet.Utilities.PowerShell.psd1"?>
+  <?define Resource_PSUtility_PSM1="..\..\..\Release\Utilities\BUILDLet.Utilities.PowerShell\BUILDLet.Utilities.PowerShell.psm1"?>
+  <?define Resource_PSUtility_DLL="..\..\..\Release\Utilities\BUILDLet.Utilities.PowerShell\BUILDLet.Utilities.PowerShell.dll"?>
+  <?define Resource_PSUtilitySetup="..\..\..\Release\Utilities\PSUtilitySetup.msi"?>
+  <?define Resource_PSUtilitySetup64="..\..\..\Release\Utilities\PSUtilitySetup64.msi"?>
 
 </Include>

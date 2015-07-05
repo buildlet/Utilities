@@ -13,7 +13,7 @@
   <?define GUID_WOL_OldExeFile="{6245EE59-0EFB-41AA-B19A-A61B98BDA287}"?>  <!-- for Backword Compatibility -->
 
 
-  <!-- GUIDs for "BUILDLet.PowerShell.Utilities" -->
+  <!-- GUIDs for "BUILDLet.Utilities.PowerShell" -->
   <?define GUID_PSUtility_ExePackage_UpgradeCode="{4A7CB8F0-03BC-4A82-9CA5-F85AB4D0699D}"?>
 
   <?define GUID_PSUtility_Product="{B84029A5-CCD9-4833-B1A0-0C0F281F7714}"?>
@@ -25,7 +25,7 @@
   <?define GUID_PSUtility64_ProductComponent="{25118E0F-F75D-4E65-AE70-1F0D5056D558}"?>
 
   
-  <!-- GUIDs for "BUILDLet.PowerShell.PackageMaker" -->
+  <!-- GUIDs for "BUILDLet.PackageMaker.PowerShell" -->
   <?define GUID_PSPackageMaker_ExePackage_UpgradeCode="{916D4719-6397-4E16-9138-EED04D48C777}"?>
 
   <?define GUID_PSPackageMaker_Product="{73181F0D-DB55-4244-8F1D-ADB0165E554E}"?>
@@ -44,5 +44,22 @@
   <?define GUID_PackageMaker_UpgradeCode="{A6A4BCB3-C021-4258-8E74-EC18411A2B0B}"?>
   <?define GUID_PackageMaker_ProductComponent="{E1CD2775-2E80-4ECF-BD08-4D7EB8190F49}"?>
   <?define GUID_PackageMaker_Documents="{D31CC5A3-1666-404B-B772-3C2B56FAFF22}"?>
+
+
+  <!-- GUIDs for "BUILDLet JBIG Image Viewer" -->
+  <?define GUID_JBIGView_ExePackage_UpgradeCode="{8E2640A9-5E7A-4146-89C8-93548563DEFB}"?>
+  
+  <?define GUID_JBIGView_Product="{9B468668-62BC-4BB7-B228-F00C9BD92687}"?>
+  <?define GUID_JBIGView_UpgradeCode="{229069CA-7044-4D5F-8322-C964D4C31A02}"?>
+  
+  <?define GUID_JBIGView_ProductComponent="{AA61A82B-E5AC-4491-AA1E-268C272043E0}"?>
+  <?define GUID_JBIGView_ProductComponent_JbigToBitmap="{58987A1D-A80A-4A68-9F52-7846D0EFE176}"?>
+  <?define GUID_JBIGView_ProductComponent_BUILDLet_Library="{610618DC-D6B0-449E-AEB7-9EB4C8C5598D}"?>
+  <?define GUID_JBIGView_ProductComponent_Redist_JbigKit="{480511F9-E9CA-4DF0-B5C9-E0B4DEB512AA}"?>
+  <?define GUID_JBIGView_ProductComponent_Redist_NetPbm="{5A230E52-5B23-4B48-AEB8-37947533ADA8}"?>
+
+  <?define GUID_JBIGView_Documents="{A1D8996D-7527-4FD3-88EC-5DBFCC2B9926}"?>
+  <?define GUID_JBIGView_Configuration="{63F52B9C-DFBE-47BA-8FE9-96FEE7093943}"?>  <!-- Not used for Version 1.0.0 -->
+  <?define GUID_JBIGView_ProgramMenu="{5F6F1F1C-D981-4FE3-A39C-A848B44A7C1E}"?>
 
 </Include>
