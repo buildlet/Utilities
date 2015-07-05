@@ -6,8 +6,9 @@ Windows クラスライブラリ
 ##プロジェクト
 以下のプロジェクトを含みます。
 
-###BUILDLet.PowerShell.Utilities (C#)
+###BUILDLet.Utilities.PowerShell (C#)
 PowerShell コマンドレット
+(Version 1.1.2.0 より BUILDLet.PowerShell.Utilities から BUILDLet.Utilities.PowerShell に名称変更。)
 
 ###BUILDLet.Utilities (C#)
 クラスライブラリ
