@@ -53,8 +53,6 @@ namespace BUILDLet.Utilities.Compression.Tests
             }
 
 
-            Log log = new Log();
-
             string source = string.Empty;
             string destination = string.Empty;
             string output = string.Empty;
@@ -70,6 +68,11 @@ namespace BUILDLet.Utilities.Compression.Tests
 
             for (int i = 0; i < number_of_testcase; i++)
             {
+                // Initialize Log
+                Log.Clear();
+                Log.WriteLine();
+
+                
                 // Unzip (Extract)
                 switch (i)
                 {
@@ -107,7 +110,12 @@ namespace BUILDLet.Utilities.Compression.Tests
                 }
                 if (!string.IsNullOrEmpty(output))
                 {
-                    log.WriteLine("({0}) \"{1}\" is unzipped to \"{2}\".", i, source, output);
+                    // Log.WriteLine(string.Format("({0}) \"{1}\" is unzipped to \"{2}\".", i, source, output));
+                    Log.WriteLine(string.Format("({0})", i));
+                    Log.WriteLine(string.Format("Unzipped ({0})", i), false);
+                    Log.WriteLine(string.Format("Source=\"{0}\"", source));
+                    Log.WriteLine(string.Format("Destination=\"{0}\"", output));
+                    Log.WriteLine();
                 }
 
 
@@ -144,7 +152,11 @@ namespace BUILDLet.Utilities.Compression.Tests
                     default:
                         break;
                 }
-                log.WriteLine("({0}) \"{1}\" is zipped to \"{2}\".", i, source, output);
+                // Log.WriteLine(string.Format("({0}) \"{1}\" is zipped to \"{2}\".", i, source, output));
+                Log.WriteLine(string.Format("Zipped ({0})", i));
+                Log.WriteLine(string.Format("Source=\"{0}\"", source));
+                Log.WriteLine(string.Format("Destination=\"{0}\"", output));
+                Log.WriteLine();
             }
         }
 

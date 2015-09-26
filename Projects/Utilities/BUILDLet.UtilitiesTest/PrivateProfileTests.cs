@@ -102,8 +102,9 @@ namespace BUILDLet.Utilities.Tests
                 }
 
                 // print Trace message
-                Debug.WriteLine("");
-                Debug.WriteLine("Check Key name \"{0}\" of Section [{1}] ({2}).", testcases[i].key, testcases[i].section, testcases[i].filepath);
+                Log.WriteLine(stream: LogOutputStream.Trace);
+                Log.WriteLine(string.Format("Check Key name \"{0}\" of Section [{1}] ({2}).",
+                    testcases[i].key, testcases[i].section, testcases[i].filepath), stream: LogOutputStream.Trace);
 
                 // Test
                 string actual = PrivateProfile.GetString(testcases[i].section, testcases[i].key, testcases[i].filepath);
@@ -173,8 +174,9 @@ namespace BUILDLet.Utilities.Tests
                 }
 
                 // print Trace message
-                Debug.WriteLine("");
-                Debug.WriteLine("Check Key name \"{0}\" of Section [{1}] ({2}).", testcases[i].key, testcases[i].section, testcases[i].filepath);
+                Log.WriteLine(stream: LogOutputStream.Trace);
+                Log.WriteLine(string.Format("Check Key name \"{0}\" of Section [{1}] ({2}).",
+                    testcases[i].key, testcases[i].section, testcases[i].filepath), stream: LogOutputStream.Trace);
 
                 // Test
                 string[] contents = File.ReadLines(testcases[i].filepath).ToArray();
@@ -230,8 +232,9 @@ namespace BUILDLet.Utilities.Tests
                 }
                 
                 // print Trace message
-                Debug.WriteLine("");
-                Debug.WriteLine("Check Key name \"{0}\" of Section [{1}] ({2}).", testcases[i].key, testcases[i].section, testcases[i].filepath);
+                Log.WriteLine(stream: LogOutputStream.Trace);
+                Log.WriteLine(string.Format("Check Key name \"{0}\" of Section [{1}] ({2}).",
+                    testcases[i].key, testcases[i].section, testcases[i].filepath), stream: LogOutputStream.Trace);
 
                 // Test
                 PrivateProfile.SetString(testcases[i].section, testcases[i].key, testcases[i].value, testcases[i].filepath);

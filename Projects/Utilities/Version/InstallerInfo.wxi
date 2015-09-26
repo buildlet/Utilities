@@ -2,7 +2,7 @@
 <Include>
 
   <!-- Version Information -->
-  <?define Version="1.1.2"?>
+  <?define Version="1.2.0"?>
 
   
   <!-- Product Information (BUILDLet.Utilities) -->

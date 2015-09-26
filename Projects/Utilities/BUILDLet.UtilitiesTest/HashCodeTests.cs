@@ -40,7 +40,7 @@ namespace BUILDLet.Utilities.Cryptography.Tests
     {
         [TestMethod()]
         [ExpectedException(typeof(ArgumentException))]
-        public void HashCode_HashNameExceptionTest()
+        public void HashCode_HashName_ExceptionTest()
         {
             byte[] dummy = new byte[] { 0x00, 0xFF };
             new HashCode(dummy, "hoge");
@@ -64,7 +64,6 @@ namespace BUILDLet.Utilities.Cryptography.Tests
         [TestMethod()]
         public void LONG_BIG_HashCode_ToStringTest()
         {
-            Log log = new Log(false, true, true);
             DateTime start;
 
             string fciv_path = LocalPath.FCIV;
@@ -114,15 +113,14 @@ namespace BUILDLet.Utilities.Cryptography.Tests
             for (int i = 0; i < testFiles.Length; i++)
             {
                 // Output
-                log.WriteLine();
-                log.WriteLine();
-                log.WriteLine("Test File=\"{0}\", Hash Name=\"{1}\"", testFiles[i], hashNames[i]);
+                Log.Clear();
+                Log.WriteLine(string.Format("Test File=\"{0}\", Hash Name=\"{1}\"", testFiles[i], hashNames[i]));
 
 
 
                 // Output (FCIV: Start)
-                log.WriteLine();
-                log.WriteLine("FCIV: Start");
+                Log.WriteLine();
+                Log.WriteLine("FCIV: Start", false, true);
                 start = DateTime.Now;
 
                 // FCIV
@@ -147,13 +145,13 @@ namespace BUILDLet.Utilities.Cryptography.Tests
                 expected = fciv_stdout.Split(new string[] { "\r\n" }, StringSplitOptions.None)[3].Split(' ')[0].ToUpper();
 
                 // Output (FCIV: End)
-                log.WriteLine("FCIV: End ({0})", DateTime.Now - start);
+                Log.WriteLine(string.Format("FCIV: End ({0})", DateTime.Now - start));
 
 
 
                 // Output (HashCode.ComputeHash: Start)
-                log.WriteLine();
-                log.WriteLine("HashCode.ComputeHash: Start");
+                Log.WriteLine();
+                Log.WriteLine("HashCode.ComputeHash: Start");
                 start = DateTime.Now;
 
                 // compute Hash
@@ -167,14 +165,16 @@ namespace BUILDLet.Utilities.Cryptography.Tests
                 }
 
                 // Output (HashCode.ComputeHash: End)
-                log.WriteLine("HashCode.ComputeHash: End ({0})", DateTime.Now - start);
+                Log.WriteLine(string.Format("HashCode.ComputeHash: End ({0})", DateTime.Now - start));
 
 
                 // Output
-                log.WriteLine();
-                log.WriteLine("(E:Expected (FCIV), A:Actual)");
-                log.WriteLine("E:{0}", expected);
-                log.WriteLine("A:{0}", actual);
+                Log.WriteLine();
+                Log.WriteLine(string.Format("(E:Expected (FCIV), A:Actual)"), false, false);
+                Log.WriteLine(string.Format("E:{0}", expected));
+                Log.WriteLine(string.Format("A:{0}", actual));
+                Log.WriteLine();
+                Log.WriteLine();
 
 
                 // Check result

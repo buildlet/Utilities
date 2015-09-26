@@ -37,6 +37,6 @@ namespace BUILDLet.Utilities.Tests
         public static readonly string WakeOnLan_ConfigFilePath_from_MyDocuments = @"BUILDLet\WOL.conf";
 
         // TestData Folder
-        public static readonly string TestDataFolder = @"..\..\..\..\Common\TestData";
+        public static readonly string TestDataFolder = @"..\..\..\..\Common\TestData\Utilities";
     }
 }

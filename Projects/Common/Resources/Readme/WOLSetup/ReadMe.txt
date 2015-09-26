@@ -32,6 +32,8 @@ This software is released under the MIT License, see License.txt.
 
 History
 ---------------
+* July 20, 2015    Version 1.1.3.0    Minor Update
+  Icon image was a little changed.
 * June 15, 2015    Version 1.1.2.0    Minor Update
 * June 5, 2015    Version 1.1.1.0    Minor Update
 * June 3, 2015    Version 1.1.0.0    Minor Update

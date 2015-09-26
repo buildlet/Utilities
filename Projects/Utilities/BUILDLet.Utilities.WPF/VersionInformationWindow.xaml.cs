@@ -74,15 +74,20 @@ namespace BUILDLet.Utilities.WPF
         /// <param name="format">
         /// ロゴ イメージのフォーマット指定します。
         /// </param>
+        /// <param name="owner">
+        /// オーナー ウィンドウを表す <see cref="System.Windows.Window"/> オブジェクトを設定します。
+        /// このパラメーターを設定すると、ウィンドウの位置がオーナー ウィンドウの中央になります。
+        /// このパラメーターは Version 1.1.3.0 で追加されました。
+        /// </param>
         /// <remarks>
         /// <see cref="VersionInformationWindow"/> は、このクラスを初期化したメソッドのコードを格納しているアセンブリの各種情報を格納します。
         /// <see cref="System.Windows.Window"/> と同様に、<see cref="System.Windows.Window.Show"/> または 
         /// <see cref="System.Windows.Window.ShowDialog"/> メソッドで表示できます。
         /// <para>
-        /// このメソッドは Version 1.1.2.0 で追加されました。
+        /// このコンストラクターは Version 1.1.2.0 で追加されました。
         /// </para>
         /// </remarks>
-        public VersionInformationWindow(System.Drawing.Image logo, ImageFormat format) : this(Assembly.GetCallingAssembly())
+        public VersionInformationWindow(System.Drawing.Image logo, ImageFormat format, Window owner = null) : this(Assembly.GetCallingAssembly(), owner)
         {
             try
             {
@@ -118,12 +123,17 @@ namespace BUILDLet.Utilities.WPF
         /// この値は <see cref="VersionInformationWindow.LogoImageWidth"/> および <see cref="VersionInformationWindow.LogoImageHeight"/> として参照できます。
         /// </para>
         /// </param>
+        /// <param name="owner">
+        /// オーナー ウィンドウを表す <see cref="System.Windows.Window"/> オブジェクトを設定します。
+        /// このパラメーターを設定すると、ウィンドウの位置がオーナー ウィンドウの中央になります。
+        /// このパラメーターは Version 1.1.3.0 で追加されました。
+        /// </param>
         /// <remarks>
         /// <see cref="VersionInformationWindow"/> は、このクラスを初期化したメソッドのコードを格納しているアセンブリの各種情報を格納します。
         /// <see cref="System.Windows.Window"/> と同様に、<see cref="System.Windows.Window.Show"/> または 
         /// <see cref="System.Windows.Window.ShowDialog"/> メソッドで表示できます。
         /// </remarks>
-        public VersionInformationWindow(BitmapImage logo) : this(Assembly.GetCallingAssembly())
+        public VersionInformationWindow(BitmapImage logo, Window owner = null) : this(Assembly.GetCallingAssembly(), owner)
         {
             try
             {
@@ -142,17 +152,29 @@ namespace BUILDLet.Utilities.WPF
         /// 省略した場合 (および null を指定した場合) は、このクラスを初期化したメソッドのコードを格納しているアセンブリのバージョン情報が指定されます。
         /// このパラメーターは Version 1.1.2.0 で追加されました。
         /// </param>
+        /// <param name="owner">
+        /// オーナー ウィンドウを表す <see cref="System.Windows.Window"/> オブジェクトを設定します。
+        /// このパラメーターを設定すると、ウィンドウの位置がオーナー ウィンドウの中央になります。
+        /// このパラメーターは Version 1.1.3.0 で追加されました。
+        /// </param>
         /// <remarks>
         /// <see cref="System.Windows.Window"/> と同様に、<see cref="System.Windows.Window.Show"/> または 
         /// <see cref="System.Windows.Window.ShowDialog"/> メソッドで表示できます。
         /// </remarks>
-        public VersionInformationWindow(Assembly assembly = null)
+        public VersionInformationWindow(Assembly assembly = null, Window owner = null)
         {
             InitializeComponent();
 
             try
             {
                 if (assembly == null) { assembly = Assembly.GetCallingAssembly(); }
+
+                // Add Version 1.1.3.0
+                if (owner != null)
+                {
+                    this.Owner = owner;
+                    this.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
+                }                
 
                 AssemblyCustomAttributes customAttr = new AssemblyCustomAttributes(assembly);
                 AssemblyAttributes attr = new AssemblyAttributes(assembly);

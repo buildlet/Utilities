@@ -38,145 +38,136 @@ namespace BUILDLet.Utilities.Tests
     public class LogTests
     {
         [TestMethod()]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void Log_WriteLine_ExceptionTest()
+        [ExpectedException(typeof(FormatException))]
+        public void Log_TimeStampFormat_ExceptionTest1()
         {
-            new Log(methodBracket: new char[] { '1', '2', '3' });
-        }
-
-        [TestMethod()]
-        public void Log_MethodNameTest_withTitle()
-        {
-            new Log(title: true);
-        }
-
-        [TestMethod()]
-        public void Log_WriteTitleTest()
-        {
-            new Log(methodBracket: new char[] { '!', '|' }).WriteTitle();
-            new Log(methodBracket: new char[] { '★', '☆' }).WriteTitle();
-        }
-
-        [TestMethod()]
-        public void Log_TimeFormatTest()
-        {
-            new Log(timeStamp: true, timeFormat: "G").WriteLine("Test");
+            Log.WriteLine("TimeStampFormat Exception Test", format: "★");
         }
 
         [TestMethod()]
         [ExpectedException(typeof(FormatException))]
-        public void Log_TimeFormat_ExceptionTest()
+        public void Log_TimeStampFormat_ExceptionTest2()
         {
-            new Log(timeStamp: true, timeFormat: "★").WriteLine("Test");
+            Log.WriteLine("TimeStampFormat Exception Test", true, true, format: "★");
         }
 
         [TestMethod()]
-        public void Log_LogOutputTest()
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void Log_Bracket_ExceptionTest()
         {
-            new Log().WriteLine("Standard Output Stream (Default)");
+            Log.WriteLine("Bracket Exception Test", true, true, bracket: new char[] { '1', '2', '3' });
+        }
 
-            new Log(stream: LogOutputStream.StandardError).WriteLine("Standard Error Output Stream");
 
-            new Log(stream: LogOutputStream.Trace).WriteLine("Trace Listner");
-
-            new Log().WriteLine("Standard Output Stream (2)");
-
-            new Log(stream: LogOutputStream.StandardError).WriteLine("Standard Error Output Stream (2)");
-
-            new Log(stream: LogOutputStream.Trace).WriteLine("Trace Listner (2)");
+        [TestMethod()]
+        public void Log_WriteTest()
+        {
+            Log.Clear();
+            Log.Write("Write Test1");
+            Log.Write("+Write Test2", false);
+            Log.Write("+Write Test3");
         }
 
         [TestMethod()]
         public void Log_WriteLineTest()
         {
-            Log log = null;
-            bool?[] comb = null;
+            Log.Clear();
+            Log.WriteLine("WriteLine Test");
 
-            for (int i = 0; i < 4; i++)
-            {
-                switch (i)
-                {
-                    case 0:
-                        // methodName:true, timeStamp:false (Default)
-                        log = new Log();
-                        log.WriteLine("new Log();");
-                        break;
+            Log.WriteLine();
+            Log.WriteLine("WriteLine Test1", false, false);
+            Log.WriteLine("WriteLine Test2", false, true);
+            Log.WriteLine("WriteLine Test3", true, false);
+            Log.WriteLine("WriteLine Test4", true, true);
 
-                    case 1:
-                        // methodName:true, timeStamp:true
-                        log = new Log(methodName: true, timeStamp: true);
-                        log.WriteLine("new Log(methodName: true, timeStamp: true);");
-                        break;
+            Log.WriteLine();
+            Log.WriteLine("WriteLine Test5", true, true, "G");
+            Log.WriteLine("WriteLine Test6");
+            Log.WriteLine("WriteLine Test7");
+        }
 
-                    case 2:
-                        // methodName:true, timeStamp:true
-                        log = new Log(methodName: true, timeStamp: true);
-                        log.WriteLine("new Log(methodName: true, timeStamp: true);");
-                        break;
 
-                    case 3:
-                        // methodName:false, timeStamp:false
-                        log = new Log(methodName: false, timeStamp: false);
-                        log.WriteLine("new Log(methodName: false, timeStamp: false);");
-                        break;
+        [TestMethod()]
+        public void Log_BracketTest1()
+        {
+            Log.Clear();
+            Log.WriteLine("Bracket should be changed into '!' and '|'.");
+            Log.WriteLine("Bracket Test1-1", bracket: new char[] { '!', '|' });
+            Log.WriteLine("Bracket Test1-2");
+        }
 
-                    case 4:
-                        // methodName:false, timeStamp:true
-                        log = new Log(methodName: false, timeStamp: true);
-                        log.WriteLine("new Log(methodName: false, timeStamp: true);");
-                        break;
+        [TestMethod()]
+        public void Log_BracketTest2()
+        {
+            Log.Clear();
+            Log.WriteLine("Bracket should be changed into '★' and '☆'.");
+            Log.WriteLine("Bracket Test2-1", true, true, bracket: new char[] { '★', '☆' });
+            Log.WriteLine("Bracket Test2-2");
+        }
 
-                    default:
-                        break;
-                }
+        [TestMethod()]
+        public void Log_TimeStampFormatTest()
+        {
+            Log.Clear();
+            Log.WriteLine("TimeStampFormat should be changed into \"G\".");
+            Log.WriteLine("TimeStampFormat Test1", false, true, format: "G");
+            Log.WriteLine("TimeStampFormat Test2");
+        }
 
-                for (int j = 0; j < 3 * 3; j++)
-                {
-                    switch (j)
-                    {
-                        case 0:
-                            comb = new bool?[] { null, null };
-                            break;
+        [TestMethod()]
+        public void Log_LogOutputStreamTest()
+        {
+            Log.WriteLine("This message should be shown to \"Standard Output Stream\".", stream: LogOutputStream.StandardOutput);
+            Log.WriteLine("This message should be shown to \"Standard Output Stream\". (again)");
 
-                        case 1:
-                            comb = new bool?[] { null, true };
-                            break;
+            Log.WriteLine("This message should be shown to \"Standard Error Output Stream\".", stream: LogOutputStream.StandardError);
+            Log.WriteLine("This message should be shown to \"Standard Error Output Stream\". (again)");
 
-                        case 2:
-                            comb = new bool?[] { null, false };
-                            break;
+            Log.WriteLine("This message should be shown to \"Trace Listner\".", stream: LogOutputStream.Trace);
+            Log.WriteLine("This message should be shown to \"Trace Listner\". (again)");
+        }
 
-                        case 3:
-                            comb = new bool?[] { true, null };
-                            break;
+        [TestMethod()]
+        public void Log_StaticPropertiesTest()
+        {
+            Log.Clear();
+            Log.WriteLine("Default");
 
-                        case 4:
-                            comb = new bool?[] { true, true };
-                            break;
+            Log.WriteLine("TimeStampFormat and Bracket should be changed into \"yyyy/MM/dd\" and { '【', '】' }.");
+            Log.WriteLine("Method Name and Time Stamp should be shown (without parameters).");
+            Log.WriteLine("Test 1-0", true, true, "yyyy/MM/dd", new char[] { '【', '】' });
 
-                        case 5:
-                            comb = new bool?[] { true, false };
-                            break;
+            Log.WriteLine("Test 1-1");
+            Log.WriteLine("Test 1-2");
+            Log.WriteLine();
 
-                        case 6:
-                            comb = new bool?[] { false, false };
-                            break;
 
-                        case 7:
-                            comb = new bool?[] { false, true };
-                            break;
+            Log.Clear();
+            Log.WriteLine("Default");
 
-                        case 8:
-                            comb = new bool?[] { false, false };
-                            break;
+            Log.WriteLine("TimeStampFormat and Bracket should be changed into \"yyyy/MM/dd\" and { '【', '】' }.");
+            Log.TimeStampFormat = "yyyy/MM/dd";
+            Log.Bracket = new char[] { '【', '】' };
 
-                        default:
-                            break;
-                    }
+            Log.WriteLine("Test 2-1", true, true);
+            Log.WriteLine("Test 2-2", true, true);
+            Log.WriteLine();
 
-                    log.WriteLine(string.Format("\"methodName={0}, timeStamp={1}\"", comb[0], comb[1]), comb[0], comb[1]);
-                }
-            }
+
+            Log.Clear();
+            Log.WriteLine("Default");
+
+            Log.WriteLine("Method Name should not be shown (without parameter).");
+            Log.MethodName = false;
+            Log.WriteLine("Time Stamp should be shown (without parameter).");
+            Log.TimeStamp = true;
+
+            Log.WriteLine("Test 3-1");
+            Log.WriteLine("Test 3-2");
+            Log.WriteLine();
+
+            Log.Clear();
+            Log.WriteLine("Default");
         }
     }
 }

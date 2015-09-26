@@ -101,7 +101,7 @@ namespace BUILDLet.Utilities.Network
 
 #if DEBUG
             Debug.WriteLine("");
-            Debug.WriteLine("[MagicPacket]:MAC Address=\"" + this.MacAddress + "\"");
+            Debug.WriteLine(string.Format("[{0}] MAC Address=\"{1}\"", typeof(MagicPacket).Name, this.MacAddress));
 #endif
 
 
@@ -117,7 +117,7 @@ namespace BUILDLet.Utilities.Network
 #if DEBUG
             for (int i = 0; i < (1 + 16); i++)
             {
-                Debug.Write(string.Format("[MagicPacket]:Magic Packet[{0:D2}]=0x", i));
+                Debug.Write(string.Format("[{0}] Magic Packet[{1:D2}]=0x", typeof(MagicPacket).Name, i));
                 for (int j = 0; j < 6; j++) { Debug.Write(string.Format("{0:X2}", this.data[(i * 6) + j])); }
                 Debug.WriteLine("");
             }
@@ -153,7 +153,9 @@ namespace BUILDLet.Utilities.Network
                     sent++;
 
 #if DEBUG
-                    Debug.WriteLine("[MagicPacket]:Magic Packet (MAC Address=\"{0}\", Port={1}) has been sent! ({2})", this.MacAddress, port, i + 1);
+                    Debug.WriteLine(
+                        "[{0}] Magic Packet (MAC Address=\"{1}\", Port={2}) has been sent! ({3})", 
+                        typeof(MagicPacket).Name, this.MacAddress, port, i + 1);
 #endif
                 }
                 return sent;

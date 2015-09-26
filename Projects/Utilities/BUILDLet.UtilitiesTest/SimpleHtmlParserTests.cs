@@ -30,6 +30,7 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 
 using BUILDLet.Utilities;
 
@@ -181,72 +182,75 @@ namespace BUILDLet.Utilities.Tests
             testcases[0].attr = "href";
             testcases[0].expected = null;
 
-            Log log = new Log(false);
+            // Initialize Log
+            Log.Clear();
+            Log.OutputStream = LogOutputStream.Trace;
+            Log.WriteLine(string.Format("Test File is \"{0}\".", testcases[0].filename), true);
 
-            Debug.Write("[" + testcases[0].filename + "]: ");
             string content = File.ReadAllText(Path.Combine(LocalPath.TestDataFolder, testcases[0].filename), testcases[0].encoding);
             string[] actual = SimpleHtmlParser.GetAttributes(content, testcases[0].tag, testcases[0].attr);
 
             // Output
-            log.WriteLine("[{0}] {1} of \"{2}\" attribute of <{3}> element is found.",
-                testcases[0].filename, actual.Length, testcases[0].attr, testcases[0].tag);
-            for (int i = 0; i < actual.Length; i++) { log.WriteLine("({0}) \"{1}\"", i, actual[i]); }
-
+            Log.WriteLine(string.Format("{0} of \"{1}\" attribute of <{2}> element is found.", actual.Length, testcases[0].attr, testcases[0].tag));
+            for (int i = 0; i < actual.Length; i++) { Log.WriteLine(string.Format("({0}) \"{1}\"", i, actual[i])); }
         }
 
 
-        private void innerTest_SimpleHtmlParser(testcase[] testcases)
+        private void innerTest_SimpleHtmlParser(testcase[] testcases, [CallerMemberName] string caller = "")
         {
-            Log log = new Log();
+            // Initialize Log
+            Log.Clear();
+            Log.MethodName = false;
+            Log.OutputStream = LogOutputStream.Trace;
 
             foreach (var testcase in testcases)
             {
                 string filepath = Path.Combine(LocalPath.TestDataFolder, testcase.filename);
                 string[] actual;
 
+
+                Log.WriteLine(string.Format("[{0}] Test File is \"{1}\".", caller, testcase.filename));
                 if (string.IsNullOrEmpty(testcase.attr))
                 {
-                    Debug.Write("[" + testcase.filename + "]: ");
                     actual = SimpleHtmlParser.GetElements(File.ReadAllText(filepath, testcase.encoding), testcase.tag, testcase.strict);
 
                     // Length should be the same.
-                    log.WriteLine("({0}) {1} of <{2}> is found.", testcase.filename, actual.Length, testcase.tag);
+                    Log.WriteLine(string.Format("[{0}] {1} of <{2}> is found.", caller, actual.Length, testcase.tag));
                     Assert.AreEqual(testcase.expected.Length, actual.Length);
 
                     for (int i = 0; i < testcase.expected.Length; i++)
                     {
-                        log.WriteLine("({0}) Value({1}) of <{2}> is \"{3}\".", testcase.filename, i, testcase.tag, actual[i]);
+                        Log.WriteLine(string.Format("[{0}] Value({1}) of <{2}> is \"{3}\".", caller, i, testcase.tag, actual[i]));
                         Assert.AreEqual(testcase.expected[i], actual[i]);
                     }
                 }
                 else
                 {
-                    Debug.Write("[" + testcase.filename + "]: ");
                     actual = SimpleHtmlParser.GetAttributes(File.ReadAllText(filepath, testcase.encoding), testcase.tag, testcase.attr);
 
                     // Length should be the same.
-                    log.WriteLine("({0}) {1} of \"{2}\" attribute of <{3}> element is found.", testcase.filename, actual.Length, testcase.attr, testcase.tag);
+                    Log.WriteLine(string.Format("[{0}] {1} of \"{2}\" attribute of <{3}> element is found.", caller, actual.Length, testcase.attr, testcase.tag));
                     Assert.AreEqual(testcase.expected.Length, actual.Length);
 
                     for (int i = 0; i < testcase.expected.Length; i++)
                     {
-                        log.WriteLine("({0}) Value({1}) of \"{2}\" attribute of <{3}> is \"{4}\".", testcase.filename, i, testcase.attr, testcase.tag, actual[i]);
+                        Log.WriteLine(string.Format("[{0}] Value({1}) of \"{2}\" attribute of <{3}> is \"{4}\".", caller, i, testcase.attr, testcase.tag, actual[i]));
                         Assert.AreEqual(testcase.expected[i], actual[i]);
                     }
                 }
-                log.WriteLine();
+                Log.WriteLine();
             }
         }
 
         [TestMethod()]
         public void SimpleHtmlParser_RemoveHtmlCommentTest()
         {
-            Log log = new Log();
             string content = File.ReadAllText(Path.Combine(LocalPath.TestDataFolder, "comment.html"));
 
-            log.WriteLine("Before\n" + content);
+            Log.Clear();
+            Log.WriteLine("Before\n" + content);
             Assert.AreEqual(7, SimpleHtmlParser.RemoveHtmlComment(ref content));
-            log.WriteLine("After\n" + content);
+            Log.WriteLine("After\n" + content);
         }
     }
 }

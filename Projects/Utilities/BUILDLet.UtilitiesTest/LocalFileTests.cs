@@ -41,11 +41,10 @@ namespace BUILDLet.Utilities.Tests
         [TestMethod()]
         public void LocalFile_SearchPathTest()
         {
-            Log log = new Log(false, false, true);
-
-            log.WriteLine("LocalFile.SearchPath={");
-            foreach (var dir in LocalFile.SearchPath) { log.WriteLine("\t\"{0}\",", dir); }
-            log.WriteLine("}");
+            Log.Clear();
+            Log.WriteLine("LocalFile.SearchPath={");
+            foreach (var dir in LocalFile.SearchPath) { Console.WriteLine("\t\"{0}\",", dir); }
+            Console.WriteLine("}");
         }
 
 
@@ -100,7 +99,8 @@ namespace BUILDLet.Utilities.Tests
         [TestMethod()]
         public void LocalFile_GetSearchPath_TestEmpty()
         {
-            new Log().WriteLine("Empty(Current Directory)");
+            Log.Clear();
+            Log.WriteLine("Empty (Current Directory)");
 
             List<string> expected = new List<string>();
             expected.Add(Environment.CurrentDirectory);
@@ -112,7 +112,8 @@ namespace BUILDLet.Utilities.Tests
         [TestMethod()]
         public void LocalFile_GetSearchPath_InvalidDirectoryTest()
         {
-            new Log().WriteLine("Invalid Directory");
+            Log.Clear();
+            Log.WriteLine("Invalid Directory");
             string dir = "hoge";
 
             this.test_GetSearchPath(LocalFile.SearchPath, LocalFile.GetSearchPath(dir), dir);
@@ -121,7 +122,8 @@ namespace BUILDLet.Utilities.Tests
         [TestMethod()]
         public void LocalFile_GetSearchPath_ValidDirectoryTest()
         {
-            new Log().WriteLine("Valid Directory");
+            Log.Clear();
+            Log.WriteLine("Valid Directory");
             string dir = @"C:\Users";
 
             List<string> expected = new List<string>();
@@ -134,16 +136,15 @@ namespace BUILDLet.Utilities.Tests
         [TestMethod()]
         public void LocalFile_GetSearchPath_AlreadyIncludingDirectoryTest()
         {
-            Log log = new Log();
-
             Dictionary<string, string> dirs = new Dictionary<string, string>();
             dirs.Add("Windows Folder", @"C:\Windows");
             dirs.Add("System32 Folder", @"C:\Windows\System32");
 
             foreach (var dir in dirs)
             {
-                log.WriteLine();
-                log.WriteLine(dir.Key);
+                Log.Clear();
+                Log.WriteLine();
+                Log.WriteLine(dir.Key);
                 this.test_GetSearchPath(LocalFile.SearchPath, LocalFile.GetSearchPath(dir.Value), dir.Value);
             }
         }
@@ -152,7 +153,8 @@ namespace BUILDLet.Utilities.Tests
         [TestMethod()]
         public void LocalFile_GetSearchPath_ValidDirectoriesTest()
         {
-            new Log().WriteLine("Valid Directories");
+            Log.Clear();
+            Log.WriteLine("Valid Directories");
 
             List<string> dirs = new List<string>();
             dirs.Add(@"C:\Users");
@@ -168,7 +170,8 @@ namespace BUILDLet.Utilities.Tests
         [TestMethod()]
         public void LocalFile_GetSearchPath_ComplexTest()
         {
-            new Log().WriteLine("Complex");
+            Log.Clear();
+            Log.WriteLine("Complex");
 
             List<string> dirs = new List<string>();
             dirs.Add(@"C:\Users");
@@ -210,51 +213,60 @@ namespace BUILDLet.Utilities.Tests
 
         [TestMethod()]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void LocalFile_GetFilePath_EmptyTest()
+        public void LocalFile_GetFilePath_Empty_ExceptionTest()
         {
-            new Log().WriteLine("Empty");
+            // Log.WriteLine(string.Format("Empty (Expected Exception is <{0}>.)", typeof(ArgumentNullException).Name));
             this.test_GetFilePath(null, null);
         }
+
 
         [TestMethod()]
         public void LocalFile_GetFilePathTest()
         {
-            new Log(false, false, true).WriteLine("Current Directory");
+            Log.Clear();
+            Log.WriteLine("Current Directory");
             this.test_GetFilePath("BUILDLet.Utilities.dll", null);
-            
-            new Log(false, false, true).WriteLine("My Documents");
+            Log.WriteLine();
+
+            Log.WriteLine("My Documents");
             this.test_GetFilePath(LocalPath.DummyFileName_in_MyDocuments, null);
+            Log.WriteLine();
 
-            new Log(false, false, true).WriteLine("My Documents");
+            Log.WriteLine("My Documents");
             this.test_GetFilePath("NOEXIST", null);
+            Log.WriteLine();
 
-            new Log(false, false, true).WriteLine("Windows Folder");
+            Log.WriteLine("Windows Folder");
             this.test_GetFilePath("regedit.exe", null);
+            Log.WriteLine();
 
-            new Log(false, false, true).WriteLine("System32 Folder");
+            Log.WriteLine("System32 Folder");
             this.test_GetFilePath("calc.exe", null);
+            Log.WriteLine();
 
 
-            new Log(false, false, true).WriteLine("Current Directory");
+            Log.WriteLine("Current Directory");
             this.test_GetFilePath("BUILDLet.Utilities.dll", null);
+            Log.WriteLine();
 
 
-            new Log(false, false, true).WriteLine("Program Folder");
+            Log.WriteLine("Program Folder");
             this.test_GetFilePath("wordpad.exe", new string[] { @"C:\Program Files\Windows NT\Accessories" });
+            Log.WriteLine();
 
-            new Log(false, false, true).WriteLine("Program Folder");
+            Log.WriteLine("Program Folder");
             this.test_GetFilePath("wordpad.exe", LocalFile.GetSearchPath(@"C:\Program Files\Windows NT\Accessories"));
+            Log.WriteLine();
 
-            new Log(false, false, true).WriteLine("System32 Folder");
+            Log.WriteLine("System32 Folder");
             this.test_GetFilePath("shell32.dll", LocalFile.GetSearchPath(@"C:\Program Files\Windows NT\Accessories"));
+            Log.WriteLine();
         }
 
 
         [TestMethod()]
         public void LocalFile_ConvertPathTest()
         {
-            Log log = new Log();
-
             string path;
             string expected;
             string actual;
@@ -283,16 +295,16 @@ namespace BUILDLet.Utilities.Tests
                 }
 
                 actual = LocalFile.ConvertPath(path);
-                log.WriteLine("LocalFile.ConvertPath({0}) = {1}", path, actual);
                 Assert.AreEqual(expected, actual);
+
+                Log.Clear();
+                Log.WriteLine(string.Format("LocalFile.ConvertPath({0}) = {1}", path, actual));
             }
         }
 
         [TestMethod()]
         public void LocalFile_GetFolderNameTest()
         {
-            Log log = new Log();
-
             string path;
             string expected;
             string actual;
@@ -317,8 +329,10 @@ namespace BUILDLet.Utilities.Tests
                 }
 
                 actual = LocalFile.GetFolderName(path);
-                log.WriteLine("LocalFile.ConvertPath({0}) = {1}", path, actual);
                 Assert.AreEqual(expected, actual);
+
+                Log.Clear();
+                Log.WriteLine(string.Format("LocalFile.ConvertPath({0}) = {1}", path, actual), true, false);
             }
         }
     }

@@ -81,7 +81,8 @@ namespace BUILDLet.Utilities.Network.Tests
         [TestMethod()]
         public void MagicPacket_GetBytesTest()
         {
-            new Log().WriteLine("(E:Expected, A:Actual)");
+            Log.Clear();
+            Log.WriteLine("(E:Expected, A:Actual)");
 
             foreach (var mac in TestData.DummyMacAddresses)
             {
@@ -89,6 +90,7 @@ namespace BUILDLet.Utilities.Network.Tests
                 string actual = BitConverter.ToString((new MagicPacket(mac)).GetBytes()).Replace("-", "");
 
                 Console.WriteLine();
+                Console.WriteLine("MAC Address=\"{0}\"", mac);
                 Console.WriteLine("E:\"{0}\"", expected);
                 Console.WriteLine("A:\"{0}\"", actual);
 
@@ -99,7 +101,8 @@ namespace BUILDLet.Utilities.Network.Tests
         [TestMethod()]
         public void MagicPacket_MacAddressTest()
         {
-            new Log().WriteLine("(E:Expected, A:Actual=MagicPacket.MacAddress)");
+            Log.Clear();
+            Log.WriteLine("(E:Expected, A:Actual=MagicPacket.MacAddress)");
 
             foreach (var mac in TestData.DummyMacAddresses)
             {
@@ -107,6 +110,7 @@ namespace BUILDLet.Utilities.Network.Tests
                 string actual = (new MagicPacket(mac)).MacAddress;
 
                 Console.WriteLine();
+                Console.WriteLine("MAC Address=\"{0}\"", mac);
                 Console.WriteLine("E:\"{0}\"", expected);
                 Console.WriteLine("A:\"{0}\"", actual);
 
@@ -117,7 +121,8 @@ namespace BUILDLet.Utilities.Network.Tests
         [TestMethod()]
         public void MagicPacket_SeparatorTest()
         {
-            new Log().WriteLine("(E:Expected, A:Actual=MagicPacket.MacAddress)");
+            Log.Clear();
+            Log.WriteLine("(E:Expected, A:Actual=MagicPacket.MacAddress)");
 
             foreach (var mac in TestData.DummyMacAddresses)
             {
@@ -129,6 +134,7 @@ namespace BUILDLet.Utilities.Network.Tests
                 string actual = packet.MacAddress;
 
                 Console.WriteLine();
+                Console.WriteLine("MAC Address=\"{0}\"", mac);
                 Console.WriteLine("E:\"{0}\"", expected);
                 Console.WriteLine("A:\"{0}\"", actual);
 
@@ -148,27 +154,27 @@ namespace BUILDLet.Utilities.Network.Tests
         [TestMethod()]
         public void MagicPacket_SendTest()
         {
-            Log log = new Log();
             int times = 0;
             int port = 0;
 
             foreach (var mac in TestData.DummyMacAddresses)
             {
-                log.WriteLine();
-                log.WriteLine("MAC Address Text=\"{0}\"", mac);
+                Log.Clear();
+                Log.WriteLine();
+                Log.WriteLine(string.Format("MAC Address=\"{0}\"", mac));
 
                 MagicPacket packet = new MagicPacket(mac);
 
-                log.WriteLine("MagicPacket.Send()");
+                Log.WriteLine("MagicPacket.Send()");
                 packet.Send();
 
-                log.WriteLine("MagicPacket.Send({0})", times = 0);
+                Log.WriteLine(string.Format("MagicPacket.Send({0})", times = 0));
                 packet.Send(times);
 
-                log.WriteLine("MagicPacket.Send({0})", times = 5);
+                Log.WriteLine(string.Format("MagicPacket.Send({0})", times = 5));
                 packet.Send(times);
 
-                log.WriteLine("MagicPacket.Send({0}, {1})", times = 3, port = 8080);
+                Log.WriteLine(string.Format("MagicPacket.Send({0}, {1})", times = 3, port = 8080));
                 packet.Send(times, port);
             }
         }
@@ -177,13 +183,13 @@ namespace BUILDLet.Utilities.Network.Tests
         [TestMethod()]
         public void MagicPacket_SendTest2()
         {
-            Log log = new Log();
+            Log.Clear();
 
             new MagicPacket("00:00:00:00:00:00").Send(-1);
-            log.WriteLine("Magic Packet should not be sent.");
+            Log.WriteLine("Magic Packet should not be sent.");
 
             new MagicPacket("FF:FF:FF:FF:FF:FF").Send(-1);
-            log.WriteLine("Magic Packet should not be sent.");
+            Log.WriteLine("Magic Packet should not be sent.");
         }
 
 

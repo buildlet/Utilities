@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Include>
 
-  <!-- License -->
-  <?define Resource_LicenseFile_TXT="..\..\Common\Resources\License\License.txt"?>
-  <?define Resource_LicenseFile_RTF="..\..\Common\Resources\License\License.rtf"?>
-
-  <!-- License (Redist) -->
-  <?define Resource_LicenseFile_Redist_JbigKit="..\..\Common\Resources\License\jbigkit.txt"?>
-  <?define Resource_LicenseFile_Redist_NetPbm="..\..\Common\Resources\License\netpbm.txt"?>
-  
   <!-- Readme -->
   <?define Resource_ReadmeFile_WOL="..\..\Common\Resources\Readme\WOLSetup\Readme.txt"?>
   <?define Resource_ReadmeFile_PackageMaker="..\..\Common\Resources\Readme\PackageMakerSetup\Readme.txt"?>
   <?define Resource_ReadmeFile_JBIGView="..\..\Common\Resources\Readme\JBIGViewSetup\Readme.txt"?>
   
   <!-- Logo -->
-  <?define Resource_LogoFile_WOLSetupBootstrapper="..\..\Common\Resources\Logo\WOLSetupBootstrapper\BUILDLet_Yellow_64x64.png"?>
-  <?define Resource_LogoFile_PSUtilitySetupBootstrapper="..\..\Common\Resources\Logo\PSUtilitiesSetupBootstrapper\BUILDLet_White2_64x64.png"?>
-  <?define Resource_LogoFile_PSPackageMakerSetupBootstrapper="..\..\Common\Resources\Logo\PSPackageMakerSetupBootstrapper\BUILDLet_DarkRed_64x64.png"?>
-  <?define Resource_LogoFile_JBIGViewSetupBootstrapper="..\..\Common\Resources\Logo\JBIGViewSetupBootstrapper\BUILDLet_Orange_64x64.png"?>
+  <?define Resource_LogoFile_WOLSetupBootstrapper="..\..\Common\Resources\Logo\WOLSetupBootstrapper\BUILDLet.Logo_Yellow-LightBlue_64x64.png"?>
+  <?define Resource_LogoFile_PSUtilitySetupBootstrapper="..\..\Common\Resources\Logo\PSUtilitiesSetupBootstrapper\BUILDLet.Logo_White-LightBlue_64x64.png"?>
+  <?define Resource_LogoFile_PSPackageMakerSetupBootstrapper="..\..\Common\Resources\Logo\PSPackageMakerSetupBootstrapper\BUILDLet.Logo_White-DarkRed_64x64.png"?>
+  <?define Resource_LogoFile_JBIGViewSetupBootstrapper="..\..\Common\Resources\Logo\JBIGViewSetupBootstrapper\BUILDLet.Logo_White-LightOrange_64x64.png"?>
+
+  <!-- License -->
+  <?define Resource_LicenseFile_TXT="..\..\Common\Resources\License\License.txt"?>
+  <?define Resource_LicenseFile_RTF="..\..\Common\Resources\License\License.rtf"?>
+  
+  
+  <!-- License (Redist: JBIG-KIT) -->
+  <?define Resource_LicenseFile_Redist_JbigKit="..\..\Common\Resources\License\jbigkit-1.6\jbigkit.txt"?>
+
+  <!-- License (Redist: Netpbm) -->
+  <?define Resource_LicenseFile_Redist_NetPbm="..\..\Common\Resources\License\netpbm-10.27\netpbm.txt"?>
 
   
   <!-- .NET Framework 4.5 (Redist) -->

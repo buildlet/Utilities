@@ -52,7 +52,8 @@
   <?define GUID_JBIGView_Product="{9B468668-62BC-4BB7-B228-F00C9BD92687}"?>
   <?define GUID_JBIGView_UpgradeCode="{229069CA-7044-4D5F-8322-C964D4C31A02}"?>
   
-  <?define GUID_JBIGView_ProductComponent="{AA61A82B-E5AC-4491-AA1E-268C272043E0}"?>
+  <?define GUID_JBIGView_OldProductComponent="{AA61A82B-E5AC-4491-AA1E-268C272043E0}"?>  <!-- [Version 1.1.1.0] for Backword Compatibility -->
+  <?define GUID_JBIGView_ProductComponent="{243EB6A0-C6D8-424B-AE91-4F297C183D92}"?>     <!-- [Version 1.1.1.0] Change value for change Desktop Shortcut Name -->
   <?define GUID_JBIGView_ProductComponent_JbigToBitmap="{58987A1D-A80A-4A68-9F52-7846D0EFE176}"?>
   <?define GUID_JBIGView_ProductComponent_BUILDLet_Library="{610618DC-D6B0-449E-AEB7-9EB4C8C5598D}"?>
   <?define GUID_JBIGView_ProductComponent_Redist_JbigKit="{480511F9-E9CA-4DF0-B5C9-E0B4DEB512AA}"?>

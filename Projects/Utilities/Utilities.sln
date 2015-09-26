@@ -39,8 +39,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Version", "Version", "{0272
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Link", "Link", "{6E889817-C38C-47C6-B0D9-54BF15A05F1D}"
 	ProjectSection(SolutionItems) = preProject
-		BUILDLet.PowerShell.Utilities\BUILDLet.PowerShell.Utilities.psd1 = BUILDLet.PowerShell.Utilities\BUILDLet.PowerShell.Utilities.psd1
-		BUILDLet.PowerShell.UtilitiesTest\BUILDLet.PowerShell.Utilities.Tests.ps1 = BUILDLet.PowerShell.UtilitiesTest\BUILDLet.PowerShell.Utilities.Tests.ps1
+		BUILDLet.Utilities.PowerShell\BUILDLet.Utilities.PowerShell.psd1 = BUILDLet.Utilities.PowerShell\BUILDLet.Utilities.PowerShell.psd1
+		BUILDLet.Utilities.PowerShellTest\BUILDLet.Utilities.PowerShell.Tests.ps1 = BUILDLet.Utilities.PowerShellTest\BUILDLet.Utilities.PowerShell.Tests.ps1
 	EndProjectSection
 	ProjectSection(FolderStartupServices) = postProject
 		{82A7F48D-3B50-4B1E-B82E-3ADA8210C358} = {82A7F48D-3B50-4B1E-B82E-3ADA8210C358}

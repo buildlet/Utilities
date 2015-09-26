@@ -178,11 +178,6 @@ namespace BUILDLet.Utilities
 
         private static string read(string section, string key, string value, ref string[] contents, mode mode)
         {
-#if DEBUG
-            Log log = new Log(stream:LogOutputStream.Trace);
-            Log log2 = new Log(false, stream: LogOutputStream.Trace);
-#endif
-
             string section_found;
             string key_found;
             string value_found;
@@ -221,7 +216,7 @@ namespace BUILDLet.Utilities
                             if (string.IsNullOrEmpty(value)) { after.Insert(i, key); }
                             else { after.Insert(i, key + "=" + value); }
 #if DEBUG
-                            log.WriteLine("Add New Entry ({0}) to Section[{1}].", after[i], section);
+                            Console.WriteLine("[{0}] Add New Entry ({1}) to Section[{2}].", typeof(PrivateProfile).Name, after[i], section);
 #endif
                             // Updated contents
                             contents = after.ToArray();
@@ -238,7 +233,7 @@ namespace BUILDLet.Utilities
                         // SECTION is found!
                         section_already_found = true;
 #if DEBUG
-                        log.WriteLine("Section [{0}] is found at line ({1})!", section, i);
+                        Console.WriteLine("[{0}] Section [{1}] is found at line ({2})!", typeof(PrivateProfile).Name, section, i);
 #endif
                     }
                 }
@@ -251,12 +246,12 @@ namespace BUILDLet.Utilities
                     {
                         // the KEY name is found!
 #if DEBUG
-                        log.WriteLine("Key '{0}' is found at line ({1}) !", key, i);
+                        Console.WriteLine("[{0}] Key '{1}' is found at line ({2}) !", typeof(PrivateProfile).Name, key, i);
 #endif
                         if (mode == mode.get)
                         {
 #if DEBUG
-                            log.WriteLine("Section=[{0}], Key=\"{1}\", Value=\"{2}\"", section, key, value_found);
+                            Console.WriteLine("[{0}] Section=[{1}], Key=\"{2}\", Value=\"{3}\"", typeof(PrivateProfile).Name, section, key, value_found);
 #endif
                             // Return the Value (Entries) (in case of 'GetString()')
                             return value_found;
@@ -267,7 +262,7 @@ namespace BUILDLet.Utilities
                             if (string.IsNullOrEmpty(value)) { contents[i] = key; }
                             else { contents[i] = key + "=" + value; }
 #if DEBUG
-                            log.WriteLine("Update the Entry ({0}) in Section[{1}].", contents[i], section);
+                            Console.WriteLine("[{0}] Update the Entry ({1}) in Section[{2}].", typeof(PrivateProfile).Name, contents[i], section);
 #endif
 
                             // Return null (always in case of 'SetString()')
@@ -279,7 +274,7 @@ namespace BUILDLet.Utilities
             }
 
 #if DEBUG
-            log.WriteLine("Entry (Section=[{0}], Key=\"{1}\") is not found.", section, key);
+            Console.WriteLine("[{0}] Entry (Section=[{1}], Key=\"{2}\") is not found.", typeof(PrivateProfile).Name, section, key);
 #endif
 
             // Default
@@ -301,7 +296,7 @@ namespace BUILDLet.Utilities
                 if (string.IsNullOrEmpty(value)) { after.Add(key); }
                 else { after.Add(key + "=" + value); }
 #if DEBUG
-                log.WriteLine("Append New Section [{0}] and New Entry ({1}).", section, after[after.Count - 1]);
+                Console.WriteLine("[{0}] Append New Section [{1}] and New Entry ({2}).", typeof(PrivateProfile).Name, section, after[after.Count - 1]);
 #endif
 
                 // Updated contents

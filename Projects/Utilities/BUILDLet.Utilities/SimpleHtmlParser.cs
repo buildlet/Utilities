@@ -65,7 +65,7 @@ namespace BUILDLet.Utilities
             // Remove comments
             int comments = SimpleHtmlParser.RemoveHtmlComment(ref content);
 #if DEBUG
-            Debug.WriteLine("Number of removed comment is {0}.", comments);
+            Debug.WriteLine("[{0}] Number of removed comment is {1}.", typeof(SimpleHtmlParser).Name, comments);
 #endif
 
             // Remove Line Braek and Replace Tab into White Space
@@ -170,7 +170,7 @@ namespace BUILDLet.Utilities
             // Remove comments
             int comments = SimpleHtmlParser.RemoveHtmlComment(ref content);
 #if DEBUG
-            Debug.WriteLine("Number of removed comment is {0}.", comments);
+            Debug.WriteLine("[{0}] Number of removed comment is {1}.", typeof(SimpleHtmlParser).Name, comments);
 #endif
 
             // Remove Line Braek and Replace Tab into White Space

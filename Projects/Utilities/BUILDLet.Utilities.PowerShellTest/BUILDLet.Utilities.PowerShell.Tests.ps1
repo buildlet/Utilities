@@ -32,7 +32,7 @@ Copyright (C) 2015 Daiki Sakamoto
 ####################################################################################################
 
 # Version
-$version = '1.1.2.0'
+$version = '1.2.0.0'
 
 # VerbosePreference
 $Script:VerbosePreference = 'SilentlyContinue'
@@ -106,7 +106,7 @@ $win32_test_file = 'Win32Test.dll'
 $fciv_path = 'C:\FCIV\fciv.exe'
 
 # Test Data Folder (PathInfo)
-$test_data_dir = Resolve-Path -Path '..\..\Common\TestData'
+$test_data_dir = Resolve-Path -Path '..\..\Common\TestData\Utilities'
 
 ####################################################################################################
 # Functions only for tests

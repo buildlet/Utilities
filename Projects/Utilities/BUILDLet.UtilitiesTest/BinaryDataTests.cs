@@ -45,10 +45,21 @@ namespace BUILDLet.Utilities.Tests
         [TestMethod()]
         public void BinaryData_CreateTest()
         {
-            int[] sizes = { 100, 10, (500 * (int)Math.Pow(1000, 2)), 999 };
-            int[] patterns = { -1, 100, -1, 32 };
+            int[] sizes =
+            {
+                100,
+                10,
+                (500 * (int)Math.Pow(1000, 2)),
+                999
+            };
 
-            Log log = new Log(false, title: true);
+            int[] patterns =
+            {
+                -1,   // to use default
+                100,
+                -1,   // to use default
+                32
+            };
 
             BinaryData bin;
             byte[] data;
@@ -56,7 +67,8 @@ namespace BUILDLet.Utilities.Tests
 
             for (int i = 0; i < sizes.Length; i++)
             {
-                log.WriteLine();
+                Log.Clear();
+                Log.WriteLine();
 
                 // Sleep (for Randum() function in BinaryData class)
                 System.Threading.Thread.Sleep(100);
@@ -70,12 +82,12 @@ namespace BUILDLet.Utilities.Tests
                 {
                     bin = new BinaryData(sizes[i]);
                 }
-                log.WriteLine("(size={0},pattern={1})", sizes[i], bin.PatternLength);
+                Log.WriteLine(string.Format("(size={0},pattern={1})", sizes[i], bin.PatternLength));
 
 
                 if (sizes[i] > 1000)
                 {
-                    log.WriteLine("Size of data is over than 1KB.");
+                    Log.WriteLine("Size of data is over than 1KB.");
                 }
                 else
                 {
@@ -90,7 +102,7 @@ namespace BUILDLet.Utilities.Tests
                         {
                             if (total < sizes[i]) { hex.Append(string.Format("{0:X2} ", data[total])); }
                         }
-                        log.WriteLine(hex.ToString());
+                        Log.WriteLine(hex.ToString(), false);
                     }
                 }
             }
