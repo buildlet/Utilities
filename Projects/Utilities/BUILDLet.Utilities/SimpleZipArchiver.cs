@@ -36,7 +36,7 @@ using BUILDLet.Utilities;
 namespace BUILDLet.Utilities.Compression
 {
     /// <summary>
-    /// zip ファイルの作成、および解凍の静的メソッドを提供します。
+    /// zip ファイルの作成、および、解凍の静的メソッドを提供します。
     /// </summary>
     public class SimpleZipArchiver
     {
@@ -65,9 +65,9 @@ namespace BUILDLet.Utilities.Compression
         /// </param>
         /// <returns>作成した zip ファイルのパスを返します。</returns>
         /// <remarks>
-        /// filename が指定されていない場合、作成する zip ファイルのファイル名は source から自動的に作成されます。
-        /// source がディレクトリの場合は、source に拡張子 ".zip" が付加されたものが zip ファイル名になります。
-        /// source がファイルの場合は、source ファイルの拡張子を ".zip" に置き換えたものが zip ファイル名になります。
+        /// <paramref name="filename"/> が指定されていない場合、作成する zip ファイルのファイル名は <paramref name="source"/> から自動的に作成されます。
+        /// <paramref name="source"/> がディレクトリの場合は、<paramref name="source"/> に拡張子 ".zip" が付加されたものが zip ファイル名になります。
+        /// <paramref name="source"/> がファイルの場合は、<paramref name="source"/> ファイルの拡張子を ".zip" に置き換えたものが zip ファイル名になります。
         /// </remarks>
         public static string Zip(string source, string destination = "", string filename = "", bool overwrite = false,
             CompressionLevel compressionLevel = CompressionLevel.Fastest, bool includeBaseDirectory = true)
@@ -149,7 +149,7 @@ namespace BUILDLet.Utilities.Compression
         /// 省略した場合の既定の設定は、カレントディレクトリです。
         /// </param>
         /// <param name="foldername">
-        /// 抽出されたファイルを保存するルートディレクトリのフォルダー名。省略した場合の既定の設定では source から自動的に作成されます。
+        /// 抽出されたファイルを保存するルートディレクトリのフォルダー名。省略した場合の既定の設定では <paramref name="source"/> から自動的に作成されます。
         /// </param>
         /// <param name="overwrite">
         /// 出力先フォルダーのパスにフォルダーまたはディレクトリが既に存在する場合、そのファイルまたはディレクトリを削除してから、ファイルを抽出します。
@@ -157,8 +157,8 @@ namespace BUILDLet.Utilities.Compression
         /// </param>
         /// <returns>抽出されたファイルが保存されているルートディレクトリのパス</returns>
         /// <remarks>
-        /// foldername パラメーターが省略された場合、zip ファイルから拡張子を除いたフォルダーが destination ディレクトリに自動的に作成され、
-        /// アーカイブから抽出したファイルはその中に保存されます。
+        /// <paramref name="foldername"/> パラメーターが省略された場合、zip ファイルから拡張子を除いたフォルダーが 
+        /// <paramref name="destination"/> ディレクトリに自動的に作成され、アーカイブから抽出したファイルはその中に保存されます。
         /// また、抽出ファイルを保存するルートディレクトリのパスが既に存在する場合は、エラーになります。
         /// </remarks>
         public static string Unzip(string source, string destination = "", string foldername = "", bool overwrite = false)

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="bc972919-ba04-4c89-bc2f-e3820e40a97c" revisionNumber="1">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>Version 1.0.3.0 was released on February 9th, 2015.</para>
+		</introduction>
+
+		<section>
+			<title>Changes in This Release</title>
+			<content>
+				<list class="bullet">
+				
+					<listItem>
+						<para>BUILDLet WOL Version 1.0.3 was released from this release.</para>
+					</listItem>
+				
+				</list>
+			</content>
+		</section>
+
+		<relatedTopics>
+			<link xlink:href="423f65ea-763f-4a5d-9a97-d3c466efc880" />
+		</relatedTopics>
+
+	</developerConceptualDocument>
+</topic>

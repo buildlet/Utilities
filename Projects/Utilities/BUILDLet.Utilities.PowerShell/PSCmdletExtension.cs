@@ -1,7 +1,7 @@
 ﻿/*******************************************************************************
  The MIT License (MIT)
 
- Copyright (c) 2015 Daiki Sakamoto
+ Copyright (c) 2015, 2016 Daiki Sakamoto
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -71,13 +71,6 @@ namespace BUILDLet.Utilities.PowerShell
             }
             catch (Exception e) { throw e; }
         }
-
-
-        //protected string ConvertPath(string path)
-        //{
-        //    try { return Path.IsPathRooted(path) ? path : Path.Combine(this.SessionState.Path.CurrentFileSystemLocation.Path, path); }
-        //    catch (Exception e) { throw e; }
-        //}
 
 
         protected string CmdletVersion

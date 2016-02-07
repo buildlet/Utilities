@@ -91,9 +91,29 @@ namespace BUILDLet.Utilities
         {
             try
             {
-                return PrivateProfile.read(section, key, null, ref contents, mode.get);
+                return PrivateProfile.scan(section, key, null, ref contents, mode.get);
             }
             catch (Exception e) { throw e; }
+        }
+
+
+        /// <summary>
+        /// INI ファイル (初期化ファイル) から、指定したセクションに対応するキーと値の組み合わせを全て取得します。
+        /// </summary>
+        /// <param name="section">セクション</param>
+        /// <param name="contents">INI ファイルの内容</param>
+        /// <returns>
+        /// 指定したセクションに対応するキーと値の組み合わせを <see cref="Dictionary{TKey, TValue}"/> として全て取得します。
+        /// TKey および TValue は <see cref="String"/> 型です。
+        /// 該当するセクションとキーの組み合わせが存在しない場合は null を返します。
+        /// </returns>
+        /// <remarks>
+        /// 行継続文字 (Line Continuetor) としてのバックスラッシュ (\) はサポートしていません。
+        /// </remarks>
+        public static Dictionary<string, string> GetString(string section, string[] contents)
+        {
+            
+            throw new NotImplementedException();
         }
 
 
@@ -109,7 +129,7 @@ namespace BUILDLet.Utilities
         /// 更新または追加する値は ',' を含むことができます。
         /// </para>
         /// <para>
-        /// 指定したセクションが存在しない場合は、contents の末尾に、そのセクションとエントリーを追加します。
+        /// 指定したセクションが存在しない場合は、INI ファイルの末尾に、そのセクションとエントリーを追加します。
         /// </para>
         /// <para>
         /// 指定したセクションは存在して、キーが存在しない場合は、そのセクションにエントリーを追加します。
@@ -123,13 +143,13 @@ namespace BUILDLet.Utilities
         {
             try
             {
-                // Read
+                // Read content from ini file
                 string[] contents = File.ReadLines(path).ToArray();
 
-                // Update
+                // Update content
                 PrivateProfile.SetString(section, key, value, ref contents);
 
-                // Write
+                // Write content to ini file
                 File.WriteAllLines(path, contents);
             }
             catch (Exception e) { throw e; }
@@ -148,7 +168,7 @@ namespace BUILDLet.Utilities
         /// 更新または追加する値は ',' を含むことができます。
         /// </para>
         /// <para>
-        /// 指定したセクションが存在しない場合は、contents の末尾に、そのセクションとエントリーを追加します。
+        /// 指定したセクションが存在しない場合は、<paramref name="contents"/> の末尾に、そのセクションとエントリーを追加します。
         /// </para>
         /// <para>
         /// 指定したセクションは存在して、キーが存在しない場合は、そのセクションにエントリーを追加します。
@@ -162,7 +182,7 @@ namespace BUILDLet.Utilities
         {
             try
             {
-                PrivateProfile.read(section, key, value, ref contents, mode.set);
+                PrivateProfile.scan(section, key, value, ref contents, mode.set);
             }
             catch (Exception e) { throw e; }
         }
@@ -175,8 +195,18 @@ namespace BUILDLet.Utilities
             set
         }
 
-
-        private static string read(string section, string key, string value, ref string[] contents, mode mode)
+        // Arguments:
+        //  contents = content of ini file
+        //  (contents[i] = 1 line of content)
+        //  When mode = get, this argument is not updated.
+        //  When mode = set, this argument represents updated content.
+        // 
+        // Return Value: 
+        //  When mode = get, result if the kay value pair is found or not (= value, null or string.Empty) is returned.
+        //  When mode = set, null is always returned.
+        // 
+        // Change method name "read" -> "scan" (Version 1.3.0.0)
+        private static string scan(string section, string key, string value, ref string[] contents, mode mode)
         {
             string section_found;
             string key_found;

@@ -67,6 +67,9 @@ namespace BUILDLet.Utilities.WPF
 
         /// <summary>
         /// <see cref="VersionInformationWindow"/> クラスの新しいインスタンスを初期化します。 
+        /// <para>
+        /// このコンストラクターは Version 1.1.2.0 で追加されました。
+        /// </para>
         /// </summary>
         /// <param name="logo">
         /// ロゴ イメージを指定します。
@@ -77,15 +80,14 @@ namespace BUILDLet.Utilities.WPF
         /// <param name="owner">
         /// オーナー ウィンドウを表す <see cref="System.Windows.Window"/> オブジェクトを設定します。
         /// このパラメーターを設定すると、ウィンドウの位置がオーナー ウィンドウの中央になります。
+        /// <para>
         /// このパラメーターは Version 1.1.3.0 で追加されました。
+        /// </para>
         /// </param>
         /// <remarks>
         /// <see cref="VersionInformationWindow"/> は、このクラスを初期化したメソッドのコードを格納しているアセンブリの各種情報を格納します。
         /// <see cref="System.Windows.Window"/> と同様に、<see cref="System.Windows.Window.Show"/> または 
         /// <see cref="System.Windows.Window.ShowDialog"/> メソッドで表示できます。
-        /// <para>
-        /// このコンストラクターは Version 1.1.2.0 で追加されました。
-        /// </para>
         /// </remarks>
         public VersionInformationWindow(System.Drawing.Image logo, ImageFormat format, Window owner = null) : this(Assembly.GetCallingAssembly(), owner)
         {
@@ -126,7 +128,9 @@ namespace BUILDLet.Utilities.WPF
         /// <param name="owner">
         /// オーナー ウィンドウを表す <see cref="System.Windows.Window"/> オブジェクトを設定します。
         /// このパラメーターを設定すると、ウィンドウの位置がオーナー ウィンドウの中央になります。
+        /// <para>
         /// このパラメーターは Version 1.1.3.0 で追加されました。
+        /// </para>
         /// </param>
         /// <remarks>
         /// <see cref="VersionInformationWindow"/> は、このクラスを初期化したメソッドのコードを格納しているアセンブリの各種情報を格納します。
@@ -150,12 +154,16 @@ namespace BUILDLet.Utilities.WPF
         /// <param name="assembly">
         /// バージョン情報を表示する <see cref="System.Reflection.Assembly"/> を指定します。
         /// 省略した場合 (および null を指定した場合) は、このクラスを初期化したメソッドのコードを格納しているアセンブリのバージョン情報が指定されます。
+        /// <para>
         /// このパラメーターは Version 1.1.2.0 で追加されました。
+        /// </para>
         /// </param>
         /// <param name="owner">
         /// オーナー ウィンドウを表す <see cref="System.Windows.Window"/> オブジェクトを設定します。
         /// このパラメーターを設定すると、ウィンドウの位置がオーナー ウィンドウの中央になります。
+        /// <para>
         /// このパラメーターは Version 1.1.3.0 で追加されました。
+        /// </para>
         /// </param>
         /// <remarks>
         /// <see cref="System.Windows.Window"/> と同様に、<see cref="System.Windows.Window.Show"/> または 

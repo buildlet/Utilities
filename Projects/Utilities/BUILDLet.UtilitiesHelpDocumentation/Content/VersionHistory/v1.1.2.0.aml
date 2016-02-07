@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="c46a565d-3975-461d-9472-a649e9a8f791" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>Version 1.1.2.0 was released on July 5th, 2015.</para>
+		</introduction>
+
+		<section>
+			<title>Changes in This Release</title>
+			<content>
+				<list class="bullet">
+
+          <listItem>
+            <para>
+              Project name of <codeInline>BUILDLet.PowerShell.Utilities</codeInline> and its related names were changed into <codeInline>BUILDLet.Utilities.PowerShell</codeInline>.
+          </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              New constructor of <codeInline>BUILDLet.Utilities.WPF.VersionInformationWindow</codeInline> class was added.
+            </para>
+          </listItem>
+					
+					<listItem>
+						<para>BUILDLet WOL Version 1.1.2 was released from this release.</para>
+					</listItem>
+					
+					<listItem>
+						<para>BUILDLet PackageMaker Toolkit Version 1.1.2 was released from this release.</para>
+					</listItem>
+				
+				</list>
+			</content>
+		</section>
+
+		<relatedTopics>
+			<link xlink:href="423f65ea-763f-4a5d-9a97-d3c466efc880" />
+		</relatedTopics>
+
+	</developerConceptualDocument>
+</topic>

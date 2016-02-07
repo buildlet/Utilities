@@ -49,9 +49,15 @@ namespace BUILDLet.Utilities
         /// 既定では、下記の順番でフォルダーを検索します。
         /// <para>
         ///     <list type="number">
-        ///         <value_found><description>マイ ドキュメント フォルダー</description></value_found>
-        ///         <value_found><description>Windows フォルダー</description></value_found>
-        ///         <value_found><description>System32 フォルダー</description></value_found>
+        ///         <item>
+        ///             <description>マイ ドキュメント フォルダー</description>
+        ///         </item>
+        ///         <item>
+        ///             <description>Windows フォルダー</description>
+        ///         </item>
+        ///         <item>
+        ///             <description>System32 フォルダー</description>
+        ///         </item>
         ///     </list>
         /// </para>
         /// </remarks>

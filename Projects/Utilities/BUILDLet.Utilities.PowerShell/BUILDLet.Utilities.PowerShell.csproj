@@ -51,17 +51,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\BUILDLet.Utilities.PInvoke\HtmlHelp.cs">
+      <Link>Link\HtmlHelp.cs</Link>
+    </Compile>
+    <Compile Include="..\BUILDLet.Utilities.PInvoke\HtmlHelpCommands.cs">
+      <Link>Link\HtmlHelpCommands.cs</Link>
+    </Compile>
+    <Compile Include="..\BUILDLet.Utilities.PInvoke\Win32.cs">
+      <Link>Link\Win32.cs</Link>
+    </Compile>
     <Compile Include="..\BUILDLet.Utilities\HashCode.cs">
       <Link>Link\HashCode.cs</Link>
     </Compile>
     <Compile Include="..\BUILDLet.Utilities\LocalFile.cs">
       <Link>Link\LocalFile.cs</Link>
-    </Compile>
-    <Compile Include="..\BUILDLet.Utilities\Log.cs">
-      <Link>Link\Log.cs</Link>
-    </Compile>
-    <Compile Include="..\BUILDLet.Utilities\LogOutputStream.cs">
-      <Link>Link\LogOutputStream.cs</Link>
     </Compile>
     <Compile Include="..\BUILDLet.Utilities\MagicPacket.cs">
       <Link>Link\MagicPacket.cs</Link>
@@ -81,6 +84,8 @@
     <Compile Include="..\Version\PowerShellAssemblyVersionInfo.cs">
       <Link>Properties\PowerShellAssemblyVersionInfo.cs</Link>
     </Compile>
+    <Compile Include="CloseHtmlHelp.cs" />
+    <Compile Include="OpenHtmlHelp.cs" />
     <Compile Include="InvokeProcess.cs" />
     <Compile Include="SetPrivateProfileString.cs" />
     <Compile Include="GetPrivateProfileString.cs" />
