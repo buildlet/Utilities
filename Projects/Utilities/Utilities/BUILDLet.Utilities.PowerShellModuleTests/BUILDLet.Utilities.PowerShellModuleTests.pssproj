@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{cc5eb5b1-a2ad-4c58-a3ef-7933fbbeefbf}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MyApplication</RootNamespace>
+    <AssemblyName>MyApplication</AssemblyName>
+    <Name>BUILDLet.Utilities.PowerShellModuleTests</Name>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Invoke-Process.Tests.ps1" />
+    <Compile Include="Get-HtmlString.Tests.ps1" />
+    <Compile Include="Set-PrivateProfileString.Tests.ps1" />
+    <Compile Include="Get-PrivateProfileString.Tests.ps1" />
+    <Compile Include="Expand-ZipFile.Tests.ps1" />
+    <Compile Include="New-BinaryFile.Tests.ps1" />
+    <Compile Include="Get-AuthenticodeSinerName.Tests.ps1" />
+    <Compile Include="Send-MagicPacket.Tests.ps1" />
+    <Compile Include="Test-FileHash.Tests.ps1" />
+    <Compile Include="Open-HtmlHelp.Tests.ps1" />
+    <Compile Include="New-DateString.Tests.ps1" />
+    <Compile Include="Get-FileVersionInfo.Tests.ps1" />
+    <Compile Include="Initialize.ps1" />
+    <Compile Include="New-Directory.Tests.ps1" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Target Name="Build" />
+</Project>

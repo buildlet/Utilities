@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="e3f61d88-20ef-4c2e-9c8d-2b7f28a09fba" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>Version 1.4.0.0 was NOT public released.</para>
+		</introduction>
+
+		<section>
+			<title>Changes in This Release</title>
+			<content>
+				<list class="bullet">
+
+          <listItem>
+            <para>
+              Build Environment was changed from <legacyBold>Visual Sutudio 2013</legacyBold> to <legacyBold>Visual Studio 2015</legacyBold>.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              <codeInline>BUILDLet.Utilities.AssemblyCultureInfo</codeInline> class was added.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              <codeInline>BUILDLet.Utilities.DebugInfo</codeInline> class and <codeInline>DebugInfoCallerFormat</codeInline> enumeration was added.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              <codeInline>BUILDLet.Utilities.SimpleFileFinder</codeInline> class was added.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              Refactoring for <codeInline>BUILDLet.Utilities.BinaryData</codeInline> class was performed.
+              Overload of <codeInline>BUILDLet.Utilities.BinaryData.ToFile</codeInline> method was added, and behavior of the method was changed.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              Refactoring for <codeInline>BUILDLet.Utilities.HashCode</codeInline> class was performed.
+              <codeInline>BUILDLet.Utilities.HashCode.Hash</codeInline> properties was changed into <codeInline>BUILDLet.Utilities.HashCode.GetBytes</codeInline> method.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              Refactoring for <codeInline>BUILDLet.Utilities.PrivateProfile</codeInline> class was performed.
+              Name of <codeInline>BUILDLet.Utilities.PrivateProfile.GetString</codeInline> method was changed into <codeInline>BUILDLet.Utilities.PrivateProfile.GetValue</codeInline>,
+              and overload of the method was added.
+              <codeInline>BUILDLet.Utilities.PrivateProfile.GetSection</codeInline> method was added.
+              <codeInline>BUILDLet.Utilities.PrivateProfile.Read</codeInline> method was added.
+              Name of <codeInline>BUILDLet.Utilities.PrivateProfile.SetString</codeInline> method was changed into <codeInline>BUILDLet.Utilities.PrivateProfile.SetValue</codeInline>.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              Refactoring for <codeInline>BUILDLet.Utilities.SimpleHtmlParser</codeInline> class was performed, and behavior of the class was changed.
+              <codeInline>BUILDLet.Utilities.SimpleHtmlParser.HtmlContent</codeInline> class was added.
+              Behavior of <codeInline>BUILDLet.Utilities.SimpleHtmlParser.GetAttributes</codeInline> was changed.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              <codeInline>BUILDLet.Utilities.SimpleZipArchiver</codeInline> class was removed.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              <codeInline>BUILDLet.Utilities.LocalFile</codeInline> class was removed.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              <codeInline>BUILDLet.Utilities.TestLog</codeInline> class and <codeInline>BUILDLet.Utilities.TestLogOutputStream</codeInline> class were removed.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              Refactoring for Unit Test of almost all class was performed.
+              <codeInline>BUILDLet.Utilities.Tests.LocalFileTests</codeInline>, <codeInline>BUILDLet.Utilities.Tests.TestLogTests</codeInline>
+              <codeInline>BUILDLet.Utilities.Tests.TestData</codeInline> (only including <codeInline>DummyMacAddresses</codeInline> member)
+              and <codeInline>BUILDLet.Utilities.Tests.PrivatePath</codeInline> were removed.
+              <codeInline>BUILDLet.Utilities.PInvoke.Tests.PrivatePath</codeInline> were removed.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              <codeInline>BUILDLet.Utilities.PowerShell</codeInline> class were restructed using <codeInline>PowerShell Tools for Visual Studio</codeInline>.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              <codeInline>VerbosePromptLength</codeInline> variable in <codeInline>BUILDLet.Utilities.PowerShell</codeInline> class was removed.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              <codeInline>New-HR</codeInline> Function in <codeInline>BUILDLet.Utilities.PowerShell</codeInline> was removed.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              <codeInline>New-GUID</codeInline> Function in <codeInline>BUILDLet.Utilities.PowerShell</codeInline> was removed
+              because the same Function has already existed in <codeInline>Microsoft.PowerShell.Utility</codeInline> Module.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              Name of <codeInline>Reset-Driectory</codeInline> Function in <codeInline>BUILDLet.Utilities.PowerShell</codeInline> was changed into
+              <codeInline>New-Driectory</codeInline>, and the behavior of the Cmdlet was changed.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              Implementation of <codeInline>New-Zip</codeInline> and <codeInline>Expand-Zip</codeInline> Cmdlet in <codeInline>BUILDLet.Utilities.PowerShell</codeInline>
+              was changed into <legacyBold>DotNetZip</legacyBold> (<codeInline>Ionic.Zip</codeInline>) Library from <legacyBold>.NET Framework</legacyBold>
+              (<codeInline>System.IO.Compression.ZipArchive</codeInline> and <codeInline>System.IO.Compression.ZipFile</codeInline>).
+            </para>
+          </listItem>
+
+        </list>
+			</content>
+		</section>
+
+		<relatedTopics>
+			<link xlink:href="423f65ea-763f-4a5d-9a97-d3c466efc880" />
+		</relatedTopics>
+
+	</developerConceptualDocument>
+</topic>

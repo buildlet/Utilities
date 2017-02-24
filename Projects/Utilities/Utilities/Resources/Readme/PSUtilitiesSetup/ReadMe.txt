@@ -1,0 +1,145 @@
+﻿BUILDLet Utilities PowerShell Module
+====================================
+
+概要
+----
+
+を含む PowerShell モジュールです。
+
+
+インストール方法
+----------------
+
+PSUtilitiesSetup.exe を実行してください。
+
+インストールウィザードの終了画面で Launch ボタンをクリックすると、この Readme が表示されます。
+
+
+アンインストール方法
+--------------------
+
+コントロールパネルから下記のプログラムを選択してアンインストールを実行してください。
+
+  1. BUILDLet Utilities PowerShell Module
+
+
+動作環境
+--------
+
+BUILDLet.Utilities.PowerShell を実行するためには、下記のソフトウェアがインストール
+されている必要があります。
+
+  1. Windows Management Framework 4.0 (Windows PowerShell 4.0)
+  2. Microsoft .NET Framework 4.5
+
+
+Windows 7 Ultimate x64 で動作を確認しています。
+
+
+使用準備
+--------
+
+下記の PowerShell コマンドを実行してモジュールをインポートしてください。
+
+    Import-Module BUILDLet.Utilities.PowerShell
+
+PowerShell モジュールは、32ビットOSの場合は %ProgramFiles%\WindowsPowerShell\Modules 
+に保存されます。64ビットOSの場合は %ProgramFiles%\WindowsPowerShell\Modules および 
+%ProgramFiles(x86)%\WindowsPowerShell\Modules にインストールされます。
+これらのパスは $env:PSModulePath に含まれているので、上記のコマンドを入力するだけで
+モジュールをインポートすることができます。インポートできないときは下記のコマンドを
+実行して BUILDLet.Utilities.PowerShell が表示されることを確認してください。
+
+    Get-Module -ListAvailable
+
+
+使用方法
+--------
+
+BUILDLet Utilities PowerShell Module には、下記の PowerShell コマンド 
+(Function および Cmdlet) が含まれます。
+
+
+コマンド (Function または Cmdlet)
+---------------------------------
+
+BUILDLet.Utilities.PowerShell をインポートすると、下記のコマンド (Function または Cmdlet) 
+がインポートされます。詳細は各コマンドのヘルプを参照してください。
+( Cmdlet は、コマンドのみを入力するとコマンドの概要が表示されます。 )
+
+* Expand-ZipFile (Cmdlet)
+  zip ファイルを解凍します。
+
+* New-ZipFile (Cmdlet)
+  zip ファイルを作成します。
+
+* New-BinaryFile (Cmdlet)
+  ランダムな値のバイト配列を格納したバイナリファイルを作成します。
+
+* Get-HashValue (Cmdlet)
+  指定されたハッシュ アルゴリズムを使用して、入力データのハッシュ値を計算します。
+
+* Get-HtmlString (Cmdlet)
+  入力データから HTML 要素またはその属性の値を取得します。
+
+* Get-PrivateProfileString (Cmdlet)
+  INI ファイル (初期化ファイル) から、指定したセクションとキーの組み合わせに対応する値を取得します。
+
+* Set-PrivateProfileString (Cmdlet)
+  INI ファイル (初期化ファイル) の指定したセクションとキーの組み合わせに対応する値を更新または追加します。
+
+* Invoke-Process (Cmdlet)
+  指定されたされたプロセスを開始します。
+
+* Send-MagicPacket (Cmdlet)
+  指定された MAC アドレスのマジックパケットを送信します。
+
+* Open-HtmlHelp (Cmdlet)
+  HTML ヘルプ ファイルを開きます。
+
+* Close-HtmlHelp (Cmdlet)
+  開いている HTML ヘルプ ファイルを全て閉じます。
+
+* Get-AuthenticodeSignerName (Function)
+  デジタル署名の署名者名を取得します。
+
+* Get-FileDescription (Function)
+  ディスク上の物理ファイルの説明を取得します。
+
+* Get-FileVersion (Function)
+  ディスク上の物理ファイルのファイルバージョンを取得します。
+
+* Get-FileVersionInfo (Function)
+  ディスク上の物理ファイルのバージョン情報を取得します。
+
+* Get-ProductName (Function)
+  ディスク上の物理ファイルの製品名を取得します。
+
+* Get-ProductVersion (Function)
+  ディスク上の物理ファイルの製品バージョンを取得します。
+
+* New-DateString (Function)
+  指定した時刻に対する日付を、指定した書式の文字列として取得します。
+
+* New-Directory (Function)
+  指定されたパスにディレクトリを作成します。
+
+
+ライセンス
+----------
+
+このソフトウェアは MIT ライセンスの下で配布されます。
+License.txt を参照してください。
+
+
+DotNetZip Library は Microsoft Public License (Ms-PL) の下で配布されます。
+DotNetZip Library のライセンスについては、下記 URL を参照してください。
+http://dotnetzip.codeplex.com/license
+
+DotNetZip Library については、下記の URL を参照してください。
+http://dotnetzip.codeplex.com/
+
+
+変更履歴
+--------
+* 2017/01/08    Version 2.0.0.0    Readme ファイルを添付

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+
+  <!-- Version Information -->
+  <?define Version="2.0.0"?>
+
+
+  <!-- Manufacturer Information -->
+  <?define Manufacturer="BUILDLet"?>
+  <?define Copyright="Copyright (c) 2015-2017 Daiki Sakamoto"?>
+
+  
+  <!-- Product Information -->
+  <!-- [Version 1.4.0.0] Product Name is changed from "BUILDLet Utility PowerShell Module" into "BUILDLet Utilities PowerShell Module". -->
+  <?define PSUtilities_ProductName="BUILDLet Utilities PowerShell Module"?>
+  <?define PSUtilities_ProductComment="BUILDLet Utilities PowerShell Module"?>
+  <?define PSUtilities_PSModuleName="BUILDLet.Utilities.PowerShell"?>
+
+
+  <!-- Resource Files (Logo) -->
+  <?define Resource_LogoFile_PSUtilitiesSetupBootstrapper="..\Resources\Logo\PSUtilitiesSetupBootstrapper\BUILDLet.Logo_White-LightBlue_64x64.png"?>
+
+  <!-- Resource Files (License) -->
+  <!-- (Not used)
+  <?define Resource_LicenseFile_TXT="..\Resources\License\License.txt"?>
+  -->
+  <?define Resource_LicenseFile_RTF="..\Resources\License\License.rtf"?>
+
+  <!-- Resource Files (Readme) -->
+  <!-- [Version 1.4.0.0] Append -->
+  <?define Resource_ReadmeFile_PSUtilitiesSetup="..\Resources\Readme\PSUtilitiesSetup\ReadMe.txt"?>
+
+  <!-- Resource Files (Setup) -->
+  <?define Resource_PSUtilitiesSetup="..\bin\$(var.Configuration)\PSUtilitiesSetup.msi"?>
+  <?define Resource_PSUtilitiesSetup64="..\bin\$(var.Configuration)\PSUtilitiesSetup64.msi"?>
+
+  <!-- Resource Files (PowerShell Module) -->
+  <?define Source_PSModule_Directory="..\bin\$(var.Configuration)\WindowsPowerShell\Modules\BUILDLet.Utilities.PowerShell"?>
+  <?define Resource_PSUtilities_PSD1="$(var.Source_PSModule_Directory)\BUILDLet.Utilities.PowerShell.psd1"?>
+  <?define Resource_PSUtilities_PSM1="$(var.Source_PSModule_Directory)\BUILDLet.Utilities.PowerShell.psm1"?>
+  <?define Resource_PSUtilities_DLL1="$(var.Source_PSModule_Directory)\BUILDLet.Utilities.PowerShell.dll"?>
+  <!-- [Version 1.4.0.0] Append -->
+  <?define Resource_PSUtilities_DLL2="$(var.Source_PSModule_Directory)\BUILDLet.Utilities.PInvoke.dll"?>
+  <?define Resource_PSUtilities_DLL3="$(var.Source_PSModule_Directory)\BUILDLet.Utilities.dll"?>
+  <?define Resource_PSUtilities_DLL4="$(var.Source_PSModule_Directory)\Ionic.Zip.dll"?>
+
+</Include>
