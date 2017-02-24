@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <!-- Include -->
+  <?include ..\Version\InstallerGUIDs.wxi?>
+  <?include ..\Version\InstallerInfo.wxi?>
+
+  
+  <!-- GUID -->
+  <?define GUID_Product="$(var.GUID_PSUtilities64_Product)"?>
+  <?define GUID_UpgradeCode="$(var.GUID_PSUtilities64_UpgradeCode)"?>
+  <?define GUID_ProductComponent="$(var.GUID_PSUtilities64_ProductComponent)"?>
+  
+  <!-- UpgradeCode of Version 1.x.x (for Backward Compatibility) -->
+  <?define GUID_UpgradeCode_Version1xx="$(var.GUID_PSUtility64_Version1xx_UpgradeCode)"?>
+
+  
+  <!-- Product Information -->
+  <?define ProductName="$(var.PSUtilities_ProductName) (x64)"?>
+  <?define ProductComment="$(var.PSUtilities_ProductComment) (x64)"?>
+  <?define PSModuleName="$(var.PSUtilities_PSModuleName)"?>
+
+  <!-- Source Files -->
+  <?define Source_ProductComponent_PSD1="$(var.Resource_PSUtilities_PSD1)"?>
+  <?define Source_ProductComponent_PSM1="$(var.Resource_PSUtilities_PSM1)"?>
+  <?define Source_ProductComponent_DLL1="$(var.Resource_PSUtilities_DLL1)"?>
+  <!-- [Version 1.4.0.0] Append -->
+  <?define Source_ProductComponent_DLL2="$(var.Resource_PSUtilities_DLL2)"?>
+  <?define Source_ProductComponent_DLL3="$(var.Resource_PSUtilities_DLL3)"?>
+  <?define Source_ProductComponent_DLL4="$(var.Resource_PSUtilities_DLL4)"?>
+
+
+  <!-- Product -->
+  <Product Id="$(var.GUID_Product)"
+           UpgradeCode="$(var.GUID_UpgradeCode)"
+           Manufacturer="$(var.Manufacturer)"
+           Name="$(var.ProductName) $(var.Version)"
+           Version="$(var.Version)"
+           Language="1041" Codepage="932">
+    
+		<Package Id="*"
+             Platform="x64"
+             Description="$(var.ProductName) $(var.Version) Installer"
+             Comments="$(var.ProductComment)"
+             Manufacturer="$(var.Manufacturer)"
+             InstallerVersion="200"
+             Compressed="yes" 
+             Languages="1041" SummaryCodepage="932"
+             InstallScope="perMachine" />
+    
+    
+    <!-- Major Upgrade from Version 1.x.x (from "1.0.0" to "2.0.0") to Current Version -->
+    <Upgrade Id="$(var.GUID_UpgradeCode_Version1xx)">
+      <UpgradeVersion OnlyDetect="no" Property="PREVIOUSFOUND"
+                      Minimum="1.0.0" IncludeMinimum="yes"
+                      Maximum="2.0.0" IncludeMaximum="no" />
+    </Upgrade>
+
+
+    <!-- Install Condition -->
+    <Condition Message="This program is available only for x64 platform.">VersionNT64</Condition>
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+
+
+    <!-- Media -->
+    <MediaTemplate CabinetTemplate="data{0}.cab" EmbedCab="yes" />
+
+
+    <!-- Feature (x64) -->
+    <Feature Id="ProductFeature64" Title="$(var.ProductName)"  Level="1">
+      <ComponentGroupRef Id="ProductComponents64" />
+    </Feature>
+
+  </Product>
+
+
+  
+  <!-- Directories -->
+  <Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+
+      <!-- PSModulePath (x64) -->
+      <Directory Id="ProgramFiles64Folder">
+        <Directory Id="WindowsPowerShell64Folder" Name="WindowsPowerShell">
+          <Directory Id="PSModule64Folder" Name="Modules">
+            <Directory Id="INSTALLFOLDER64" Name="$(var.PSModuleName)" />
+          </Directory>
+        </Directory>
+      </Directory>
+
+    </Directory>
+  </Fragment>
+
+
+
+  <!-- Components -->
+  <Fragment>
+
+    <!-- Program Files (x64) -->
+    <ComponentGroup Id="ProductComponents64" Directory="INSTALLFOLDER64">
+      <Component Id="ProductComponent64" Guid="$(var.GUID_ProductComponent)" Win64="yes">
+        <File Source="$(var.Source_ProductComponent_PSD1)" />
+        <File Source="$(var.Source_ProductComponent_PSM1)" />
+        <File Source="$(var.Source_ProductComponent_DLL1)" />
+        <File Source="$(var.Source_ProductComponent_DLL2)" /> <!-- Added at Version 1.4.0.0 -->
+        <File Source="$(var.Source_ProductComponent_DLL3)" /> <!-- Added at Version 1.4.0.0 -->
+        <File Source="$(var.Source_ProductComponent_DLL4)" /> <!-- Added at Version 1.4.0.0 -->
+
+        <!-- Registry registration is removed. -->
+        <!--
+        <RegistryValue Root="HKLM" Key='SOFTWARE\[Manufacturer]\[ProductName]' Name='installed' Type='integer' Value='1' KeyPath='yes' />
+        -->
+      </Component>
+    </ComponentGroup>
+
+  </Fragment>
+</Wix>

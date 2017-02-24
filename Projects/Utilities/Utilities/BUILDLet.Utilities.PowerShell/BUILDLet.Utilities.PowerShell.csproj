@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3FD2E411-F7FC-4D5C-9F2C-6D934CA98F23}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BUILDLet.Utilities.PowerShell</RootNamespace>
+    <AssemblyName>BUILDLet.Utilities.PowerShell</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.PowerShell.4.ReferenceAssemblies.1.0.0\lib\net4\System.Management.Automation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Version\AssemblyManufacturerInfo.cs">
+      <Link>Properties\AssemblyManufacturerInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Version\PowerShellAssemblyVersionInfo.cs">
+      <Link>Properties\PowerShellAssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="CloseHtmlHelpCommand.cs" />
+    <Compile Include="TestFileHashCommand.cs" />
+    <Compile Include="NewBinaryFileCommand.cs" />
+    <Compile Include="OpenHtmlHelpCommand.cs" />
+    <Compile Include="InvokeProcessCommand.cs" />
+    <Compile Include="SetPrivateProfileStringCommand.cs" />
+    <Compile Include="GetPrivateProfileStringCommand.cs" />
+    <Compile Include="GetHtmlStringCommand.cs" />
+    <Compile Include="NewZipFileCommand.cs" />
+    <Compile Include="ExpandZipFileCommand.cs" />
+    <Compile Include="SendMagicPacketCommand.cs" />
+    <Compile Include="PSCmdletExtension.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUILDLet.Utilities.PInvoke\BUILDLet.Utilities.PInvoke.csproj">
+      <Project>{8b890f79-4eb4-49e7-8ee9-64110624cddc}</Project>
+      <Name>BUILDLet.Utilities.PInvoke</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BUILDLet.Utilities\BUILDLet.Utilities.csproj">
+      <Project>{7955897b-7bb9-46a7-a4d3-039f0433c983}</Project>
+      <Name>BUILDLet.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="References\Ionic.Zip.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Redistributables\Debug\" />
+    <Folder Include="Redistributables\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF $(ConfigurationName)==Debug (
+  COPY "$(ProjectDir)Redistributables\$(ConfigurationName)\Ionic.Zip.pdb" "$(TargetDir)"
+  COPY "$(ProjectDir)Redistributables\$(ConfigurationName)\Ionic.Zip.xml" "$(TargetDir)"
+)
+
+SET DESTINATION_DIR=$(SolutionDir)bin\$(ConfigurationName)\WindowsPowerShell\Modules\$(ProjectName)\
+IF NOT EXIST "%25DESTINATION_DIR%25" ( MKDIR "%25DESTINATION_DIR%25" )
+
+COPY "$(TargetPath)" "%25DESTINATION_DIR%25"
+COPY "$(TargetDir)BUILDLet.Utilities.dll" "%25DESTINATION_DIR%25"
+COPY "$(TargetDir)BUILDLet.Utilities.PInvoke.dll" "%25DESTINATION_DIR%25"
+COPY "$(TargetDir)Ionic.Zip.dll" "%25DESTINATION_DIR%25"
+
+COPY "$(SolutionDir)$(ProjectName)Module\$(ProjectName).psd1" "%25DESTINATION_DIR%25"
+COPY "$(SolutionDir)$(ProjectName)Module\$(ProjectName).psm1" "%25DESTINATION_DIR%25"
+REM XCOPY /I /Y "$(SolutionDir)$(ProjectName)Module\Functions" "%25DESTINATION_DIR%25Functions"
+
+ECHO $(ConfigurationName)&gt;"$(ProjectDir)LastBuild"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>COPY "$(ProjectDir)Redistributables\$(ConfigurationName)\Ionic.Zip.dll" "$(ProjectDir)References\"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

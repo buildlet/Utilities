@@ -1,0 +1,998 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BUILDLet.Utilities</name>
+    </assembly>
+    <members>
+        <member name="T:BUILDLet.Utilities.AssemblyCultureInfo">
+            <summary>
+            アセンブリの特定のカルチャ ("ロケール") に関する情報を取得します。
+            <para>
+            このクラスは Version 1.4.0.0 で追加されました。
+            </para>
+            </summary>
+        </member>
+        <member name="M:BUILDLet.Utilities.AssemblyCultureInfo.#ctor">
+            <summary>
+            <see cref="T:BUILDLet.Utilities.AssemblyCultureInfo"/> クラスの新しいインスタンスを初期化します。 
+            このメソッドを呼び出したメソッドのコードを格納しているアセンブリが格納されます。
+            </summary>
+        </member>
+        <member name="M:BUILDLet.Utilities.AssemblyCultureInfo.#ctor(System.Reflection.Assembly)">
+            <summary>
+            <see cref="T:BUILDLet.Utilities.AssemblyCultureInfo"/> クラスの新しいインスタンスを初期化します。 
+            </summary>
+            <param name="assembly">情報を取得するアセンブリを指定します。</param>
+        </member>
+        <member name="P:BUILDLet.Utilities.AssemblyCultureInfo.LCID">
+            <summary>
+            アセンブリのカルチャ識別子 (<see cref="P:System.Globalization.CultureInfo.LCID"/>) を取得します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.AssemblyCultureInfo.Name">
+            <summary>
+            アセンブリのカルチャ名 (<see cref="P:System.Globalization.CultureInfo.Name"/>) を取得します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.AssemblyCultureInfo.DisplayName">
+            <summary>
+            アセンブリの完全にローカライズされたカルチャ名 (<see cref="P:System.Globalization.CultureInfo.DisplayName"/>) を取得します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.AssemblyCultureInfo.NativeName">
+            <summary>
+            アセンブリのカルチャの表示設定である、言語、国/地域、およびオプションのスクリプトで構成されるカルチャ名
+             (<see cref="P:System.Globalization.CultureInfo.NativeName"/>) を取得します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.AssemblyCultureInfo.EnglishName">
+            <summary>
+            アセンブリの英語で表したカルチャ名 (<see cref="P:System.Globalization.CultureInfo.EnglishName"/>) を取得します。
+            </summary>
+        </member>
+        <member name="T:BUILDLet.Utilities.AssemblyAttributes">
+            <summary>
+            アセンブリの情報を取得します。
+            </summary>
+        </member>
+        <member name="M:BUILDLet.Utilities.AssemblyAttributes.#ctor">
+            <summary>
+            <see cref="T:BUILDLet.Utilities.AssemblyAttributes"/> クラスの新しいインスタンスを初期化します。 
+            このメソッドを呼び出したメソッドのコードを格納しているアセンブリが格納されます。
+            </summary>
+        </member>
+        <member name="M:BUILDLet.Utilities.AssemblyAttributes.#ctor(System.Reflection.Assembly)">
+            <summary>
+            <see cref="T:BUILDLet.Utilities.AssemblyAttributes"/> クラスの新しいインスタンスを初期化します。 
+            </summary>
+            <param name="assembly">情報を取得するアセンブリを指定します。</param>
+        </member>
+        <member name="P:BUILDLet.Utilities.AssemblyAttributes.Name">
+            <summary>
+            アセンブリの簡易名 (<see cref="P:System.Reflection.AssemblyName.Name"/>) を取得します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.AssemblyAttributes.FullName">
+            <summary>
+            アセンブリの完全名 (<see cref="P:System.Reflection.AssemblyName.FullName"/>) を取得します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.AssemblyAttributes.Version">
+            <summary>
+            アセンブリのバージョン (<see cref="P:System.Reflection.AssemblyName.Version"/>) を取得します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.AssemblyAttributes.CultureInfo">
+            <summary>
+            アセンブリに関連付けられたカルチャ (<see cref="P:System.Reflection.AssemblyName.CultureInfo"/>) を取得します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.AssemblyAttributes.CultureName">
+            <summary>
+            アセンブリに関連付けられたカルチャの名前 (<see cref="P:System.Reflection.AssemblyName.CultureName"/>) を取得します。
+            </summary>
+        </member>
+        <member name="T:BUILDLet.Utilities.Properties.Resources">
+            <summary>
+              ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.Properties.Resources.ResourceManager">
+            <summary>
+              このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.Properties.Resources.Culture">
+            <summary>
+              厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
+              現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.Properties.Resources.InvalidHtmlContentErrorMessage">
+            <summary>
+              HTML content is invalid! に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.Properties.Resources.InvalidHtmlContentErrorMessage_EndTagNotFound">
+            <summary>
+              Appropriate End Tag could not be found. に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.Properties.Resources.InvalidHtmlContentErrorMessage_InvalidEmptyElement">
+            <summary>
+              Content of Start Tag starts with \&quot;&lt;!\&quot; and ends with \&quot;/&gt;\&quot;. に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.Properties.Resources.InvalidHtmlContentErrorMessage_InvalidHtmlEnd">
+            <summary>
+              HTML content ends with &quot;&lt;&quot;. に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.Properties.Resources.InvalidHtmlContentErrorMessage_InvalidHtmlStart">
+            <summary>
+              HTML content does not start with &quot;&lt;[A-Za-z!]&quot;. に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.Properties.Resources.InvalidHtmlContentErrorMessage_NotIncludingAnyTag">
+            <summary>
+              Any HTML tag is not included in HTML content. に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.Properties.Resources.InvalidHtmlContentErrorMessage_StartTagEmpty">
+            <summary>
+              There is not content of Start Tag. に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.Properties.Resources.InvalidHtmlContentErrorMessage_TryNoStrict">
+            <summary>
+              Please try without STRICT mode. に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="T:BUILDLet.Utilities.SimpleFileFinder">
+            <summary>
+            ローカルドライブ上のファイルを探索する簡易的なメソッドを実装します。
+            <para>
+            このクラスは Version 1.4.0.0 で追加されました。
+            </para>
+            </summary>
+        </member>
+        <member name="M:BUILDLet.Utilities.SimpleFileFinder.#ctor">
+            <summary>
+            <see cref="T:BUILDLet.Utilities.SimpleFileFinder"/> クラスの新しいインスタンスを初期化します。 
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.SimpleFileFinder.DefaultSearchPath">
+            <summary>
+            既定の探索パスを取得します。
+            </summary>
+            <remarks>
+            以下の順番で検索します。
+            <para>
+                <list type="number">
+                    <item>
+                        <description>現在のフォルダー (カレント ディレクトリ)</description>
+                    </item>
+                    <item>
+                        <description>マイ ドキュメント フォルダー</description>
+                    </item>
+                    <item>
+                        <description>System32 フォルダー</description>
+                    </item>
+                    <item>
+                        <description>Windows フォルダー</description>
+                    </item>
+                </list>
+            </para>
+            <para>
+            Version 1.4.0.0 で、Windows フォルダー よりも System32 フォルダー の優先順位が入れ替わりました。
+            </para>
+            </remarks>
+        </member>
+        <member name="P:BUILDLet.Utilities.SimpleFileFinder.SearchPath">
+            <summary>
+            探索パスを取得します。
+            </summary>
+        </member>
+        <member name="M:BUILDLet.Utilities.SimpleFileFinder.GetSearchPath">
+            <summary>
+            探索パスを文字列配列として取得します。
+            </summary>
+            <returns>探索パス</returns>
+        </member>
+        <member name="M:BUILDLet.Utilities.SimpleFileFinder.Find(System.String)">
+            <summary>
+            ローカルドライブからファイルを探索します。
+            </summary>
+            <param name="filename">探索するファイル名</param>
+            <returns>
+            指定されたファイルが、探索パスのいずれかに存在する場合は、ファイルのパスを返します。
+            ファイルが存在しない場合は null を返します。
+            </returns>
+            <remarks>
+            ディレクトリーは検出されません。
+            </remarks>
+        </member>
+        <member name="T:BUILDLet.Utilities.PrivateProfile">
+            <summary>
+            INI ファイル (初期化ファイル) の簡易的な読み込みと書き込みをサポートします。
+            </summary>
+        </member>
+        <member name="M:BUILDLet.Utilities.PrivateProfile.#ctor">
+            <summary>
+            <see cref="T:BUILDLet.Utilities.PrivateProfile"/> クラスの新しいインスタンスを初期化します。
+            </summary>
+        </member>
+        <member name="M:BUILDLet.Utilities.PrivateProfile.GetValue(System.String,System.String,System.String)">
+            <summary>
+            INI ファイル (初期化ファイル) から、指定したセクションとキーの組み合わせに対応する値を文字列として取得します。
+            <para>
+            このメソッドの名前は Version 1.4.0.0 で <c>GetString</c> から <c>GetValue</c> に変更されました。
+            </para>
+            </summary>
+            <param name="section">セクション</param>
+            <param name="key">キー</param>
+            <param name="path">INI ファイルのパス</param>
+            <returns>
+            指定したセクションとキーの組み合わせに対応する値の文字列を返します。
+            該当するセクションとキーの組み合わせが存在しない場合は null を返します。
+            該当するセクションとキーの組み合わせに値が存在しない場合は、そのエントリーが '=' まで含んでいるかどうかに
+            かかわらず、<see cref="F:System.String.Empty"/> を返します。
+            </returns>
+            <remarks>
+            行継続文字 (Line Continuetor) としてのバックスラッシュ (\) はサポートしていません。
+            </remarks>
+        </member>
+        <member name="M:BUILDLet.Utilities.PrivateProfile.GetValue(System.String,System.String,System.String[])">
+            <summary>
+            INI ファイル (初期化ファイル) から、指定したセクションとキーの組み合わせに対応する値を文字列として取得します。
+            <para>
+            このメソッドの名前は Version 1.4.0.0 で <c>GetString</c> から <c>GetValue</c> に変更されました。
+            </para>
+            </summary>
+            <param name="section">セクション</param>
+            <param name="key">キー</param>
+            <param name="contents">INI ファイルの内容</param>
+            <returns>
+            指定したセクションとキーの組み合わせに対応する値の文字列を返します。
+            該当するセクションとキーの組み合わせが存在しない場合は null を返します。
+            該当するセクションとキーの組み合わせに値が存在しない場合は、そのエントリーが '=' まで含んでいるかどうかに
+            かかわらず、<see cref="F:System.String.Empty"/> を返します。
+            </returns>
+            <remarks>
+            行継続文字 (Line Continuetor) としてのバックスラッシュ (\) はサポートしていません。
+            </remarks>
+        </member>
+        <member name="M:BUILDLet.Utilities.PrivateProfile.GetSection(System.String,System.String)">
+            <summary>
+            INI ファイル (初期化ファイル) から、指定したセクションに含まれるキーと値の組み合わせを全て取得します。
+            <para>
+            このメソッドは Version 1.4.0.0 で追加されました。
+            </para>
+            </summary>
+            <param name="name">セクション</param>
+            <param name="path">INI ファイルのパス</param>
+            <returns>
+            指定したセクションに対応するキーと値の組み合わせを <see cref="T:System.Collections.Generic.Dictionary`2"/> として全て取得します。
+            TKey および TValue は <see cref="T:System.String"/> 型です。
+            <para>
+            該当するセクションが存在しない場合は null を返します。
+            該当するセクションに、キーと値の組み合わせが存在しない場合は、長さ 0 の <see cref="T:System.Collections.Generic.Dictionary`2"/> を返します。
+            </para>
+            </returns>
+            <remarks>
+            行継続文字 (Line Continuetor) としてのバックスラッシュ (\) はサポートしていません。
+            </remarks>
+        </member>
+        <member name="M:BUILDLet.Utilities.PrivateProfile.GetSection(System.String,System.String[])">
+            <summary>
+            INI ファイル (初期化ファイル) から、指定したセクションに含まれるキーと値の組み合わせを全て取得します。
+            <para>
+            このメソッドは Version 1.4.0.0 で追加されました。
+            </para>
+            </summary>
+            <param name="name">セクションの名前</param>
+            <param name="contents">INI ファイルの内容</param>
+            <returns>
+            指定したセクションに対応するキーと値の組み合わせを <see cref="T:System.Collections.Generic.Dictionary`2"/> として全て取得します。
+            TKey および TValue は <see cref="T:System.String"/> 型です。
+            <para>
+            該当するセクションが存在しない場合は null を返します。
+            該当するセクションに、キーと値の組み合わせが存在しない場合は、長さ 0 の <see cref="T:System.Collections.Generic.Dictionary`2"/> を返します。
+            </para>
+            </returns>
+            <remarks>
+            行継続文字 (Line Continuetor) としてのバックスラッシュ (\) はサポートしていません。
+            </remarks>
+        </member>
+        <member name="M:BUILDLet.Utilities.PrivateProfile.Read(System.String)">
+            <summary>
+            INI ファイル (初期化ファイル) の内容を全て取得します。
+            <para>
+            このメソッドは Version 1.4.0.0 で追加されました。
+            </para>
+            </summary>
+            <param name="path">INI ファイルのパス</param>
+            <returns>
+            全てのセクションに含まれるキーと値の組み合わせを <see cref="T:System.Collections.Generic.Dictionary`2"/> として全て取得します。
+            TDictionary は <see cref="T:System.Collections.Generic.Dictionary`2"/> 型です。
+            TSection, TKey および TValue は <see cref="T:System.String"/> 型です。
+            <para>
+            キーと値の組み合わせが存在しないセクションは含まれません。
+            有効なセクションが含まれていない場合は null を返します。
+            </para>
+            </returns>
+            <remarks>
+            行継続文字 (Line Continuetor) としてのバックスラッシュ (\) はサポートしていません。
+            </remarks>
+        </member>
+        <member name="M:BUILDLet.Utilities.PrivateProfile.Read(System.String[])">
+            <summary>
+            INI ファイル (初期化ファイル) の内容を全て取得します。
+            <para>
+            このメソッドは Version 1.4.0.0 で追加されました。
+            </para>
+            </summary>
+            <param name="contents">INI ファイルの内容</param>
+            <returns>
+            全てのセクションに含まれるキーと値の組み合わせを <see cref="T:System.Collections.Generic.Dictionary`2"/> として全て取得します。
+            TDictionary は <see cref="T:System.Collections.Generic.Dictionary`2"/> 型です。
+            TSection, TKey および TValue は <see cref="T:System.String"/> 型です。
+            <para>
+            キーと値の組み合わせが存在しないセクションは含まれません。
+            有効なセクションが含まれていない場合は null を返します。
+            </para>
+            </returns>
+            <remarks>
+            行継続文字 (Line Continuetor) としてのバックスラッシュ (\) はサポートしていません。
+            </remarks>
+        </member>
+        <member name="M:BUILDLet.Utilities.PrivateProfile.SetValue(System.String,System.String,System.String,System.String)">
+            <summary>
+            INI ファイル (初期化ファイル) の指定したセクションとキーの組み合わせに対応する値を更新または追加します。
+            <para>
+            このメソッドの名前は Version 1.4.0.0 で <c>SetString</c> から <c>SetValue</c> に変更されました。
+            </para>
+            </summary>
+            <param name="section">セクション</param>
+            <param name="key">キー</param>
+            <param name="value">
+            値。
+            <see cref="F:System.String.Empty"/> を指定することもできます。この場合は '=' まで書き込まれます。
+            null が指定されたときは '=' も書き込まれません。
+            </param>
+            <param name="path">INI ファイルのパス</param>
+            <remarks>
+            <para>
+            更新または追加する値は ',' を含むことができます。
+            </para>
+            <para>
+            指定したセクションが存在しない場合は、INI ファイルの末尾に、そのセクションとエントリーを追加します。
+            </para>
+            <para>
+            指定したセクションは存在して、キーが存在しない場合は、そのセクションにエントリーを追加します。
+            </para>
+            <para>
+            指定したセクションとキーが存在する場合は、該当する値を更新します。値がない場合は、値を追加します。
+            当該エントリーの末尾にコメントがある場合、そのコメントは削除されます。
+            </para>
+            </remarks>
+        </member>
+        <member name="M:BUILDLet.Utilities.PrivateProfile.SetValue(System.String,System.String,System.String,System.String[]@)">
+            <summary>
+            INI ファイル (初期化ファイル) の指定したセクションとキーの組み合わせに対応する値を更新または追加します。
+            </summary>
+            <param name="section">セクション</param>
+            <param name="key">キー</param>
+            <param name="value">値。null が指定されたときは '=' も書き込まれません。</param>
+            <param name="contents">INI ファイルの内容</param>
+            <remarks>
+            <para>
+            更新または追加する値は ',' を含むことができます。
+            </para>
+            <para>
+            指定したセクションが存在しない場合は、<paramref name="contents"/> の末尾に、そのセクションとエントリーを追加します。
+            </para>
+            <para>
+            指定したセクションは存在して、キーが存在しない場合は、そのセクションにエントリーを追加します。
+            </para>
+            <para>
+            指定したセクションとキーが存在する場合は、該当する値を更新します。値がない場合は、値を追加します。
+            当該エントリーの末尾にコメントがある場合、そのコメントは削除されます。
+            </para>
+            </remarks>
+        </member>
+        <member name="T:BUILDLet.Utilities.SimpleHtmlParser">
+            <summary>
+            簡易的な HTML パーサーを実装します。
+            </summary>
+        </member>
+        <member name="T:BUILDLet.Utilities.SimpleHtmlParser.HtmlContent">
+            <summary>
+            HTML コンテンツを文字列として受け取り、以下の処理を実行して、カプセル化します。
+            <list type="bullet">
+                <item>
+                    <description>コメントを削除する。</description>
+                </item>
+                <item>
+                    <description>タブ文字を半角スペースに置換する。</description>
+                </item>
+                <item>
+                    <description>改行を削除する。</description>
+                </item>
+            </list>
+            <para>このクラスは Version 1.4.0.0 で追加されました。</para>
+            </summary>
+        </member>
+        <member name="M:BUILDLet.Utilities.SimpleHtmlParser.HtmlContent.#ctor(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            <see cref="T:BUILDLet.Utilities.SimpleHtmlParser.HtmlContent"/> クラスの新しいインスタンスを初期化します。
+            </summary>
+            <param name="content">HTML コンテンツ</param>
+            <param name="strict">
+            STRICT モードを設定するときに true を指定します。
+            既定では true です。
+            </param>
+            <param name="initialize">
+            初期化する場合に true を指定します。
+            既定では true です。
+            </param>
+        </member>
+        <member name="M:BUILDLet.Utilities.SimpleHtmlParser.HtmlContent.GetFirstElementName">
+            <summary>
+            HTML コンテンツの最初の要素の名前を取得します。
+            </summary>
+            <returns>
+            HTML コンテンツの最初の要素の名前
+            </returns>
+        </member>
+        <member name="M:BUILDLet.Utilities.SimpleHtmlParser.HtmlContent.GetFirstElementAttributeValue(System.String)">
+            <summary>
+            HTML コンテンツの最初の要素の属性の値を取得します。
+            </summary>
+            <param name="name">
+            取得する属性の名前。
+            属性の値は、ダブルクォーテーション (またはシングルクォーテーション) で括ってください。
+            </param>
+            <returns>
+            属性が存在しない場合は null を返します。
+            </returns>
+        </member>
+        <member name="M:BUILDLet.Utilities.SimpleHtmlParser.HtmlContent.GetFirstElementValue">
+            <summary>
+            HTML コンテンツの最初の要素の値を取得します。
+            </summary>
+            <returns>
+            HTML コンテンツの最初の要素の開始タグと、対応する終了タグの間の HTML コンテンツ全体を返します。
+            最初の要素に対応する終了タグが見つからないとき、Strict モードの場合は、<see cref="T:System.IO.InvalidDataException"/> 例外が発生します。
+            Strict モードでない場合は、最初のタグの直前までの HTML 全体を返します。
+            空要素の場合は <see cref="F:System.String.Empty"/> を返します。
+            </returns>
+        </member>
+        <member name="M:BUILDLet.Utilities.SimpleHtmlParser.HtmlContent.GetNextContents">
+            <summary>
+            HTML コンテンツの 2 番目の要素以降の HTML コンテンツ全体を取得します。
+            </summary>
+            <returns>
+            HTML コンテンツの最初の要素の終了タグから後ろの HTML コンテンツ全体を取得します。
+            HTML コンテンツの最初の要素が、HTML コンテンツ全体の最終の要素だった場合は、null を返します。
+            </returns>
+        </member>
+        <member name="M:BUILDLet.Utilities.SimpleHtmlParser.#ctor">
+            <summary>
+            <see cref="T:BUILDLet.Utilities.SimpleHtmlParser"/> クラスの新しいインスタンスを初期化します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.SimpleHtmlParser.DebugPrintLevel">
+            <summary>
+            デバッグ ビルドのとき、トレース リスナーに書き込むデバッグ情報のレベルを指定します。
+            より詳細なデバッグ メッセージを書き込む場合には 2 以上を指定します。
+            リリース ビルドでは、このパラメーターは無効です。
+            <para>
+            このパラメーターに 2 以上を指定すると、パフォーマンスに大きく影響します。
+            </para>
+            <para>
+            <list type="bullet">
+            <item>
+            <description>0 を指定すると、GetElements() 自身が出力するデバッグ メッセージのみが書き込まれます。</description>
+            </item>
+            <item>
+            <description>1 を指定すると、GetElements() の内部で再帰的にコールされるメソッドが出力するデバッグ メッセージも書き込まれます。</description>
+            </item>
+            <item>
+            <description>2 を指定すると、SimpleHtmlParser.HtmlContent クラスが出力するデバッグ メッセージも書き込まれます。</description>
+            </item>
+            </list>
+            </para>
+            </summary>
+        </member>
+        <member name="M:BUILDLet.Utilities.SimpleHtmlParser.RemoveHtmlComment(System.String@)">
+            <summary>
+            HTML コンテンツからコメントを削除します。
+            </summary>
+            <param name="content">コメントを削除する HTML コンテンツ全体</param>
+            <returns>削除したコメントの数を返します。</returns>
+            <remarks>
+            コメントの開始タグに対応する終了タグが見つからなかった場合は、それ以降の処理は行われません。
+            </remarks>
+        </member>
+        <member name="M:BUILDLet.Utilities.SimpleHtmlParser.GetElements(System.String,System.String,System.String[0:,0:],System.Boolean)">
+            <summary>
+            HTML コンテンツから、指定された要素の値を取得します。
+            </summary>
+            <param name="content">HTML コンテンツ</param>
+            <param name="name">取り出す要素の名前</param>
+            <param name="attributes">
+            取り出す要素に属性がある場合に、属性の名前と値を指定することができます。
+            属性の名前を指定することで、該当する要素を絞り込むことができる場合などに指定します。
+            属性の名前を指定しない場合は null を指定します。
+            既定の設定は null です。
+            <para>このパラメーターは Version 1.4.0.0 で追加されました。</para>
+            </param>
+            <param name="strict">
+            &lt;P&gt; 要素のように、終了タグがない場合がある要素を許可するときに false を指定します。
+            ただし、false を指定した場合は、取得したい要素の値の内側に、同じ名前の要素が入れ子になっている場合や、
+            終了タグのない要素の値は正しく取得できない場合があります。
+            既定の設定は true です。
+            </param>
+            <returns>
+            指定した名前にマッチする要素の値を文字列配列として返します。
+            条件に一致する要素がない場合は null を返します。
+            <para>
+            指定した条件 (要素と属性) が入れ子になっている場合は、外側の要素を取り出します。
+            必要に応じて、取り出した要素から、再度、目的の要素を取り出してください。
+            </para>
+            </returns>
+        </member>
+        <member name="T:BUILDLet.Utilities.AssemblyCustomAttributes">
+            <summary>
+            アセンブリのカスタム属性を取得します。
+            </summary>
+        </member>
+        <member name="M:BUILDLet.Utilities.AssemblyCustomAttributes.#ctor">
+            <summary>
+            <see cref="T:BUILDLet.Utilities.AssemblyCustomAttributes"/> クラスの新しいインスタンスを初期化します。 
+            このメソッドを呼び出したメソッドのコードを格納しているアセンブリが格納されます。
+            </summary>
+        </member>
+        <member name="M:BUILDLet.Utilities.AssemblyCustomAttributes.#ctor(System.Reflection.Assembly)">
+            <summary>
+            <see cref="T:BUILDLet.Utilities.AssemblyCustomAttributes"/> クラスの新しいインスタンスを初期化します。 
+            </summary>
+            <param name="assembly">カスタム属性を取得を取得するアセンブリを指定します。</param>
+        </member>
+        <member name="P:BUILDLet.Utilities.AssemblyCustomAttributes.Title">
+            <summary>
+            アセンブリのタイトル (<see cref="P:System.Reflection.AssemblyTitleAttribute.Title"/>) を取得します。
+            <para>
+            このプロパティの名前は Version 1.4.0.0 で <c>AssemblyTitleAttribute</c> から <c>Title</c> に変更されました。
+            </para>
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.AssemblyCustomAttributes.Description">
+            <summary>
+            アセンブリの説明 (<see cref="P:System.Reflection.AssemblyDescriptionAttribute.Description"/>) を取得します。
+            <para>
+            このプロパティの名前は Version 1.4.0.0 で <c>AssemblyDescriptionAttribute</c> から <c>Description</c> に変更されました。
+            </para>
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.AssemblyCustomAttributes.Company">
+            <summary>
+            アセンブリの会社名に関するカスタム属性 (<see cref="P:System.Reflection.AssemblyCompanyAttribute.Company"/>) を取得します。
+            <para>
+            このプロパティの名前は Version 1.4.0.0 で <c>AssemblyCompanyAttribute</c> から <c>Company</c> に変更されました。
+            </para>
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.AssemblyCustomAttributes.Product">
+            <summary>
+            アセンブリの製品名に関するカスタム属性 (<see cref="P:System.Reflection.AssemblyProductAttribute.Product"/>) を取得します。
+            <para>
+            このプロパティの名前は Version 1.4.0.0 で <c>AssemblyProductAttribute</c> から <c>Product</c> に変更されました。
+            </para>
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.AssemblyCustomAttributes.Copyright">
+            <summary>
+            アセンブリの著作権に関するカスタム属性 (<see cref="P:System.Reflection.AssemblyCopyrightAttribute.Copyright"/>) を取得します。
+            <para>
+            このプロパティの名前は Version 1.4.0.0 で <c>AssemblyCopyrightAttribute</c> から <c>Copyright</c> に変更されました。
+            </para>
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.AssemblyCustomAttributes.Trademark">
+            <summary>
+            アセンブリの商標に関するカスタム属性 (<see cref="P:System.Reflection.AssemblyTrademarkAttribute.Trademark"/>) を取得します。
+            <para>
+            このプロパティの名前は Version 1.4.0.0 で <c>AssemblyTrademarkAttribute</c> から <c>Trademark</c> に変更されました。
+            </para>
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.AssemblyCustomAttributes.FileVersion">
+            <summary>
+            アセンブリの Win32 ファイルバージョン (<see cref="P:System.Reflection.AssemblyFileVersionAttribute.Version"/>) を取得します。
+            <para>
+            このプロパティの名前は Version 1.4.0.0 で <c>AssemblyFileVersionAttribute</c> から <c>FileVersion</c> に変更されました。
+            </para>
+            </summary>
+        </member>
+        <member name="M:BUILDLet.Utilities.AssemblyCustomAttributes.ToString">
+            <summary>
+            アセンブリに関連付けられた各種情報を文字列として取得します。
+            </summary>
+            <returns>
+            指定したアセンブリに関連付けられた各種情報を文字列として取得します。
+            </returns>
+            <remarks>取得される文字列には次の情報が含まれます。
+            <para>
+            <see cref="P:System.Reflection.AssemblyName.FullName"/> (Name, Version, Culture, PublicKeyToken), 
+            <see cref="P:System.Reflection.AssemblyTitleAttribute.Title"/>, <see cref="P:System.Reflection.AssemblyDescriptionAttribute.Description"/>, 
+            <see cref="P:System.Reflection.AssemblyCompanyAttribute.Company"/>, <see cref="P:System.Reflection.AssemblyProductAttribute.Product"/>, 
+            <see cref="P:System.Reflection.AssemblyCopyrightAttribute.Copyright"/>, <see cref="P:System.Reflection.AssemblyTrademarkAttribute.Trademark"/>, 
+            <see cref="P:System.Reflection.AssemblyFileVersionAttribute.Version"/>
+            </para>
+            </remarks>
+        </member>
+        <member name="T:BUILDLet.Utilities.Diagnostics.DebugInfoCallerFormat">
+            <summary>
+            <see cref="T:BUILDLet.Utilities.Diagnostics.DebugInfo"/> クラスで呼び出し元メソッド名の表示形式を表します。
+            </summary>
+            <para>
+            この列挙型は Version 1.4.0.0 で追加されました。
+            </para>
+        </member>
+        <member name="F:BUILDLet.Utilities.Diagnostics.DebugInfoCallerFormat.Name">
+            <summary>
+            メソッド名のみを表示します。
+            </summary>
+        </member>
+        <member name="F:BUILDLet.Utilities.Diagnostics.DebugInfoCallerFormat.ShortName">
+            <summary>
+            クラス名とメソッド名を表示します。
+            </summary>
+        </member>
+        <member name="F:BUILDLet.Utilities.Diagnostics.DebugInfoCallerFormat.FullName">
+            <summary>
+            クラス名を含むメソッド名を完全修飾名で表示します。
+            </summary>
+        </member>
+        <member name="F:BUILDLet.Utilities.Diagnostics.DebugInfoCallerFormat.ClassName">
+            <summary>
+            クラス名のみを表示します。
+            </summary>
+        </member>
+        <member name="F:BUILDLet.Utilities.Diagnostics.DebugInfoCallerFormat.FullClassName">
+            <summary>
+            クラス名のみを完全修飾名で表示します。
+            </summary>
+        </member>
+        <member name="T:BUILDLet.Utilities.Diagnostics.DebugInfo">
+            <summary>
+            ログ出力などに埋め込むためのデバッグ情報の文字列を実装します。
+            <para>
+            このクラスは静的クラスです。
+            必要に応じて <see cref="M:BUILDLet.Utilities.Diagnostics.DebugInfo.Init(BUILDLet.Utilities.Diagnostics.DebugInfoCallerFormat,System.String)"/> メソッドでプロパティの値を初期化してください。
+            </para>
+            <para>
+            このクラスは Version 1.4.0.0 で追加されました。
+            </para>
+            </summary>
+            <remarks>
+            このクラスはデバッグ ビルドでのみ使用することを推奨します。
+            <see cref="T:System.Diagnostics.StackFrame"/> クラスを使用してクラス名やメソッド名の取得しているため、
+            リリース ビルドでは、コンパイラの最適化のために正しいクラス名やメソッド名が取得できない場合があります。
+            </remarks>
+        </member>
+        <member name="F:BUILDLet.Utilities.Diagnostics.DebugInfo.DefaultDateFormat">
+            <summary>
+            日付のみを含む既定のフォーマットの書式指定文字列を表します。
+            書式指定文字列は "yyyy/MM/dd" です。
+            <para>
+            このフィールドは Version 1.4.0.0 で追加されました。
+            </para>
+            </summary>
+        </member>
+        <member name="F:BUILDLet.Utilities.Diagnostics.DebugInfo.DefaultTimeFormat">
+            <summary>
+            時刻のみを含む既定のフォーマットの書式指定文字列を表します。
+            書式指定文字列は "HH:mm:ss" です。
+            <para>
+            このフィールドは Version 1.4.0.0 で追加されました。
+            </para>
+            </summary>
+        </member>
+        <member name="F:BUILDLet.Utilities.Diagnostics.DebugInfo.DefaultDateTimeFormat">
+            <summary>
+            日付と時刻を含む既定のフォーマットの書式指定文字列を表します。
+            書式指定文字列は "<see cref="F:BUILDLet.Utilities.Diagnostics.DebugInfo.DefaultDateFormat"/> <see cref="F:BUILDLet.Utilities.Diagnostics.DebugInfo.DefaultTimeFormat"/>" です。
+            <para>
+            このフィールドは Version 1.4.0.0 で追加されました。
+            </para>
+            </summary>
+        </member>
+        <member name="M:BUILDLet.Utilities.Diagnostics.DebugInfo.#cctor">
+            <summary>
+            <see cref="T:BUILDLet.Utilities.Diagnostics.DebugInfo"/> クラスの静的コンストラクター
+            </summary>
+        </member>
+        <member name="M:BUILDLet.Utilities.Diagnostics.DebugInfo.Init(BUILDLet.Utilities.Diagnostics.DebugInfoCallerFormat,System.String)">
+            <summary>
+            <see cref="T:BUILDLet.Utilities.Diagnostics.DebugInfo"/> クラスの各種静的プロパティを初期化します。
+            </summary>
+            <param name="caller">
+            <see cref="P:BUILDLet.Utilities.Diagnostics.DebugInfo.CallerFormat"/> に設定するクラス名およびメソッド名の形式を指定します。
+            既定では <see cref="F:BUILDLet.Utilities.Diagnostics.DebugInfoCallerFormat.ShortName"/> です。
+            </param>
+            <param name="time">
+            <see cref="P:BUILDLet.Utilities.Diagnostics.DebugInfo.DateTimeFormat"/> に設定する時刻のフォーマットの書式指定文字列を指定します。
+            既定では <see cref="F:BUILDLet.Utilities.Diagnostics.DebugInfo.DefaultTimeFormat"/> です。
+            </param>
+        </member>
+        <member name="P:BUILDLet.Utilities.Diagnostics.DebugInfo.DateTimeFormat">
+            <summary>
+            表示する時刻のフォーマットの書式指定文字列を指定します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.Diagnostics.DebugInfo.CallerFormat">
+            <summary>
+            表示するクラス名およびメソッド名の形式を取得または指定します。
+            </summary>
+        </member>
+        <member name="M:BUILDLet.Utilities.Diagnostics.DebugInfo.GetDateTime(System.String)">
+            <summary>
+            現在時刻の文字列を取得します。
+            </summary>
+            <param name="format">
+            取得する時刻のフォーマットの書式指定文字列を指定します。
+            null を指定すると、現在の <see cref="P:BUILDLet.Utilities.Diagnostics.DebugInfo.DateTimeFormat"/> が設定されます。
+            既定では null です。
+            </param>
+            <returns>現在時刻の文字列</returns>
+        </member>
+        <member name="M:BUILDLet.Utilities.Diagnostics.DebugInfo.GetCallerName(System.Nullable{BUILDLet.Utilities.Diagnostics.DebugInfoCallerFormat},System.Int32)">
+            <summary>
+            書式のクラス名およびメソッド名を取得します。
+            </summary>
+            <param name="format">
+            取得する書式のクラス名およびメソッド名のフォーマットを指定します。
+            null を指定すると、現在の <see cref="P:BUILDLet.Utilities.Diagnostics.DebugInfo.CallerFormat"/> が設定されます。
+            既定では null です。
+            </param>
+            <param name="skipFrames">
+            スキップするスタック上のフレーム数。
+            <para>
+            既定のフレーム数は 1 です。
+            フレーム数 1 を指定することで、このメソッドをコールしたクラス名およびメソッド名を取得できます。
+            </para>
+            </param>
+            <returns>
+            書式のクラス名およびメソッド名。
+            </returns>
+        </member>
+        <member name="P:BUILDLet.Utilities.Diagnostics.DebugInfo.Date">
+            <summary>
+            デバッグ情報として、日付のみを文字列として取得します。
+            表示する日付のフォーマットの書式指定文字列は <see cref="F:BUILDLet.Utilities.Diagnostics.DebugInfo.DefaultDateFormat"/> です。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.Diagnostics.DebugInfo.Time">
+            <summary>
+            デバッグ情報として、時刻のみを文字列として取得します。
+            表示する時刻のフォーマットの書式指定文字列は <see cref="F:BUILDLet.Utilities.Diagnostics.DebugInfo.DefaultTimeFormat"/> です。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.Diagnostics.DebugInfo.DateTime">
+            <summary>
+            デバッグ情報として、日付と時刻のみを文字列として取得します。
+            表示する日付時刻のフォーマットの書式指定文字列は <see cref="F:BUILDLet.Utilities.Diagnostics.DebugInfo.DefaultDateTimeFormat"/> です。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.Diagnostics.DebugInfo.Name">
+            <summary>
+            デバッグ情報として、呼び出し元のメソッド名のみを文字列として取得します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.Diagnostics.DebugInfo.ShortName">
+            <summary>
+            デバッグ情報として、呼び出し元のクラス名とメソッド名のみを文字列として取得します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.Diagnostics.DebugInfo.FullName">
+            <summary>
+            デバッグ情報として、呼び出し元のメソッド名の完全修飾名のみを文字列として取得します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.Diagnostics.DebugInfo.ClassName">
+            <summary>
+            デバッグ情報として、呼び出し元のクラス名のみを文字列として取得します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.Diagnostics.DebugInfo.FullClassName">
+            <summary>
+            デバッグ情報として、呼び出し元のクラス名の完全修飾名のみを文字列として取得します。
+            </summary>
+        </member>
+        <member name="M:BUILDLet.Utilities.Diagnostics.DebugInfo.ToString">
+            <summary>
+            現在のオブジェクトを表す文字列を返します。
+            </summary>
+            <returns>デバッグ情報の文字列</returns>
+        </member>
+        <member name="T:BUILDLet.Utilities.Network.MagicPacket">
+            <summary>
+            マジックパケットを実装します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.Network.MagicPacket.MacAddress">
+            <summary>
+            MAC アドレスを 16 進文字列として取得します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.Network.MagicPacket.Separator">
+            <summary>
+            MAC アドレスの既定の区切り文字を取得、または設定します。
+            既定では ':' です。
+            </summary>
+        </member>
+        <member name="M:BUILDLet.Utilities.Network.MagicPacket.#ctor(System.String)">
+            <summary>
+            <see cref="T:BUILDLet.Utilities.Network.MagicPacket"/> クラスの新しいインスタンスを初期化します。 
+            </summary>
+            <param name="macAddress">MAC アドレスの文字列を指定します。</param>
+        </member>
+        <member name="M:BUILDLet.Utilities.Network.MagicPacket.GetBytes">
+            <summary>
+            マジックパケットをバイト配列として取得します。
+            </summary>
+            <returns>マジックパケットのバイト配列</returns>
+        </member>
+        <member name="M:BUILDLet.Utilities.Network.MagicPacket.Send(System.Int32,System.Int32)">
+            <summary>
+            マジックパケットを送信します。
+            </summary>
+            <param name="times">マジックパケットを送信する回数を指定します。省略した場合の既定の回数は 1 回です。</param>
+            <param name="port">リモートマシンのポート番号を指定します。省略した場合の既定のポート番号は 2304 番です。</param>
+            <returns>マジックパケットを送信した回数を返します。</returns>
+        </member>
+        <member name="T:BUILDLet.Utilities.Cryptography.HashCode">
+            <summary>
+            指定されたハッシュ アルゴリズムを使用して、入力データのハッシュ値を計算します。
+            </summary>
+        </member>
+        <member name="F:BUILDLet.Utilities.Cryptography.HashCode.DefaultHashAlgorithmName">
+            <summary>
+            既定のハッシュ アルゴリズムを表します。
+            既定のハッシュ アルゴリズムは、メッセージ ダイジェスト 5 (MD5) です。
+            <para>
+            このフィールドは Version 1.4.0.0 で追加されました。
+            </para>
+            </summary>
+        </member>
+        <member name="M:BUILDLet.Utilities.Cryptography.HashCode.#ctor(System.String,System.String)">
+            <summary>
+            ハッシュ アルゴリズムと対象となるファイルを指定して、<see cref="T:BUILDLet.Utilities.Cryptography.HashCode"/> クラスの新しいインスタンスを初期化します。 
+            </summary>
+            <param name="path">ハッシュ コードを計算する対象のファイルのパスを指定します。</param>
+            <param name="hashName">
+            使用するハッシュ アルゴリズムを文字列で指定します。
+            既定のハッシュ アルゴリズムは <see cref="F:BUILDLet.Utilities.Cryptography.HashCode.DefaultHashAlgorithmName"/> です。
+            </param>
+            <seealso cref="T:System.Security.Cryptography.HashAlgorithm"/>
+            <seealso cref="M:System.Security.Cryptography.HashAlgorithm.Create(System.String)"/>
+        </member>
+        <member name="M:BUILDLet.Utilities.Cryptography.HashCode.#ctor(System.Byte[],System.String)">
+            <summary>
+            ハッシュ アルゴリズムと対象となるバイト配列を指定して、<see cref="T:BUILDLet.Utilities.Cryptography.HashCode"/> クラスの新しいインスタンスを初期化します。 
+            </summary>
+            <param name="data">ハッシュ コードを計算する対象の入力データ</param>
+            <param name="hashName">
+            使用するハッシュ アルゴリズムを文字列で指定します。
+            既定のハッシュ アルゴリズムは <see cref="F:BUILDLet.Utilities.Cryptography.HashCode.DefaultHashAlgorithmName"/> です。
+            </param>
+            <seealso cref="T:System.Security.Cryptography.HashAlgorithm"/>
+            <seealso cref="M:System.Security.Cryptography.HashAlgorithm.Create(System.String)"/>
+        </member>
+        <member name="P:BUILDLet.Utilities.Cryptography.HashCode.HashName">
+            <summary>
+            使用するハッシュ アルゴリズムの名前を取得します。
+            </summary>
+            <seealso cref="T:System.Security.Cryptography.HashAlgorithm"/>
+            <seealso cref="M:System.Security.Cryptography.HashAlgorithm.Create(System.String)"/>
+        </member>
+        <member name="M:BUILDLet.Utilities.Cryptography.HashCode.GetBytes">
+            <summary>
+            計算されたハッシュ コードの値をバイト配列として取得します。
+            <para>
+            このメソッドは Version 1.4.0.0 で追加されました。
+            </para>
+            </summary>
+            <returns>ハッシュ コードの値</returns>
+        </member>
+        <member name="M:BUILDLet.Utilities.Cryptography.HashCode.ToString">
+            <summary>
+            指定されたハッシュ アルゴリズムで計算したハッシュ値を文字列として取得します。
+            </summary>
+            <returns>計算したハッシュ値</returns>
+        </member>
+        <member name="T:BUILDLet.Utilities.BinaryData">
+            <summary>
+            ランダムな値を格納したバイト配列のデータを実装します。
+            </summary>
+        </member>
+        <member name="F:BUILDLet.Utilities.BinaryData.DefaultDataSize">
+            <summary>
+            作成するバイト配列データの全体の既定のサイズを表します。
+            既定のサイズは 1024 バイトです。
+            <para>
+            このフィールドは Version 1.4.0.0 で追加されました。
+            </para>
+            </summary>
+        </member>
+        <member name="F:BUILDLet.Utilities.BinaryData.DefaultPatternLength">
+            <summary>
+            バイト配列 1 組の既定のパターンの長さを表します。
+            既定の長さは 16 です。
+            <para>
+            このフィールドは Version 1.4.0.0 で追加されました。
+            </para>
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.BinaryData.PatternLength">
+            <summary>
+            ランダムな値を格納したバイト配列の 1 組のパターンの長さを取得します。
+            </summary>
+            <remarks>
+            この値よりも大きい値がデータ全体のサイズに指定された場合は、この長さのパターンが繰り返し格納されます。
+            </remarks>
+        </member>
+        <member name="M:BUILDLet.Utilities.BinaryData.#ctor(System.Int32,System.Int32)">
+            <summary>
+            <see cref="T:BUILDLet.Utilities.BinaryData"/> クラスの新しいインスタンスを初期化します。 
+            ランダムな値を格納したバイト配列のパターンを指定されたサイズになるまで繰り返したデータを作成します。
+            </summary>
+            <param name="size">
+            作成するバイト配列データの全体のサイズを指定します。
+            既定のサイズは <see cref="F:BUILDLet.Utilities.BinaryData.DefaultDataSize"/> バイトです。
+            </param>
+            <param name="pattern">
+            バイト配列 1 組のパターンの長さを指定します。
+            既定の長さは <see cref="F:BUILDLet.Utilities.BinaryData.DefaultPatternLength"/> です。
+            </param>
+            <exception cref="T:System.ArgumentOutOfRangeException">パラメーター size と pattern のいずれか一方、あるいは両方が 0 以下です。</exception>
+            <exception cref="T:System.OutOfMemoryException">指定されたバイト配列データのサイズが大きすぎます。</exception>
+        </member>
+        <member name="M:BUILDLet.Utilities.BinaryData.ToFile(System.String,System.Int64,System.IO.FileMode)">
+            <summary>
+            作成したバイト配列データをファイルに書き出します。
+            </summary>
+            <param name="filename">保存するファイルのパス</param>
+            <param name="size">
+            作成するバイト配列データのサイズを指定します。
+            省略した場合、0 または負の値が指定された場合、あるいは、データのサイズよりも大きい値が指定された場合は、
+            作成したバイト配列データ全体がファイルに書き出されます。
+            </param>
+            <param name="mode">
+            ファイルを開く際の <see cref="T:System.IO.FileMode"/> を指定します。
+            既定では <see cref="F:System.IO.FileMode.Create"/> です。
+            </param>
+        </member>
+        <member name="M:BUILDLet.Utilities.BinaryData.ToFile(System.Int32,System.String)">
+            <summary>
+            作成したバイト配列データを繰り返しファイルに書き出します。
+            メモリ上に保持できないような容量の大きいサイズのファイルを作成するときに使用します。
+            <para>
+            このメソッドは Version 1.4.0.0 で追加されました。
+            </para>
+            </summary>
+            <param name="count">バイト配列データを書き出す繰り返し回数を指定します。</param>
+            <param name="filename">保存するファイルのパス</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">繰り返し回数が 1024 回以上です。</exception>
+        </member>
+        <member name="M:BUILDLet.Utilities.BinaryData.GetBytes">
+            <summary>
+            作成したバイト配列データを取得します。
+            </summary>
+            <returns>作成したバイト配列データ</returns>
+        </member>
+    </members>
+</doc>

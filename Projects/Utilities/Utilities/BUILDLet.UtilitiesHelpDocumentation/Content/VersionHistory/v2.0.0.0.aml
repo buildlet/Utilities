@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="ef9d815b-b63d-4678-9cbe-2823aee730f6" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>
+        Version 2.0.0.0 は February 24th, 2017 にリリースされました。
+      </para>
+      <para>
+        変更点は次の通りです。
+      </para>
+    </introduction>
+
+    <section>
+      <title>Changes in This Release</title>
+      <content>
+        <list class="bullet">
+
+          <listItem>
+            <para>
+              全てのモジュールを刷新しました。
+            </para>
+          </listItem>
+
+        </list>
+      </content>
+    </section>
+
+    <relatedTopics>
+			<link xlink:href="423f65ea-763f-4a5d-9a97-d3c466efc880" />
+		</relatedTopics>
+
+	</developerConceptualDocument>
+</topic>

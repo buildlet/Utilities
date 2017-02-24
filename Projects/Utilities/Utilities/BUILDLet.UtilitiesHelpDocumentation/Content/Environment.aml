@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="92304369-3678-4898-aa27-aee438700dd2" revisionNumber="1">
+  <developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <introduction>
+      <para>
+        BUILDLet Utilities Class Library は <legacyBold>Visual Studio Community 2015</legacyBold> でビルドしています。
+      </para>
+      <para>
+        BUILDLet Utilities Class Library をビルドするためには、次に示すコンポーネントが必要です。
+      </para>
+    </introduction>
+
+    <section>
+      <title>Components</title>
+      <content>
+        <list class="bullet">
+
+          <!-- Sandcastle Help File Builder -->
+          <listItem>
+            <para>
+              <legacyBold>Sandcastle Help File Builder</legacyBold> (<legacyBold>SHFB</legacyBold>)
+            </para>
+            <para>
+              ヘルプファイル (<codeInline>BUILDLet.UtilitiesHelpDocumentation</codeInline>) をビルドするために必要です。
+            </para>
+            <para>
+              次の Visual Studio の拡張機能をインストールしてください。
+            </para>
+            <list class="bullet">
+              <listItem>
+                <para>
+                  <legacyBold>
+                    <externalLink>
+                      <linkText>SHFB</linkText>
+                      <linkAlternateText>https://github.com/EWSoftware/SHFB</linkAlternateText>
+                      <linkUri>https://github.com/EWSoftware/SHFB</linkUri>
+                    </externalLink>
+                  </legacyBold> (2016.5.28.0)
+                </para>
+              </listItem>
+            </list>
+            <para>
+              次の NuGet パッケージをインストールしてください。
+            </para>
+            <list class="bullet">
+              <listItem>
+                <para>
+                  <legacyBold>
+                    <externalLink>
+                      <linkText>EWSoftware.SHFB</linkText>
+                      <linkAlternateText>https://github.com/EWSoftware/SHFB</linkAlternateText>
+                      <linkUri>https://github.com/EWSoftware/SHFB</linkUri>
+                    </externalLink>
+                  </legacyBold> (v2017.1.28)
+                </para>
+              </listItem>
+              <listItem>
+                <para>
+                  <legacyBold>
+                    <externalLink>
+                      <linkText>EWSoftware.SHFB.NETFramework</linkText>
+                      <linkAlternateText>https://github.com/EWSoftware/SHFB</linkAlternateText>
+                      <linkUri>https://github.com/EWSoftware/SHFB</linkUri>
+                    </externalLink>
+                  </legacyBold> (v4.6.2)
+                </para>
+              </listItem>
+            </list>
+          </listItem>
+          
+
+          <!-- Wix Toolset -->
+          <listItem>
+            <para>
+              <legacyBold>WiX Toolset</legacyBold>
+            </para>
+            <para>
+              各インストーラー (<codeInline>BUILDLet.Utilities.PowerShellModuleSetup</codeInline>,
+              <codeInline>BUILDLet.Utilities.PowerShellModuleSetup64</codeInline> および
+              <codeInline>BUILDLet.Utilities.PowerShellModuleSetupBootstrapper</codeInline>) をビルドするために必要です。
+            </para>
+            <para>
+              次の Visual Studio の拡張機能をインストールしてください。
+            </para>
+            <list class="bullet">
+              <listItem>
+                <para>
+                  <legacyBold>Wix Toolset</legacyBold> (3.10)
+                </para>
+              </listItem>
+            </list>
+            <para>
+              次の NuGet パッケージをインストールしてください。
+            </para>
+            <list class="bullet">
+              <listItem>
+                <para>
+                  <legacyBold>
+                    <externalLink>
+                      <linkText>WiX</linkText>
+                      <linkAlternateText>http://wixtoolset.org/</linkAlternateText>
+                      <linkUri>http://wixtoolset.org/</linkUri>
+                    </externalLink>
+                  </legacyBold> (v3.10.3)
+                </para>
+              </listItem>
+              <listItem>
+                <para>
+                  <legacyBold>
+                    <externalLink>
+                      <linkText>WiX.Toolset.2015</linkText>
+                      <linkAlternateText>https://github.com/shana/WiX.Toolset.NuGet</linkAlternateText>
+                      <linkUri>https://github.com/shana/WiX.Toolset.NuGet</linkUri>
+                    </externalLink>
+                  </legacyBold> (v3.10.0.1503)
+                </para>
+              </listItem>
+            </list>
+          </listItem>
+
+          
+          <!-- PowerShell Tools for Visual Studio 2015 -->
+          <listItem>
+            <para>
+              <legacyBold>PowerShell Tools for Visual Studio 2015</legacyBold>
+            </para>
+            <para>
+              PowerShell モジュール (<codeInline>BUILDLet.Utilities.PowerShellModule</codeInline>) を作成するために必要です。
+              (Visual Stuio インストール時に選択可能です。)
+            </para>
+            <para>
+              次の Visual Studio の拡張機能をインストールしてください。
+            </para>
+            <list class="bullet">
+              <listItem>
+                <para>
+                  <legacyBold>
+                    <externalLink>
+                      <linkText>PowerShell Tools for Visual Studio 2015</linkText>
+                      <linkAlternateText>http://adamdriscoll.github.io/poshtools/</linkAlternateText>
+                      <linkUri>http://adamdriscoll.github.io/poshtools/</linkUri>
+                    </externalLink>
+                  </legacyBold> (3.0.399)
+                </para>
+              </listItem>
+            </list>
+          </listItem>
+
+          
+          <!-- Microsoft.PowerShell.4.ReferenceAssemblies -->
+          <listItem>
+            <para>
+              <legacyBold>PowerShell (Version 4.0) モジュールのための参照アセンブリ</legacyBold>
+            </para>
+            <para>
+              <codeInline>BUILDLet.Utilities.PowerShell</codeInline> (<codeInline>BUILDLet.Utilities.PowerShell.dll</codeInline>)
+              をビルドするために必要です。
+            </para>
+            <para>
+              次の NuGet パッケージをインストールしてください。
+            </para>
+            <list class="bullet">
+              <listItem>
+                <para>
+                  <legacyBold>
+                    <externalLink>
+                      <linkText>Microsoft.PowerShell.4.ReferenceAssemblies</linkText>
+                      <linkAlternateText>https://msdn.microsoft.com/en-us/mt173057.aspx</linkAlternateText>
+                      <linkUri>https://msdn.microsoft.com/en-us/mt173057.aspx</linkUri>
+                    </externalLink>
+                  </legacyBold> (v1.0.0)
+                </para>
+              </listItem>
+            </list>
+          </listItem>
+
+          
+          <!-- Pester -->
+          <listItem>
+            <para>
+              <legacyBold>Pester</legacyBold> (Version 3.4.6)
+            </para>
+            <para>
+              PowerShell モジュールの単体テストに必要です。
+            </para>
+            <para>
+              次の NuGet パッケージをインストールしてください。
+            </para>
+            <list class="bullet">
+              <listItem>
+                <para>
+                  <legacyBold>
+                    <externalLink>
+                      <linkText>Pester</linkText>
+                      <linkAlternateText>https://github.com/Pester/Pester</linkAlternateText>
+                      <linkUri>https://github.com/Pester/Pester</linkUri>
+                    </externalLink>
+                  </legacyBold> (v3.4.6)
+                </para>
+              </listItem>
+            </list>
+            <para>
+              または、
+              <externalLink>
+                <linkText>GitHub</linkText>
+                <linkAlternateText>https://github.com/pester/pester</linkAlternateText>
+                <linkUri>https://github.com/pester/pester</linkUri>
+              </externalLink>
+              からダウンロードするか、
+              <externalLink>
+                <linkText>Chocolatey</linkText>
+                <linkAlternateText>https://chocolatey.org/</linkAlternateText>
+                <linkUri>https://chocolatey.org/</linkUri>
+              </externalLink>
+              で、次のようにインストールすることもできます。
+            </para>
+            <code language="powershell" title="PowerShell">
+              Invoke-Expression ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
+              choco install pester
+            </code>
+          </listItem>
+
+        </list>
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="ef30545a-4b9e-45f9-90ec-aed447fd0eb0" />
+    </relatedTopics>
+
+  </developerConceptualDocument>
+</topic>

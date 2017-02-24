@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BUILDLet.Utilities.WPF</name>
+    </assembly>
+    <members>
+        <member name="T:BUILDLet.Utilities.WPF.Properties.Resources">
+            <summary>
+              ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.WPF.Properties.Resources.ResourceManager">
+            <summary>
+              このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.WPF.Properties.Resources.Culture">
+            <summary>
+              厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
+              現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.WPF.Properties.Resources.OKButtonContent">
+            <summary>
+              OK に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.WPF.Properties.Resources.VersionInformationWindowTitle">
+            <summary>
+              Version Information に類似しているローカライズされた文字列を検索します。
+            </summary>
+        </member>
+        <member name="T:BUILDLet.Utilities.WPF.VersionInformationWindow">
+            <summary>
+            VersionInformationWindow.xaml の相互作用ロジック
+            </summary>
+            <summary>
+            VersionInformationWindow
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.WPF.VersionInformationWindow.LogoImageWidth">
+            <summary>
+            ロゴイメージの幅を表します。
+            </summary>
+        </member>
+        <member name="P:BUILDLet.Utilities.WPF.VersionInformationWindow.LogoImageHeight">
+            <summary>
+            ロゴイメージの高さを表します。
+            </summary>
+        </member>
+        <member name="M:BUILDLet.Utilities.WPF.VersionInformationWindow.#ctor(System.Drawing.Image,System.Drawing.Imaging.ImageFormat,System.Windows.Window)">
+            <summary>
+            <see cref="T:BUILDLet.Utilities.WPF.VersionInformationWindow"/> クラスの新しいインスタンスを初期化します。 
+            <para>
+            このコンストラクターは Version 1.1.2.0 で追加されました。
+            </para>
+            </summary>
+            <param name="logo">
+            ロゴ イメージを指定します。
+            </param>
+            <param name="format">
+            ロゴ イメージのフォーマット指定します。
+            </param>
+            <param name="owner">
+            オーナー ウィンドウを表す <see cref="T:System.Windows.Window"/> オブジェクトを設定します。
+            このパラメーターを設定すると、ウィンドウの位置がオーナー ウィンドウの中央になります。
+            <para>
+            このパラメーターは Version 1.1.3.0 で追加されました。
+            </para>
+            </param>
+            <remarks>
+            <see cref="T:BUILDLet.Utilities.WPF.VersionInformationWindow"/> は、このクラスを初期化したメソッドのコードを格納しているアセンブリの各種情報を格納します。
+            <see cref="T:System.Windows.Window"/> と同様に、<see cref="M:System.Windows.Window.Show"/> または 
+            <see cref="M:System.Windows.Window.ShowDialog"/> メソッドで表示できます。
+            </remarks>
+        </member>
+        <member name="M:BUILDLet.Utilities.WPF.VersionInformationWindow.#ctor(System.Windows.Media.Imaging.BitmapImage,System.Windows.Window)">
+            <summary>
+            <see cref="T:BUILDLet.Utilities.WPF.VersionInformationWindow"/> クラスの新しいインスタンスを初期化します。 
+            </summary>
+            <param name="logo">
+            ロゴ イメージを指定します。
+            <para>
+            画像が表示されない場合は <see cref="P:System.Windows.Media.Imaging.BitmapImage.CacheOption"/> を <see cref="F:System.Windows.Media.Imaging.BitmapCacheOption.OnLoad"/> に設定すると、表示される場合があります。
+            </para>
+            <para>
+            64x64 ピクセルの画像として表示されるので、<see cref="P:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth"/> または 
+            <see cref="P:System.Windows.Media.Imaging.BitmapImage.DecodePixelHeight"/> に 64 を設定することを検討してください。
+            この値は <see cref="P:BUILDLet.Utilities.WPF.VersionInformationWindow.LogoImageWidth"/> および <see cref="P:BUILDLet.Utilities.WPF.VersionInformationWindow.LogoImageHeight"/> として参照できます。
+            </para>
+            </param>
+            <param name="owner">
+            オーナー ウィンドウを表す <see cref="T:System.Windows.Window"/> オブジェクトを設定します。
+            このパラメーターを設定すると、ウィンドウの位置がオーナー ウィンドウの中央になります。
+            <para>
+            このパラメーターは Version 1.1.3.0 で追加されました。
+            </para>
+            </param>
+            <remarks>
+            <see cref="T:BUILDLet.Utilities.WPF.VersionInformationWindow"/> は、このクラスを初期化したメソッドのコードを格納しているアセンブリの各種情報を格納します。
+            <see cref="T:System.Windows.Window"/> と同様に、<see cref="M:System.Windows.Window.Show"/> または 
+            <see cref="M:System.Windows.Window.ShowDialog"/> メソッドで表示できます。
+            </remarks>
+        </member>
+        <member name="M:BUILDLet.Utilities.WPF.VersionInformationWindow.#ctor(System.Reflection.Assembly,System.Windows.Window)">
+            <summary>
+            <see cref="T:BUILDLet.Utilities.WPF.VersionInformationWindow"/> クラスの新しいインスタンスを初期化します。 
+            </summary>
+            <param name="assembly">
+            バージョン情報を表示する <see cref="T:System.Reflection.Assembly"/> を指定します。
+            省略した場合 (および null を指定した場合) は、このクラスを初期化したメソッドのコードを格納しているアセンブリのバージョン情報が指定されます。
+            <para>
+            このパラメーターは Version 1.1.2.0 で追加されました。
+            </para>
+            </param>
+            <param name="owner">
+            オーナー ウィンドウを表す <see cref="T:System.Windows.Window"/> オブジェクトを設定します。
+            このパラメーターを設定すると、ウィンドウの位置がオーナー ウィンドウの中央になります。
+            <para>
+            このパラメーターは Version 1.1.3.0 で追加されました。
+            </para>
+            </param>
+            <remarks>
+            <see cref="T:System.Windows.Window"/> と同様に、<see cref="M:System.Windows.Window.Show"/> または 
+            <see cref="M:System.Windows.Window.ShowDialog"/> メソッドで表示できます。
+            </remarks>
+        </member>
+        <member name="M:BUILDLet.Utilities.WPF.VersionInformationWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>
