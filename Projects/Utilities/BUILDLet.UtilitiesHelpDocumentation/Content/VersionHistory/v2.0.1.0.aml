@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="e149039e-30ad-4b84-91c1-ab1fd13b262d" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+      <para>
+        Version 2.0.1.0 は March 18th, 2017 にリリースされました。
+      </para>
+      <para>
+        BUILDLet Utilities PowerShell Module Version 2.0.1.0 は
+        BUILDLet PackageMaker Tool Kit Version 2.0.1.0 のためのリリースです。
+      </para>
+    </introduction>
+
+    <section>
+      <title>Changes in This Release</title>
+      <content>
+        <list class="bullet">
+
+          <listItem>
+            <para>
+              <codeEntityReference qualifyHint="true">T:BUILDLet.Utilities.PrivateProfile</codeEntityReference> クラスのセクション抽出パターンを改善しました。
+            </para>
+          </listItem>
+        
+        </list>
+      </content>
+    </section>
+
+    <relatedTopics>
+			<link xlink:href="423f65ea-763f-4a5d-9a97-d3c466efc880" />
+		</relatedTopics>
+
+	</developerConceptualDocument>
+</topic>

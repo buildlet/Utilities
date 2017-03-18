@@ -12,15 +12,24 @@
     <SccProvider>SAK</SccProvider>
     <SccAuxPath>SAK</SccAuxPath>
     <SccLocalPath>SAK</SccLocalPath>
-    <Author>Daiki Sakamoto</Author>
-    <CompanyName>BUILDLet</CompanyName>
-    <Copyright>(c) 2015, 2016 Daiki Sakamoto. All rights reserved.</Copyright>
-    <Description>BUILDLet Utility PowerShell Module</Description>
-    <Guid>58bbd29a-c79a-48ab-a039-e0b5d07abbda</Guid>
-    <Version>1.4.0.0</Version>
-    <VariablesToExport>*</VariablesToExport>
-    <CmdletsToExport>*</CmdletsToExport>
-    <AliasesToExport>*</AliasesToExport>
+    <Author>
+    </Author>
+    <CompanyName>
+    </CompanyName>
+    <Copyright>
+    </Copyright>
+    <Description>
+    </Description>
+    <Guid>
+    </Guid>
+    <Version>
+    </Version>
+    <VariablesToExport>
+    </VariablesToExport>
+    <CmdletsToExport>
+    </CmdletsToExport>
+    <AliasesToExport>
+    </AliasesToExport>
     <ClrVersion />
     <PowerShellHostVersion />
     <PowerShellVersion>v4</PowerShellVersion>

@@ -3,8 +3,9 @@
      xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
 
   <!-- Include -->
-  <?include ..\Version\InstallerGUIDs.wxi?>
+  <?include ..\Version\InstallerGUID.wxi?>
   <?include ..\Version\InstallerInfo.wxi?>
+  <?include ..\Version\InstallerVersionInfo.wxi?>
 
   <!-- GUID -->
   <?define GUID_UpgradeCode="$(var.GUID_PSUtilitiesSetupBootstrapper_UpgradeCode)"?>

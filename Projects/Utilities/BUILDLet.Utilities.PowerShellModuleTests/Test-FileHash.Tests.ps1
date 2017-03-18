@@ -29,7 +29,7 @@
 #
 
 # Initialize
-. ($PSCommandPath | Split-Path -Parent | Join-Path -ChildPath 'Initialize.ps1')
+. ($PSCommandPath | Split-Path -Parent | Join-Path -ChildPath 'Initialize.ps1') > $null
 
 
 # TestData Directory

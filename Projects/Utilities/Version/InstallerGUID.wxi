@@ -5,25 +5,25 @@
   <?define GUID_PSUtilitiesSetupBootstrapper_UpgradeCode="{4A7CB8F0-03BC-4A82-9CA5-F85AB4D0699D}"?>
 
   
-  <!-- BUILDLet.Utilities.PowerShell Version 2.x.x" (Current) -->
+  <!-- BUILDLet.Utilities.PowerShell Version 2.x.x (Current) -->
   <!-- (x86) -->
-  <?define GUID_PSUtilities_Product="{092B0AC1-6542-4D19-9467-B1087282FDB4}"?>
   <?define GUID_PSUtilities_UpgradeCode="{2A5ECE4D-A220-4E25-8BED-51A5D005180C}"?>
+  <?define GUID_PSUtilities_Product="{092B0AC1-6542-4D19-9467-B1087282FDB4}"?>
   <?define GUID_PSUtilities_ProductComponent="{32DF9E0D-1E19-4377-B111-6935DA639E23}"?>
   <!-- (x64) -->
-  <?define GUID_PSUtilities64_Product="{9B594029-FFDB-4A45-B881-60D421BC05F6}"?>
   <?define GUID_PSUtilities64_UpgradeCode="{D82A736E-C1FF-4C55-875B-7A4F8A39E7EE}"?>
+  <?define GUID_PSUtilities64_Product="{9B594029-FFDB-4A45-B881-60D421BC05F6}"?>
   <?define GUID_PSUtilities64_ProductComponent="{25D18AA4-10BB-4E97-82F4-C0B4980EA715}"?>
 
   
-  <!-- BUILDLet.Utilities.PowerShell Version 1.x.x" (for Backward Compatibility) -->
+  <!-- BUILDLet.Utilities.PowerShell Version 1.x.x (for Backward Compatibility) -->
   <!-- (x86) -->
-  <?define GUID_PSUtility_Version1xx_Product="{B84029A5-CCD9-4833-B1A0-0C0F281F7714}"?>
   <?define GUID_PSUtility_Version1xx_UpgradeCode="{B196327A-ED1C-4E1A-9028-680AA1A1BFD3}"?>
+  <?define GUID_PSUtility_Version1xx_Product="{B84029A5-CCD9-4833-B1A0-0C0F281F7714}"?>
   <?define GUID_PSUtility_Version1xx_ProductComponent="{20DAAF31-D66C-49D3-9502-28C2CA2C67CC}"?>
   <!-- (x64) -->
-  <?define GUID_PSUtility64_Version1xx_Product="{7E7CA1EC-F7D0-4E39-BC61-6A03BF2FBD8B}"?>
   <?define GUID_PSUtility64_Version1xx_UpgradeCode="{8068C24A-F536-479F-A060-D82821D71A46}"?>
+  <?define GUID_PSUtility64_Version1xx_Product="{7E7CA1EC-F7D0-4E39-BC61-6A03BF2FBD8B}"?>
   <?define GUID_PSUtility64_Version1xx_ProductComponent="{25118E0F-F75D-4E65-AE70-1F0D5056D558}"?>
 
 </Include>

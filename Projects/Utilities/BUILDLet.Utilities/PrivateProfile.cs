@@ -771,7 +771,7 @@ namespace BUILDLet.Utilities
 
 
             // Check SECTION or NOT
-            if (Regex.IsMatch(target, @"\[.+\][\t ]*"))
+            if (Regex.IsMatch(target.TrimEnd(), @"^\[.+\]$"))
             {
                 // SECTION is found!
                 section = target.Split(new char[] { '[', ']' }, StringSplitOptions.RemoveEmptyEntries)[0].Trim();

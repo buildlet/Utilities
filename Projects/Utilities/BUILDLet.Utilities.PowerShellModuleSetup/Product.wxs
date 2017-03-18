@@ -2,13 +2,14 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 
   <!-- Include -->
-  <?include ..\Version\InstallerGUIDs.wxi?>
+  <?include ..\Version\InstallerGUID.wxi?>
   <?include ..\Version\InstallerInfo.wxi?>
+  <?include ..\Version\InstallerVersionInfo.wxi?>
 
-  
+
   <!-- GUID -->
-  <?define GUID_Product="$(var.GUID_PSUtilities_Product)"?>
   <?define GUID_UpgradeCode="$(var.GUID_PSUtilities_UpgradeCode)"?>
+  <?define GUID_Product="$(var.GUID_PSUtilities_Product)"?>
   <?define GUID_ProductComponent="$(var.GUID_PSUtilities_ProductComponent)"?>
 
   <!-- UpgradeCode of Version 1.x.x (for Backward Compatibility) -->

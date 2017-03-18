@@ -53,10 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Version\AssemblyManufacturerInfo.cs">
-      <Link>Properties\AssemblyManufacturerInfo.cs</Link>
-    </Compile>
-    <Compile Include="..\Version\PowerShellAssemblyVersionInfo.cs">
+    <Compile Include="..\Version\Properties\PowerShellAssemblyVersionInfo.cs">
       <Link>Properties\PowerShellAssemblyVersionInfo.cs</Link>
     </Compile>
     <Compile Include="CloseHtmlHelpCommand.cs" />
@@ -87,6 +84,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="LastBuild" />
     <None Include="packages.config" />
     <None Include="References\Ionic.Zip.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
