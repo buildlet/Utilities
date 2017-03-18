@@ -1,4 +1,6 @@
-# Utilities Class Library Version 2.0.1.0
+# Utilities Class Library
+
+## Version 2.0.1.0
 
 ## 概要
 Windows クラスライブラリと PowerShell モジュールが含まれます。
