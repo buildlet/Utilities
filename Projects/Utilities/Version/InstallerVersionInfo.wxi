@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+
+  <!-- Version Information -->
+  <?define Version="2.0.1"?>
+
+
+  <!-- Manufacturer Information -->
+  <?define Manufacturer="BUILDLet"?>
+  <?define Copyright="Copyright (c) 2015-2017 Daiki Sakamoto"?>
+
+</Include>

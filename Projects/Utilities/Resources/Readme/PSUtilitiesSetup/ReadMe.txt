@@ -4,7 +4,7 @@
 概要
 ----
 
-を含む PowerShell モジュールです。
+さまざまなユーティリティーを含む PowerShell モジュールです。
 
 
 インストール方法
@@ -12,7 +12,8 @@
 
 PSUtilitiesSetup.exe を実行してください。
 
-インストールウィザードの終了画面で Launch ボタンをクリックすると、この Readme が表示されます。
+インストールウィザードの終了画面で Launch ボタンをクリックすると、
+この Readme が表示されます。
 
 
 アンインストール方法
@@ -44,11 +45,13 @@ Windows 7 Ultimate x64 で動作を確認しています。
     Import-Module BUILDLet.Utilities.PowerShell
 
 PowerShell モジュールは、32ビットOSの場合は %ProgramFiles%\WindowsPowerShell\Modules 
-に保存されます。64ビットOSの場合は %ProgramFiles%\WindowsPowerShell\Modules および 
-%ProgramFiles(x86)%\WindowsPowerShell\Modules にインストールされます。
+にインストールされます。64ビットOSの場合は %ProgramFiles%\WindowsPowerShell\Modules 
+および %ProgramFiles(x86)%\WindowsPowerShell\Modules の両方にインストールされます。
 これらのパスは $env:PSModulePath に含まれているので、上記のコマンドを入力するだけで
-モジュールをインポートすることができます。インポートできないときは下記のコマンドを
-実行して BUILDLet.Utilities.PowerShell が表示されることを確認してください。
+モジュールをインポートすることができます。
+
+インポートできないときは下記のコマンドを実行して BUILDLet.Utilities.PowerShell が
+表示されることを確認してください。
 
     Get-Module -ListAvailable
 
@@ -76,8 +79,8 @@ BUILDLet.Utilities.PowerShell をインポートすると、下記のコマン�
 * New-BinaryFile (Cmdlet)
   ランダムな値のバイト配列を格納したバイナリファイルを作成します。
 
-* Get-HashValue (Cmdlet)
-  指定されたハッシュ アルゴリズムを使用して、入力データのハッシュ値を計算します。
+* Test-FileHash (Cmdlet)
+  ファイルのハッシュ値を比較することによって、ファイル内容が同一かどうかを確認します。
 
 * Get-HtmlString (Cmdlet)
   入力データから HTML 要素またはその属性の値を取得します。
@@ -142,4 +145,7 @@ http://dotnetzip.codeplex.com/
 
 変更履歴
 --------
-* 2017/01/08    Version 2.0.0.0    Readme ファイルを添付
+* 2017/03/15    Version 2.0.1.0    BUILDLet PackageMaker Tool Kit Version 2.0.1.0 のためのリリース。
+                                   New-Directory Function の再帰的削除に関する処理を変更しました。
+
+* 2017/01/08    Version 2.0.0.0    全ての Cmdlet および Function を刷新しました。

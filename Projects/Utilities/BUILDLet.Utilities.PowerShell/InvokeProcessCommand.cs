@@ -222,8 +222,10 @@ namespace BUILDLet.Utilities.PowerShell.Commands
 
                 if (this.ParameterSetName == "FilePath" || this.ParameterSetName == "StartInfo")
                 {
-                    // for Verbose Message
+                    // for Verbose Message (psInfo = "FileName='abc.exe'")
                     StringBuilder psInfo = new StringBuilder(string.Format("FileNmae='{0}'", StartInfo.FileName));
+
+                    // Update psInfo (= "FileName='abc.exe', Arguments='a=1 b=2 c=3'")
                     if (!string.IsNullOrEmpty(StartInfo.Arguments)) { psInfo.AppendFormat(", Arguments='{0}'", StartInfo.Arguments); }
 
 
@@ -311,11 +313,12 @@ namespace BUILDLet.Utilities.PowerShell.Commands
                                 p.BeginOutputReadLine();
                                 p.BeginErrorReadLine();
 
-                                // Update psInfo
+                                // Update psInfo (= "PID=0000, FileName='abc.exe', Arguments='a=1 b=2 c=3'")
                                 psInfo.Insert(0, string.Format("PID={0}, ", p.Id));
 
                                 // Verbose Output
-                                this.WriteVerbose(string.Format("({0}) プロセス ({1}) を開始しました。", i, psInfo));
+                                this.WriteVerbose(string.Format("プロセス ({0}) を開始しました。", psInfo)
+                                    + ((i > 0) ? string.Format("({0} 回目)", i) : ""));
 
 
                                 // Output loop
@@ -386,12 +389,11 @@ namespace BUILDLet.Utilities.PowerShell.Commands
                                 if (p.ExitCode == 0) { break; }
                                 else
                                 {
-                                    this.WriteWarning(string.Format("({0}) プロセス (PID={1}) は終了コード [0x{2:X}] ({2}) で終了しました。", i, p.Id, p.ExitCode));
+                                    this.WriteWarning(string.Format("プロセス (PID={0}) は終了コード {1} [0x{1:X4}] で終了しました。", p.Id, p.ExitCode)
+                                        + ((i < this.RetryCount) ? string.Format("{0} 秒後にプロセスを再開します。({1} 回目)", this.RetryInterval, i + 1) : ""));
 
                                     if (i < this.RetryCount)
                                     {
-                                        if (this.RetryInterval > 0) { this.WriteWarning(string.Format("({0}) {1} 秒後にプロセスを再開します。", i, this.RetryInterval)); }
-
                                         // Wait
                                         Thread.Sleep(this.RetryInterval * 1000);
                                     }
@@ -400,9 +402,8 @@ namespace BUILDLet.Utilities.PowerShell.Commands
 
 
                             // Output (ExitCode)
-                            //   1. None                       : 'PassThru' Parameter
-                            //   2. Warning Output             : 'RedirectStandardOutputToWarning' Parameter
-                            //   3. Standard Output (Pipeline) : (Default)
+                            //   1. None                       : 'PassThru' Parameter, 'RedirectStandardOutputToWarning' Parameter
+                            //   2. Standard Output (Pipeline) : (Default)
                             if (!this.PassThru)
                             {
                                 this.WriteObject(p.ExitCode);

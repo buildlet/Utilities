@@ -22,6 +22,7 @@
   THE SOFTWARE.
 ################################################################################>
 
+####################################################################################################
 Function New-DateString {
 
     <#
@@ -88,16 +89,20 @@ Function New-DateString {
 
     [CmdletBinding()]
     Param (
-        [Parameter(Mandatory=$false, Position=0, ValueFromPipeline=$true)][System.DateTime]$Date = (Get-Date),
-        [Parameter(Mandatory=$false, Position=1)][string]$LCID = (Get-Culture).ToString(),
-        [Parameter(Mandatory=$false, Position=2)][string]$Format = 'D'
+        [Parameter(Position = 0, ValueFromPipeline = $true)]
+		[System.DateTime]$Date = (Get-Date),
+
+        [Parameter(Position = 1)]
+		[string]$LCID = (Get-Culture).ToString(),
+
+        [Parameter(Position = 2)]
+		[string]$Format = 'D'
     )
 
     Process {
 		return ($Date).ToString($Format, (New-Object System.Globalization.CultureInfo($LCID)))
     }
 }
-
 
 ####################################################################################################
 Function New-Directory {
@@ -143,12 +148,19 @@ Function New-Directory {
             既にフォルダーまたはファイルが存在する場合は、それらを削除してから、フォルダーを作成します。
     #>
 
-    [CmdletBinding(SupportsShouldProcess=$true)]
+    [CmdletBinding(SupportsShouldProcess = $true)]
     Param (
-        [Parameter(Mandatory=$true, Position=0, ValueFromPipeline=$true)][string]$Path,
-        [Parameter(Mandatory=$false)][switch]$Force,
-        [Parameter(Mandatory=$false)][switch]$Clean,
-        [Parameter(Mandatory=$false)][switch]$PassThru
+        [Parameter(Mandatory = $true, Position = 0, ValueFromPipeline = $true)]
+		[string]$Path,
+
+        [Parameter()]
+		[switch]$Force,
+
+        [Parameter()]
+		[switch]$Clean,
+
+        [Parameter()]
+		[switch]$PassThru
     )
 
     Process {
@@ -165,7 +177,9 @@ Function New-Directory {
 				if (Test-Path $Path -PathType Container) {
 
 					# Delete files in the directory
-					Get-ChildItem -Path $Path -Recurse -Force:$Force | Remove-Item -Recurse -Force:$Force
+					Get-ChildItem -Path $Path -Force:$Force | % {
+						if (Test-Path -Path $_.FullName) { Remove-Item -Path $_.FullName -Recurse -Force:$Force }
+					}
 				}
 			}
 
@@ -181,7 +195,6 @@ Function New-Directory {
 		}
     }
 }
-
 
 ####################################################################################################
 Function Get-FileVersionInfo {
@@ -216,14 +229,13 @@ Function Get-FileVersionInfo {
 
     [CmdletBinding()]
     Param (
-        [Parameter(Mandatory=$true, Position=0, ValueFromPipeline=$true)]
-        [ValidateScript( { Test-Path -Path $_ -PathType Leaf } )]
+        [Parameter(Mandatory = $true, Position = 0, ValueFromPipeline = $true)]
+        [ValidateScript({ Test-Path -Path $_ -PathType Leaf })]
         [string]$Path
     )
 
     Process { return (Get-Item -Path $Path).VersionInfo }
 }
-
 
 ####################################################################################################
 Function Get-FileVersion {
@@ -255,8 +267,8 @@ Function Get-FileVersion {
 
     [CmdletBinding()]
     Param (
-        [Parameter(Mandatory=$true, Position=0, ValueFromPipeline=$true)]
-        [ValidateScript( { Test-Path -Path $_ -PathType Leaf } )]
+        [Parameter(Mandatory = $true, Position = 0, ValueFromPipeline = $true)]
+        [ValidateScript({ Test-Path -Path $_ -PathType Leaf })]
         [string]$Path
     )
 
@@ -264,7 +276,6 @@ Function Get-FileVersion {
         return (Get-Item -Path $Path).VersionInfo.FileVersion
     }
 }
-
 
 ####################################################################################################
 Function Get-ProductVersion {
@@ -296,8 +307,8 @@ Function Get-ProductVersion {
 
     [CmdletBinding()]
     Param (
-        [Parameter(Mandatory=$true, Position=0, ValueFromPipeline=$true)]
-        [ValidateScript( { Test-Path -Path $_ -PathType Leaf } )]
+        [Parameter(Mandatory = $true, Position = 0, ValueFromPipeline = $true)]
+        [ValidateScript({ Test-Path -Path $_ -PathType Leaf })]
         [string]$Path
     )
 
@@ -305,7 +316,6 @@ Function Get-ProductVersion {
         return (Get-Item -Path $Path).VersionInfo.ProductVersion
     }
 }
-
 
 ####################################################################################################
 Function Get-ProductName {
@@ -336,8 +346,8 @@ Function Get-ProductName {
 
     [CmdletBinding()]
     Param (
-        [Parameter(Mandatory=$true, Position=0, ValueFromPipeline=$true)]
-        [ValidateScript( { Test-Path -Path $_ -PathType Leaf } )]
+        [Parameter(Mandatory = $true, Position = 0, ValueFromPipeline = $true)]
+        [ValidateScript({ Test-Path -Path $_ -PathType Leaf })]
         [string]$Path
     )
 
@@ -345,7 +355,6 @@ Function Get-ProductName {
         return (Get-Item -Path $Path).VersionInfo.ProductName
     }
 }
-
 
 ####################################################################################################
 Function Get-FileDescription {
@@ -377,8 +386,8 @@ Function Get-FileDescription {
 
     [CmdletBinding()]
     Param (
-        [Parameter(Mandatory=$true, Position=0, ValueFromPipeline=$true)]
-        [ValidateScript( { Test-Path -Path $_ -PathType Leaf } )]
+        [Parameter(Mandatory = $true, Position = 0, ValueFromPipeline = $true)]
+        [ValidateScript({ Test-Path -Path $_ -PathType Leaf })]
         [string]$Path
     )
 
@@ -386,7 +395,6 @@ Function Get-FileDescription {
         return (Get-Item -Path $Path).VersionInfo.FileDescription
     }
 }
-
 
 ####################################################################################################
 Function Get-AuthenticodeSignerName {
@@ -418,8 +426,8 @@ Function Get-AuthenticodeSignerName {
 
     [CmdletBinding()]
     Param (
-        [Parameter(Mandatory=$true, Position=0, ValueFromPipeline=$true)]
-        [ValidateScript( { Test-Path -Path $_ -PathType Leaf } )]
+        [Parameter(Mandatory = $true, Position = 0, ValueFromPipeline = $true)]
+        [ValidateScript({ Test-Path -Path $_ -PathType Leaf })]
         [string]$FilePath
     )
 
@@ -431,3 +439,6 @@ Function Get-AuthenticodeSignerName {
         }
     }
 }
+
+####################################################################################################
+Export-ModuleMember -Function *

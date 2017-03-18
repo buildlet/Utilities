@@ -54,10 +54,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Version\AssemblyManufacturerInfo.cs">
-      <Link>Properties\AssemblyManufacturerInfo.cs</Link>
-    </Compile>
-    <Compile Include="..\Version\AssemblyVersionInfo.cs">
+    <Compile Include="..\Version\Properties\AssemblyVersionInfo.cs">
       <Link>Properties\AssemblyVersionInfo.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">

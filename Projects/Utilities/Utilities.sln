@@ -3,17 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Version", "Version", "{027248A7-BA3C-4E13-A293-B7365A7DB6D2}"
-	ProjectSection(SolutionItems) = preProject
-		Version\AssemblyManufacturerInfo.cs = Version\AssemblyManufacturerInfo.cs
-		Version\AssemblyVersionInfo.cs = Version\AssemblyVersionInfo.cs
-		Version\InstallerGUIDs.wxi = Version\InstallerGUIDs.wxi
-		Version\InstallerInfo.wxi = Version\InstallerInfo.wxi
-		Version\PowerShellAssemblyVersionInfo.cs = Version\PowerShellAssemblyVersionInfo.cs
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{ADE35221-1647-47EE-9C41-4B059F9D5B66}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUILDLet.Utilities", "BUILDLet.Utilities\BUILDLet.Utilities.csproj", "{7955897B-7BB9-46A7-A4D3-039F0433C983}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUILDLet.Utilities.WPF", "BUILDLet.Utilities.WPF\BUILDLet.Utilities.WPF.csproj", "{E40A3CC0-5FD4-4E0D-85CD-B1C0EA6B3FAF}"
@@ -61,13 +50,45 @@ Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "BUILDLet.Utilities.PowerShe
 		{919EEC56-F7C7-482E-BB49-09A89B15C443} = {919EEC56-F7C7-482E-BB49-09A89B15C443}
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Link", "Link", "{CDB7E80E-5344-4706-A813-A113431DEE34}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{A9E5B254-46C7-4B57-95CB-216FC4A2C688}"
+	ProjectSection(SolutionItems) = preProject
+		Common\Post-BuildEventTemplate.cmd = Common\Post-BuildEventTemplate.cmd
+		Common\PowerShellModuleTestInitializeTemplate.ps1 = Common\PowerShellModuleTestInitializeTemplate.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Properties", "Properties", "{64187672-7773-43EC-8366-555E04FC0D11}"
+	ProjectSection(SolutionItems) = preProject
+		Version\Properties\AssemblyVersionInfo.cs = Version\Properties\AssemblyVersionInfo.cs
+		Version\Properties\PowerShellAssemblyVersionInfo.cs = Version\Properties\PowerShellAssemblyVersionInfo.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Link", "Link", "{D3B9D296-A9BE-4CC7-8AE2-8789E8D9C9DA}"
 	ProjectSection(SolutionItems) = preProject
 		BUILDLet.Utilities.PowerShellModule\BUILDLet.Utilities.PowerShell.psd1 = BUILDLet.Utilities.PowerShellModule\BUILDLet.Utilities.PowerShell.psd1
 		BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\VersionHistory.aml = BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\VersionHistory.aml
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Redisributables", "Redisributables", "{C714DE6C-3E02-4C2D-8E18-818B996E9603}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packages", "Packages", "{F8D93BBD-0398-44F7-8E0A-E498C7A43F89}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Redistributables", "Redistributables", "{0965BC60-8B46-4522-9F71-33FBB9CBBE51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{FA9BC1D0-2DD3-4FB9-9941-88F302553040}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestData", "TestData", "{D7F5719E-2E6A-41FE-ADCF-741964CB0B86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestResults", "TestResults", "{32E819B0-0CD8-44B0-AFB7-DE5BF27DC6FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Link", "Link", "{2E14686B-826E-4E39-A9C7-E1AB6FCC96DC}"
+	ProjectSection(SolutionItems) = preProject
+		Clean.ps1 = Clean.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Version", "Version", "{4D130734-FFEE-4D71-9BBC-F3985F6AE14E}"
+	ProjectSection(SolutionItems) = preProject
+		Version\InstallerGUID.wxi = Version\InstallerGUID.wxi
+		Version\InstallerInfo.wxi = Version\InstallerInfo.wxi
+		Version\InstallerVersionInfo.wxi = Version\InstallerVersionInfo.wxi
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -260,7 +281,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{CDB7E80E-5344-4706-A813-A113431DEE34} = {027248A7-BA3C-4E13-A293-B7365A7DB6D2}
+		{64187672-7773-43EC-8366-555E04FC0D11} = {4D130734-FFEE-4D71-9BBC-F3985F6AE14E}
+		{D3B9D296-A9BE-4CC7-8AE2-8789E8D9C9DA} = {4D130734-FFEE-4D71-9BBC-F3985F6AE14E}
+		{2E14686B-826E-4E39-A9C7-E1AB6FCC96DC} = {A9E5B254-46C7-4B57-95CB-216FC4A2C688}
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
 		SccNumberOfProjects = 14

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Topics>
-  <Topic id="ef30545a-4b9e-45f9-90ec-aed447fd0eb0" visible="True" isDefault="true" isSelected="true" title="About BUILDLet Utilities Class Library">
+  <Topic id="ef30545a-4b9e-45f9-90ec-aed447fd0eb0" visible="True" isDefault="true" title="About BUILDLet Utilities Class Library">
     <HelpKeywords>
       <HelpKeyword index="K" term="About" />
     </HelpKeywords>
@@ -16,7 +16,7 @@
     </HelpKeywords>
     <Topic id="068f897c-a2db-4dec-9c3c-7932fcbe1c77" visible="True" title="Version 1.0.0.0">
       <HelpKeywords>
-        <HelpKeyword index="K" term="version, 1.0.0.0, 1.0.0, 1.0" />
+        <HelpKeyword index="K" term="version, 1.0.0.0, 1.0.0, 1.0, 1" />
       </HelpKeywords>
     </Topic>
     <Topic id="4a070a5a-88fc-45b0-8c6a-ad383a02bad7" visible="True" title="Version 1.0.1.0">
@@ -87,6 +87,11 @@
     <Topic id="ef9d815b-b63d-4678-9cbe-2823aee730f6" visible="True" title="Version 2.0.0.0">
       <HelpKeywords>
         <HelpKeyword index="K" term="version, 2.0.0.0, 2.0.0, 2.0, 2" />
+      </HelpKeywords>
+    </Topic>
+    <Topic id="e149039e-30ad-4b84-91c1-ab1fd13b262d" visible="True" isSelected="true" title="Version 2.0.1.0">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version, 2.0.1.0, 2.0.1" />
       </HelpKeywords>
     </Topic>
   </Topic>

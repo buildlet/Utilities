@@ -29,7 +29,7 @@
 #
 
 # Initialize
-. ($PSCommandPath | Split-Path -Parent | Join-Path -ChildPath 'Initialize.ps1')
+. ($PSCommandPath | Split-Path -Parent | Join-Path -ChildPath 'Initialize.ps1') > $null
 
 
 # TestData Directory
@@ -105,8 +105,8 @@ Describe "Invoke-Process" {
 	}
 
 
-	# Default Test (Check RETURN CODE using 'Exit999.exe')
-	Context "'$Script:filename_Exit999_EXE'" {
+	# Default Test (Check RETURN CODE using 'Exit999.exe' (1))
+	Context "'$Script:filename_Exit999_EXE' (1)" {
 
 		$expected = 0x999
 		$expected_HexString = $expected.ToString("X4")
@@ -202,7 +202,7 @@ Describe "Invoke-Process" {
 		It "Returns Code $expected_code0." { Invoke-Process $Script:filepath_Randum300_EXE -WarningAction SilentlyContinue | Should Be $expected_code0 }
 
 
-		# 'PassThru' parameter (VERBOSE Output is redirected to PIPELINE)
+		# 'PassThru' Parameter Test (VERBOSE Output is redirected to PIPELINE)
 		It "Outputs continuous value to PIPELINE (VERBOSE Output Redirected from STANDARD OUTPUT STREAM by 'PassThru' Parameter) and WARNING Output." {
 
 			$stdout = Invoke-Process $Script:filepath_Randum300_EXE -PassThru -WarningVariable warnings -WarningAction SilentlyContinue
@@ -226,7 +226,7 @@ Describe "Invoke-Process" {
 		}
 
 
-		# 'PassThru' parameter (VERBOSE Output -> PIPELINE) and 'RedirectStandardErrorToOutput' parameter (WARNING Output -> PIPELINE)
+		# 'PassThru' parameter Test (VERBOSE Output -> PIPELINE) and 'RedirectStandardErrorToOutput' parameter (WARNING Output -> PIPELINE)
 		It "Outputs continuous value to PIPELINE (VERBOSE: 'PassThru' Parameter & WARNING: 'RedirectStandardErrorToOutput' Parameter)." {
 
 			$stdout = Invoke-Process $Script:filepath_Randum300_EXE -PassThru -RedirectStandardErrorToOutput
@@ -246,6 +246,21 @@ Describe "Invoke-Process" {
 			0..299 | % { $actual += $stdout[$_] }
 
 			$actual | Should Be $expected
+		}
+	}
+
+
+	# 'RetryCount' Parameter Test (using 'Exit999.exe' (2))
+	Context "'$Script:filename_Exit999_EXE' (2)" {
+
+		$expected_code = 0x999
+		$expected_code_HexString = $expected_code.ToString("X4")
+		$retry_count = 5
+		$retry_interval = 2
+
+		It "Returns Code $expected_code (0x$expected_code_HexString) $retry_count times." {
+
+			Invoke-Process $Script:filepath_Exit999_EXE -RetryCount $retry_count -RetryInterval $retry_interval | % { $_ | Should Be $expected_code }
 		}
 	}
 }
