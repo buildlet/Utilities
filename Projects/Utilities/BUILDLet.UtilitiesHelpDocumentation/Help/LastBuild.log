@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2016.5.28.0" projectFile="C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\BUILDLet.UtilitiesHelpDocumentation.shfbproj" started="2017/03/18 11:47:20">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2016.5.28.0" projectFile="C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\BUILDLet.UtilitiesHelpDocumentation.shfbproj" started="2017/03/26 23:20:33">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
@@ -41,16 +41,16 @@ Copying XML comments files
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, 英語 (米国))...
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
-</plugIn>    Last step completed in 00:00:00.1670
+</plugIn>    Last step completed in 00:00:00.0250
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00.0175
+    Last step completed in 00:00:00.0165
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe - GenerateRefInfo.proj]
-2017/03/18 11:47:25 にビルドを開始しました。
+2017/03/26 23:20:34 にビルドを開始しました。
 ノード 1 上のプロジェクト &quot;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\GenerateRefInfo.proj&quot; (既定のターゲット)。
 PrepareForBuild:
   ディレクトリ &quot;obj\Debug\&quot; を作成しています。
@@ -69,13 +69,13 @@ GenerateRefInfo:
 
 ビルドに成功しました。
 
-経過時間 00:00:02.97
-    Last step completed in 00:00:03.5250
+経過時間 00:00:00.98
+    Last step completed in 00:00:01.4795
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe - TransformManifest.proj]
-2017/03/18 11:47:29 にビルドを開始しました。
+2017/03/26 23:20:36 にビルドを開始しました。
 ノード 1 上のプロジェクト &quot;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\TransformManifest.proj&quot; (既定のターゲット)。
 TransformManifest:
   XslTransform (v2016.5.28.0)
@@ -95,12 +95,12 @@ TransformManifest:
 
 ビルドに成功しました。
 
-経過時間 00:00:02.48
-    Last step completed in 00:00:02.9160
+経過時間 00:00:01.39
+    Last step completed in 00:00:01.5934
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.1430
+    Last step completed in 00:00:00.0475
 </buildStep>
 <buildStep step="CopyConceptualContent">
 Copying conceptual content...
@@ -147,28 +147,30 @@ Generating conceptual topic files
     C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v2.0.0.0.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\ef9d815b-b63d-4678-9cbe-2823aee730f6.xml
     Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v2.0.1.0.aml&#39;
     C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v2.0.1.0.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\e149039e-30ad-4b84-91c1-ab1fd13b262d.xml
-    Last step completed in 00:00:00.9525
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v2.1.0.0.aml&#39;
+    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v2.1.0.0.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\871f9883-a983-4128-9610-0ca40d69140d.xml
+    Last step completed in 00:00:00.3695
 </buildStep>
 <buildStep step="CreateConceptualTopicConfigs">
 Creating conceptual topic configuration files...
     Companion files
     _ContentMetadata_.xml
     Merging topic IDs into manifest.xml
-    Last step completed in 00:00:00.2140
+    Last step completed in 00:00:00.1405
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\icons\Help.png -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\Help.png
-    Last step completed in 00:00:00.0440
+    Last step completed in 00:00:00.0120
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00.0060
+    Last step completed in 00:00:00.0005
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe - GenerateIntermediateTOC.proj]
-2017/03/18 11:47:33 にビルドを開始しました。
+2017/03/26 23:20:38 にビルドを開始しました。
 ノード 1 上のプロジェクト &quot;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\GenerateIntermediateTOC.proj&quot; (既定のターゲット)。
 GenerateIntermediateTOC:
   XslTransform (v2016.5.28.0)
@@ -179,14 +181,14 @@ GenerateIntermediateTOC:
 
 ビルドに成功しました。
 
-経過時間 00:00:01.09
+経過時間 00:00:00.16
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:01.5730
+    Last step completed in 00:00:00.8583
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00.5790
+    Last step completed in 00:00:00.2999
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
@@ -194,12 +196,12 @@ C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHe
   Updating reference topic configurations.
   Updating conceptual topic configurations.
     Removing unused ExampleComponent.
-    Last step completed in 00:00:00.0470
+    Last step completed in 00:00:00.0000
 </buildStep>
 <buildStep step="BuildTopics">
 Building help topics...
 [C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe - BuildTopics.proj]
-2017/03/18 11:47:35 にビルドを開始しました。
+2017/03/26 23:20:39 にビルドを開始しました。
 ノード 1 上のプロジェクト &quot;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\BuildTopics.proj&quot; (既定のターゲット)。
 BuildTopics:
   BuildAssembler (v2016.5.28.0)
@@ -207,22 +209,22 @@ BuildTopics:
   Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
   Loading configuration...
   Processing topics...
-  Processed 171 topic(s)
+  Processed 172 topic(s)
   CopyFromIndexComponent: &quot;metadata&quot; in-memory cache entries used: 1 of 15.
   ResolveArtLinksComponent: Copying media files...
   CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 11 of 15.
   CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 3 of 30.
-  SaveComponent: Waiting for the document writer task to finish (76 Help1 API file(s) remaining)...
+  SaveComponent: Waiting for the document writer task to finish (80 Help1 API file(s) remaining)...
 プロジェクト &quot;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\BuildTopics.proj&quot; (既定のターゲット) のビルドが完了しました。
 
 ビルドに成功しました。
 
-経過時間 00:00:21.78
-    Last step completed in 00:00:22.2320
+経過時間 00:00:16.09
+    Last step completed in 00:00:16.2959
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
-    Last step completed in 00:00:00.0340
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
@@ -234,11 +236,11 @@ E-Mail: Eric@EWoodruff.us
 Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
 
 Processing Help 1 files in C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1
-Processed 171 HTML files
+Processed 172 HTML files
 Sorting keywords and generating See Also indices
 Saving HTML Help 1 keyword index to C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\BUILDLet.Utilities.hhk
 Saving HTML Help 1 table of contents to C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\BUILDLet.Utilities.hhc
-    Last step completed in 00:00:03.9375
+    Last step completed in 00:00:02.7750
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -304,7 +306,7 @@ C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyle
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-CN.css -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-zh-CN.css
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-TW.css -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-zh-TW.css
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding.css -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding.css
-    Last step completed in 00:00:01.3285
+    Last step completed in 00:00:00.8518
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating HTML Help 1 table of contents file...
@@ -316,7 +318,7 @@ Generating HTML Help 1 index file...
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Generating HTML Help 1 project file...
-    Last step completed in 00:00:00.0190
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="CompilingHelpFile">
 Compiling HTML Help 1 file...
@@ -333,11 +335,11 @@ Compiling HTML Help 1 file...
   
   Compile time: 0 minutes, 3 seconds
   
-  173	Topics
+  174	Topics
   
-  1,639	Local links
+  1,645	Local links
   
-  2,509	Internet links
+  2,510	Internet links
   
   0	Graphics
   
@@ -345,19 +347,19 @@ Compiling HTML Help 1 file...
   
   
   
-  Created c:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\BUILDLet.Utilities.chm, 260,084 bytes
+  Created c:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\BUILDLet.Utilities.chm, 261,200 bytes
   
-  Compression decreased file by 1,333,131 bytes.
+  Compression decreased file by 1,336,614 bytes.
   
-    Last step completed in 00:00:06.3360
+    Last step completed in 00:00:04.2099
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.2440
+    Last step completed in 00:00:00.2520
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 2017/03/18 11:48:09.  Total time: 00:00:48.9430
+Build completed successfully at 2017/03/26 23:21:03.  Total time: 00:00:30.1499
 
 </buildStep>
 </shfbBuild>

@@ -38,6 +38,7 @@
   </PropertyGroup>
   <ItemGroup />
   <ItemGroup>
+    <Compile Include="Get-ContentBlock.Tests.ps1" />
     <Compile Include="Invoke-Process.Tests.ps1" />
     <Compile Include="Get-HtmlString.Tests.ps1" />
     <Compile Include="Set-PrivateProfileString.Tests.ps1" />

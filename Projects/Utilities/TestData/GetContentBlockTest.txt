@@ -1,0 +1,40 @@
+Line 1
+Line 2
+Line 3
+<!-- __START__ -->
+Line 5
+Line 6
+Line 7
+<!-- __END__ -->
+Line 8
+Line 9
+<div class="test1"> <!-- __TEST1__ -->
+Line 12
+Line 13
+<div class="test2"> <!-- __TEST2__ -->
+Line 15
+Line 16
+</div> <!-- /TEST1__ -->
+Line 18
+Line 19
+</div> <!-- /TEST2__ -->
+Line 21
+Line 22
+Line 23
+Line 24
+Line 25
+<div class="test3"> <!-- __TEST3__ -->
+Line 27
+Line 28
+<div class="test4"> <!-- __TEST4__ -->
+Line 30
+Line 31
+</div> <!-- /TEST4__ -->
+Line 33
+Line 34
+</div> <!-- /TEST3__ -->
+Line 36
+Line 37
+<!-- __LAST__ -->
+Line 40
+Line 41
