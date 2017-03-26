@@ -4,8 +4,9 @@
 
   <!-- Include -->
   <?include ..\Version\InstallerGUID.wxi?>
-  <?include ..\Version\InstallerInfo.wxi?>
   <?include ..\Version\InstallerVersionInfo.wxi?>
+  <?include ..\Common\InstallerInfo.wxi?>
+
 
   <!-- GUID -->
   <?define GUID_UpgradeCode="$(var.GUID_PSUtilitiesSetupBootstrapper_UpgradeCode)"?>

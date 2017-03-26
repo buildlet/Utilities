@@ -433,9 +433,152 @@ Function Get-AuthenticodeSignerName {
 
     Process {
         if (($cert = (Get-AuthenticodeSignature -FilePath $FilePath).SignerCertificate) -ne $null) {
-            return $cert.Subject.`
-				Split(@('O='), [System.StringSplitOptions]::RemoveEmptyEntries)[1].`
-				Split(@(', '), [System.StringSplitOptions]::RemoveEmptyEntries)[0]
+			$cert.Subject -split ',' | ? { $_ -like 'CN=*' } | % { return ($_ -split 'CN=')[1] }
+        }
+    }
+}
+
+####################################################################################################
+Function Get-ContentBlock
+{
+	<#
+        .SYNOPSIS
+            指定した検索パターンを含む開始行と終了行の間に含まれるテキスト ブロックを取得します。
+
+        .DESCRIPTION
+            Get-ContentBlock コマンドレットは Get-Content コマンドレットによって取得したテキスト 
+			データの中から、指定した検索パターンが match 比較演算によってマッチする開始行、
+			および、終了行の間に含まれるテキスト ブロックを取得します。
+
+        .PARAMETER InputObject
+			入力テキスト データを指定します。
+
+        .PARAMETER Path
+            入力テキスト ファイルのパスを指定します。
+
+        .PARAMETER StartPattern
+			取り出すテキスト ブロックの開始行の検索パターンを指定します。
+
+        .PARAMETER EndPattern
+			取り出すテキスト ブロックの終了行の検索パターンを指定します。
+
+        .PARAMETER ExcludeStartLine
+			StartPattern パラメーターにマッチする開始行を、出力に含めたくない場合に指定します。
+
+        .PARAMETER ExcludeEndLine
+			EndPattern パラメーターにマッチする終了行を、出力に含めたくない場合に指定します。
+
+        .PARAMETER Encoding
+			使用する文字エンコードの種類を指定します。
+
+        .INPUTS
+            System.String[]
+            パイプを使用して、コンテンツ (InputObject パラメーター) を Get-ContentBlock 
+			コマンドレットに渡すことができます。
+
+        .OUTPUTS
+            System.String[]
+            Get-ContentBlock コマンドレットは System.String[] を返します。
+
+        .EXAMPLE
+			Get-ContentBlock -Path .\Test.html -StartPattern '<!-- __START__ -->' -EndPattern '<!-- __END__ -->'
+
+        .EXAMPLE
+			Get-ContentBlock -InputObject (Get-Content -Path .\Test.html) -StartPattern '<!-- __START__ -->'
+
+        .EXAMPLE
+			Get-Content -Path .\Test.html | Get-ContentBlock -EndPattern '<!-- __END__ -->'
+	#>
+
+    [CmdletBinding(DefaultParameterSetName = 'InputObject')]
+    Param (
+        [Parameter(ParameterSetName = 'InputObject', Position = 0, Mandatory = $true, ValueFromPipeline = $true)]
+        [string[]]$InputObject,
+
+        [Parameter(ParameterSetName = 'Path', Position = 0, Mandatory = $true)]
+        [string]$Path,
+        
+        [Parameter()]
+        [string]$StartPattern,
+
+        [Parameter()]
+        [string]$EndPattern,
+
+        [Parameter()]
+        [switch]$ExcludeStartLine,
+
+        [Parameter()]
+        [switch]$ExcludeEndLine,
+
+        [Parameter()]
+        [Microsoft.PowerShell.Commands.FileSystemCmdletProviderEncoding]$Encoding
+    )
+
+    Begin {
+
+        if ($PSCmdlet.ParameterSetName -eq 'InputObject') {
+
+            # Set $bypass Flag
+            if ([string]::IsNullOrEmpty($StartPattern)) {
+                $bypass = $true
+            }
+            else {
+                $bypass = $false
+            }
+        }
+    }
+
+    Process {
+
+        if ($PSCmdlet.ParameterSetName -eq 'Path') {
+
+            # Set $bypass Flag
+            if ([string]::IsNullOrEmpty($StartPattern)) {
+                $bypass = $true
+            }
+            else {
+                $bypass = $false
+            }
+
+            # Get-Content
+            if ($Encoding -eq $null) {
+                $content = Get-Content -Path $Path
+            }
+            else {
+                $content = Get-Content -Path $Path -Encoding $Encoding
+            }
+        }
+        elseif ($PSCmdlet.ParameterSetName -eq 'InputObject') {
+
+            $content = $InputObject
+        }
+
+
+		# Read & Output Content
+        $content | % {
+                    
+            $line = $_
+
+            # Check Pattern
+            if (-not ([string]::IsNullOrEmpty($StartPattern)) -and ($line -match $StartPattern)) {
+
+                # Turn ON $bypass Flag
+                $bypass = $true
+
+                # Append Start Line
+                if (-not $ExcludeStartLine) { return $line }
+            }
+            elseif (-not ([string]::IsNullOrEmpty($EndPattern)) -and ($line -match $EndPattern)) {
+
+                # Turn OFF $bypass Flag
+                $bypass = $false
+
+                # Append Start Line
+                if (-not $ExcludeEndLine) { return $line }
+            }
+            else {
+                if ($bypass) { return $line }
+            }
         }
     }
 }

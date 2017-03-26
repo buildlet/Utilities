@@ -139,6 +139,10 @@ namespace BUILDLet.Utilities
         /// 必要に応じて、取り出した要素から、再度、目的の要素を取り出してください。
         /// </para>
         /// </returns>
+        /// <remarks>
+        /// 取り出した要素の値に含まれるタブ文字 ("\t") は空白文字に置き換えられます。
+        /// また、改行コード ("\n" および "\r") は削除されます。
+        /// </remarks>
         public static string[] GetElements(string content, string name, string[,] attributes = null, bool strict = true)
         {
             // Validataion

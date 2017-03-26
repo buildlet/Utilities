@@ -34,3 +34,7 @@ if (($host.ui.PromptForChoice($list, "これらのディレクトリを削除し
 		Remove-Item -Path $_ -Recurse -Force -Verbose #-WhatIf
 	}
 }
+
+# Wait to Exit
+"Press any key to exit." | Write-Host
+[void]$host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")

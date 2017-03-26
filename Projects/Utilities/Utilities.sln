@@ -52,6 +52,7 @@ Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "BUILDLet.Utilities.PowerShe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{A9E5B254-46C7-4B57-95CB-216FC4A2C688}"
 	ProjectSection(SolutionItems) = preProject
+		Common\InstallerInfo.wxi = Common\InstallerInfo.wxi
 		Common\Post-BuildEventTemplate.cmd = Common\Post-BuildEventTemplate.cmd
 		Common\PowerShellModuleTestInitializeTemplate.ps1 = Common\PowerShellModuleTestInitializeTemplate.ps1
 	EndProjectSection
@@ -86,7 +87,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Version", "Version", "{4D130734-FFEE-4D71-9BBC-F3985F6AE14E}"
 	ProjectSection(SolutionItems) = preProject
 		Version\InstallerGUID.wxi = Version\InstallerGUID.wxi
-		Version\InstallerInfo.wxi = Version\InstallerInfo.wxi
 		Version\InstallerVersionInfo.wxi = Version\InstallerVersionInfo.wxi
 	EndProjectSection
 EndProject

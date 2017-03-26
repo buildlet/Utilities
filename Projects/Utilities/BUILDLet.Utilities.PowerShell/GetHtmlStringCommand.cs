@@ -195,8 +195,12 @@ namespace BUILDLet.Utilities.PowerShell.Commands
                         // Verbose Output
                         this.WriteVerbose(verbose_message.AppendFormat("要素 <{0}> の値を検索します。", this.Name).ToString());
 
-                        // Process and Output
-                        this.WriteObject(SimpleHtmlParser.GetElements(content, this.Name, strict: this.Strict));
+                        // Get Value(s) of HTML Element
+                        string[] values = SimpleHtmlParser.GetElements(content, this.Name, strict: this.Strict);
+
+                        // Output
+                        if (values.Length == 1) { this.WriteObject(values[0]);  }
+                        else { this.WriteObject(values); }
                     }
                     else
                     {
@@ -221,8 +225,12 @@ namespace BUILDLet.Utilities.PowerShell.Commands
                         }
                         this.WriteVerbose(verbose_message.Append(")").ToString());
 
-                        // Process and Output
-                        this.WriteObject(SimpleHtmlParser.GetElements(content, this.Name, attributes, this.Strict));
+                        // Get Value(s) of HTML Element
+                        string[] values = SimpleHtmlParser.GetElements(content, this.Name, attributes, this.Strict);
+
+                        // Output
+                        if (values.Length == 1) { this.WriteObject(values[0]); }
+                        else { this.WriteObject(values); }
                     }
                 }
             }
