@@ -1,9 +1,10 @@
-# Utilities Class Library
+# Utilities Class Library, Tools and PowerShell Module
 
 ## Version 2.2.0.0
 
 ## 概要
-Windows クラスライブラリとツール、および PowerShell モジュールが含まれます。
+Windows クラスライブラリとツール、および PowerShell モジュールが含まれます。  
+詳細はヘルプを参照してください。
 
 ## 変更履歴
 
