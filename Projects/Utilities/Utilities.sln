@@ -50,19 +50,6 @@ Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "BUILDLet.Utilities.PowerShe
 		{919EEC56-F7C7-482E-BB49-09A89B15C443} = {919EEC56-F7C7-482E-BB49-09A89B15C443}
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{A9E5B254-46C7-4B57-95CB-216FC4A2C688}"
-	ProjectSection(SolutionItems) = preProject
-		Common\InstallerInfo.wxi = Common\InstallerInfo.wxi
-		Common\Post-BuildEventTemplate.cmd = Common\Post-BuildEventTemplate.cmd
-		Common\PowerShellModuleTestInitializeTemplate.ps1 = Common\PowerShellModuleTestInitializeTemplate.ps1
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Properties", "Properties", "{64187672-7773-43EC-8366-555E04FC0D11}"
-	ProjectSection(SolutionItems) = preProject
-		Version\Properties\AssemblyVersionInfo.cs = Version\Properties\AssemblyVersionInfo.cs
-		Version\Properties\PowerShellAssemblyVersionInfo.cs = Version\Properties\PowerShellAssemblyVersionInfo.cs
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Link", "Link", "{D3B9D296-A9BE-4CC7-8AE2-8789E8D9C9DA}"
 	ProjectSection(SolutionItems) = preProject
 		BUILDLet.Utilities.PowerShellModule\BUILDLet.Utilities.PowerShell.psd1 = BUILDLet.Utilities.PowerShellModule\BUILDLet.Utilities.PowerShell.psd1
@@ -79,15 +66,44 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestData", "TestData", "{D7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestResults", "TestResults", "{32E819B0-0CD8-44B0-AFB7-DE5BF27DC6FF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Link", "Link", "{2E14686B-826E-4E39-A9C7-E1AB6FCC96DC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Licenses", "Licenses", "{8D309236-D328-4946-B3DE-3C68768C2BF0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Properties", "Properties", "{B3052C60-4101-40A9-BEE3-648EF0C8869C}"
+	ProjectSection(SolutionItems) = preProject
+		Properties\AssemblyVersionInfo.cs = Properties\AssemblyVersionInfo.cs
+		Properties\InstallerGUID.wxi = Properties\InstallerGUID.wxi
+		Properties\InstallerProductInfo.wxi = Properties\InstallerProductInfo.wxi
+		Properties\InstallerResourceInfo.wxi = Properties\InstallerResourceInfo.wxi
+		Properties\InstallerVersionInfo.wxi = Properties\InstallerVersionInfo.wxi
+		Properties\PowerShellAssemblyVersionInfo.cs = Properties\PowerShellAssemblyVersionInfo.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{74D728D9-18E2-4898-8935-1A7D2E1E7B9C}"
+	ProjectSection(SolutionItems) = preProject
+		Templates\Post-BuildEvent.Template.cmd = Templates\Post-BuildEvent.Template.cmd
+		Templates\PowerShellModuleDeployTemplate.ps1 = Templates\PowerShellModuleDeployTemplate.ps1
+		Templates\PowerShellModuleTestInitialize.Template.ps1 = Templates\PowerShellModuleTestInitialize.Template.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Link", "Link", "{A7897152-0852-4B88-B2B2-DF34154D7922}"
 	ProjectSection(SolutionItems) = preProject
 		Clean.ps1 = Clean.ps1
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Version", "Version", "{4D130734-FFEE-4D71-9BBC-F3985F6AE14E}"
-	ProjectSection(SolutionItems) = preProject
-		Version\InstallerGUID.wxi = Version\InstallerGUID.wxi
-		Version\InstallerVersionInfo.wxi = Version\InstallerVersionInfo.wxi
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUILDLet.Utilities.WOL", "BUILDLet.Utilities.WOL\BUILDLet.Utilities.WOL.csproj", "{B87844A5-3BB1-476D-992E-BD4A143DA4E1}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "BUILDLet.UtilitiesSetup", "BUILDLet.UtilitiesSetup\BUILDLet.UtilitiesSetup.wixproj", "{21F701FA-C03E-41E0-839A-39872AA98716}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9B6C9609-DEDA-4C29-9EA9-7A067BF90590} = {9B6C9609-DEDA-4C29-9EA9-7A067BF90590}
+		{8B890F79-4EB4-49E7-8EE9-64110624CDDC} = {8B890F79-4EB4-49E7-8EE9-64110624CDDC}
+		{7955897B-7BB9-46A7-A4D3-039F0433C983} = {7955897B-7BB9-46A7-A4D3-039F0433C983}
+		{B87844A5-3BB1-476D-992E-BD4A143DA4E1} = {B87844A5-3BB1-476D-992E-BD4A143DA4E1}
+		{E40A3CC0-5FD4-4E0D-85CD-B1C0EA6B3FAF} = {E40A3CC0-5FD4-4E0D-85CD-B1C0EA6B3FAF}
+	EndProjectSection
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "BUILDLet.UtilitiesSetupBootstrapper", "BUILDLet.UtilitiesSetupBootstrapper\BUILDLet.UtilitiesSetupBootstrapper.wixproj", "{86008A55-2DFD-4B74-8ADD-7F3D22AC292D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{21F701FA-C03E-41E0-839A-39872AA98716} = {21F701FA-C03E-41E0-839A-39872AA98716}
 	EndProjectSection
 EndProject
 Global
@@ -276,17 +292,60 @@ Global
 		{52CD87BC-1ED8-4EA5-8016-5491198679E4}.Release|Win32.Build.0 = Release|x86
 		{52CD87BC-1ED8-4EA5-8016-5491198679E4}.Release|x86.ActiveCfg = Release|x86
 		{52CD87BC-1ED8-4EA5-8016-5491198679E4}.Release|x86.Build.0 = Release|x86
+		{B87844A5-3BB1-476D-992E-BD4A143DA4E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B87844A5-3BB1-476D-992E-BD4A143DA4E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B87844A5-3BB1-476D-992E-BD4A143DA4E1}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B87844A5-3BB1-476D-992E-BD4A143DA4E1}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B87844A5-3BB1-476D-992E-BD4A143DA4E1}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{B87844A5-3BB1-476D-992E-BD4A143DA4E1}.Debug|Win32.Build.0 = Debug|Any CPU
+		{B87844A5-3BB1-476D-992E-BD4A143DA4E1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B87844A5-3BB1-476D-992E-BD4A143DA4E1}.Debug|x86.Build.0 = Debug|Any CPU
+		{B87844A5-3BB1-476D-992E-BD4A143DA4E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B87844A5-3BB1-476D-992E-BD4A143DA4E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B87844A5-3BB1-476D-992E-BD4A143DA4E1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B87844A5-3BB1-476D-992E-BD4A143DA4E1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B87844A5-3BB1-476D-992E-BD4A143DA4E1}.Release|Win32.ActiveCfg = Release|Any CPU
+		{B87844A5-3BB1-476D-992E-BD4A143DA4E1}.Release|Win32.Build.0 = Release|Any CPU
+		{B87844A5-3BB1-476D-992E-BD4A143DA4E1}.Release|x86.ActiveCfg = Release|Any CPU
+		{B87844A5-3BB1-476D-992E-BD4A143DA4E1}.Release|x86.Build.0 = Release|Any CPU
+		{21F701FA-C03E-41E0-839A-39872AA98716}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{21F701FA-C03E-41E0-839A-39872AA98716}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{21F701FA-C03E-41E0-839A-39872AA98716}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{21F701FA-C03E-41E0-839A-39872AA98716}.Debug|Win32.ActiveCfg = Debug|x86
+		{21F701FA-C03E-41E0-839A-39872AA98716}.Debug|Win32.Build.0 = Debug|x86
+		{21F701FA-C03E-41E0-839A-39872AA98716}.Debug|x86.ActiveCfg = Debug|x86
+		{21F701FA-C03E-41E0-839A-39872AA98716}.Debug|x86.Build.0 = Debug|x86
+		{21F701FA-C03E-41E0-839A-39872AA98716}.Release|Any CPU.ActiveCfg = Release|x86
+		{21F701FA-C03E-41E0-839A-39872AA98716}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{21F701FA-C03E-41E0-839A-39872AA98716}.Release|Mixed Platforms.Build.0 = Release|x86
+		{21F701FA-C03E-41E0-839A-39872AA98716}.Release|Win32.ActiveCfg = Release|x86
+		{21F701FA-C03E-41E0-839A-39872AA98716}.Release|Win32.Build.0 = Release|x86
+		{21F701FA-C03E-41E0-839A-39872AA98716}.Release|x86.ActiveCfg = Release|x86
+		{21F701FA-C03E-41E0-839A-39872AA98716}.Release|x86.Build.0 = Release|x86
+		{86008A55-2DFD-4B74-8ADD-7F3D22AC292D}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{86008A55-2DFD-4B74-8ADD-7F3D22AC292D}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{86008A55-2DFD-4B74-8ADD-7F3D22AC292D}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{86008A55-2DFD-4B74-8ADD-7F3D22AC292D}.Debug|Win32.ActiveCfg = Debug|x86
+		{86008A55-2DFD-4B74-8ADD-7F3D22AC292D}.Debug|Win32.Build.0 = Debug|x86
+		{86008A55-2DFD-4B74-8ADD-7F3D22AC292D}.Debug|x86.ActiveCfg = Debug|x86
+		{86008A55-2DFD-4B74-8ADD-7F3D22AC292D}.Debug|x86.Build.0 = Debug|x86
+		{86008A55-2DFD-4B74-8ADD-7F3D22AC292D}.Release|Any CPU.ActiveCfg = Release|x86
+		{86008A55-2DFD-4B74-8ADD-7F3D22AC292D}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{86008A55-2DFD-4B74-8ADD-7F3D22AC292D}.Release|Mixed Platforms.Build.0 = Release|x86
+		{86008A55-2DFD-4B74-8ADD-7F3D22AC292D}.Release|Win32.ActiveCfg = Release|x86
+		{86008A55-2DFD-4B74-8ADD-7F3D22AC292D}.Release|Win32.Build.0 = Release|x86
+		{86008A55-2DFD-4B74-8ADD-7F3D22AC292D}.Release|x86.ActiveCfg = Release|x86
+		{86008A55-2DFD-4B74-8ADD-7F3D22AC292D}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{64187672-7773-43EC-8366-555E04FC0D11} = {4D130734-FFEE-4D71-9BBC-F3985F6AE14E}
-		{D3B9D296-A9BE-4CC7-8AE2-8789E8D9C9DA} = {4D130734-FFEE-4D71-9BBC-F3985F6AE14E}
-		{2E14686B-826E-4E39-A9C7-E1AB6FCC96DC} = {A9E5B254-46C7-4B57-95CB-216FC4A2C688}
+		{D3B9D296-A9BE-4CC7-8AE2-8789E8D9C9DA} = {B3052C60-4101-40A9-BEE3-648EF0C8869C}
+		{A7897152-0852-4B88-B2B2-DF34154D7922} = {74D728D9-18E2-4898-8935-1A7D2E1E7B9C}
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 14
+		SccNumberOfProjects = 17
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://dsakam.visualstudio.com/
 		SccLocalPath0 = .
@@ -329,5 +388,14 @@ Global
 		SccProjectUniqueName13 = BUILDLet.Utilities.PowerShellModuleSetupBootstrapper\\BUILDLet.Utilities.PowerShellModuleSetupBootstrapper.wixproj
 		SccProjectName13 = BUILDLet.Utilities.PowerShellModuleSetupBootstrapper
 		SccLocalPath13 = BUILDLet.Utilities.PowerShellModuleSetupBootstrapper
+		SccProjectUniqueName14 = BUILDLet.Utilities.WOL\\BUILDLet.Utilities.WOL.csproj
+		SccProjectName14 = BUILDLet.Utilities.WOL
+		SccLocalPath14 = BUILDLet.Utilities.WOL
+		SccProjectUniqueName15 = BUILDLet.UtilitiesSetup\\BUILDLet.UtilitiesSetup.wixproj
+		SccProjectName15 = BUILDLet.UtilitiesSetup
+		SccLocalPath15 = BUILDLet.UtilitiesSetup
+		SccProjectUniqueName16 = BUILDLet.UtilitiesSetupBootstrapper\\BUILDLet.UtilitiesSetupBootstrapper.wixproj
+		SccProjectName16 = BUILDLet.UtilitiesSetupBootstrapper
+		SccLocalPath16 = BUILDLet.UtilitiesSetupBootstrapper
 	EndGlobalSection
 EndGlobal

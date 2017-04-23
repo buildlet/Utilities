@@ -1,7 +1,7 @@
 ﻿BUILDLet Utilities PowerShell Module
 ====================================
 
-Version 2.1.0.0
+Version 2.2.0.0
 ---------------
 
 概要
@@ -33,7 +33,7 @@ PSUtilitiesSetup.exe を実行してください。
   2. Microsoft .NET Framework 4.5
 
 
-Windows 10 Pro (1607) x64 および Windows 7 Ultimate Service Pack 1x64 で動作を確認しています。
+Windows 10 Pro Version 1607 (x64) および Windows 7 Ultimate Service Pack 1 (x64) で動作を確認しています。
 
 
 使用準備
@@ -120,6 +120,9 @@ BUILDLet.Utilities.PowerShell をインポートすると、次のコマンド (
   19. New-Directory (Function)  
      指定されたパスにディレクトリを作成します。
 
+  20. Get-ContentBlock (Function)  
+     指定した検索パターンを含む開始行と終了行の間に含まれるテキスト ブロックを取得します。
+
 
 ライセンス
 ----------
@@ -135,9 +138,21 @@ http://dotnetzip.codeplex.com/license
 DotNetZip Library については、下記の URL を参照してください。  
 http://dotnetzip.codeplex.com/
 
+Microsoft Public License (Ms-PL) については、下記 URL を参照してください。  
+https://msdn.microsoft.com/ja-jp/library/gg592960.aspx
+
 
 変更履歴
 --------
+
+* Version 2.2.0.0 (2017/04/23)  
+  ディレクトリのエントリーを含まない Source に対する Expand-ZipFile Function 
+  の出力が正しくない不具合を修正しました。  
+  また、Expand-ZipFile Function の既定の出力をルート エントリーとし、
+  SuppressOutput パラメーターを追加しました。 
+
+* Version 2.1.1.0 (2017/04/02)  
+  (BUILDLet WOL Version 2.1.1.0 のための内部リリース)  
 
 * Version 2.1.0.0 (2017/03/26)  
   (BUILDLet PackageMaker Tool Kit Version 2.1.0.0 のためのリリース)  

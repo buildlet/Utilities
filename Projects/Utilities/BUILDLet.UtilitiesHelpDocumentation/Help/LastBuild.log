@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2016.5.28.0" projectFile="C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\BUILDLet.UtilitiesHelpDocumentation.shfbproj" started="2017/03/26 23:20:33">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2016.5.28.0" projectFile="C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\BUILDLet.UtilitiesHelpDocumentation.shfbproj" started="2017/04/23 18:02:24">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
 Searching for HTML Help 1 compiler...
 Found HTML Help 1 compiler in &#39;C:\Program Files (x86)\HTML Help Workshop\&#39;
 Locating components in the following folder(s):
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation
     C:\ProgramData\EWSoftware\Sandcastle Help File Builder\Components and Plug-Ins\
     C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\
 Using framework reflection data for &#39;.NET Framework 4.5&#39; located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Data\.NETFramework&#39;
@@ -18,40 +18,40 @@ Portions Copyright &#169; 2014, Sam Harwell, All Rights Reserved
 </buildStep>
 <buildStep step="ValidatingDocumentationSources">
 Validating and copying documentation source information
-Source: C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.Utilities\BUILDLet.Utilities.csproj
-    Found project &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.Utilities\BUILDLet.Utilities.csproj&#39;
-Source: C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.Utilities.PInvoke\BUILDLet.Utilities.PInvoke.csproj
-    Found project &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.Utilities.PInvoke\BUILDLet.Utilities.PInvoke.csproj&#39;
-Source: C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.Utilities.WPF\BUILDLet.Utilities.WPF.csproj
-    Found project &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.Utilities.WPF\BUILDLet.Utilities.WPF.csproj&#39;
+Source: C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.Utilities\BUILDLet.Utilities.csproj
+    Found project &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.Utilities\BUILDLet.Utilities.csproj&#39;
+Source: C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.Utilities.PInvoke\BUILDLet.Utilities.PInvoke.csproj
+    Found project &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.Utilities.PInvoke\BUILDLet.Utilities.PInvoke.csproj&#39;
+Source: C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.Utilities.WPF\BUILDLet.Utilities.WPF.csproj
+    Found project &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.Utilities.WPF\BUILDLet.Utilities.WPF.csproj&#39;
 
 Parsing project files
-    Found assembly &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.Utilities\bin\Release\BUILDLet.Utilities.dll&#39;
-    Found assembly &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.Utilities.PInvoke\bin\Release\BUILDLet.Utilities.PInvoke.dll&#39;
-    Found assembly &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.Utilities.WPF\bin\Release\BUILDLet.Utilities.WPF.dll&#39;
+    Found assembly &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.Utilities\bin\Release\BUILDLet.Utilities.dll&#39;
+    Found assembly &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.Utilities.PInvoke\bin\Release\BUILDLet.Utilities.PInvoke.dll&#39;
+    Found assembly &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.Utilities.WPF\bin\Release\BUILDLet.Utilities.WPF.dll&#39;
 
 References to include (excluding framework assemblies):
     None
 
 Copying XML comments files
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.Utilities\bin\Release\BUILDLet.Utilities.XML -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\BUILDLet.Utilities.XML
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.Utilities.PInvoke\bin\Release\BUILDLet.Utilities.PInvoke.XML -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\BUILDLet.Utilities.PInvoke.XML
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.Utilities.WPF\bin\Release\BUILDLet.Utilities.WPF.XML -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\BUILDLet.Utilities.WPF.XML
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.Utilities\bin\Release\BUILDLet.Utilities.XML -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\BUILDLet.Utilities.XML
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.Utilities.PInvoke\bin\Release\BUILDLet.Utilities.PInvoke.XML -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\BUILDLet.Utilities.PInvoke.XML
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.Utilities.WPF\bin\Release\BUILDLet.Utilities.WPF.XML -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\BUILDLet.Utilities.WPF.XML
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, 英語 (米国))...
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
-</plugIn>    Last step completed in 00:00:00.0250
+</plugIn>    Last step completed in 00:00:00.0720
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00.0165
+    Last step completed in 00:00:00.0135
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe - GenerateRefInfo.proj]
-2017/03/26 23:20:34 にビルドを開始しました。
-ノード 1 上のプロジェクト &quot;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\GenerateRefInfo.proj&quot; (既定のターゲット)。
+2017/04/23 18:02:26 にビルドを開始しました。
+ノード 1 上のプロジェクト &quot;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\GenerateRefInfo.proj&quot; (既定のターゲット)。
 PrepareForBuild:
   ディレクトリ &quot;obj\Debug\&quot; を作成しています。
 GenerateRefInfo:
@@ -65,18 +65,18 @@ GenerateRefInfo:
   Copyright c 2006-2016, Microsoft Corporation, All Rights Reserved.
   Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\MergeDuplicates.xsl&#39;.
-プロジェクト &quot;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\GenerateRefInfo.proj&quot; (既定のターゲット) のビルドが完了しました。
+プロジェクト &quot;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\GenerateRefInfo.proj&quot; (既定のターゲット) のビルドが完了しました。
 
 ビルドに成功しました。
 
-経過時間 00:00:00.98
-    Last step completed in 00:00:01.4795
+経過時間 00:00:01.28
+    Last step completed in 00:00:01.5655
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe - TransformManifest.proj]
-2017/03/26 23:20:36 にビルドを開始しました。
-ノード 1 上のプロジェクト &quot;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\TransformManifest.proj&quot; (既定のターゲット)。
+2017/04/23 18:02:27 にビルドを開始しました。
+ノード 1 上のプロジェクト &quot;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\TransformManifest.proj&quot; (既定のターゲット)。
 TransformManifest:
   XslTransform (v2016.5.28.0)
   Copyright c 2006-2016, Microsoft Corporation, All Rights Reserved.
@@ -91,16 +91,16 @@ TransformManifest:
   Copyright c 2006-2016, Microsoft Corporation, All Rights Reserved.
   Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\ReflectionToManifest.xsl&#39;.
-プロジェクト &quot;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\TransformManifest.proj&quot; (既定のターゲット) のビルドが完了しました。
+プロジェクト &quot;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\TransformManifest.proj&quot; (既定のターゲット) のビルドが完了しました。
 
 ビルドに成功しました。
 
-経過時間 00:00:01.39
-    Last step completed in 00:00:01.5934
+経過時間 00:00:01.10
+    Last step completed in 00:00:01.3320
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.0475
+    Last step completed in 00:00:00.0510
 </buildStep>
 <buildStep step="CopyConceptualContent">
 Copying conceptual content...
@@ -109,122 +109,126 @@ Checking for other token files...
 Checking for code snippets files...
 Copying images and creating the media map file...
 Generating conceptual topic files
-    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\About.aml&#39;
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\About.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\ef30545a-4b9e-45f9-90ec-aed447fd0eb0.xml
-    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\Environment.aml&#39;
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\Environment.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\92304369-3678-4898-aa27-aee438700dd2.xml
-    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\VersionHistory.aml&#39;
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\VersionHistory.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\423f65ea-763f-4a5d-9a97-d3c466efc880.xml
-    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.0.0.aml&#39;
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.0.0.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\068f897c-a2db-4dec-9c3c-7932fcbe1c77.xml
-    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.1.0.aml&#39;
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.1.0.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\4a070a5a-88fc-45b0-8c6a-ad383a02bad7.xml
-    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.2.0.aml&#39;
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.2.0.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\598f6137-893a-424c-b810-eb3d8e102fc5.xml
-    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.3.0.aml&#39;
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.3.0.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\bc972919-ba04-4c89-bc2f-e3820e40a97c.xml
-    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.4.0.aml&#39;
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.4.0.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\29fdffa7-5862-4d42-bc66-2ccdc2ce75ec.xml
-    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.5.0.aml&#39;
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.5.0.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\bcae7373-89f3-488d-bbfc-82a5b8147e92.xml
-    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.6.0.aml&#39;
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.6.0.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\65d7bb88-f006-44f9-b65c-c4a6cafb67b4.xml
-    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.7.0.aml&#39;
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.7.0.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\7f113f4c-77c0-41b9-9c18-f7a6e887cc17.xml
-    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.1.0.0.aml&#39;
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.1.0.0.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\ea5e4561-aec3-4d47-b3dd-caec221518b3.xml
-    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.1.1.0.aml&#39;
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.1.1.0.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\8a33849c-b76d-4c20-9218-efedda1276c5.xml
-    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.1.2.0.aml&#39;
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.1.2.0.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\c46a565d-3975-461d-9472-a649e9a8f791.xml
-    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.2.0.0.aml&#39;
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.2.0.0.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\b75dcd94-ff73-4000-973c-43693b215646.xml
-    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.3.0.0.aml&#39;
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.3.0.0.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\064520b6-5a54-491e-bf97-901faabaab30.xml
-    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.4.0.0.aml&#39;
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.4.0.0.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\e3f61d88-20ef-4c2e-9c8d-2b7f28a09fba.xml
-    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v2.0.0.0.aml&#39;
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v2.0.0.0.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\ef9d815b-b63d-4678-9cbe-2823aee730f6.xml
-    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v2.0.1.0.aml&#39;
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v2.0.1.0.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\e149039e-30ad-4b84-91c1-ab1fd13b262d.xml
-    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v2.1.0.0.aml&#39;
-    C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v2.1.0.0.aml -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\871f9883-a983-4128-9610-0ca40d69140d.xml
-    Last step completed in 00:00:00.3695
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\About.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\About.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\ef30545a-4b9e-45f9-90ec-aed447fd0eb0.xml
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\Environment.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\Environment.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\92304369-3678-4898-aa27-aee438700dd2.xml
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\VersionHistory.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\VersionHistory.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\423f65ea-763f-4a5d-9a97-d3c466efc880.xml
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.0.0.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.0.0.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\068f897c-a2db-4dec-9c3c-7932fcbe1c77.xml
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.1.0.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.1.0.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\4a070a5a-88fc-45b0-8c6a-ad383a02bad7.xml
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.2.0.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.2.0.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\598f6137-893a-424c-b810-eb3d8e102fc5.xml
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.3.0.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.3.0.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\bc972919-ba04-4c89-bc2f-e3820e40a97c.xml
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.4.0.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.4.0.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\29fdffa7-5862-4d42-bc66-2ccdc2ce75ec.xml
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.5.0.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.5.0.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\bcae7373-89f3-488d-bbfc-82a5b8147e92.xml
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.6.0.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.6.0.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\65d7bb88-f006-44f9-b65c-c4a6cafb67b4.xml
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.7.0.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.0.7.0.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\7f113f4c-77c0-41b9-9c18-f7a6e887cc17.xml
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.1.0.0.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.1.0.0.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\ea5e4561-aec3-4d47-b3dd-caec221518b3.xml
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.1.1.0.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.1.1.0.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\8a33849c-b76d-4c20-9218-efedda1276c5.xml
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.1.2.0.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.1.2.0.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\c46a565d-3975-461d-9472-a649e9a8f791.xml
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.2.0.0.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.2.0.0.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\b75dcd94-ff73-4000-973c-43693b215646.xml
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.3.0.0.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.3.0.0.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\064520b6-5a54-491e-bf97-901faabaab30.xml
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.4.0.0.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v1.4.0.0.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\e3f61d88-20ef-4c2e-9c8d-2b7f28a09fba.xml
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v2.0.0.0.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v2.0.0.0.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\ef9d815b-b63d-4678-9cbe-2823aee730f6.xml
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v2.0.1.0.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v2.0.1.0.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\e149039e-30ad-4b84-91c1-ab1fd13b262d.xml
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v2.1.0.0.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v2.1.0.0.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\871f9883-a983-4128-9610-0ca40d69140d.xml
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v2.1.1.0.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v2.1.1.0.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\326388af-7ef9-4575-a4b5-63d37eaa5043.xml
+    Parsing topic file &#39;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v2.2.0.0.aml&#39;
+    C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Content\VersionHistory\v2.2.0.0.aml -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\ddueXml\33488909-aa00-4b79-82eb-68009741298b.xml
+    Last step completed in 00:00:00.3630
 </buildStep>
 <buildStep step="CreateConceptualTopicConfigs">
 Creating conceptual topic configuration files...
     Companion files
     _ContentMetadata_.xml
     Merging topic IDs into manifest.xml
-    Last step completed in 00:00:00.1405
+    Last step completed in 00:00:00.1080
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
-C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\icons\Help.png -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\Help.png
-    Last step completed in 00:00:00.0120
+C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\icons\Help.png -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\Help.png
+    Last step completed in 00:00:00.0100
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00.0005
+    Last step completed in 00:00:00.0010
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe - GenerateIntermediateTOC.proj]
-2017/03/26 23:20:38 にビルドを開始しました。
-ノード 1 上のプロジェクト &quot;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\GenerateIntermediateTOC.proj&quot; (既定のターゲット)。
+2017/04/23 18:02:29 にビルドを開始しました。
+ノード 1 上のプロジェクト &quot;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\GenerateIntermediateTOC.proj&quot; (既定のターゲット)。
 GenerateIntermediateTOC:
   XslTransform (v2016.5.28.0)
   Copyright c 2006-2016, Microsoft Corporation, All Rights Reserved.
   Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\\ProductionTransforms\CreateVSToc.xsl&#39;.
-プロジェクト &quot;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\GenerateIntermediateTOC.proj&quot; (既定のターゲット) のビルドが完了しました。
+プロジェクト &quot;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\GenerateIntermediateTOC.proj&quot; (既定のターゲット) のビルドが完了しました。
 
 ビルドに成功しました。
 
-経過時間 00:00:00.16
+経過時間 00:00:00.15
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:00.8583
+    Last step completed in 00:00:00.3460
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00.2999
+    Last step completed in 00:00:00.3200
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
-C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\sandcastle.config
+C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\sandcastle.config
   Updating reference topic configurations.
   Updating conceptual topic configurations.
     Removing unused ExampleComponent.
-    Last step completed in 00:00:00.0000
+    Last step completed in 00:00:00.0345
 </buildStep>
 <buildStep step="BuildTopics">
 Building help topics...
 [C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe - BuildTopics.proj]
-2017/03/26 23:20:39 にビルドを開始しました。
-ノード 1 上のプロジェクト &quot;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\BuildTopics.proj&quot; (既定のターゲット)。
+2017/04/23 18:02:30 にビルドを開始しました。
+ノード 1 上のプロジェクト &quot;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\BuildTopics.proj&quot; (既定のターゲット)。
 BuildTopics:
   BuildAssembler (v2016.5.28.0)
   Copyright c 2006-2016, Microsoft Corporation, All Rights Reserved.
   Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
   Loading configuration...
   Processing topics...
-  Processed 172 topic(s)
+  Processed 174 topic(s)
   CopyFromIndexComponent: &quot;metadata&quot; in-memory cache entries used: 1 of 15.
   ResolveArtLinksComponent: Copying media files...
   CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 11 of 15.
   CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 3 of 30.
-  SaveComponent: Waiting for the document writer task to finish (80 Help1 API file(s) remaining)...
-プロジェクト &quot;C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\BuildTopics.proj&quot; (既定のターゲット) のビルドが完了しました。
+  SaveComponent: Waiting for the document writer task to finish (86 Help1 API file(s) remaining)...
+プロジェクト &quot;C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\BuildTopics.proj&quot; (既定のターゲット) のビルドが完了しました。
 
 ビルドに成功しました。
 
-経過時間 00:00:16.09
-    Last step completed in 00:00:16.2959
+経過時間 00:00:17.05
+    Last step completed in 00:00:17.2560
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
-    Last step completed in 00:00:00.0156
+    Last step completed in 00:00:00.0310
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
@@ -235,78 +239,78 @@ E-Mail: Eric@EWoodruff.us
 
 Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
 
-Processing Help 1 files in C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1
-Processed 172 HTML files
+Processing Help 1 files in C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1
+Processed 174 HTML files
 Sorting keywords and generating See Also indices
-Saving HTML Help 1 keyword index to C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\BUILDLet.Utilities.hhk
-Saving HTML Help 1 table of contents to C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\BUILDLet.Utilities.hhc
-    Last step completed in 00:00:02.7750
+Saving HTML Help 1 keyword index to C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\BUILDLet.Utilities.hhk
+Saving HTML Help 1 table of contents to C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\BUILDLet.Utilities.hhc
+    Last step completed in 00:00:02.9720
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertCaution.png -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\AlertCaution.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertNote.png -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\AlertNote.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertSecurity.png -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\AlertSecurity.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CFW.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\CFW.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CodeExample.png -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\CodeExample.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\favicon.ico -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\favicon.ico
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privclass.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\privclass.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privdelegate.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\privdelegate.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privenumeration.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\privenumeration.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privevent.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\privevent.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privextension.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\privextension.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privfield.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\privfield.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privinterface.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\privinterface.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privmethod.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\privmethod.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privproperty.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\privproperty.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privstructure.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\privstructure.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protclass.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protclass.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protdelegate.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protdelegate.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protenumeration.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protenumeration.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protevent.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protevent.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protextension.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protextension.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protfield.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protfield.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protinterface.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protinterface.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protmethod.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protmethod.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protoperator.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protoperator.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protproperty.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protproperty.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protstructure.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protstructure.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubclass.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\pubclass.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubdelegate.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\pubdelegate.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubenumeration.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\pubenumeration.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubevent.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\pubevent.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubextension.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\pubextension.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubfield.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\pubfield.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubinterface.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\pubinterface.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubmethod.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\pubmethod.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\puboperator.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\puboperator.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubproperty.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\pubproperty.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubstructure.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\pubstructure.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionCollapsed.png -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\SectionCollapsed.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionExpanded.png -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\SectionExpanded.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\slMobile.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\slMobile.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\static.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\static.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\xna.gif -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\xna.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\scripts\branding.js -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\scripts\branding.js
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-cs-CZ.css -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-cs-CZ.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-de-DE.css -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-de-DE.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-en-US.css -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-en-US.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-es-ES.css -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-es-ES.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-fr-FR.css -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-fr-FR.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Help1.css -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-Help1.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-HelpViewer.css -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-HelpViewer.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-it-IT.css -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-it-IT.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ja-JP.css -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-ja-JP.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ko-KR.css -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-ko-KR.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pl-PL.css -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-pl-PL.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pt-BR.css -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-pt-BR.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ru-RU.css -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-ru-RU.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-tr-TR.css -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-tr-TR.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Website.css -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-Website.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-CN.css -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-zh-CN.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-TW.css -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-zh-TW.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding.css -&gt; C:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding.css
-    Last step completed in 00:00:00.8518
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertCaution.png -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\AlertCaution.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertNote.png -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\AlertNote.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertSecurity.png -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\AlertSecurity.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CFW.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\CFW.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CodeExample.png -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\CodeExample.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\favicon.ico -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\favicon.ico
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privclass.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\privclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privdelegate.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\privdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privenumeration.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\privenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privevent.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\privevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privextension.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\privextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privfield.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\privfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privinterface.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\privinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privmethod.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\privmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privproperty.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\privproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privstructure.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\privstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protclass.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protdelegate.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protenumeration.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protevent.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protextension.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protfield.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protinterface.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protmethod.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protoperator.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protoperator.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protproperty.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protstructure.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\protstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubclass.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\pubclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubdelegate.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\pubdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubenumeration.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\pubenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubevent.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\pubevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubextension.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\pubextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubfield.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\pubfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubinterface.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\pubinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubmethod.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\pubmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\puboperator.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\puboperator.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubproperty.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\pubproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubstructure.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\pubstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionCollapsed.png -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\SectionCollapsed.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionExpanded.png -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\SectionExpanded.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\slMobile.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\slMobile.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\static.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\static.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\xna.gif -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\icons\xna.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\scripts\branding.js -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\scripts\branding.js
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-cs-CZ.css -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-cs-CZ.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-de-DE.css -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-de-DE.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-en-US.css -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-en-US.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-es-ES.css -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-es-ES.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-fr-FR.css -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-fr-FR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Help1.css -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-Help1.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-HelpViewer.css -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-HelpViewer.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-it-IT.css -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-it-IT.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ja-JP.css -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-ja-JP.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ko-KR.css -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-ko-KR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pl-PL.css -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-pl-PL.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pt-BR.css -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-pt-BR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ru-RU.css -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-ru-RU.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-tr-TR.css -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-tr-TR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Website.css -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-Website.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-CN.css -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-zh-CN.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-TW.css -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding-zh-TW.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding.css -&gt; C:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\styles\branding.css
+    Last step completed in 00:00:00.5900
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating HTML Help 1 table of contents file...
@@ -318,7 +322,7 @@ Generating HTML Help 1 index file...
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Generating HTML Help 1 project file...
-    Last step completed in 00:00:00.0156
+    Last step completed in 00:00:00.0100
 </buildStep>
 <buildStep step="CompilingHelpFile">
 Compiling HTML Help 1 file...
@@ -327,7 +331,7 @@ Compiling HTML Help 1 file...
   
   
   
-  Compiling c:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\BUILDLet.Utilities.chm
+  Compiling c:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\BUILDLet.Utilities.chm
   
   
   
@@ -335,9 +339,9 @@ Compiling HTML Help 1 file...
   
   Compile time: 0 minutes, 3 seconds
   
-  174	Topics
+  176	Topics
   
-  1,645	Local links
+  1,658	Local links
   
   2,510	Internet links
   
@@ -347,19 +351,19 @@ Compiling HTML Help 1 file...
   
   
   
-  Created c:\Projects\BUILDLet\Version2.0\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\BUILDLet.Utilities.chm, 261,200 bytes
+  Created c:\Projects\BUILDLet\Version2.2\BUILDLet\Projects\Utilities\BUILDLet.UtilitiesHelpDocumentation\Help\Working\Output\HtmlHelp1\BUILDLet.Utilities.chm, 262,268 bytes
   
-  Compression decreased file by 1,336,614 bytes.
+  Compression decreased file by 1,345,438 bytes.
   
-    Last step completed in 00:00:04.2099
+    Last step completed in 00:00:05.2020
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.2520
+    Last step completed in 00:00:00.1710
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 2017/03/26 23:21:03.  Total time: 00:00:30.1499
+Build completed successfully at 2017/04/23 18:02:56.  Total time: 00:00:31.5980
 
 </buildStep>
 </shfbBuild>

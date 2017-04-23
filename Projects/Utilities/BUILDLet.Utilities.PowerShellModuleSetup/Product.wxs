@@ -2,9 +2,10 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 
   <!-- Include -->
-  <?include ..\Version\InstallerGUID.wxi?>
-  <?include ..\Version\InstallerVersionInfo.wxi?>
-  <?include ..\Common\InstallerInfo.wxi?>
+  <?include ..\Properties\InstallerGUID.wxi?>
+  <?include ..\Properties\InstallerProductInfo.wxi?>
+  <?include ..\Properties\InstallerVersionInfo.wxi?>
+  <?include ..\Properties\InstallerResourceInfo.wxi?>
 
 
   <!-- GUID -->
@@ -25,10 +26,11 @@
   <?define Source_ProductComponent_PSD1="$(var.Resource_PSUtilities_PSD1)"?>
   <?define Source_ProductComponent_PSM1="$(var.Resource_PSUtilities_PSM1)"?>
   <?define Source_ProductComponent_DLL1="$(var.Resource_PSUtilities_DLL1)"?>
-  <!-- [Version 1.4.0.0] Append -->
+  <!-- Version 1.4.0.0 [START] -->
   <?define Source_ProductComponent_DLL2="$(var.Resource_PSUtilities_DLL2)"?>
   <?define Source_ProductComponent_DLL3="$(var.Resource_PSUtilities_DLL3)"?>
   <?define Source_ProductComponent_DLL4="$(var.Resource_PSUtilities_DLL4)"?>
+  <!-- Version 1.4.0.0 [END] -->
 
 
   <!-- Product -->
@@ -103,10 +105,12 @@
         <File Source="$(var.Source_ProductComponent_PSD1)" />
         <File Source="$(var.Source_ProductComponent_PSM1)" />
         <File Source="$(var.Source_ProductComponent_DLL1)" />
-        <File Source="$(var.Source_ProductComponent_DLL2)" />  <!-- Added at Version 1.4.0.0 -->
-        <File Source="$(var.Source_ProductComponent_DLL3)" />  <!-- Added at Version 1.4.0.0 -->
-        <File Source="$(var.Source_ProductComponent_DLL4)" />  <!-- Added at Version 1.4.0.0 -->
-        
+        <!-- Version 1.4.0.0 [START] -->
+        <File Source="$(var.Source_ProductComponent_DLL2)" />
+        <File Source="$(var.Source_ProductComponent_DLL3)" />
+        <File Source="$(var.Source_ProductComponent_DLL4)" />
+        <!-- Version 1.4.0.0 [END] -->
+
         <!-- Registry registration is removed. -->
         <!--
         <RegistryValue Root="HKLM" Key='SOFTWARE\[Manufacturer]\[ProductName]' Name='installed' Type='integer' Value='1' KeyPath='yes' />

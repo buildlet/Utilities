@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="326388af-7ef9-4575-a4b5-63d37eaa5043" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+      <para>
+        Version 2.1.1.0 は BUILDLet WOL Version 2.1.1.0 のための内部リリースです。
+      </para>
+      <para>
+        (BUILDLet WOL Version 2.1.1.0 は April 2nd, 2017 にリリースされました。)
+      </para>
+      <para>
+        変更点は次の通りです。
+      </para>
+    </introduction>
+
+    <section>
+      <title>Changes in This Release</title>
+      <content>
+        <list class="bullet">
+
+          <listItem>
+            <para>
+              <codeEntityReference qualifyHint="true">M:BUILDLet.Utilities.Network.MagicPacket.Send(System.Int32,System.Int32)</codeEntityReference> メソッドの
+              <codeInline>times</codeInline> パラメーターの名前を <codeInline>count</codeInline> に変更しました。
+            </para>
+          </listItem>
+
+        </list>
+      </content>
+    </section>
+
+    <relatedTopics>
+			<link xlink:href="423f65ea-763f-4a5d-9a97-d3c466efc880" />
+		</relatedTopics>
+
+	</developerConceptualDocument>
+</topic>

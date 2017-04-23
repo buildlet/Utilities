@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<topic id="e149039e-30ad-4b84-91c1-ab1fd13b262d" revisionNumber="2">
+<topic id="e149039e-30ad-4b84-91c1-ab1fd13b262d" revisionNumber="3">
   <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
 		<introduction>
       <para>
@@ -21,6 +21,12 @@
           <listItem>
             <para>
               <codeEntityReference qualifyHint="true">T:BUILDLet.Utilities.PrivateProfile</codeEntityReference> クラスのセクション抽出パターンを改善しました。
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              <codeInline>New-Directory</codeInline> Function の再帰的削除に関する処理を変更しました。
             </para>
           </listItem>
 

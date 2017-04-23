@@ -74,7 +74,8 @@ namespace BUILDLet.Utilities
         ///     </list>
         /// </para>
         /// <para>
-        /// Version 1.4.0.0 で、Windows フォルダー よりも System32 フォルダー の優先順位が入れ替わりました。
+        /// Version 1.4.0.0 で、Windows フォルダーと System32 フォルダーの優先順位が入れ替わり、
+        /// System32 フォルダーの方が優先順位が高くなりました。
         /// </para>
         /// </remarks>
         public static string[] DefaultSearchPath

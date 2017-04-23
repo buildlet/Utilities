@@ -575,6 +575,40 @@ Describe "Expand-ZipFile" {
 			}
 		}
 	}
+
+
+	# Additional Tests for 'SuppressOutput' Parameter
+	Context "($j) Output of Cmdlet with 'SuppressOutput' Parameter" {
+
+		for ($i = 0; $i -lt $Script:references.Count; $i++) {
+
+			$filename = $Script:references[$i].SourceZipFileName
+			$filepath = $Script:references[$i].SourceZipFilePath
+
+			It "Is Nothing. ('$filename')" { Expand-ZipFile -Path $filepath -Force -SuppressOutput | Should BeNullOrEmpty }
+		}
+	}
+
+	$j++
+	Context "($j) FullName of Output of Cmdlet with both 'SuppressOutput' and 'PassThru' Parameter" {
+
+		for ($i = 0; $i -lt $Script:references.Count; $i++) {
+
+			$filename = $Script:references[$i].SourceZipFileName
+			$filepath = $Script:references[$i].SourceZipFilePath
+
+			It "Is Same as the Output with 'PassThru' Parameter. ('$filename')" {
+				$expected = Expand-ZipFile -Path $filepath -Force -PassThru
+				$actual = Expand-ZipFile -Path $filepath -Force -SuppressOutput -PassThru
+
+				# Check Number of Output
+				$actual.Count | Should Be $expected.Count
+
+				# Check Each of Content (FullName)
+				0..($expected.Count - 1) | % { $actual[$_].FullName -eq $expected[$_].FullName }
+			}
+		}
+	}
 }
 
 

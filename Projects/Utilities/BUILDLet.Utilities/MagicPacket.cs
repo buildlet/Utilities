@@ -74,7 +74,9 @@ namespace BUILDLet.Utilities.Network
         /// <summary>
         /// <see cref="MagicPacket"/> クラスの新しいインスタンスを初期化します。 
         /// </summary>
-        /// <param name="macAddress">MAC アドレスの文字列を指定します。</param>
+        /// <param name="macAddress">
+        /// MAC アドレスの文字列を指定します。
+        /// </param>
         public MagicPacket(string macAddress)
         {
             // Set initial value_found of separator
@@ -130,17 +132,30 @@ namespace BUILDLet.Utilities.Network
         /// <summary>
         /// マジックパケットをバイト配列として取得します。
         /// </summary>
-        /// <returns>マジックパケットのバイト配列</returns>
+        /// <returns>
+        /// マジックパケットのバイト配列
+        /// </returns>
         public byte[] GetBytes() { return this.data; }
 
 
         /// <summary>
         /// マジックパケットを送信します。
         /// </summary>
-        /// <param name="times">マジックパケットを送信する回数を指定します。省略した場合の既定の回数は 1 回です。</param>
-        /// <param name="port">リモートマシンのポート番号を指定します。省略した場合の既定のポート番号は 2304 番です。</param>
-        /// <returns>マジックパケットを送信した回数を返します。</returns>
-        public int Send(int times = 1, int port = 2304)
+        /// <param name="count">
+        /// マジックパケットを送信する回数を指定します。
+        /// 省略した場合の既定の回数は 1 回です。
+        /// <para>
+        /// このパラメーターは Version 2.1.1.0 で名前が変更されました。
+        /// </para>
+        /// </param>
+        /// <param name="port">
+        /// リモートマシンのポート番号を指定します。
+        /// 省略した場合の既定のポート番号は 2304 番です。
+        /// </param>
+        /// <returns>
+        /// マジックパケットを送信した回数を返します。
+        /// </returns>
+        public int Send(int count = 1, int port = 2304)
         {
             try
             {
@@ -149,7 +164,7 @@ namespace BUILDLet.Utilities.Network
                 int bytes = 0;
                 int sent = 0;
 
-                for (int i = 0; i < times; i++)
+                for (int i = 0; i < count; i++)
                 {
                     bytes = udp.Send(this.data, this.data.Length, ep);
                     sent++;

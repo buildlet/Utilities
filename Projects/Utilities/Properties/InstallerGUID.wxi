@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+
+  <!-- Upgrade Code -->
+  <!-- BUILDLet Utilities PowerShell Module -->
+  <?define GUID_PSUtilitiesSetupBootstrapper_UpgradeCode="{4A7CB8F0-03BC-4A82-9CA5-F85AB4D0699D}"?>
+  <!-- BUILDLet Utilities Class Library and Tools -->
+  <!-- (Version 2.2.0.0: Changed from "BUILDLet WOL") -->
+  <?define GUID_UtilitiesSetupBootstrapper_UpgradeCode="{965E66F5-08CD-4138-AC1B-07BAD82AD75A}"?>
+  
+
+  <!-- BUILDLet Utilities PowerShell Module Version 2.x.x (Current) -->
+  <!-- (x86) -->
+  <?define GUID_PSUtilities_UpgradeCode="{2A5ECE4D-A220-4E25-8BED-51A5D005180C}"?>
+  <?define GUID_PSUtilities_Product="{092B0AC1-6542-4D19-9467-B1087282FDB4}"?>
+  <?define GUID_PSUtilities_ProductComponent="{32DF9E0D-1E19-4377-B111-6935DA639E23}"?>
+  <!-- (x64) -->
+  <?define GUID_PSUtilities64_UpgradeCode="{D82A736E-C1FF-4C55-875B-7A4F8A39E7EE}"?>
+  <?define GUID_PSUtilities64_Product="{9B594029-FFDB-4A45-B881-60D421BC05F6}"?>
+  <?define GUID_PSUtilities64_ProductComponent="{25D18AA4-10BB-4E97-82F4-C0B4980EA715}"?>
+
+  
+  <!-- BUILDLet Utilities PowerShell Module Version 1.x.x (for Backward Compatibility) -->
+  <!-- (x86) -->
+  <?define GUID_PSUtility_Version1xx_UpgradeCode="{B196327A-ED1C-4E1A-9028-680AA1A1BFD3}"?>
+  <?define GUID_PSUtility_Version1xx_Product="{B84029A5-CCD9-4833-B1A0-0C0F281F7714}"?>
+  <?define GUID_PSUtility_Version1xx_ProductComponent="{20DAAF31-D66C-49D3-9502-28C2CA2C67CC}"?>
+  <!-- (x64) -->
+  <?define GUID_PSUtility64_Version1xx_UpgradeCode="{8068C24A-F536-479F-A060-D82821D71A46}"?>
+  <?define GUID_PSUtility64_Version1xx_Product="{7E7CA1EC-F7D0-4E39-BC61-6A03BF2FBD8B}"?>
+  <?define GUID_PSUtility64_Version1xx_ProductComponent="{25118E0F-F75D-4E65-AE70-1F0D5056D558}"?>
+  
+
+  <!-- BUILDLet Utilities Class Library and Tools Version 2.2.x (Current) -->
+  <?define GUID_Utilities_UpgradeCode="{141727EF-B7E6-4E40-B740-0586F93858B6}"?>
+  <?define GUID_Utilities_Product="{4AF7FFFE-1090-4EAA-9CC3-32AB2B27818C}"?>
+  <!-- (Components) -->
+  <?define GUID_Utilities_ProductComponent="{4E4F2238-E8DD-41B1-ACBF-4FA9885A3EC8}"?>
+  <?define GUID_Utilities_DocumentComponent="{E871B1C1-B0FF-4F2E-9203-A8EE05B6ECE7}"?>
+  <?define GUID_Utilities_ProgramMenuComponent="{1DAD2A4A-6DB8-41FB-BED6-6EE22BA7A2D5}"?>
+  <!-- (Components for Help File) -->
+  <?define GUID_Utilities_HelpDocumentComponent="{A88DF29B-5097-4B23-A5C7-208D5964607C}"?>
+  <!-- (Components for WOL) -->
+  <?define GUID_Utilities_WOL_ProductComponent="{9B99973F-75DA-4108-B670-A5E2577EDABF}"?>
+  <?define GUID_Utilities_WOL_DocumentComponent="{77070301-DB73-4867-A10F-9CB86FBE3DD6}"?>
+  <?define GUID_Utilities_WOL_ConfigFileComponent="{F467F1BD-C9FF-4BDB-89B7-B9D2FDA5A2E1}"?>
+
+  
+  <!-- "BUILDLet WOL" -> "BUILDLet Utilities Class Library and Tools" (including BUILDLet.Utilities.WOL) -->
+
+
+  <!-- BUILDLet WOL Version 2.1.1.x (for Backward Compatibility)  -->
+  <?define GUID_WOL_Version211_Product="{44119839-21E2-4917-B721-AF491C87DE7E}"?>
+  <?define GUID_WOL_Version211_UpgradeCode="{01ED808E-F637-43E1-9505-28D2AE5F6C7A}"?>
+  <?define GUID_WOL_Version211_ProductComponent="{F1B145FF-4CA1-4AA7-9B8D-D64A610DD634}"?>
+  <?define GUID_WOL_Version211_Documents="{7DE07AEA-0137-4AEC-A633-920826622732}"?>
+  <?define GUID_WOL_Version211_ConfigFile="{DF3E73DC-7D48-4812-B20F-5CD0712FC871}"?>
+  <?define GUID_WOL_Version211_ProgramMenu="{3210AAF6-0E2D-4CF2-8499-7239703012B7}"?>
+
+  
+  <!-- BUILDLet WOL Version 1.x.x (for Backward Compatibility) -->
+  <?define GUID_WOL_Version1xx_Product="{D56FBBFB-8D89-4233-9763-048BB7FF201D}"?>
+  <?define GUID_WOL_Version1xx_UpgradeCode="{AFCA8C85-7CB9-44F9-9880-0C58F711B09C}"?>
+  <?define GUID_WOL_Version1xx_ProductComponent="{EB131451-2E2A-4209-BD40-C2D02DD40216}"?>  <!-- V1.0.5 Changed -->
+  <?define GUID_WOL_Version1xx_Documents="{3C726715-3878-4664-A02F-959C79F96265}"?>
+  <?define GUID_WOL_Version1xx_ConfigFile="{5B00CD26-AC1D-430A-A5D1-09887191665D}"?>
+  <?define GUID_WOL_Version1xx_ProgramMenu="{168B96DE-720A-4158-AE27-9A44BCFAD354}"?>  <!-- V1.0.6 Add -->
+  <?define GUID_WOL_Version1xx_OldExeFile="{6245EE59-0EFB-41AA-B19A-A61B98BDA287}"?>  <!-- for Backword Compatibility -->
+
+</Include>
