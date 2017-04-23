@@ -1,11 +1,22 @@
 # Utilities Class Library
 
-## Version 2.1.0.0
+## Version 2.2.0.0
 
 ## 概要
-Windows クラスライブラリと PowerShell モジュールが含まれます。
+Windows クラスライブラリとツール、および PowerShell モジュールが含まれます。
 
 ## 変更履歴
+
+### Version 2.2.0.0 (2017/4/23)
+#### BUILDLet Utilities Class Library and Tools Version 2.2.0.0
+BUILDLet WOL を BUILDLet Utilities Class Library and Tools の一部として、再マージしました。  
+設定ファイルの検索パスの優先順位を変更しました。  
+設定ファイルの名前を WOL.conf から WOL.ini に変更しました。  
+設定ファイルのフォーマットを変更し、保存可能な設定値を増やしました。
+
+#### BUILDLet Utilities PowerShell Module Version 2.2.0.0
+ディレクトリのエントリーを含まない Source に対する Expand-ZipFile Function の出力が正しくない不具合を修正しました。  
+Expand-ZipFile Function の既定の出力をルート エントリーとし、SuppressOutput パラメーターを追加しました。
 
 ### Version 2.1.0.0 (2017/3/26)
 #### BUILDLet Utilities PowerShell Module Version 2.1.0.0
