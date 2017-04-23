@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="33488909-aa00-4b79-82eb-68009741298b" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+      <para>
+        Version 2.2.0.0 は April 23rd, 2017 にリリースされました。
+      </para>
+      <para>
+        変更点は次の通りです。
+      </para>
+    </introduction>
+
+    <section>
+      <title>Changes in This Release</title>
+      <content>
+        <list class="bullet">
+
+          <listItem>
+            <para>
+              <codeInline>Expand-ZipFile</codeInline> Function に対して、次の変更を行いました。
+            </para>
+            <list class="bullet">
+              <listItem>
+                <para>
+                  ディレクトリのエントリーを含まない Source に対する出力が正しくない不具合を修正しました。
+                </para>
+              </listItem>
+              <listItem>
+                <para>
+                  既定の出力を、ルート エントリーとしました。
+                </para>
+              </listItem>
+              <listItem>
+                <para>
+                  <codeInline>SuppressOutput</codeInline> パラメーターを追加しました。
+                </para>
+              </listItem>
+            </list>
+          </listItem>
+
+          <listItem>
+            <para>
+              <codeInline>BUILDLet.Utilities.WOL</codeInline> に対して、次の変更を行いました。
+            </para>
+            <list class="bullet">
+              <listItem>
+                <para>
+                  Version 1.3 で分離した <codeInline>BUILDLet.WOL</codeInline> を <codeInline>BUILDLet.Utilities.WOL</codeInline> として再マージしました。
+                </para>
+              </listItem>
+              <listItem>
+                <para>
+                  セットアップ プログラムを <legacyBold>BUILDLet WOL</legacyBold> 専用から、
+                  <legacyBold>BUILDLet Utilities Class Library and Tools</legacyBold> の一部に含まれるように変更しました。
+                </para>
+              </listItem>
+              <listItem>
+                <para>
+                  設定ファイルの検索パスの優先順位を変更しました。
+                </para>
+              </listItem>
+              <listItem>
+                <para>
+                  設定ファイルの名前を <codeInline>WOL.conf</codeInline> から <codeInline>WOL.ini</codeInline> に変更しました。
+                </para>
+              </listItem>
+              <listItem>
+                <para>
+                  設定ファイルのフォーマットを変更し、保存可能な設定値を増やしました。
+                </para>
+              </listItem>
+            </list>
+          </listItem>
+        </list>
+      </content>
+    </section>
+
+    <relatedTopics>
+			<link xlink:href="423f65ea-763f-4a5d-9a97-d3c466efc880" />
+		</relatedTopics>
+
+	</developerConceptualDocument>
+</topic>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<topic id="871f9883-a983-4128-9610-0ca40d69140d" revisionNumber="1">
+<topic id="871f9883-a983-4128-9610-0ca40d69140d" revisionNumber="2">
   <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
 		<introduction>
       <para>
@@ -17,6 +17,18 @@
       <title>Changes in This Release</title>
       <content>
         <list class="bullet">
+
+          <listItem>
+            <para>
+              <codeInline>Get-ContentBlock</codeInline> Function を追加しました。
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              <codeInline>Get-AuthenticodeSignerName</codeInline> Function の処理を修正しました。
+            </para>
+          </listItem>
 
           <listItem>
             <para>

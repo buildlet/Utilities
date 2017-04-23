@@ -88,8 +88,7 @@ namespace BUILDLet.Utilities.PowerShell.Commands
         public SwitchParameter PassThru { get; set; }
         protected const string PassThruHelpMessage =
             "展開した全ての Ionic.Zip.ZipEntry を出力します。\n" +
-            "既定では、Source がディレクトリを含む場合は展開したルート ディレクトリのみを出力します。\n" +
-            "Source がファイルの場合は、常に展開したファイルを出力します。";
+            "既定では、ルート エントリー (ファイルまたはディレクトリ) のみを出力します。";
 
 
         [Parameter(ParameterSetName = "Path", HelpMessage = ExpandZipFileCommand.SilentHelpMessage)]
@@ -109,6 +108,15 @@ namespace BUILDLet.Utilities.PowerShell.Commands
         public Encoding Encoding { get; set; }
         protected const string EncodingHelpMessage =
             "エンコーディングを指定します。既定のエンコーディングは System.Text.UnicodeEncoding.Default です。";
+
+
+        [Parameter(ParameterSetName = "Path", HelpMessage = ExpandZipFileCommand.SuppressOutputHelpMessage)]
+        [Parameter(ParameterSetName = "LiteralPath", HelpMessage = ExpandZipFileCommand.SuppressOutputHelpMessage)]
+        public SwitchParameter SuppressOutput { get; set; }
+        protected const string SuppressOutputHelpMessage =
+            "このコマンドレットの出力を抑制します。\n" +
+            "Source に含まれるエントリーが多く、パフォーマンスに影響がある場合に、このパラメーターを指定してください。\n" +
+            "ただし、PassThru パラメーターと同時に指定された場合は、PassThru パラメーターが優先されます。";
 
 
         // ProgressRecord
@@ -187,8 +195,8 @@ namespace BUILDLet.Utilities.PowerShell.Commands
                         int intervalCount = 150;
 
 
-                        // Root Entry
-                        ZipEntry root = null;
+                        // ALL Zip Entries
+                        List<ZipEntry> entries = new List<ZipEntry>();
 
                         // using ZipFile
                         using (ZipFile zip = ZipFile.Read(src, new ReadOptions() { Encoding = (this.Encoding ?? UnicodeEncoding.Default) }))
@@ -208,6 +216,7 @@ namespace BUILDLet.Utilities.PowerShell.Commands
                                 this.WriteDebug("-----");
 #endif
 
+                                // NOT Silent
                                 if (!this.Silent)
                                 {
                                     if (e.EventType == ZipProgressEventType.Extracting_BeforeExtractEntry)
@@ -262,9 +271,11 @@ namespace BUILDLet.Utilities.PowerShell.Commands
                                 }
 
 
-                                // PassThru
+                                // PassThru (or NOT)
                                 if (this.PassThru)
                                 {
+                                    // PassThru
+
                                     if (e.EventType == ZipProgressEventType.Extracting_AfterExtractEntry)
                                     {
                                         string filename = e.CurrentEntry.FileName.Replace('/', System.IO.Path.DirectorySeparatorChar);
@@ -282,10 +293,17 @@ namespace BUILDLet.Utilities.PowerShell.Commands
                                         }
                                     }
                                 }
-
-
-                                // for Root Entry (= 1st Zip Entry)
-                                if (root == null) { root = e.CurrentEntry; }
+                                else
+                                {
+                                    // NOT PassThru
+                                    
+                                    // NOT SuppressOutput
+                                    if (!this.SuppressOutput)
+                                    {
+                                        // Add ALL of Zip Entries
+                                        entries.Add(e.CurrentEntry);
+                                    }
+                                }
                             };
 
 
@@ -319,20 +337,37 @@ namespace BUILDLet.Utilities.PowerShell.Commands
                         }
 
 
-                        // Output (NOT PassThru)
-                        if (!this.PassThru)
+                        // Output (NOT PassThru && NOT SuppressOutput)
+                        if (!this.PassThru && !this.SuppressOutput)
                         {
-                            if (root.IsDirectory)
-                            {
-                                // DIRECTORY:
-                                this.WriteObject(new DirectoryInfo(System.IO.Path.Combine(dest, root.FileName.Split(new char[] { '/' })[0]) + System.IO.Path.DirectorySeparatorChar));
-                            }
-                            else
-                            {
-                                // FILE:
-                                this.WriteObject(new FileInfo(System.IO.Path.Combine(dest, root.FileName)));
-                            }
+                            // Verbose Output
+                            this.WriteVerbose(string.Format("\"{0}\" を \"{1}\" に展開しました。結果を出力しています。", src, dest));
 
+
+                            List<string> roots = new List<string>();
+
+                            foreach (var entry in entries)
+                            {
+                                string root = entry.FileName.Split(new char[] { '/' })[0];
+
+                                if (!roots.Contains(root))
+                                {
+                                    // Add Root Entry
+                                    roots.Add(root);
+
+                                    // Output
+                                    if (entry.IsDirectory)
+                                    {
+                                        // DIRECTORY:
+                                        this.WriteObject(new DirectoryInfo(System.IO.Path.Combine(dest, entry.FileName.Split(new char[] { '/' })[0]) + System.IO.Path.DirectorySeparatorChar));
+                                    }
+                                    else
+                                    {
+                                        // FILE:
+                                        this.WriteObject(new FileInfo(System.IO.Path.Combine(dest, entry.FileName)));
+                                    }
+                                }
+                            }
                         }
                     }
                 }

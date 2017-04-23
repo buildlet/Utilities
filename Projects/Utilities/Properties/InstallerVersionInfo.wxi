@@ -2,8 +2,7 @@
 <Include>
 
   <!-- Version Information -->
-  <?define Version="2.1.0"?>
-
+  <?define Version="2.2.0"?>
 
   <!-- Manufacturer Information -->
   <?define Manufacturer="BUILDLet"?>

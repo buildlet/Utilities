@@ -184,7 +184,8 @@
                 </list>
             </para>
             <para>
-            Version 1.4.0.0 で、Windows フォルダー よりも System32 フォルダー の優先順位が入れ替わりました。
+            Version 1.4.0.0 で、Windows フォルダーと System32 フォルダーの優先順位が入れ替わり、
+            System32 フォルダーの方が優先順位が高くなりました。
             </para>
             </remarks>
         </member>
@@ -819,21 +820,36 @@
             <summary>
             <see cref="T:BUILDLet.Utilities.Network.MagicPacket"/> クラスの新しいインスタンスを初期化します。 
             </summary>
-            <param name="macAddress">MAC アドレスの文字列を指定します。</param>
+            <param name="macAddress">
+            MAC アドレスの文字列を指定します。
+            </param>
         </member>
         <member name="M:BUILDLet.Utilities.Network.MagicPacket.GetBytes">
             <summary>
             マジックパケットをバイト配列として取得します。
             </summary>
-            <returns>マジックパケットのバイト配列</returns>
+            <returns>
+            マジックパケットのバイト配列
+            </returns>
         </member>
         <member name="M:BUILDLet.Utilities.Network.MagicPacket.Send(System.Int32,System.Int32)">
             <summary>
             マジックパケットを送信します。
             </summary>
-            <param name="times">マジックパケットを送信する回数を指定します。省略した場合の既定の回数は 1 回です。</param>
-            <param name="port">リモートマシンのポート番号を指定します。省略した場合の既定のポート番号は 2304 番です。</param>
-            <returns>マジックパケットを送信した回数を返します。</returns>
+            <param name="count">
+            マジックパケットを送信する回数を指定します。
+            省略した場合の既定の回数は 1 回です。
+            <para>
+            このパラメーターは Version 2.1.1.0 で名前が変更されました。
+            </para>
+            </param>
+            <param name="port">
+            リモートマシンのポート番号を指定します。
+            省略した場合の既定のポート番号は 2304 番です。
+            </param>
+            <returns>
+            マジックパケットを送信した回数を返します。
+            </returns>
         </member>
         <member name="T:BUILDLet.Utilities.Cryptography.HashCode">
             <summary>

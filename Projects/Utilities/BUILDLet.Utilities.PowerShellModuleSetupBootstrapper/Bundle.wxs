@@ -3,14 +3,16 @@
      xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
 
   <!-- Include -->
-  <?include ..\Version\InstallerGUID.wxi?>
-  <?include ..\Version\InstallerVersionInfo.wxi?>
-  <?include ..\Common\InstallerInfo.wxi?>
+  <?include ..\Properties\InstallerGUID.wxi?>
+  <?include ..\Properties\InstallerProductInfo.wxi?>
+  <?include ..\Properties\InstallerVersionInfo.wxi?>
+  <?include ..\Properties\InstallerResourceInfo.wxi?>
 
 
   <!-- GUID -->
   <?define GUID_UpgradeCode="$(var.GUID_PSUtilitiesSetupBootstrapper_UpgradeCode)"?>
 
+  
   <!-- Product Information -->
   <?define ProductName="$(var.PSUtilities_ProductName)"?>
 
