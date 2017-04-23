@@ -16,8 +16,8 @@ BUILDLet WOL を BUILDLet Utilities Class Library and Tools の一部として�
 設定ファイルのフォーマットを変更し、保存可能な設定値を増やしました。
 
 #### BUILDLet Utilities PowerShell Module Version 2.2.0.0
-ディレクトリのエントリーを含まない Source に対する Expand-ZipFile Cmdlet の出力が正しくない不具合を修正しました。  
-Expand-ZipFile Cmdlet の既定の出力をルート エントリーとしました。  
+ディレクトリのエントリーを含まない Source に対する Expand-ZipFile Cmdlet の出力が正しくない不具合を修正しました。  
+Expand-ZipFile Cmdlet の既定の出力をルート エントリーとしました。  
 Expand-ZipFile Cmdlet に SuppressOutput パラメーターを追加しました。
 
 ### Version 2.1.0.0 (2017/3/26)
