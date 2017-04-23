@@ -1,4 +1,4 @@
-# Utilities Class Library
+# Utilities Class Library, Tools and PowerShell Module
 
 ## Version 2.2.0.0
 
