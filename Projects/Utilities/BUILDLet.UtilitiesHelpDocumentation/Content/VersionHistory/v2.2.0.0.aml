@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<topic id="33488909-aa00-4b79-82eb-68009741298b" revisionNumber="1">
+<topic id="33488909-aa00-4b79-82eb-68009741298b" revisionNumber="2">
   <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
 		<introduction>
       <para>
@@ -17,7 +17,7 @@
 
           <listItem>
             <para>
-              <codeInline>Expand-ZipFile</codeInline> Function に対して、次の変更を行いました。
+              <codeInline>Expand-ZipFile</codeInline> Cmdlet に対して、次の変更を行いました。
             </para>
             <list class="bullet">
               <listItem>
@@ -71,6 +71,7 @@
               </listItem>
             </list>
           </listItem>
+          
         </list>
       </content>
     </section>

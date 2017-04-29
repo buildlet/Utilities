@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Include>
 
-  <!-- Setup Files (.msi) -->
-  <!-- BUILDLet.Utilities.PoserShell -->
+  <!-- Setup Files (.msi) of BUILDLet Utilities PoserShell Module -->
   <?define Resource_PSUtilitiesSetup="..\bin\$(var.Configuration)\PSUtilitiesSetup.msi"?>
   <?define Resource_PSUtilitiesSetup64="..\bin\$(var.Configuration)\PSUtilitiesSetup64.msi"?>
-  <!-- BUILDLet.Utilities -->
+
+  <!-- Setup File (.msi) of BUILDLet Utilities Class Library and Tools -->
   <!-- Version 2.2.0.0: Changed from BUILDLet.Utilities.WOL (WOLSetup.msi) -->
   <?define Resource_UtilitiesSetup="..\bin\$(var.Configuration)\UtilitiesSetup.msi"?>
 
@@ -14,11 +14,9 @@
   <?define Resource_LicenseFile_TXT="..\Resources\License\License.txt"?>
   <?define Resource_LicenseFile_RTF="..\Resources\License\License.rtf"?>
 
-
   <!-- Logo Image Files -->
   <?define Resource_LogoFile_PSUtilitiesSetupBootstrapper="..\Resources\Logo\PSUtilitiesSetupBootstrapper\BUILDLet.Logo_White-LightBlue_64x64.png"?>
   <?define Resource_LogoFile_UtilitiesSetupBootstrapper="..\Resources\Logo\UtilitiesSetupBootstrapper\BUILDLet.Logo_Yellow-LightBlue_64x64.png"?>
-
 
   <!-- Readme Files -->
   <?define Resource_ReadmeFile_PSUtilities="..\Resources\Readme\PSUtilities\ReadMe.txt"?>
@@ -33,16 +31,16 @@
 
 
   <!-- Content Files -->
-  <!-- BUILDLet.Utilities.PoserShell  -->
-  <?define Source_PSModule_Directory="..\bin\$(var.Configuration)\WindowsPowerShell\Modules\BUILDLet.Utilities.PowerShell"?>
-  <?define Resource_PSUtilities_PSD1="$(var.Source_PSModule_Directory)\BUILDLet.Utilities.PowerShell.psd1"?>
-  <?define Resource_PSUtilities_PSM1="$(var.Source_PSModule_Directory)\BUILDLet.Utilities.PowerShell.psm1"?>
-  <?define Resource_PSUtilities_DLL1="$(var.Source_PSModule_Directory)\BUILDLet.Utilities.PowerShell.dll"?>
-  <?define Resource_PSUtilities_DLL2="$(var.Source_PSModule_Directory)\BUILDLet.Utilities.PInvoke.dll"?>  <!-- Version 1.4.0.0: Added -->
-  <?define Resource_PSUtilities_DLL3="$(var.Source_PSModule_Directory)\BUILDLet.Utilities.dll"?>          <!-- Version 1.4.0.0: Added -->
-  <?define Resource_PSUtilities_DLL4="$(var.Source_PSModule_Directory)\Ionic.Zip.dll"?>                   <!-- Version 1.4.0.0: Added -->
+  <!-- BUILDLet Utilities PoserShell Module -->
+  <?define PSModule_SourceDirectory="..\bin\$(var.Configuration)\WindowsPowerShell\Modules\BUILDLet.Utilities.PowerShell"?>
+  <?define Resource_PSUtilities_PSD1="$(var.PSModule_SourceDirectory)\BUILDLet.Utilities.PowerShell.psd1"?>
+  <?define Resource_PSUtilities_PSM1="$(var.PSModule_SourceDirectory)\BUILDLet.Utilities.PowerShell.psm1"?>
+  <?define Resource_PSUtilities_DLL1="$(var.PSModule_SourceDirectory)\BUILDLet.Utilities.PowerShell.dll"?>
+  <?define Resource_PSUtilities_DLL2="$(var.PSModule_SourceDirectory)\BUILDLet.Utilities.PInvoke.dll"?>  <!-- Version 1.4.0.0: Added -->
+  <?define Resource_PSUtilities_DLL3="$(var.PSModule_SourceDirectory)\BUILDLet.Utilities.dll"?>          <!-- Version 1.4.0.0: Added -->
+  <?define Resource_PSUtilities_DLL4="$(var.PSModule_SourceDirectory)\Ionic.Zip.dll"?>                   <!-- Version 1.4.0.0: Added -->
 
-  <!-- BUILDLet.Utilities (Class Library and Tools) -->
+  <!-- BUILDLet Utilities Class Library and Tools -->
   <?define Resource_Utilities_WOL_EXE="..\bin\$(var.Configuration)\BUILDLet.Utilities.WOL.exe"?>
   <?define Resource_Utilities_DLL="..\bin\$(var.Configuration)\BUILDLet.Utilities.dll"?>                  <!-- Version 2.2.0.0: Added -->
   <?define Resource_Utilities_XML="..\bin\$(var.Configuration)\BUILDLet.Utilities.xml"?>                  <!-- Version 2.2.0.0: Added -->

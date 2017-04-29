@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="de6fa846-cfa4-4595-97da-22a04a34e57f" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+      <para>
+        Version 2.2.1.0 は BUILDLet Utilities PowerShell Module 2.2.1.0 のための内部リリースです。
+      </para>
+      <para>
+        (BUILDLet Utilities PowerShell Module 2.2.1.0 は April 29th, 2017 にリリースされました。)
+      </para>
+      <para>
+        変更点は次の通りです。
+      </para>
+    </introduction>
+
+    <section>
+      <title>Changes in This Release</title>
+      <content>
+        <list class="bullet">
+
+          <listItem>
+            <para>
+              <codeInline>Expand-ZipFile</codeInline> Cmdlet の出力が正しくない場合がある不具合を修正しました。
+            </para>
+          </listItem>
+
+        </list>
+      </content>
+    </section>
+
+    <relatedTopics>
+			<link xlink:href="423f65ea-763f-4a5d-9a97-d3c466efc880" />
+		</relatedTopics>
+
+	</developerConceptualDocument>
+</topic>

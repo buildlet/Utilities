@@ -195,12 +195,13 @@ namespace BUILDLet.Utilities.PowerShell.Commands
                         int intervalCount = 150;
 
 
-                        // ALL Zip Entries
-                        List<ZipEntry> entries = new List<ZipEntry>();
-
                         // using ZipFile
                         using (ZipFile zip = ZipFile.Read(src, new ReadOptions() { Encoding = (this.Encoding ?? UnicodeEncoding.Default) }))
                         {
+                            // Root Entries for Output
+                            List<string> roots = new List<string>();
+
+
                             // Extract Progress Event Handler
                             zip.ExtractProgress += (object sender, ExtractProgressEventArgs e) =>
                             {
@@ -296,12 +297,30 @@ namespace BUILDLet.Utilities.PowerShell.Commands
                                 else
                                 {
                                     // NOT PassThru
-                                    
-                                    // NOT SuppressOutput
+
+                                    // NOT PassThru && NOT SuppressOutput
                                     if (!this.SuppressOutput)
                                     {
-                                        // Add ALL of Zip Entries
-                                        entries.Add(e.CurrentEntry);
+                                        string[] separeted = e.CurrentEntry.FileName.Split(new char[] { '/' });
+                                        string root = separeted[0];
+
+                                        if (!roots.Contains(root))
+                                        {
+                                            // Add File Name of Root Entry 
+                                            roots.Add(root);
+
+                                            // Output
+                                            if (e.CurrentEntry.IsDirectory || (separeted.Length > 1))
+                                            {
+                                                // DIRECTORY
+                                                this.WriteObject(new DirectoryInfo(System.IO.Path.Combine(dest, root)));
+                                            }
+                                            else
+                                            {
+                                                // FILE
+                                                this.WriteObject(new FileInfo(System.IO.Path.Combine(dest, root)));
+                                            }
+                                        }
                                     }
                                 }
                             };
@@ -334,40 +353,6 @@ namespace BUILDLet.Utilities.PowerShell.Commands
 
                             // Complete Main Progress
                             this.CompleteProcessRecord(mainProgress);
-                        }
-
-
-                        // Output (NOT PassThru && NOT SuppressOutput)
-                        if (!this.PassThru && !this.SuppressOutput)
-                        {
-                            // Verbose Output
-                            this.WriteVerbose(string.Format("\"{0}\" を \"{1}\" に展開しました。結果を出力しています。", src, dest));
-
-
-                            List<string> roots = new List<string>();
-
-                            foreach (var entry in entries)
-                            {
-                                string root = entry.FileName.Split(new char[] { '/' })[0];
-
-                                if (!roots.Contains(root))
-                                {
-                                    // Add Root Entry
-                                    roots.Add(root);
-
-                                    // Output
-                                    if (entry.IsDirectory)
-                                    {
-                                        // DIRECTORY:
-                                        this.WriteObject(new DirectoryInfo(System.IO.Path.Combine(dest, entry.FileName.Split(new char[] { '/' })[0]) + System.IO.Path.DirectorySeparatorChar));
-                                    }
-                                    else
-                                    {
-                                        // FILE:
-                                        this.WriteObject(new FileInfo(System.IO.Path.Combine(dest, entry.FileName)));
-                                    }
-                                }
-                            }
                         }
                     }
                 }
