@@ -1,12 +1,16 @@
 # Utilities Class Library, Tools and PowerShell Module
 
-## Version 2.2.0.0
+## Version 2.2.1.0
 
 ## 概要
 Windows クラスライブラリとツール、および PowerShell モジュールが含まれます。  
 詳細はヘルプを参照してください。
 
 ## 変更履歴
+
+### Version 2.2.1.0 (2017/4/29)
+#### BUILDLet Utilities PowerShell Module Version 2.2.1.0
+Expand-ZipFile Function の出力が正しくない場合がある不具合を修正しました。
 
 ### Version 2.2.0.0 (2017/4/23)
 #### BUILDLet Utilities Class Library and Tools Version 2.2.0.0
