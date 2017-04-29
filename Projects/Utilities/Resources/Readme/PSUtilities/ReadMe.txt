@@ -1,7 +1,7 @@
 ﻿BUILDLet Utilities PowerShell Module
 ====================================
 
-Version 2.2.0.0
+Version 2.2.1.0
 ---------------
 
 概要
@@ -145,11 +145,14 @@ https://msdn.microsoft.com/ja-jp/library/gg592960.aspx
 変更履歴
 --------
 
+* Version 2.2.1.0 (2017/04/29)  
+  Expand-ZipFile Function の出力が正しくない場合がある不具合を修正しました。
+
 * Version 2.2.0.0 (2017/04/23)  
   ディレクトリのエントリーを含まない Source に対する Expand-ZipFile Function 
   の出力が正しくない不具合を修正しました。  
-  また、Expand-ZipFile Function の既定の出力をルート エントリーとし、
-  SuppressOutput パラメーターを追加しました。 
+  Expand-ZipFile Cmdlet の既定の出力をルート エントリーとしました。  
+  Expand-ZipFile Cmdlet に SuppressOutput パラメーターを追加しました。 
 
 * Version 2.1.1.0 (2017/04/02)  
   (BUILDLet WOL Version 2.1.1.0 のための内部リリース)  

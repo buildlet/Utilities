@@ -40,6 +40,8 @@ $Script:filename_HelloZip = 'hello.zip'
 $Script:filepath_HelloZip = $Script:dirpath_TestData | Join-Path -ChildPath $Script:filename_HelloZip
 $Script:filename_RootDirectoryZip = 'RootDirectory.zip'
 $Script:filepath_RootDirectoryZip = $Script:dirpath_TestData | Join-Path -ChildPath $Script:filename_RootDirectoryZip
+$Script:filename_RootEntriesZip = 'RootEntries.zip'
+$Script:filepath_RootEntriesZip = $Script:dirpath_TestData | Join-Path -ChildPath $Script:filename_RootEntriesZip
 
 # Original Zip File(s)
 $Script:original_zip_files = @(
@@ -588,8 +590,8 @@ Describe "Expand-ZipFile" {
 			It "Is Nothing. ('$filename')" { Expand-ZipFile -Path $filepath -Force -SuppressOutput | Should BeNullOrEmpty }
 		}
 	}
-
 	$j++
+
 	Context "($j) FullName of Output of Cmdlet with both 'SuppressOutput' and 'PassThru' Parameter" {
 
 		for ($i = 0; $i -lt $Script:references.Count; $i++) {
@@ -609,6 +611,41 @@ Describe "Expand-ZipFile" {
 			}
 		}
 	}
+	$j++
+
+
+	# Additional Test for Multiple Root Entries
+	Context "($j) Output for Multiple Root Entries" {
+
+		$filename = $Script:filename_RootEntriesZip
+		$filepath = $Script:filepath_RootEntriesZip
+
+		$actual = Expand-ZipFile -Path $filepath -Force
+		$count = 3
+
+		It "Are $count Items." { $actual.Count | Should Be $count }
+
+		for ($i = 0; $i -lt $count; $i++) {
+				
+			$name = $actual[$i].Name
+
+			if ($i -ne 2) {
+				# FILE
+				It "[$i] ('$name') is FILE." {
+					$actual[$i] | Should BeOfType System.IO.FileSystemInfo
+					$actual[$i].FullName | Test-Path -PathType Leaf | Should Be $true
+				}
+			}
+			else {
+				# DIRECTORY
+				It "[$i] ('$name') is DIRECTORY." {
+					$actual[$i] | Should BeOfType System.IO.DirectoryInfo
+					$actual[$i].FullName | Test-Path -PathType Container | Should Be $true
+				}
+			}
+		}
+	}
+	$j++
 }
 
 

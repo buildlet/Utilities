@@ -4,22 +4,20 @@
   <!-- BUILDLet Utilities PowerShell Module -->
   <?define PSUtilities_ProductName="BUILDLet Utilities PowerShell Module"?>
   <?define PSUtilities_ProductComment="BUILDLet Utilities PowerShell Module"?>
-
-  <!-- PowerShell Module Name -->
+  <!-- (PowerShell Module Name) -->
   <?define PSUtilities_PSModuleName="BUILDLet.Utilities.PowerShell"?>
 
 
   <!-- BUILDLet Utilities Class Library and Tools -->
   <?define Utilities_ProductName="BUILDLet Utilities Class Library and Tools"?>
   <?define Utilities_ProductComment="BUILDLet Utilities Class Library and Tools"?>
-
-  <!-- Folder Name of "BUILDLet Utilities" -->
+  <!-- (Program Folder Name) -->
   <?define Utilities_ProductFolderName="BUILDLet Utilities"?>
-
+  
   <!-- BUILDLet Utilities Help Documentation -->
   <?define Utilities_HelpDocument_ProductName="BUILDLet Utilities Documentation"?>
   <?define Utilities_HelpDocument_ProductDescription="BUILDLet Utilities Class Library Help Documentation"?>
-
+  
   <!-- BUILDLet WOL -->
   <?define Utilities_WOL_ProductName="BUILDLet WOL"?>
   <!-- Not Used:  "BUILDLet WOL" -> "BUILDLet Utilities Class Library and Tools"

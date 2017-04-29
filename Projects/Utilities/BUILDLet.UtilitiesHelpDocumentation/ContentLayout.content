@@ -104,9 +104,14 @@
         <HelpKeyword index="K" term="version, 2.1.1.0, 2.1.1" />
       </HelpKeywords>
     </Topic>
-    <Topic id="33488909-aa00-4b79-82eb-68009741298b" visible="True" isSelected="true" title="Version 2.2.0.0">
+    <Topic id="33488909-aa00-4b79-82eb-68009741298b" visible="True" title="Version 2.2.0.0">
       <HelpKeywords>
         <HelpKeyword index="K" term="version, 2.2.2.0, 2.2.0, 2.2" />
+      </HelpKeywords>
+    </Topic>
+    <Topic id="de6fa846-cfa4-4595-97da-22a04a34e57f" visible="True" isSelected="true" title="Version 2.2.1.0">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version, 2.2.1.0, 2.2.1" />
       </HelpKeywords>
     </Topic>
   </Topic>

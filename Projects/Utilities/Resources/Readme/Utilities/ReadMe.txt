@@ -1,7 +1,7 @@
 ﻿BUILDLet Utilities Class Library and Tools
 ==========================================
 
-Versin 2.2.0.0
+Versin 2.2.1.0
 --------------
 
 概要
@@ -69,11 +69,14 @@ License.txt を参照してください。
 変更履歴
 --------
 
+* Version 2.2.1.0 (2017/04/29)  
+  BUILDLet Utilities PowerShell Module 2.2.1.0 のための内部リリース
+
 * Version 2.2.0.0 (2017/04/23)  
   BUILDLet WOL を BUILDLet Utilities Class Library and Tools の一部として、再マージしました。  
   設定ファイルの検索パスの優先順位を変更しました。  
-  設定ファイルのフォーマットを変更し、保存可能な設定値を増やしました。  
-  設定ファイルの名前を WOL.conf から WOL.ini に変更しました。
+  設定ファイルの名前を WOL.conf から WOL.ini に変更しました。  
+  設定ファイルのフォーマットを変更し、保存可能な設定値を増やしました。
 
 * WOL Version 2.1.1.0 (April 2, 2017)  
   Base class library BUILDLet.Utilities is updated from Version 1.x to 2.1.x

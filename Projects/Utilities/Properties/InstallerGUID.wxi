@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Include>
 
-  <!-- Upgrade Code -->
-  <!-- BUILDLet Utilities PowerShell Module -->
+  <!-- Upgrade Code of BUILDLet Utilities PowerShell Module -->
   <?define GUID_PSUtilitiesSetupBootstrapper_UpgradeCode="{4A7CB8F0-03BC-4A82-9CA5-F85AB4D0699D}"?>
-  <!-- BUILDLet Utilities Class Library and Tools -->
-  <!-- (Version 2.2.0.0: Changed from "BUILDLet WOL") -->
-  <?define GUID_UtilitiesSetupBootstrapper_UpgradeCode="{965E66F5-08CD-4138-AC1B-07BAD82AD75A}"?>
   
+  <!-- Upgrade Code of BUILDLet Utilities Class Library and Tools -->
+  <?define GUID_UtilitiesSetupBootstrapper_UpgradeCode="{965E66F5-08CD-4138-AC1B-07BAD82AD75A}"?>
+  <!-- (Version 2.2.0.0: Changed from "BUILDLet WOL") -->
 
+
+  
   <!-- BUILDLet Utilities PowerShell Module Version 2.x.x (Current) -->
   <!-- (x86) -->
   <?define GUID_PSUtilities_UpgradeCode="{2A5ECE4D-A220-4E25-8BED-51A5D005180C}"?>
@@ -18,19 +19,7 @@
   <?define GUID_PSUtilities64_UpgradeCode="{D82A736E-C1FF-4C55-875B-7A4F8A39E7EE}"?>
   <?define GUID_PSUtilities64_Product="{9B594029-FFDB-4A45-B881-60D421BC05F6}"?>
   <?define GUID_PSUtilities64_ProductComponent="{25D18AA4-10BB-4E97-82F4-C0B4980EA715}"?>
-
   
-  <!-- BUILDLet Utilities PowerShell Module Version 1.x.x (for Backward Compatibility) -->
-  <!-- (x86) -->
-  <?define GUID_PSUtility_Version1xx_UpgradeCode="{B196327A-ED1C-4E1A-9028-680AA1A1BFD3}"?>
-  <?define GUID_PSUtility_Version1xx_Product="{B84029A5-CCD9-4833-B1A0-0C0F281F7714}"?>
-  <?define GUID_PSUtility_Version1xx_ProductComponent="{20DAAF31-D66C-49D3-9502-28C2CA2C67CC}"?>
-  <!-- (x64) -->
-  <?define GUID_PSUtility64_Version1xx_UpgradeCode="{8068C24A-F536-479F-A060-D82821D71A46}"?>
-  <?define GUID_PSUtility64_Version1xx_Product="{7E7CA1EC-F7D0-4E39-BC61-6A03BF2FBD8B}"?>
-  <?define GUID_PSUtility64_Version1xx_ProductComponent="{25118E0F-F75D-4E65-AE70-1F0D5056D558}"?>
-  
-
   <!-- BUILDLet Utilities Class Library and Tools Version 2.2.x (Current) -->
   <?define GUID_Utilities_UpgradeCode="{141727EF-B7E6-4E40-B740-0586F93858B6}"?>
   <?define GUID_Utilities_Product="{4AF7FFFE-1090-4EAA-9CC3-32AB2B27818C}"?>
@@ -46,8 +35,20 @@
   <?define GUID_Utilities_WOL_ConfigFileComponent="{F467F1BD-C9FF-4BDB-89B7-B9D2FDA5A2E1}"?>
 
   
-  <!-- "BUILDLet WOL" -> "BUILDLet Utilities Class Library and Tools" (including BUILDLet.Utilities.WOL) -->
 
+  <!-- BUILDLet Utilities PowerShell Module Version 1.x.x (for Backward Compatibility) -->
+  <!-- (x86) -->
+  <?define GUID_PSUtility_Version1xx_UpgradeCode="{B196327A-ED1C-4E1A-9028-680AA1A1BFD3}"?>
+  <?define GUID_PSUtility_Version1xx_Product="{B84029A5-CCD9-4833-B1A0-0C0F281F7714}"?>
+  <?define GUID_PSUtility_Version1xx_ProductComponent="{20DAAF31-D66C-49D3-9502-28C2CA2C67CC}"?>
+  <!-- (x64) -->
+  <?define GUID_PSUtility64_Version1xx_UpgradeCode="{8068C24A-F536-479F-A060-D82821D71A46}"?>
+  <?define GUID_PSUtility64_Version1xx_Product="{7E7CA1EC-F7D0-4E39-BC61-6A03BF2FBD8B}"?>
+  <?define GUID_PSUtility64_Version1xx_ProductComponent="{25118E0F-F75D-4E65-AE70-1F0D5056D558}"?>
+
+
+  
+  <!-- "BUILDLet WOL" -> "BUILDLet Utilities Class Library and Tools" (including BUILDLet.Utilities.WOL) -->
 
   <!-- BUILDLet WOL Version 2.1.1.x (for Backward Compatibility)  -->
   <?define GUID_WOL_Version211_Product="{44119839-21E2-4917-B721-AF491C87DE7E}"?>
@@ -56,7 +57,6 @@
   <?define GUID_WOL_Version211_Documents="{7DE07AEA-0137-4AEC-A633-920826622732}"?>
   <?define GUID_WOL_Version211_ConfigFile="{DF3E73DC-7D48-4812-B20F-5CD0712FC871}"?>
   <?define GUID_WOL_Version211_ProgramMenu="{3210AAF6-0E2D-4CF2-8499-7239703012B7}"?>
-
   
   <!-- BUILDLet WOL Version 1.x.x (for Backward Compatibility) -->
   <?define GUID_WOL_Version1xx_Product="{D56FBBFB-8D89-4233-9763-048BB7FF201D}"?>
